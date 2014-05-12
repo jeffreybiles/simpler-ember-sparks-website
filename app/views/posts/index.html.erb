@@ -1,0 +1,27 @@
+<h1>Listing posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Video url</th>
+      <th>Description</th>
+      <th>Transcript</th>
+      <th>Publish date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= link_to post.title, post %></td>
+        <td><%= post.video_url %></td>
+        <td><%= post.description %></td>
+        <td><%= post.transcript %></td>
+        <td><%= post.publish_date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

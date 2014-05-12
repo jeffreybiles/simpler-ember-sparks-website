@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @post.video_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>Transcript:</strong>
+  <%= @post.transcript %>
+</p>
+
+<p>
+  <strong>Publish date:</strong>
+  <%= @post.publish_date %>
+</p>
+
+<%= link_to 'Back', posts_path %>
