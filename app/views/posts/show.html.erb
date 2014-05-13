@@ -13,10 +13,19 @@
 </div>
 
 <div class="description">
-  <%= @post.description %>
+  <%= raw @markdown.render @post.description %>
 </div>
 
+<% if @post.links && @post.links.length > 0 %>
+<div class="links">
+  <h4>Links</h4>
+  <%= raw @markdown.render(@post.links) %>  
+</div>
+<% end %>
+
+<% if @post.transcript && @post.transcript.length > 0 %>
 <div class="transcript">
-  <%= @post.transcript %>
+  <h4>Transcript</h4>
+  <%= raw @markdown.render @post.transcript %>
 </div>
-
+<% end %>

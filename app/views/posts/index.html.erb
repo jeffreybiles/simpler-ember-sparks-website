@@ -10,7 +10,7 @@
         <em>Published on <%= post.publish_date %></em>
       </div>
 
-      <div class="description"><%= post.description %></div>
+      <div class="description"><%= raw @markdown.render post.description %></div>
     </div>
   <% end %>
 </div>
