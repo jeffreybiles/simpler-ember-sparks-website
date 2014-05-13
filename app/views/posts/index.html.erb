@@ -1,27 +1,10 @@
-<h1>Listing posts</h1>
+<h1>Most Recent Videos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Video url</th>
-      <th>Description</th>
-      <th>Transcript</th>
-      <th>Publish date</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.title, post %></td>
-        <td><%= post.video_url %></td>
-        <td><%= post.description %></td>
-        <td><%= post.transcript %></td>
-        <td><%= post.publish_date %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="posts">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h2><%= link_to post.title, post %></h2>
+      <div class="description"><%= post.description %></div>
+    </div>
+  <% end %>
+</div>
