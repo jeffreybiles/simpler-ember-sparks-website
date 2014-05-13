@@ -8,11 +8,9 @@
 
 <%= render 'video', video_url: @post.video_url %>
 
-<% if @post.publish_date %>
-  <div class="published-on">
-    <em>Published on <%= @post.publish_date %></em>
-  </div>
-<% end %>
+<div class="published-on">
+  <em>Published on <%= @post.publish_date %></em>
+</div>
 
 <div class="description">
   <%= @post.description %>
