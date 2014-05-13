@@ -4,6 +4,11 @@
   <% @posts.each do |post| %>
     <div class="post">
       <h2><%= link_to post.title, post %></h2>
+      
+      <div class="published-on">
+        <em>Published on <%= post.publish_date %></em>
+      </div>
+
       <div class="description"><%= post.description %></div>
     </div>
   <% end %>
