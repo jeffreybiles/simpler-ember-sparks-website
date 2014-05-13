@@ -3,6 +3,7 @@
 <div class="posts">
   <% @posts.each do |post| %>
     <div class="post">
+      <%= image_tag post.thumbnail_image %>
       <h2><%= link_to post.title, post %></h2>
       
       <div class="published-on">

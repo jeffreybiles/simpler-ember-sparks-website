@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  permit_params :title, :publish_date, :video_url, :description, :transcript
+  permit_params :title, :publish_date, :video_url, :description, :transcript, :thumbnail_image
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
