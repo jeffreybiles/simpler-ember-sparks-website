@@ -1,16 +1,21 @@
-<h1>Most Recent Videos</h1>
 
 <div class="posts">
   <% @posts.each do |post| %>
-    <div class="post">
-      <%= image_tag post.thumbnail_image %>
-      <h2><%= link_to post.title, post %></h2>
-      
-      <div class="published-on">
-        <em>Published on <%= post.publish_date %></em>
+    <div class="post row">
+      <div class="col-md-4 col-sm-6">
+        <%= image_tag post.thumbnail_image %>
       </div>
+      <div class="col-md-8 col-sm-6">
+        <h2 class="index-title"><%= link_to post.title, post %></h2>
+        
+        <div class="published-on">
+          <em>Published on <%= post.publish_date %></em>
+        </div>
 
-      <div class="description"><%= raw @markdown.render post.description %></div>
+        <div class="description"><%= raw @markdown.render post.description %></div>
+        <%= link_to 'watch', post, class: 'btn' %>
+      </div>
     </div>
+    <hr>
   <% end %>
 </div>

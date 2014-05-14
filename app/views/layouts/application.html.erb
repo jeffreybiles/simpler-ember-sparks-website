@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ActiveadminSite</title>
+  <title>Ember SparkCasts</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header class="navbar navbar-static-top sparks-header">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand sparkcast-brand" href="/">Ember SparkCasts</a>
+    </div>
+  </div>
+</header>
+<div class="container main-content">
 <%= yield %>
-
+</div>
 </body>
 </html>

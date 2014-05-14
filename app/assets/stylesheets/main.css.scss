@@ -1,0 +1,73 @@
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Kameron:400,700|EB+Garamond);
+
+$primary-red: #FF373B;
+$primary-blue: #3E25E8;
+$primary-brown: #CC4B18;
+$dark-red: #99644F;
+$mid-green: #9BDC4A;
+$dark-green: #7cad3c;
+$near-black: #1D1D1D;
+$near-white: #F5F5F5;
+
+@mixin no-underline {
+  a, a:visited, a:hover, a:link {
+    text-decoration: none
+  };
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  background-color: $near-white;
+  color: $near-black;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kameron', serif;
+  font-weight: bold;
+  @include no-underline; 
+}
+
+a, a:hover, a:link {
+  color: $primary-red;
+}
+
+a:visited {
+  color: $dark-red;
+}
+
+.sparks-header {
+  background-color: $primary-brown;
+}
+
+a.sparkcast-brand {
+  font-family: 'Kameron', serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: $near-black;
+}
+
+.btn {
+  font-family: 'Kameron', serif;
+  font-weight: bold;
+  background-color: $mid-green;
+}
+
+a:visited.btn {
+  background-color: $dark-green;
+}
+
+a.btn {
+  text-decoration: none;  
+  color: $near-black;
+}
+
+.main-content {
+  margin-bottom: 60px;
+}
+
+.index-title {
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
