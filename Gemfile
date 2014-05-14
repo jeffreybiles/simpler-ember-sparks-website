@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'redcarpet'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
