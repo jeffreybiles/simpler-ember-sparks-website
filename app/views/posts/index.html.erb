@@ -11,7 +11,7 @@
         <div class="published-on">
           <em>Published on <%= post.publish_date %></em>
         </div>
-
+         <div class="tags">Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></div>
         <div class="description"><%= raw @markdown.render post.description %></div>
         <%= link_to 'watch', post, class: 'btn' %>
       </div>
