@@ -14,6 +14,7 @@
 <div class="description">
   <%= raw @markdown.render @post.description %>
 </div>
+<%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
 
 <% if @post.links && @post.links.length > 0 %>
 <div class="links">

@@ -13,5 +13,18 @@ ActiveAdmin.register Post do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+
+  form do |f|
+    f.inputs "post" do
+      f.input :title
+      f.input :publish_date
+      f.input :video_url
+      f.input :thumbnail_image
+      f.input :tag_list, :hint => 'Comma separated'
+      f.input :description
+      f.input :links
+      f.input :transcript
+    end
+    f.actions
+  end  
 end
