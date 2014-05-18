@@ -6,5 +6,6 @@ class PostsController < InheritedResources::Base
     else
       @posts = Post.all
     end
+    @posts = @posts.published.recent_first
   end
 end
