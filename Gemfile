@@ -27,6 +27,7 @@ gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development
 gem 'pry', groups: [:development, :test]
 
+gem 'has_permalink'
 gem 'acts_as_taggable_on'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

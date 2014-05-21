@@ -5,4 +5,5 @@ class Post < ActiveRecord::Base
   mount_uploader :thumbnail_image, ImageUploader
 
   acts_as_taggable
+  has_permalink
 end

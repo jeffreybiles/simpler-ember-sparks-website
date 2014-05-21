@@ -109,6 +109,7 @@ GEM
     formatador (0.2.4)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
+    has_permalink (0.1.6)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -236,6 +237,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   fog
+  has_permalink
   jquery-rails
   mini_magick
   pg
