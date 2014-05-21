@@ -10,10 +10,6 @@ class PostsController < InheritedResources::Base
   end
 
   def show
-    if params[:id].to_i
-      @post = Post.find(params[:id])
-    else
-      @post = Post.find_by_permalink(params[:id])
-    end
+    @post = Post.find_by_permalink(params[:id]) || Post.find(params[:id])
   end
 end
