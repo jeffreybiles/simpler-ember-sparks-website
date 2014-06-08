@@ -41,11 +41,14 @@ a:visited {
   background-color: $primary-brown;
 }
 
-a.sparkcast-brand {
+.navbar a {
   font-family: 'Kameron', serif;
-  font-weight: bold;
   text-decoration: none;
   color: $near-black;
+
+  &.navbar-brand {
+    font-weight: bold;
+  }
 }
 
 .btn {
