@@ -14,9 +14,21 @@ ActiveAdmin.register Post do
   #  permitted
   # end
 
+  index do
+    column :id
+    column :title
+    column :publish_date
+    column :permalink
+    default_actions
+  end
+
   controller do
     def permitted_params
       params.permit!
+    end
+
+    def find_resource
+      @post = Post.find_by_permalink(params[:id]) || Post.find(params[:id])
     end
   end
   
