@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'about', to: 'pages#about'
   get 'account', to: 'accounts#show'
+  post 'subscribe', to: 'accounts#subscribe'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
