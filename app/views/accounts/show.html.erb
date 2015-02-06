@@ -1,0 +1,14 @@
+Put stuff here about current subscription status.
+
+<form action="/charge" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+    data-image="/square-image.png"
+    data-name="SparkCasts"
+    data-description="Monthly Subscription"
+    data-label="Subscribe"
+    data-panel-label="Subscribe {{amount}}/month"
+    data-amount="900">
+  </script>
+</form>
