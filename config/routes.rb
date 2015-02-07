@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'account', to: 'accounts#show'
   post 'subscribe', to: 'accounts#subscribe'
+  post 'unsubscribe', to: 'accounts#unsubscribe'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
