@@ -6,4 +6,14 @@ class Post < ActiveRecord::Base
 
   acts_as_taggable
   has_permalink
+
+
+  def free_days_remaining
+   free_days = 7.days
+   return (publish_date + free_days - Date.today).to_i
+  end
+
+  def in_trial_period
+    free_days_remaining > 0
+  end
 end

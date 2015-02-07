@@ -5,7 +5,19 @@
   <%= @post.title %>
 </h1>
 
-<%= render 'video', video_url: @post.video_url %>
+<% if current_user.subscribed or @post.free or @post.in_trial_period %>
+  <%= render 'video', video_url: @post.video_url %>
+  <% if @post.free %>
+    <p>This is a free post.  I hope you enjoy it!</p>
+  <% elsif @post.in_trial_period %>
+    <p><%= "#{@post.free_days_remaining} #{'free day'.pluralize(@post.free_days_remaining)} remaining." %></p>
+  <% end %>
+<% else %>
+  <a href="/account">
+    <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
+  </a>
+  You can't watch this video. <%= link_to 'Subscribe Now', account_path %>
+<% end %>
 
 <div class="published-on">
   <em>Published on <%= @post.publish_date %></em>
