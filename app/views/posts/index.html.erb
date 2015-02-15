@@ -3,7 +3,7 @@
   <% @posts.each do |post| %>
     <div class="post row">
       <div class="col-md-4 col-sm-6">
-        <%= image_tag post.thumbnail_image, class: "img-responsive" %>
+        <%= link_to image_tag(post.thumbnail_image, class: "img-responsive"), post %>
       </div>
       <div class="col-md-8 col-sm-6">
         <h2 class="index-title"><%= link_to post.title, post %></h2>
