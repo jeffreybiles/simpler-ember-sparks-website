@@ -5,7 +5,7 @@
   <%= @post.title %>
 </h1>
 
-<% if current_user.subscribed or @post.free or @post.in_trial_period %>
+<% if current_user.try(:subscribed) or @post.free or @post.in_trial_period %>
   <%= render 'video', video_url: @post.video_url %>
   <% if @post.free %>
     <p>This is a free post.  I hope you enjoy it!</p>
