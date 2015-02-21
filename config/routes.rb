@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :posts, only: [:show, :index]
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'about', to: 'pages#about'
-    
+  get 'mailing_list', to: 'pages#mailing_list'
+      
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
