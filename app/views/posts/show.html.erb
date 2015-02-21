@@ -10,6 +10,8 @@
 <div class="published-on">
   <em>Published on <%= @post.publish_date %></em>
 </div>
+<b><% if @post.free %> FREE <% else %> PRO <% end %></b>
+
 
 <div class="description">
   <%= raw @markdown.render @post.description %>

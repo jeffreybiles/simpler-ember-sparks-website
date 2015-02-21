@@ -16,6 +16,7 @@ ActiveAdmin.register Post do
 
   index do
     column :id
+    column :free
     column :title
     column :publish_date
     column :permalink
@@ -35,6 +36,7 @@ ActiveAdmin.register Post do
   form do |f|
     f.inputs "post" do
       f.input :title
+      f.input :free
       f.input :publish_date
       f.input :video_url
       f.input :thumbnail_image

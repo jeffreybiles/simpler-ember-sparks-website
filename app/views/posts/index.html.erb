@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-8 col-sm-6">
         <h2 class="index-title"><%= link_to post.title, post %></h2>
-        
+        <b><% if post.free %> FREE <% else %> PRO <% end %></b>
         <div class="published-on">
           <em>Published on <%= post.publish_date %></em>
         </div>
