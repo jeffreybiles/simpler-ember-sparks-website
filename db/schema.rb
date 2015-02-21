@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221061542) do
+ActiveRecord::Schema.define(version: 20150221070251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20150221061542) do
     t.text     "links"
     t.string   "thumbnail_image"
     t.string   "permalink"
-    t.boolean  "free"
+    t.boolean  "free",            default: false
   end
 
   add_index "posts", ["permalink"], name: "index_posts_on_permalink", using: :btree
