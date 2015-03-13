@@ -6,17 +6,17 @@ class AccountsController < ApplicationController
   end
 
   def subscribe
-    unless current_user
+    user = User.find_by(email: params[:stripeEmail]) ||
       user = User.create(email: params[:stripeEmail], password: 'temporaryPassword')
-      sign_in(user)
-      # send an email
-    end
+
     customer = Stripe::Customer.create(
       :card => params[:stripeToken],
       :plan => "pro",
-      :email => current_user.email
+      :email => user.email
     )
-    current_user.update(stripe_customer_id: customer.id, subscribed: true)
+    user.update(stripe_customer_id: customer.id, subscribed: true)
+
+    sign_in(user) unless current_user
 
     redirect_to account_path
   end
