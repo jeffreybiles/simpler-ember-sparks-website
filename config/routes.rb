@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
+
   resources :posts, only: [:show, :index]
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'about', to: 'pages#about'

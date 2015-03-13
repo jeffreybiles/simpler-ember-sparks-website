@@ -109,11 +109,17 @@ GEM
     formatador (0.2.4)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
+    gibbon (1.1.5)
+      httparty
+      multi_json (>= 1.9.0)
     has_permalink (0.1.6)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
@@ -137,6 +143,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.3.3)
     multi_json (1.10.0)
+    multi_xml (0.5.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
@@ -248,6 +255,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   fog
+  gibbon
   has_permalink
   jquery-rails
   mini_magick
