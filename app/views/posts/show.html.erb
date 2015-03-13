@@ -5,7 +5,14 @@
   <%= @post.title %>
 </h1>
 
-<%= render 'video', video_url: @post.video_url %>
+<% if current_user.subscribed or @post.free %>
+  <%= render 'video', video_url: @post.video_url %>
+<% else %>
+  <a href="/account">
+    <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
+  </a>
+  You can't watch this video. <%= link_to 'Subscribe Now', account_path %>
+<% end %>
 
 <div class="published-on">
   <em>Published on <%= @post.publish_date %></em>
