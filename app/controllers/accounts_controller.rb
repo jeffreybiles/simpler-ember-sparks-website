@@ -9,16 +9,21 @@ class AccountsController < ApplicationController
     user = User.find_by(email: params[:stripeEmail]) ||
       user = User.create(email: params[:stripeEmail], password: 'temporaryPassword')
 
-    customer = Stripe::Customer.create(
-      :card => params[:stripeToken],
-      :plan => "pro",
-      :email => user.email
-    )
-    user.update(stripe_customer_id: customer.id, subscribed: true)
+    if user.subscribed
+      flash[:warning] = "A user with the email address has already subscribed... please sign in!  Your current subscription will not change."
+      redirect_to new_user_session_path
+    else
+      customer = Stripe::Customer.create(
+        :card => params[:stripeToken],
+        :plan => "pro",
+        :email => user.email
+      )
+      user.update(stripe_customer_id: customer.id, subscribed: true)
 
-    sign_in(user) unless current_user
+      sign_in(user) unless current_user
 
-    redirect_to account_path
+      redirect_to account_path
+    end
   end
 
   def unsubscribe
