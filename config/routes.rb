@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'mailing_list', to: 'pages#mailing_list'
       
   get 'account', to: 'accounts#show'
+  post 'subscribe', to: 'accounts#subscribe'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
