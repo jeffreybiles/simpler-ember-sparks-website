@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       
   get 'account', to: 'accounts#show'
   post 'subscribe', to: 'accounts#subscribe'
+  post 'unsubscribe', to: 'accounts#unsubscribe'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

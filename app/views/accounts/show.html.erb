@@ -1,18 +1,20 @@
-Put stuff here about current subscription status.
-
-<p>Subscribed: <%= current_user.subscribed %>
-<p>Stripe Customer ID: <%= current_user.stripe_customer_id %>
-
-<form action="/subscribe" method="POST">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
-    data-image="/square-image.png"
-    data-name="SparkCasts"
-    data-description="Monthly Subscription"
-    data-label="Subscribe"
-    data-panel-label="Subscribe {{amount}}/month"
-    data-amount="900">
-  </script>
-</form>
+<% if current_user.subscribed %>
+  <h2>Thank you for your support!</h2>
+  <p>Feel free to <%= link_to 'watch any video on the site', posts_path %>.  Or, if you're done with learning from me, you can <%= link_to 'unsubscribe', unsubscribe_path, method: :post, data: {confirm: "You pressed a cancel link.  Was that on purpose?"} %>.</p>
+<% else %>
+  <h2>So you want to watch the archives?</h2>
+  <p>Yep, that's the entirety of my sales pitch.  I'm so good at selling.</p>
+  <form action="/subscribe" method="POST">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+    <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+      data-image="/square-image.png"
+      data-name="SparkCasts"
+      data-description="Monthly Subscription"
+      data-label="Subscribe"
+      data-panel-label="Subscribe {{amount}}/month"
+      data-amount="900">
+    </script>
+  </form>
+<% end %>
