@@ -7,6 +7,16 @@ Stripe.plan :pro do |plan|
   plan.interval = 'month'
   plan.interval_count = 1
 end
+
+Stripe.plan :pro_2 do |plan|
+  plan.name = "Pro"
+  plan.amount = 995
+  plan.currency = 'usd'
+  plan.interval = 'month'
+  plan.interval_count = 1
+end
+
+
 # Example
 # Stripe::Plans::PRIMO #=> 'primo'
 

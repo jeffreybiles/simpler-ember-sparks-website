@@ -15,7 +15,7 @@ class AccountsController < ApplicationController
     else
       customer = Stripe::Customer.create(
         :card => params[:stripeToken],
-        :plan => "pro",
+        :plan => "pro_2",
         :email => user.email
       )
       user.update(stripe_customer_id: customer.id, subscribed: true)
