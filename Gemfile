@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'stripe-rails'
+gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 
 gem 'redcarpet'
 gem 'carrierwave'
@@ -28,6 +29,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development
 gem 'pry', groups: [:development, :test]
+gem 'andand'
 
 gem 'has_permalink'
 gem 'acts_as_taggable_on'
