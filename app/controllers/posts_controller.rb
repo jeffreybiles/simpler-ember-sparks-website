@@ -4,7 +4,7 @@ class PostsController < InheritedResources::Base
     if current_user
       Analytics.track(user_id: current_user.email, event: 'Viewed Video Index')
     else
-      Analytics.track(anonymous_id: session.id, event: 'Viewed Video Index')
+      Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Video Index')
     end
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
@@ -25,13 +25,13 @@ class PostsController < InheritedResources::Base
       if current_user
         Analytics.track(user_id: current_user.email, event: 'Viewed Free Video', properties: properties)
       else
-        Analytics.track(anonymous_id: session.id, event: 'Viewed Free Video', properties: properties)
+        Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Free Video', properties: properties)
       end
     else
       if current_user.andand.subscribed
         Analytics.track(user_id: current_user.email, event: 'Viewed Pro Video', properties: properties)
       else
-        Analytics.track(anonymous_id: session.id, event: 'Attempted View Pro Video', properties: properties)
+        Analytics.track(anonymous_id: session.id || 'new', event: 'Attempted View Pro Video', properties: properties)
       end
     end
   end

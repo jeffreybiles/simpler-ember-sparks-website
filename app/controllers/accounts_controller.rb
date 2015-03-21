@@ -5,7 +5,7 @@ class AccountsController < ApplicationController
     if current_user.andand.subscribed
       Analytics.track(user_id: current_user.email, event: 'Viewed Account Page')
     else
-      Analytics.track(anonymous_id: session.id, event: 'Viewed Subscription Page')
+      Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Subscription Page')
     end
   end
 
