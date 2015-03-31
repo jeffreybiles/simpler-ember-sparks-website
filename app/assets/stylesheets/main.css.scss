@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:hover, a:link {
-  color: $primary-red;
+  color: $primary-brown;
 }
 
 a:visited {
@@ -54,16 +54,23 @@ a:visited {
 .btn {
   font-family: 'Kameron', serif;
   font-weight: bold;
-  background-color: $mid-green;
+  background-color: $near-black;
+}
+a.btn.watch-btn {
+  color: $mid-green;
 }
 
-a:visited.btn {
-  background-color: $dark-green;
+a:visited.btn.watch-btn {
+  color: $dark-green;
 }
 
 a.btn {
   text-decoration: none;  
   color: $near-black;
+}
+
+.description {
+  margin: 15px 0;
 }
 
 .main-content {

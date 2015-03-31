@@ -8,22 +8,27 @@
 <% if current_user.try(:subscribed) or @post.free %>
   <%= render 'video', video_url: @post.video_url %>
 <% else %>
-  <a href="/account">
-    <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
-  </a>
-  You can't watch this video. <%= link_to 'Subscribe Now', account_path %>
+  <h2>This video is for Pro subscribers-
+    <%= link_to "Subscribe Now", account_path %>
+    <a href="/account">
+      <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
+    </a>
+  </h2>
 <% end %>
 
 <div class="published-on">
-  <em>Published on <%= @post.publish_date %></em>
+  <em>
+    <% if @post.free %> Free <% else %> Pro <% end %>
+    --
+    Published on <%= @post.publish_date %>
+  </em>
 </div>
-<b><% if @post.free %> FREE <% else %> PRO <% end %></b>
 
 
 <div class="description">
   <%= raw @markdown.render @post.description %>
 </div>
-<%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
+<!-- <%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %> -->
 
 <% if @post.links && @post.links.length > 0 %>
 <div class="links">

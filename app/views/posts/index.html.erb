@@ -6,15 +6,37 @@
       </div>
       <div class="col-md-8 col-sm-6">
         <h2 class="index-title"><%= link_to post.title, post %></h2>
-        <b><% if post.free %> FREE <% else %> PRO <% end %></b>
         <div class="published-on">
           <em>Published on <%= post.publish_date %></em>
         </div>
-         <div class="tags">Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></div>
         <div class="description"><%= raw @markdown.render post.description %></div>
-        <%= link_to 'watch', post, class: 'btn' %>
+        <% @post_type = if post.free then 'free' else 'pro' end %>
+        <%= link_to "watch #{@post_type} episode", post, class: 'btn watch-btn' %>
       </div>
     </div>
     <hr>
   <% end %>
 </div>
+
+
+<!-- <div class="posts">
+  <h2>Latest Videos</h2>
+  <div class="row">
+  <% @posts.each do |post| %>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <%= link_to post do %>
+        <%= image_tag(post.thumbnail_image, class: "img-responsive title-image") %>
+        <h4 class="index-title"><%= link_to post.title, post %></h4>
+        <div class="row">
+          <b class="col-xs-6"><% if post.free %> FREE <% else %> PRO <% end %></b>
+          <div class="published-on col-xs-6">
+            <em>Published on <%= post.publish_date %></em>
+          </div>
+        </div>
+        <div class="tags"><% post.tag_list.each do |tag| %><button> <%= link_to tag, tag_path(tag) %></button><% end %></div>
+        <div class="description"><%= raw @markdown.render post.description %></div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+</div> -->

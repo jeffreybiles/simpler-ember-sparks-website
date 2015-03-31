@@ -2,8 +2,13 @@
   <h2>Thank you for your support!</h2>
   <p>Feel free to <%= link_to 'watch any video on the site', posts_path %>.  Or, if you're done with learning from me, you can <%= link_to 'unsubscribe', unsubscribe_path, method: :post, data: {confirm: "You pressed a cancel link.  Was that on purpose?"} %>.</p>
 <% else %>
-  <h2>So you want to watch the Pro screencasts?</h2>
-  <p>Yep, that's the entirety of my sales pitch.  Fortunately, I'm better at teaching than I am at selling.</p>
+  <h2>All the Pro screencasts you can watch- only $9.95/month</h2>
+  <ul>
+    <li>New screencast(s) every week</li>
+    <li>Growing archive</li>
+    <li>Up to date with the latest developments</li>
+    <li>Easy to fit into your busy day</li>
+  </ul>
   <form action="/subscribe" method="POST">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
     <script
