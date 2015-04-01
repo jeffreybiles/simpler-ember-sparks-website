@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :posts, only: [:show, :index]
+  get 'series', to: 'pages#series'
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'about', to: 'pages#about'
   get 'mailing_list', to: 'pages#mailing_list'
