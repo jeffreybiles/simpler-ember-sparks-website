@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post 'subscribe', to: 'accounts#subscribe'
   post 'unsubscribe', to: 'accounts#unsubscribe'
 
+  get 'ember_admin', to: 'pages#ember_admin'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
