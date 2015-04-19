@@ -1,5 +1,5 @@
 {
-  "name": "ember_admin",
+  "name": "ember-admin",
   "dependencies": {
     "jquery": "^1.11.1",
     "ember": "1.11.2",

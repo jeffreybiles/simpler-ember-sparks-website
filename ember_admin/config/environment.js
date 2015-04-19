@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember_admin',
+    modulePrefix: 'ember-admin',
     environment: environment,
     baseURL: '/ember_admin/',
     locationType: 'hash',
