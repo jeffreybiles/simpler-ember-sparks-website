@@ -41,13 +41,23 @@ a:visited {
   background-color: $primary-brown;
 }
 
-.navbar a {
-  font-family: 'Kameron', serif;
-  text-decoration: none;
-  color: $near-black;
+#application-nav.navbar-default.navbar {
+  .navbar-toggle {
+    border-color: $near-black;
 
-  &.navbar-brand {
-    font-weight: bold;
+    .icon-bar {
+      background-color: $near-black;
+    }
+  }
+
+  a {
+    font-family: 'Kameron', serif;
+    text-decoration: none;
+    color: $near-black;
+
+    &.navbar-brand {
+      font-weight: bold;
+    }
   }
 }
 
