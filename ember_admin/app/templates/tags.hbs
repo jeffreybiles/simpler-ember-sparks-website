@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="col-md-3">
+    <ul>
+      {{#each model as |tag|}}
+        <li>{{#link-to 'tag' tag}}{{tag.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
+</div>
