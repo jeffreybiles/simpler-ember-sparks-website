@@ -45,4 +45,10 @@ class Api::ApplicationController < ApplicationController
   def resource
     @resource ||= resource_class.send(:find, params[:id])    
   end
+
+  def authorize_admin
+    unless current_user.admin
+      head 401
+    end
+  end
 end
