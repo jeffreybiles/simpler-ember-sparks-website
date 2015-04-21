@@ -1,0 +1,8 @@
+<h2>{{model.name}}</h2>
+<p>{{model.description}}</p>
+<div>{{model.tagType}}</div>
+<div>{{model.priority}}</div>
+{{#link-to 'tag.edit' model tagName="button"}}Edit{{/link-to}}
+
+<hr>
+<button {{action 'delete'}}>Delete</button>

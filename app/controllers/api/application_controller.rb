@@ -39,7 +39,7 @@ class Api::ApplicationController < ApplicationController
   end
 
   def resource_params
-    params.require(resource_class.to_sym).permit!
+    params.require(resource_class_name.to_sym).permit!
   end
 
   def resource
@@ -47,7 +47,7 @@ class Api::ApplicationController < ApplicationController
   end
 
   def authorize_admin
-    unless current_user.admin
+    unless current_user && current_user.admin
       head 401
     end
   end
