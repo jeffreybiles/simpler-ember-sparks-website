@@ -1,5 +1,2 @@
-<div>Name: {{input value=model.name}}</div>
-<div>Description: {{textarea value=model.description}}</div>
-<div>Tag Type: (Coming soon via emberx-select)</div>
-<div>Priority: {{input value=model.priority}}</div>
+{{partial 'tag/edit-fields'}}
 <button {{action 'save'}}>Save</button>
