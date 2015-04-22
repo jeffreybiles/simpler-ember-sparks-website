@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="col-md-3">
+    {{#link-to '<%= dasherizedModuleName %>s.new' tagName="button"}}New{{/link-to}}
+    <ul>
+      {{#each model as |<%= camelizedModuleName %>|}}
+        <li>{{#link-to '<%= dasherizedModuleName %>.show' <%= camelizedModuleName %>}}{{<%= camelizedModuleName %>.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
+</div>
