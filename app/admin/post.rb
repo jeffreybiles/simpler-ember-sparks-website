@@ -18,6 +18,7 @@ ActiveAdmin.register Post do
     column :id
     column :free
     column :title
+    column :difficulty
     column :publish_date
     column :permalink
     default_actions
@@ -37,6 +38,7 @@ ActiveAdmin.register Post do
     f.inputs "post" do
       f.input :title
       f.input :free
+      f.input :difficulty, :as => :select, :collection => ['basic', 'intermediate', 'advanced']
       f.input :publish_date
       f.input :video_url
       f.input :thumbnail_image

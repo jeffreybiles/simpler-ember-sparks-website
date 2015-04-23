@@ -11,6 +11,9 @@ class PostsController < InheritedResources::Base
     else
       @posts = Post.all
     end
+    if params[:difficulty]
+      @posts = @posts.where(difficulty: params[:difficulty])
+    end
     @posts = @posts.published.recent_first
   end
 

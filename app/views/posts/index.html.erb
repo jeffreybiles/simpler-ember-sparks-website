@@ -7,7 +7,7 @@
       <div class="col-md-8 col-sm-6">
         <h2 class="index-title"><%= link_to post.title, post %></h2>
         <div class="published-on">
-          <em>Published on <%= post.publish_date %></em>
+          <em>Published on <%= post.publish_date %> -- <%= post.difficulty %></em>
         </div>
         <div class="description"><%= raw @markdown.render post.description %></div>
         <% @post_type = if post.free then 'free' else 'pro' end %>

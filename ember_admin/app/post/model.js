@@ -10,5 +10,7 @@ export default DS.Model.extend({
   createdAt: DS.attr('date'),
   thumbnailImage: DS.attr('string'),
   permalink: DS.attr('string'),
-  free: DS.attr('boolean')
+  free: DS.attr('boolean'),
+  difficulty: DS.attr('string'),
+  difficulties: ['basic', 'intermediate', 'advanced']
 });
