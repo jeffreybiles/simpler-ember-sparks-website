@@ -6,9 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  this.resource('posts', function() {
-    this.resource('post', {path: ':post_id'});
-  });
   this.resource('tags', function(){
     this.route('new');
     this.resource('tag', {path: ':tag_id'}, function(){
@@ -16,4 +13,11 @@ export default Router.map(function() {
       this.route('edit');
     })
   })
+  this.resource('posts', function() {
+    this.route('new');
+    this.resource('post', {path: ':post_id'}, function(){
+      this.route('show');
+      this.route('edit');
+    });
+  });
 });

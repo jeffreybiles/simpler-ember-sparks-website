@@ -1,0 +1,10 @@
+<h1>Show Post</h1>
+
+<p>Title: {{model.title}}</p>
+<p>Free: {{model.free}}</p>
+<p>VideoUrl: {{model.videoUrl}}</p>
+<p>Description: {{model.description}}</p>
+
+{{#link-to 'post.edit' model tagName="button"}}Edit{{/link-to}}
+
+<button {{action 'delete'}} class="pull-right">Delete</button>

@@ -1,8 +1,9 @@
 <div class="container">
   <div class="col-md-3">
+    {{#link-to 'posts.new' tagName="button"}}New{{/link-to}}
     <ul>
       {{#each model as |post|}}
-        <li>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</li>
+        <li>{{#link-to 'post.show' post}}{{post.title}}{{/link-to}}</li>
       {{/each}}
     </ul>
   </div>
