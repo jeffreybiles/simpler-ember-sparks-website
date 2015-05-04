@@ -3,7 +3,7 @@
     {{#link-to '<%= dasherizedModuleName %>s.new' tagName="button"}}New{{/link-to}}
     <ul>
       {{#each model as |<%= camelizedModuleName %>|}}
-        <li>{{#link-to '<%= dasherizedModuleName %>.show' <%= camelizedModuleName %>}}{{<%= camelizedModuleName %>.name}}{{/link-to}}</li>
+        <li>{{#link-to '<%= dasherizedModuleName %>.show' <%= camelizedModuleName %>}}{{<%= camelizedModuleName %>.toS}}{{/link-to}}</li>
       {{/each}}
     </ul>
   </div>
