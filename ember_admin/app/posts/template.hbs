@@ -3,7 +3,7 @@
     {{#link-to 'posts.new' tagName="button"}}New{{/link-to}}
     <ul>
       {{#each model as |post|}}
-        <li>{{#link-to 'post.show' post}}{{post.title}}{{/link-to}}</li>
+        <li>{{#link-to 'post.show' post}}{{post.toS}}{{/link-to}}</li>
       {{/each}}
     </ul>
   </div>

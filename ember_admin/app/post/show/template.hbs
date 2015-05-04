@@ -1,10 +1,12 @@
 <h1>Show Post</h1>
 
-<p>Title: {{model.title}}</p>
-<p>Free: {{model.free}}</p>
-<p>VideoUrl: {{model.videoUrl}}</p>
-<p>Description: {{model.description}}</p>
+<div class="display-attributes">
+  <div class='crud-attr'>title: {{model.title}}</div>
+  <div class='crud-attr'>free: {{model.free}}</div>
+  <div class='crud-attr'>videoUrl: {{model.videoUrl}}</div>
+  <div class='crud-attr'>description: {{model.description}}</div>
+</div>
 
+<hr>
 {{#link-to 'post.edit' model tagName="button"}}Edit{{/link-to}}
-
 <button {{action 'delete'}} class="pull-right">Delete</button>

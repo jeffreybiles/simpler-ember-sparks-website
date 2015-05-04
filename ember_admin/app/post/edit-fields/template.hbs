@@ -1,4 +1,6 @@
-<p>Title: {{input value=model.title}}</p>
-<p>Free: {{input type="checkbox" checked=model.free}}</p>
-<p>VideoUrl: {{input value=model.videoUrl}}</p>
-<p>Description: {{textarea value=model.description}}</p>
+<div class="edit-fields">
+  <div class='crud-input'>title: {{input value=model.title}}</div>
+  <div class='crud-input'>free: {{input type='checkbox' checked=model.free}}</div>
+  <div class='crud-input'>video-url: {{input value=model.videoUrl}}</div>
+  <div class='crud-input'>description: {{textarea value=model.description}}</div>
+</div>

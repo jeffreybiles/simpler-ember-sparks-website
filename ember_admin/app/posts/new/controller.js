@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   newPost: {
-    checked: false,
     title: '',
+    free: false,
     videoUrl: '',
     description: ''
   },
@@ -16,4 +16,4 @@ export default Ember.Controller.extend({
       })
     }
   }
-})
+});
