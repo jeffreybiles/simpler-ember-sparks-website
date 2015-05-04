@@ -1,3 +1,5 @@
+var fs          = require('fs-extra');
+var path        = require('path');
 var inflection  = require('inflection');
 var stringUtils = require('../../lib/utilities/string');
 var EOL         = require('os').EOL;
@@ -38,7 +40,13 @@ module.exports = {
       inputAttrs: inputAttrs,
       displayAttrs: displayAttrs
     };
-  }
+  },
+
+  afterInstall: function(options) {
+    addRouteToRouter(options.entity.name, {
+      root: options.project.root
+    });
+  },
 }
 
 function dsAttr(name, type) {
@@ -68,4 +76,34 @@ function inputField(name, type) {
 
 function display(name, type) {
   return name + ": {{" + name + "}}"
+}
+
+function addRouteToRouter(name, options) {
+  var routerPath = path.join(options.root, 'app', 'router.js');
+  var oldContent = fs.readFileSync(routerPath, 'utf-8');
+  var plural;
+  var newContent;
+
+  var funcRegex = /(map\(\s*function\(\) \{[\s\S]+)(\n^\S+)/m;
+
+
+  plural = inflection.pluralize(name);
+
+  if (plural === name) {
+    plural = plural + 's';
+  }
+  newContent = oldContent.replace(
+    funcRegex,
+    "$1" + EOL +
+    "  this.resource('" + plural + "', function(){" + EOL +
+    "    this.route('new');" + EOL +
+    "    this.resource('" + name + "', path: '/:" + name + "_id', function(){" + EOL + 
+    "      this.route('show');" + EOL +
+    "      this.route('edit');" + EOL +
+    "    });" + EOL +
+    "  });" + EOL +
+    "$2"
+  );
+
+  fs.writeFileSync(routerPath, newContent);
 }
