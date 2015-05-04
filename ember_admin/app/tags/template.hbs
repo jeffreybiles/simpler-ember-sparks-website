@@ -3,7 +3,7 @@
     {{#link-to 'tags.new' tagName="button"}}New{{/link-to}}
     <ul>
       {{#each model as |tag|}}
-        <li>{{#link-to 'tag.show' tag}}{{tag.name}}{{/link-to}}</li>
+        <li>{{#link-to 'tag.show' tag}}{{tag.toS}}{{/link-to}}</li>
       {{/each}}
     </ul>
   </div>

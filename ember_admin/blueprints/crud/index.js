@@ -16,6 +16,7 @@ module.exports = {
     var modelAttrs = [];
     var inputAttrs = [];
     var displayAttrs = [];
+    var newObjectAttrs = [];
 
     var entityOptions = options.entity.options;
 
@@ -26,19 +27,21 @@ module.exports = {
       var dasherizedType = stringUtils.dasherize(type);
 
       modelAttrs.push(camelizedName + ': ' + dsAttr(dasherizedName, dasherizedType));
-      inputAttrs.push("  <div class='crud-input'>" + inputField(dasherizedName, dasherizedType) + "</div>")
-      displayAttrs.push("  <div class='crud-attr'>" + display(dasherizedName, dasherizedType) + "</div>")
-
+      inputAttrs.push("  <div class='crud-input'>" + dasherizedName + ": " + inputField(camelizedName, dasherizedType) + "</div>")
+      displayAttrs.push("  <div class='crud-attr'>" + display(camelizedName, dasherizedType) + "</div>")
+      newObjectAttrs.push(camelizedName + ': ' + newObjectDefault(dasherizedType))
     }
 
     modelAttrs = modelAttrs.join(',' + EOL + '  ');
     inputAttrs = inputAttrs.join(EOL);
     displayAttrs = displayAttrs.join(EOL);
+    newObjectAttrs = newObjectAttrs.join(',' + EOL + '    ')
 
     return {
       modelAttrs: modelAttrs,
       inputAttrs: inputAttrs,
-      displayAttrs: displayAttrs
+      displayAttrs: displayAttrs,
+      newObjectAttrs: newObjectAttrs
     };
   },
 
@@ -66,16 +69,25 @@ function dsAttr(name, type) {
 function inputField(name, type) {
   switch (type) {
     case 'boolean':
-      return "<input type='checkbox' checked=" + name + ">"
+      return "{{input type='checkbox' checked=model." + name + "}}";
     case 'date': 
-      return "{{--! Put your date code here --}}"
+      return "{{--! Put your date code here --}}";
     default:
-      return "<input type='text' value=" + name + ">"
+      return "{{input value=model." + name + "}}";
   }
 }
 
 function display(name, type) {
-  return name + ": {{" + name + "}}"
+  return name + ": {{model." + name + "}}"
+}
+
+function newObjectDefault(type) {
+  switch (type) {
+    case 'boolean':
+      return "false";
+    default:
+      return "''";
+  }
 }
 
 function addRouteToRouter(name, options) {
@@ -97,7 +109,7 @@ function addRouteToRouter(name, options) {
     "$1" + EOL +
     "  this.resource('" + plural + "', function(){" + EOL +
     "    this.route('new');" + EOL +
-    "    this.resource('" + name + "', path: '/:" + name + "_id', function(){" + EOL + 
+    "    this.resource('" + name + "', {path: '/:" + name + "_id'}, function(){" + EOL + 
     "      this.route('show');" + EOL +
     "      this.route('edit');" + EOL +
     "    });" + EOL +

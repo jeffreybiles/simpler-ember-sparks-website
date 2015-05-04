@@ -1,7 +1,9 @@
-<h2>{{model.name}}</h2>
-<p>{{model.description}}</p>
-<div>Tag Type: {{model.tagType}}</div>
-<div>Priority: {{model.priority}}</div>
+<div class="display-attributes">
+  <div class='crud-attr'>name: {{model.name}}</div>
+  <div class='crud-attr'>description: {{model.description}}</div>
+  <div class='crud-attr'>tagType: {{model.tagType}}</div>
+  <div class='crud-attr'>priority: {{model.priority}}</div>
+</div>
 
 <hr>
 {{#link-to 'tag.edit' model tagName="button"}}Edit{{/link-to}}

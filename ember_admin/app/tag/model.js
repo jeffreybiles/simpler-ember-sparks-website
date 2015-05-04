@@ -4,5 +4,8 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   description: DS.attr('string'),
   tagType: DS.attr('string'),
-  priority: DS.attr('number')
+  priority: DS.attr('number'),
+
+  //this is what's used when listing records
+  toS: Ember.computed.alias('name')
 })

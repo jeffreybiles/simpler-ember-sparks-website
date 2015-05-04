@@ -1,4 +1,6 @@
-<div>Name: {{input value=model.name}}</div>
-<div>Description: {{textarea value=model.description}}</div>
-<div>Tag Type: {{view 'select' value=model.tagType content=tagTypes}}</div>
-<div>Priority: {{input value=model.priority}}</div>
+<div class="edit-fields">
+  <div class='crud-input'>name: {{input value=model.name}}</div>
+  <div class='crud-input'>description: {{textarea value=model.description}}</div>
+  <div class='crud-input'>tag-type: {{view 'select' value=model.tagType content=tagTypes}}</div>
+  <div class='crud-input'>priority: {{input value=model.priority}}</div>
+</div>
