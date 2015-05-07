@@ -32,6 +32,10 @@
 </div>
 <!-- <%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %> -->
 
+<% unless current_user %>
+<%= render 'shared/mailing_list' %>
+<% end %>
+
 <% if @post.links && @post.links.length > 0 %>
 <div class="links">
   <h4>Links</h4>
