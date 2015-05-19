@@ -6,4 +6,10 @@ class Post < ActiveRecord::Base
 
   acts_as_taggable
   has_permalink
+
+  def readable_time
+    if seconds && seconds != 0
+      "#{seconds/60}m#{seconds%60}s"
+    end
+  end
 end
