@@ -3,3 +3,18 @@
 {{post/edit-fields model=model}}
 
 <button {{action 'save'}}>Save</button>
+
+<div class="row">
+  <div class="col-md-6">
+    <ul>
+    {{#each model.taggings as |tagging|}}
+      <li {{action 'removeTag' tagging}}>{{tagging.tag.name}}</li>
+    {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-6">
+    {{#each tags as |tag|}}
+      <li {{action 'addTag' tag}}>{{tag.name}}</li>
+    {{/each}}
+  </div>
+</div>

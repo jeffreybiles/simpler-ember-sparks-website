@@ -3,6 +3,11 @@
 <div>Tag Type: {{model.tagType}}</div>
 <div>Priority: {{model.priority}}</div>
 
+<ul>
+{{#each model.taggings as |tagging|}}
+  <li {{action 'removePost' tagging}}>{{tagging.post.title}}</li>
+{{/each}}
+</ul>
 <hr>
 {{#link-to 'tag.edit' model tagName="button"}}Edit{{/link-to}}
 <button {{action 'delete'}} class="pull-right">Delete</button>

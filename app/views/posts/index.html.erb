@@ -35,7 +35,7 @@
             <em>Published on <%= post.publish_date %></em>
           </div>
         </div>
-        <div class="tags"><% post.tag_list.each do |tag| %><button> <%= link_to tag, tag_path(tag) %></button><% end %></div>
+        <div class="tags"></div>
         <div class="description"><%= raw @markdown.render post.description %></div>
       <% end %>
     </div>

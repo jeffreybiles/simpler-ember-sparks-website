@@ -5,6 +5,12 @@
 <p>VideoUrl: {{model.videoUrl}}</p>
 <p>Description: {{model.description}}</p>
 
+<ul>
+{{#each model.taggings as |tagging|}}
+  <li {{action 'removeTag' tagging}}>{{tagging.tag.name}}</li>
+{{/each}}
+</ul>
+
 {{#link-to 'post.edit' model tagName="button"}}Edit{{/link-to}}
 
 <button {{action 'delete'}} class="pull-right">Delete</button>

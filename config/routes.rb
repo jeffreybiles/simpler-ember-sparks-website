@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :posts
     resources :tags
+    resources :taggings
   end
 
   # Example of regular route:

@@ -4,8 +4,10 @@ class Post < ActiveRecord::Base
 
   mount_uploader :thumbnail_image, ImageUploader
 
-  acts_as_taggable
   has_permalink
+
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
 
   def readable_time
     if seconds && seconds != 0

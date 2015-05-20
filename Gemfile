@@ -32,7 +32,7 @@ gem 'pry', groups: [:development, :test]
 gem 'andand'
 
 gem 'has_permalink'
-gem 'acts_as_taggable_on'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

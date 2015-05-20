@@ -44,7 +44,6 @@ ActiveAdmin.register Post do
       f.input :publish_date
       f.input :video_url
       f.input :thumbnail_image
-      f.input :tag_list, :hint => 'Comma separated'
       f.input :description
       f.input :links
       f.input :transcript
