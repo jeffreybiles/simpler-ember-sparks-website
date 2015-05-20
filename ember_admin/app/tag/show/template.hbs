@@ -2,10 +2,10 @@
 <p>{{model.description}}</p>
 <div>Tag Type: {{model.tagType}}</div>
 <div>Priority: {{model.priority}}</div>
-
+<div>{{model.taggings.length}} screencasts totalling {{model.readableTime}}</div>
 <ul>
 {{#each model.taggings as |tagging|}}
-  <li {{action 'removePost' tagging}}>{{tagging.post.title}}</li>
+  {{#link-to 'post.show' tagging.post tagName="li"}}<a href="#">{{tagging.post.title}}</a>{{/link-to}}
 {{/each}}
 </ul>
 <hr>

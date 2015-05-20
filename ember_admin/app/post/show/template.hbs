@@ -7,7 +7,7 @@
 
 <ul>
 {{#each model.taggings as |tagging|}}
-  <li {{action 'removeTag' tagging}}>{{tagging.tag.name}}</li>
+  {{#link-to 'tag.show' tagging.tag tagName="li"}}<a href="#">{{tagging.tag.name}}</a>{{/link-to}}
 {{/each}}
 </ul>
 
