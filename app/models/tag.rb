@@ -3,7 +3,7 @@ class Tag < ActiveRecord::Base
   has_many :posts, through: :taggings
 
   def seconds
-    posts.pluck(:seconds).sum
+    posts.pluck(:seconds).compact.sum
   end
 
   def readable_time

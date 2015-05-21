@@ -13,7 +13,7 @@
     </ul>
   </div>
   <div class="col-md-6">
-    {{#each sortedTags as |tag|}}
+    {{#each sortedSubjects as |tag|}}
       <li {{action 'addTag' tag}}>({{tag.taggings.length}}) {{tag.name}}</li>
     {{/each}}
   </div>

@@ -13,5 +13,6 @@ export default DS.Model.extend({
   free: DS.attr('boolean'),
   difficulty: DS.attr('string'),
   difficulties: ['basic', 'intermediate', 'advanced'],
-  taggings: DS.hasMany('tagging')
+  taggings: DS.hasMany('tagging'),
+  seconds: DS.attr('number')
 });
