@@ -13,8 +13,8 @@
     </ul>
   </div>
   <div class="col-md-6">
-    {{#each tags as |tag|}}
-      <li {{action 'addTag' tag}}>{{tag.name}}</li>
+    {{#each sortedTags as |tag|}}
+      <li {{action 'addTag' tag}}>({{tag.taggings.length}}) {{tag.name}}</li>
     {{/each}}
   </div>
 </div>

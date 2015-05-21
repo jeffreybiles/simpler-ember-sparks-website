@@ -4,6 +4,8 @@ export default Ember.Controller.extend({
   posts: Ember.computed(function(){
     return this.store.find('post');
   }),
+  postsSort: ['publishDate:desc'],
+  sortedPosts: Ember.computed.sort('posts', 'postsSort'),
   actions: {
     save: function(){
       this.get("model").save().then(()=>{

@@ -4,6 +4,8 @@ export default Ember.Controller.extend({
   tags: Ember.computed(function(){
     return this.store.find('tag');
   }),
+  tagsSort: ['taggings.length:desc'],
+  sortedTags: Ember.computed.sort('tags', 'tagsSort'),
   actions: {
     save: function(){
       this.get('model').save().then(()=>{

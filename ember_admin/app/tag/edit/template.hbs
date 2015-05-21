@@ -11,7 +11,7 @@
     </ul>
   </div>
   <div class="col-md-6">
-    {{#each posts as |post|}}
+    {{#each sortedPosts as |post|}}
       <li {{action 'addPost' post}}>{{post.title}}</li>
     {{/each}}
   </div>
