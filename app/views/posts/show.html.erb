@@ -5,43 +5,50 @@
   <%= @post.title %>
 </h1>
 
-<% if current_user.try(:subscribed) or @post.free %>
-  <%= render 'video', video_url: @post.video_url %>
-<% else %>
-  <h2>This video is for Pro subscribers-
-    <%= link_to "Subscribe Now", account_path %>
-    <a href="/account">
-      <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
-    </a>
-  </h2>
-<% end %>
+<div class="row">
+  <div class="col-lg-9 col-md-12">
+    <% if current_user.try(:subscribed) or @post.free %>
+      <%= render 'video', video_url: @post.video_url %>
+    <% else %>
+      <h2>This video is for Pro subscribers-
+        <%= link_to "Subscribe Now", account_path %>
+      </h2>
+      <a href="/account">
+        <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
+      </a>
+    <% end %>
 
-<div class="published-on">
-  <small>
-    <% if @post.free %> Free <% else %> Pro <% end %>
-    --
-    Published on <%= @post.publish_date %>
-    --
-    <a href="/posts?difficulty=<%=@post.difficulty%>"><%= @post.difficulty %></a>
-  </small>
+    <div class="published-on">
+      <small>
+        <% if @post.free %> Free <% else %> Pro <% end %>
+        --
+        Published on <%= @post.publish_date %>
+        --
+        <a href="/posts?difficulty=<%=@post.difficulty%>"><%= @post.difficulty %></a>
+      </small>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-12">
+    <div class="description">
+      <h3>Description</h3>
+      <%= raw @markdown.render @post.description %>
+    </div>
+
+    <h3> More like this</h3>
+    <% @post.tags.each do |tag| %>
+      <b><%= tag.tag_type %></b>:  <%= link_to tag.name, tag_path(tag) %>
+      <br>
+    <% end %>
+
+    <% if @post.links && @post.links.length > 0 %>
+    <div class="links">
+      <h4>Links</h4>
+      <%= raw @markdown.render(@post.links) %>
+    </div>
+    <% end %>
+  </div>
 </div>
-
-
-<div class="description">
-  <%= raw @markdown.render @post.description %>
-</div>
-<!-- <%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %> -->
-
-<% unless current_user %>
-<%= render 'shared/mailing_list' %>
-<% end %>
-
-<% if @post.links && @post.links.length > 0 %>
-<div class="links">
-  <h4>Links</h4>
-  <%= raw @markdown.render(@post.links) %>  
-</div>
-<% end %>
 
 <% if @post.transcript && @post.transcript.length > 0 %>
 <div class="transcript">
@@ -49,4 +56,3 @@
   <%= raw @markdown.render @post.transcript %>
 </div>
 <% end %>
-
