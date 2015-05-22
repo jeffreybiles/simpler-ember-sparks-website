@@ -6,11 +6,7 @@ class PostsController < InheritedResources::Base
     else
       Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Video Index')
     end
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
-    else
-      @posts = Post.all
-    end
+    @posts = Post.all
     if params[:difficulty]
       @posts = @posts.where(difficulty: params[:difficulty])
     end

@@ -6,9 +6,10 @@
     <ul>
     <% @series.each do |series| %>
       <li>
-        <h4><%= series.name %></h4>
+        <%= link_to series do %><h4><%= series.name %></h4><% end %>
         Length: <%= series.taggings.length %> videos, <%= series.seconds / 60 %> minutes<br />
         <%= series.description %>
+
       </li>
     <% end %>
     </ul>
@@ -19,7 +20,7 @@
     <ul>
     <% @subjects.each do |subject| %>
       <div class="col-md-6 col-xs-12"><li>
-        <h4><%= subject.name %></h4>
+        <%= link_to subject do %><h4><%= subject.name %></h4><% end %>
         Length: <%= subject.taggings.length %> videos, <%= subject.seconds / 60 %> minutes
       </li></div>
     <% end %>
