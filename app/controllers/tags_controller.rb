@@ -18,6 +18,12 @@ class TagsController < InheritedResources::Base
       tag_length: @tag.taggings.length,
       tag_type: @tag.tag_type
     }
+    @posts = @tag.taggings.map(&:post)
+    if @tag.tag_type == 'series'
+      @posts = @posts.sort_by(&:publish_date)
+    else
+      @posts = @posts.sort {|a, b| b.publish_date <=> a.publish_date}
+    end
     if current_user
       Analytics.track(user_id: current_user.email, event: 'Viewed Tag Page', properties: properties)
     else

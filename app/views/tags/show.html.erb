@@ -1,2 +1,10 @@
+<h2 class="pull-right"><%= @tag.taggings.length %> videos, <%= @tag.seconds / 60 %> minutes</h2>
 <h1><%= @tag.name %></h1>
-<h4><%= @tag.taggings.length %> videos, <%= @tag.seconds / 60 %> minutes<br />
+
+<h4><%= @tag.description %></h4>
+
+<div class="posts">
+  <% @posts.each do |post| %>
+    <%= render 'posts/post_listing', post: post %>
+  <% end %>
+</div>

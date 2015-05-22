@@ -1,22 +1,6 @@
 <div class="posts">
   <% @posts.each do |post| %>
-    <div class="post row">
-      <div class="col-md-4 col-sm-6">
-        <%= link_to image_tag(post.thumbnail_image, class: "img-responsive"), post %>
-      </div>
-      <div class="col-md-8 col-sm-6">
-        <h2 class="index-title"><%= link_to post.title, post %></h2>
-        <div class="published-on">
-          <small>
-            Published on <%= post.publish_date %> -- <%= post.difficulty %>
-          </small>
-        </div>
-        <div class="description"><%= raw @markdown.render post.description %></div>
-        <% @post_type = if post.free then 'free' else 'pro' end %>
-        <%= link_to "watch #{@post_type} episode (#{post.readable_time})", post, class: 'btn watch-btn' %>
-      </div>
-    </div>
-    <hr>
+    <%= render 'post_listing', post: post%>
   <% end %>
 </div>
 
