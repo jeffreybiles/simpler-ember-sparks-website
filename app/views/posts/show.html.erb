@@ -49,10 +49,3 @@
     <% end %>
   </div>
 </div>
-
-<% if @post.transcript && @post.transcript.length > 0 %>
-<div class="transcript">
-  <h4>Transcript</h4>
-  <%= raw @markdown.render @post.transcript %>
-</div>
-<% end %>

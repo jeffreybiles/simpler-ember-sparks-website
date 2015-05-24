@@ -46,7 +46,6 @@ ActiveAdmin.register Post do
       f.input :thumbnail_image
       f.input :description
       f.input :links
-      f.input :transcript
     end
     f.actions
   end  
