@@ -10,8 +10,9 @@ class AccountsController < ApplicationController
   end
 
   def subscribe
-    user = User.find_by(email: params[:stripeEmail]) ||
-      user = User.create(email: params[:stripeEmail], password: 'temporaryPassword')
+    user = current_user ||
+           User.find_by(email: params[:stripeEmail]) ||
+           User.create(email: params[:stripeEmail], password: 'temporaryPassword')
     if user.subscribed
       Analytics.track(user_id: user.email, event: 'Double-Subscription attempt')
       flash[:warning] = "A user with the email address has already subscribed... please sign in!  Your current subscription will not change."
