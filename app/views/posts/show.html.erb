@@ -10,9 +10,25 @@
     <% if current_user.try(:subscribed) or @post.free %>
       <%= render 'video', video_url: @post.video_url %>
     <% else %>
-      <h2>This video is for Pro subscribers-
-        <%= link_to "Subscribe Now", account_path %>
-      </h2>
+      <h2>You can view Pro screencasts by subscribing</h2>
+      <div class="sales-box">
+        <h2>How much is your career worth?</h2>
+        <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
+        <form action="/subscribe" method="POST">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+            data-name="EmberScreencasts.com"
+            data-description="Monthly Subscription"
+            data-label="Subscribe for $9.95/month"
+            data-panel-label="Subscribe {{amount}}/month"
+            data-amount="995">
+          </script>
+        </form>
+        <span class="btn free-screencasts-button"><a href="/posts?free=true">Show me only Free screencasts</a></span>
+      </div>
+      <hr>
       <a href="/account">
         <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
       </a>

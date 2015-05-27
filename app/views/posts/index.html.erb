@@ -6,27 +6,4 @@
   <% end %>
 </div>
 
-
-<!-- <div class="posts">
-  <h2>Latest Videos</h2>
-  <div class="row">
-  <% @posts.each do |post| %>
-    <div class="col-md-4 col-sm-6 col-xs-12">
-      <%= link_to post do %>
-        <%= image_tag(post.thumbnail_image, class: "img-responsive title-image") %>
-        <h4 class="index-title"><%= link_to post.title, post %></h4>
-        <div class="row">
-          <b class="col-xs-6"><% if post.free %> FREE <% else %> PRO <% end %></b>
-          <div class="published-on col-xs-6">
-            <em>Published on <%= post.publish_date %></em>
-          </div>
-        </div>
-        <div class="tags"></div>
-        <div class="description"><%= raw @markdown.render post.description %></div>
-      <% end %>
-    </div>
-  <% end %>
-  </div>
-</div> -->
-
 <a href="https://mixpanel.com/f/partner" class="pull-right"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>

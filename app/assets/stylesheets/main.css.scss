@@ -98,3 +98,27 @@ a.btn {
     margin-bottom: 10px;
   }
 }
+
+.sales-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+
+  h2 {
+    margin-top: 0px;
+  }
+
+  form {
+    display: inline-block;
+  }
+
+  span.free-screencasts-button a {
+    color: #B99;
+    text-decoration: none;
+  }
+  span.login-path-button a {
+    color: #9B9;
+    text-decoration: none;
+  }
+}

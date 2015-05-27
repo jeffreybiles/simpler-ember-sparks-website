@@ -10,6 +10,9 @@ class PostsController < InheritedResources::Base
     if params[:difficulty]
       @posts = @posts.where(difficulty: params[:difficulty])
     end
+    if params[:free]
+      @posts = @posts.where(free: params[:free])
+    end
     @posts = @posts.published.recent_first
   end
 
