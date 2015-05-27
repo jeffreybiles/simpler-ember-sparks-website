@@ -10,9 +10,8 @@
     <% if current_user.try(:subscribed) or @post.free %>
       <%= render 'video', video_url: @post.video_url %>
     <% else %>
-      <h2>You can view Pro screencasts by subscribing</h2>
       <div class="sales-box">
-        <h2>How much is your career worth?</h2>
+        <h2>You can view Pro screencasts by subscribing</h2>
         <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
         <form action="/subscribe" method="POST">
           <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
