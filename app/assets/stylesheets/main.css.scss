@@ -9,6 +9,7 @@ $mid-green: #9BDC4A;
 $dark-green: #7cad3c;
 $near-black: #1D1D1D;
 $near-white: #F5F5F5;
+$footer-height: 40px;
 
 @mixin no-underline {
   a, a:visited, a:hover, a:link {
@@ -16,11 +17,17 @@ $near-white: #F5F5F5;
   };
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: 'EB Garamond', serif;
   background-color: $near-white;
   color: $near-black;
   font-size: 16px;
+  margin-bottom: $footer-height;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -121,4 +128,13 @@ a.btn {
     color: #9B9;
     text-decoration: none;
   }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  vertical-align: center;
+  text-align: center;
 }
