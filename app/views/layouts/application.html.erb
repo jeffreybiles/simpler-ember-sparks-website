@@ -59,6 +59,8 @@
   <%= yield %>
 </div>
 <%= render 'shared/script_footer' %>
-<%= render 'shared/footer' %>
+<% unless current_page?(root_path) %>
+  <%= render 'shared/footer' %>
+<% end %>
 </body>
 </html>
