@@ -29,7 +29,7 @@ class AccountsController < ApplicationController
 
       sign_in(user)
 
-      redirect_to account_path
+      redirect_to thank_you_path
     end
   end
 
