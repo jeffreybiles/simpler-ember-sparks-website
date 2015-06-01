@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'mailing_list', to: 'pages#mailing_list'
   get 'thank_you', to: 'pages#thank_you'
+  get 'faq', to: 'pages#faq'
       
   get 'account', to: 'accounts#show'
   post 'subscribe', to: 'accounts#subscribe'
