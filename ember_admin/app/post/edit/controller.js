@@ -9,6 +9,8 @@ export default Ember.Controller.extend({
   sortedSubjects: Ember.computed.sort('subjects', 'subjectsSort'),
   actions: {
     save: function(){
+      var file = document.getElementById('file-field').files[0];
+      this.set('model.thumbnailImage', file);
       this.get('model').save().then(()=>{
         this.transitionToRoute('post.show', this.get('model'))
       })

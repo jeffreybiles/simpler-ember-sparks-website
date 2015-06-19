@@ -8,11 +8,13 @@ export default DS.Model.extend({
   publishDate: DS.attr(),
   // updatedAt: DS.attr('date'),
   // createdAt: DS.attr('date'),
-  thumbnailImage: DS.attr('string'),
+  thumbnailImage: DS.attr('file'),
   permalink: DS.attr('string'),
   free: DS.attr('boolean'),
   difficulty: DS.attr('string'),
   difficulties: ['basic', 'intermediate', 'advanced'],
   taggings: DS.hasMany('tagging'),
-  seconds: DS.attr('number')
+  seconds: DS.attr('number'),
+
+  imageUrl: Ember.computed.alias('thumbnailImage.thumbnail_image.url')
 });

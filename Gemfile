@@ -24,7 +24,7 @@ gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'redcarpet'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog'
+gem 'carrierwave-aws'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development

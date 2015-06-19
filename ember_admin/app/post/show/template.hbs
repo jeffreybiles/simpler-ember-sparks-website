@@ -12,6 +12,7 @@
 {{/each}}
 </ul>
 
+<img src="{{model.imageUrl}}" class="small-image" />
 {{#link-to 'post.edit' model tagName="button"}}Edit{{/link-to}}
 
 <button {{action 'delete'}} class="pull-right">Delete</button>
