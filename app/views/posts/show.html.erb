@@ -11,7 +11,7 @@
 <div class="row">
   <div class="col-lg-9 col-md-12">
     <% if current_user.try(:subscribed) or @post.free %>
-      <%= render 'video', video_url: @post.video_url %>
+      <%= render 'video', video_url: @post.video_url, wistia_embed: @post.wistia_embed %>
     <% else %>
       <div class="sales-box">
         <h2>You can view Pro screencasts by subscribing</h2>

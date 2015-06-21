@@ -43,6 +43,7 @@ ActiveAdmin.register Post do
       f.input :difficulty, :as => :select, :collection => ['basic', 'intermediate', 'advanced']
       f.input :publish_date
       f.input :video_url
+      f.input :wistia_embed
       f.input :thumbnail_image
       f.input :description
       f.input :links

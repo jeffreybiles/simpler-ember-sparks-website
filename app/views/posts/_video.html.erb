@@ -1,3 +1,8 @@
-  <div class='video'>
-    <iframe width="853" height="480" src="<%= video_url %>?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
+<% if wistia_embed %>
+  <%= raw wistia_embed %>
+<% else %>
+<div class='video'>
+  <iframe width="853" height="480" src="<%= video_url %>?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>    
+</div>
+<% end %>
+
