@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  getTemporaryFile: Ember.observer('file', function(){
+  previewImage: Ember.observer('file', function(){
     var file = document.getElementById('file-field').files[0];
     if (file) {
       var reader = new FileReader();

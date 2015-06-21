@@ -5,16 +5,16 @@ class Api::PostsController < Api::ApplicationController
     'post'
   end
 
-  def update
-    save_image
-    resource.update_attributes(resource_params)
-    render json: resource
-  end
-
   def create
     @resource = resource_class.send(:create, resource_params)
     save_image
     render json: @resource
+  end
+
+  def update
+    save_image
+    resource.update_attributes(resource_params)
+    render json: resource
   end
 
   def save_image

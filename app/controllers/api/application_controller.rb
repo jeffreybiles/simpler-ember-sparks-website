@@ -13,13 +13,13 @@ class Api::ApplicationController < ApplicationController
     render json: @resources
   end
 
+  def show
+    render json: resource
+  end
+
   def create
     @resource = resource_class.send(:create, resource_params)
     render json: @resource
-  end
-
-  def show
-    render json: resource
   end
 
   def update
