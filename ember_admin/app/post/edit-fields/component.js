@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  previewImage: Ember.observer('file', function(){
-    var file = document.getElementById('file-field').files[0];
+  previewImage: Ember.observer('model.temporaryThumbnailImage', function(){
+    var file = this.get('model.temporaryThumbnailImage')
     if (file) {
       var reader = new FileReader();
 
@@ -12,5 +12,11 @@ export default Ember.Component.extend({
 
       reader.readAsDataURL(file);
     }
-  })
+  }),
+
+  actions: {
+    receiveFile: function(file){
+      this.set('model.temporaryThumbnailImage', file);
+    }
+  }
 })

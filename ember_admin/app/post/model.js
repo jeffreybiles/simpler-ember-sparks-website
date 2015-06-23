@@ -14,6 +14,7 @@ export default DS.Model.extend({
   difficulties: ['basic', 'intermediate', 'advanced'],
   taggings: DS.hasMany('tagging'),
   seconds: DS.attr('number'),
-  thumbnailImage: DS.attr('file')
+  thumbnailImage: DS.attr('file'),
 
+  temporaryThumbnailImage: null
 });

@@ -142,3 +142,21 @@ a.btn {
 .small-image {
   width: 200px;
 }
+
+.uploader.dropzone {
+  height: 200px;
+  width: 300px;
+  background-color: grey;
+  position: relative;
+
+  &.is-dragging, &:hover {
+    background-color: cornflowerblue;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
