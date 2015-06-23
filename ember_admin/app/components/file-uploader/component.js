@@ -5,6 +5,8 @@ export default Ember.Component.extend({
   tagName: 'div',
   classNames: ['uploader', 'dropzone'],
   classNameBindings: ['isDragging'],
+  isDragging: Ember.computed.gt('dragNestings', 0),
+  dragNestings: 0,
 
 
   dragOver: function(event){
@@ -12,18 +14,16 @@ export default Ember.Component.extend({
   },
 
   dragEnter: function(event){
-    event.preventDefault();
-    this.set('isDragging', true);
+    this.incrementProperty('dragNestings');
   },
 
   dragLeave: function(event){
-    event.preventDefault();
-    this.set('isDragging', false);
+    this.decrementProperty('dragNestings');
   },
 
   drop: function(event){
     event.preventDefault();
-    this.set('isDragging', false);
+    this.set('dragNestings', 0);
 
     var file = event.dataTransfer.files[0];
     this.sendAction('fileInputChanged', file);
