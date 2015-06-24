@@ -12,5 +12,17 @@ export default Ember.Component.extend({
 
       reader.readAsDataURL(file);
     }
-  })
+  }),
+
+  attributeBindings: ['style'],
+  style: Ember.computed('backgroundColor', function(){
+    return `background-color: ${this.get('backgroundColor')};`.htmlSafe();
+  }),
+  backgroundColor: null,
+  mouseMove: function(){
+    this.set('backgroundColor', this.randomColor())
+  },
+  randomColor: function(){
+    return `rgb(${Math.random() * 100}%, ${Math.random() * 100}%, ${Math.random() * 100}%)`;
+  }
 })
