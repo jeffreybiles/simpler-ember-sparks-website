@@ -15,6 +15,4 @@ export default DS.Model.extend({
   taggings: DS.hasMany('tagging'),
   seconds: DS.attr('number'),
   thumbnailImage: DS.attr('file'),
-
-  temporaryThumbnailImage: null
 });
