@@ -9,19 +9,19 @@ export default Ember.Component.extend({
   dragNestings: 0,
 
 
-  dragOver: function(event){
+  dragOver(event) {
     event.preventDefault();
   },
 
-  dragEnter: function(event){
+  dragEnter(event) {
     this.incrementProperty('dragNestings');
   },
 
-  dragLeave: function(event){
+  dragLeave(event) {
     this.decrementProperty('dragNestings');
   },
 
-  drop: function(event){
+  drop(event) {
     event.preventDefault();
     this.set('dragNestings', 0);
 
