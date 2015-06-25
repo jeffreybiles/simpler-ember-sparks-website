@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({  
+export default Ember.Component.extend({
   tagName: 'div',
   classNames: ['uploader', 'dropzone'],
   isDragging: Ember.computed.gt('dragCounter', 0),
