@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   monthsData: Ember.computed(function(){
-    return _.groupBy(this.get('model.content'), function(post){
+    var publishHash = this.get('model').map(function(post){
+      return post
+    });
+    return _.groupBy(publishHash, function(post){
       return moment(post.get('publishDate')).format('M/YYYY');
     });
   }),
