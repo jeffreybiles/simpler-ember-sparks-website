@@ -4,7 +4,7 @@ import PostValidations from 'ember-admin/mixins/validations/post';
 export default Ember.Controller.extend(PostValidations, {
   showErrors: true,
   tags: Ember.computed(function(){
-    return this.store.find('tag');
+    return this.store.findAll('tag');
   }),
   subjects: Ember.computed.filterBy('tags', 'tagType', 'subject'),
   subjectsSort: ['taggings.length:desc'],

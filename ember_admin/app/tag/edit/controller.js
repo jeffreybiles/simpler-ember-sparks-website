@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   posts: Ember.computed(function(){
-    return this.store.find('post');
+    return this.store.findAll('post');
   }),
   postsSort: ['publishDate:desc'],
   sortedPosts: Ember.computed.sort('posts', 'postsSort'),
