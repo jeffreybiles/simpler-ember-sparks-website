@@ -21,5 +21,6 @@ module ActiveadminSite
     # config.i18n.default_locale = :de
     config.stripe.secret_key = ENV['STRIPE_SECRET_KEY']
     config.stripe.publishable_key = ENV['STRIPE_PUBLISHABLE_KEY']
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
   end
 end
