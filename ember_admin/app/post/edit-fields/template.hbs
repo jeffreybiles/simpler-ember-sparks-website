@@ -3,5 +3,5 @@
 <p>VideoUrl: {{input value=model.videoUrl}}</p>
 <p>Length (in seconds): {{input value=model.seconds}}</p>
 <p>Description: {{textarea value=model.description}}</p>
-<p>{{input type='file' id='file-field' valueBinding='file'}}<img id="preview-image" src="{{model.thumbnailImage.thumbnail_image.url}}" class="small-image" />
+<p>{{input type='file' id='file-field' value=file}}<img id="preview-image" src="{{model.thumbnailImage.thumbnail_image.url}}" class="small-image" />
 </p>
