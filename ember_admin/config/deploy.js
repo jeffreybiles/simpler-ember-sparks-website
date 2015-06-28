@@ -7,7 +7,8 @@ module.exports = {
       type: 'redis', // the default store is 'redis'
       host: 'localhost',
       port: 6379
-    },
+    }
+    ,
     assets: {
       type: 's3', // default asset-adapter is 's3'
       // gzip: false, // if undefined or set to true, files are gziped

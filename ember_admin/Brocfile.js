@@ -4,11 +4,13 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
   fingerprint: {
+    enabled: true,
     prepend: 'https://s3.amazonaws.com/spark-casts/'
   }
 });
 
 app.import('bower_components/underscore/underscore-min.js');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

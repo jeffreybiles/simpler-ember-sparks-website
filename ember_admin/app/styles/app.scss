@@ -1,0 +1,141 @@
+$primary-red: #FF373B;
+$primary-blue: #3E25E8;
+$primary-brown: #CC4B18;
+$dark-red: #99644F;
+$mid-green: #9BDC4A;
+$dark-green: #7cad3c;
+$near-black: #1D1D1D;
+$near-white: #F5F5F5;
+$footer-height: 40px;
+
+@mixin no-underline {
+  a, a:visited, a:hover, a:link {
+    text-decoration: none
+  };;;;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  background-color: $near-white;
+  color: $near-black;
+  font-size: 16px;
+  margin-bottom: $footer-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kameron', serif;
+  font-weight: bold;
+  @include no-underline; 
+}
+
+a, a:hover, a:link {
+  color: $primary-brown;
+}
+
+a:visited {
+  color: $dark-red;
+}
+
+.sparks-header {
+  background-color: $primary-brown;
+}
+
+#application-nav.navbar-default.navbar {
+  .navbar-toggle {
+    border-color: $near-black;
+
+    .icon-bar {
+      background-color: $near-black;
+    }
+  }
+
+  a {
+    font-family: 'Kameron', serif;
+    text-decoration: none;
+    color: $near-black;
+    cursor: pointer;
+
+    &.navbar-brand {
+      font-weight: bold;
+    }
+  }
+}
+
+.btn {
+  font-family: 'Kameron', serif;
+  font-weight: bold;
+  background-color: $near-black;
+}
+a.btn.watch-btn {
+  color: $mid-green;
+}
+
+a:visited.btn.watch-btn {
+  color: $dark-green;
+}
+
+a.btn {
+  text-decoration: none;  
+  color: $near-black;
+}
+
+.description {
+  margin: 15px 0;
+}
+
+.main-content {
+  margin-bottom: 60px;
+}
+
+.index-title {
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+#edit_user, #new_user {
+  input {
+    margin-bottom: 10px;
+  }
+}
+
+.sales-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+
+  h2 {
+    margin-top: 0px;
+  }
+
+  form {
+    display: inline-block;
+  }
+
+  span.free-screencasts-button a {
+    color: #B99;
+    text-decoration: none;
+  }
+  span.login-path-button a {
+    color: #9B9;
+    text-decoration: none;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  vertical-align: center;
+  text-align: center;
+}
+
+.small-image {
+  width: 200px;
+}
