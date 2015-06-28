@@ -9,8 +9,8 @@ export default Ember.Controller.extend({
   actions: {
     save: function(){
       this.get("model").save().then(()=>{
-        this.transitionToRoute('tag.show')
-      })
+        this.transitionToRoute('tag.show');
+      });
     },
     addPost: function(post){
       this.store.createRecord('tagging', {
@@ -22,4 +22,4 @@ export default Ember.Controller.extend({
       tagging.destroyRecord();
     }
   }
-})
+});

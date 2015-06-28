@@ -8,4 +8,4 @@ export default DS.Model.extend({
   taggings: DS.hasMany('tagging'),
   seconds: DS.attr('number'),
   readableTime: DS.attr('string')
-})
+});

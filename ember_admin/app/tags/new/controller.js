@@ -12,8 +12,8 @@ export default Ember.Controller.extend({
     save: function(){
       var tag = this.store.createRecord('tag', this.get('newTag'));
       tag.save().then((response)=>{
-        this.transitionTo('tag.show', response)
-      })
+        this.transitionTo('tag.show', response);
+      });
     }
   }
 });

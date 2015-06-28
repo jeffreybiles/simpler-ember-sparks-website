@@ -15,8 +15,8 @@ export default Ember.Controller.extend({
       post.set('thumbnailImage', file);
 
       post.save().then((response)=>{
-        this.transitionTo('post.show', response)
-      })
+        this.transitionTo('post.show', response);
+      });
     }
   }
-})
+});

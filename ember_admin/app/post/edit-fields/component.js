@@ -8,9 +8,9 @@ export default Ember.Component.extend({
 
       reader.onload = function (e) {
         $('#preview-image').attr('src', e.target.result);
-      }
+      };
 
       reader.readAsDataURL(file);
     }
   })
-})
+});

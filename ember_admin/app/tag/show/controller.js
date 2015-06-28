@@ -4,8 +4,8 @@ export default Ember.Controller.extend({
   actions: {
     delete: function(){
       this.get("model").destroyRecord().then( ()=>{
-        this.transitionToRoute('tags')
-      })
+        this.transitionToRoute('tags');
+      });
     }
   }
-})
+});

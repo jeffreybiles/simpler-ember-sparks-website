@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
         label: 'Number of Screencasts',
         data: this.get('model').mapBy('taggings.length')
       }]
-    }
+    };
   }),
   timeData: Ember.computed(function(){
     return {
@@ -16,10 +16,10 @@ export default Ember.Controller.extend({
       datasets: [{
         label: 'Minutes of video available',
         data: this.get('model').mapBy('seconds').map(function(time){
-          return time/60
+          return time/60;
         })
       }]
-    }
+    };
   }),
   barChartOptions: {
   },
@@ -30,8 +30,8 @@ export default Ember.Controller.extend({
         label: tag.get('name'),
         color: `rgb(${Math.random() * 100}%, ${Math.random() * 100}%, ${Math.random() * 100}%)`,
         highlight: '#000'
-      }
-    })
+      };
+    });
   }),
   timePieData: Ember.computed(function(){
     return this.get('model').map(function(tag){
@@ -40,7 +40,7 @@ export default Ember.Controller.extend({
         label: tag.get('name'),
         color: `rgb(${Math.random() * 100}%, ${Math.random() * 100}%, ${Math.random() * 100}%)`,
         highlight: '#000'        
-      }
-    })
+      };
+    });
   })
-})
+});
