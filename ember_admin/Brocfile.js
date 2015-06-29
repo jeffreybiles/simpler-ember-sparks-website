@@ -2,7 +2,11 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  fingerprint: {
+    prepend: 'https://s3.amazonaws.com/spark-casts/'
+  }
+});
 
 
 app.import('bower_components/underscore/underscore-min.js');
