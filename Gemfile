@@ -58,6 +58,5 @@ gem 'rails_12factor', group: :production
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'ember-cli-rails'
 gem 'quiet_assets', group: :development
 gem 'active_model_serializers'
