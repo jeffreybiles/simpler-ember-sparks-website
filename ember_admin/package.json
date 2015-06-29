@@ -29,6 +29,7 @@
     "ember-cli-chart": "2.0.2",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "^1.0.0",
+    "ember-cli-deploy": "^0.4.2",
     "ember-cli-dotenv": "^1.0.0",
     "ember-cli-form-data": "0.0.10",
     "ember-cli-htmlbars": "0.7.4",
@@ -37,6 +38,8 @@
     "ember-cli-qunit": "0.3.13",
     "ember-cli-uglify": "1.0.1",
     "ember-data": "1.0.0-beta.18",
+    "ember-deploy-redis": "0.0.6",
+    "ember-deploy-s3": "0.0.4",
     "ember-export-application-global": "^1.0.2",
     "ember-moment": "1.1.1",
     "moment": "2.10.3"
