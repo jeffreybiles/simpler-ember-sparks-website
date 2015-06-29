@@ -2,9 +2,30 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
+var env = EmberApp.env();
+var isProductionLikeBuild = ['production', 'staging'].indexOf(env) > -1;
+
 var app = new EmberApp({
   fingerprint: {
+    enabled: isProductionLikeBuild,
     prepend: 'https://s3.amazonaws.com/spark-casts/'
+  },
+  sourcemaps: {
+    enabled: !isProductionLikeBuild,
+  },
+  minifyCSS: { enabled: isProductionLikeBuild },
+  minifyJS: { enabled: isProductionLikeBuild },
+
+  tests: process.env.EMBER_CLI_TEST_COMMAND || !isProductionLikeBuild,
+  hinting: process.env.EMBER_CLI_TEST_COMMAND || !isProductionLikeBuild,
+
+  vendorFiles: {
+    'handlebars.js': {
+      staging:  'bower_components/handlebars/handlebars.runtime.js'
+    },
+    'ember.js': {
+      staging:  'bower_components/ember/ember.prod.js'
+    }
   }
 });
 
