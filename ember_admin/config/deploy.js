@@ -23,11 +23,12 @@ module.exports = {
   staging: {
     buildEnv: 'staging', // Override the environment passed to the ember asset build. Defaults to 'production'
     store: {
-      host: 'redis',
+      type: 'redis',
+      host: 'localhost',
       port: 6379
     },
     assets: {
-       accessKeyId: 'AKIAIO7ZEGCZRPVCG2PQ',
+      accessKeyId: 'AKIAIO7ZEGCZRPVCG2PQ',
       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
       bucket: 'spark-casts'
     }
