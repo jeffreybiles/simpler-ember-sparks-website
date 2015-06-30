@@ -33,6 +33,20 @@ module.exports = {
       bucket: 'spark-casts'
     }
   },
+
+  herokuStaging: {
+    buildEnv: 'herokuStaging', // Override the environment passed to the ember asset build. Defaults to 'production'
+    store: {
+      host: 'redis://redistogo:be679ae70d771e2e5481513d13cb9700@beardfish.redistogo.com:10777/',
+      port: 10777,
+      password: process.env.STAGING_REDIS
+    },
+    assets: {
+      accessKeyId: 'AKIAIO7ZEGCZRPVCG2PQ',
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      bucket: 'spark-casts'
+    }
+  }
  
   //  production: {
   //   store: {
