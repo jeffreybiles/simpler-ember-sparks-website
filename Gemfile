@@ -62,6 +62,3 @@ gem 'quiet_assets', group: :development
 gem 'active_model_serializers'
 
 gem 'redis'
-gem 'redis-namespace'
-gem 'redis-rails'
-gem 'redis-rack-cache'

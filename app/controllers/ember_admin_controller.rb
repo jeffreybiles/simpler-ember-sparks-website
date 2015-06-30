@@ -4,8 +4,8 @@ class EmberAdminController < ApplicationController
   def index
     redis = Redis.new
     index_key &&= "ember-admin:#{manifest_id}"
-    index_key ||= redis.get("ember-admin:current")
-    html = redis.get(index_key)
+    index_key ||= REDIS.get("ember-admin:current")
+    html = REDIS.get(index_key)
     render :text => html
   end
 
