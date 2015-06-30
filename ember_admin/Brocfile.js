@@ -3,7 +3,7 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var env = EmberApp.env();
-var isProductionLikeBuild = ['production', 'staging'].indexOf(env) > -1;
+var isProductionLikeBuild = ['production', 'staging', 'herokuStaging'].indexOf(env) > -1;
 
 var app = new EmberApp({
   fingerprint: {
