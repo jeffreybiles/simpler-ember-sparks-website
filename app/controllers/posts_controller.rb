@@ -7,11 +7,11 @@ class PostsController < InheritedResources::Base
       Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Video Index')
     end
     @posts = Post.all
+    if params[:free]
+      @posts = @posts.free
+    end
     if params[:difficulty]
       @posts = @posts.where(difficulty: params[:difficulty])
-    end
-    if params[:free]
-      @posts = @posts.where(free: params[:free])
     end
     @posts = @posts.published.recent_first
   end
