@@ -1,4 +1,13 @@
 <div>Name: {{input value=model.name}}</div>
 <div>Description: {{textarea value=model.description}}</div>
-<div>Tag Type: {{view 'select' value=model.tagType content=tagTypes prompt="Select subject or series"}}</div>
+<div>Tag Type:
+  <select {{action 'selectTagType' on='change'}} id="tag-type-select">
+    <option value>Select subject or series</option>
+    {{#each tagTypes as |type|}}
+      <option value="{{type}}" selected={{eq type model.tagType}}>
+        {{type}}
+      </option>
+    {{/each}}
+  </select>
+</div>
 <div>Priority: {{input value=model.priority}}</div>
