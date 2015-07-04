@@ -11,6 +11,20 @@ namespace :one_timers do
       end
     end
   end
+
+  task :resize_wistia => :environment do
+    new_width = 800
+    new_height = 500
+
+    Post.all.each do |post|
+      embed = post.wistia_embed
+      if embed
+        embed = embed.gsub(/width:.?\d+px/, "width:#{new_width}px")
+        embed = embed.gsub(/height:.?\d+px/, "height:#{new_height}px")
+        post.update(wistia_embed: embed)
+      end
+    end
+  end
 end
 
 def generate_yaml(post, file)
