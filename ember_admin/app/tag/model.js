@@ -7,5 +7,11 @@ export default DS.Model.extend({
   priority: DS.attr('number'),
   taggings: DS.hasMany('tagging'),
   seconds: DS.attr('number'),
-  readableTime: DS.attr('string')
+  readableTime: DS.attr('string'),
+
+  awesomeOptions: [
+    'shark lasers',
+    '\'Murica'
+  ]
+
 });
