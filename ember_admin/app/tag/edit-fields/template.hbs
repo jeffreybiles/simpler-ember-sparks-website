@@ -1,5 +1,7 @@
 <div>Name: {{input value=model.name}}</div>
 <div>Description: {{textarea value=model.description}}</div>
+<div>Ninjas Exist: {{input type="checkbox" checked=ninjasExist}}</div>
+<div>Can See Ninjas: {{input type="checkbox" checked=canSeeNinjas}}</div>
 <div>Tag Type:
   <select {{action 'selectTagType' on='change'}} id="tag-type-select">
     <option>Prompt: select something</option>
@@ -9,7 +11,15 @@
     {{#each model.awesomeOptions as |type|}}
       <option value="{{type}}" selected={{eq type model.tagType}}>{{type}}</option>
     {{/each}}
-    <option value="{{ninja}}">Just a normal person, promise</option>
+    {{#if ninjasExist}}
+      <option value="{{ninja}}">
+        {{#if canSeeNinjas}}
+          A ninja!!!
+        {{else}}
+          Just a normal person, promise
+        {{/if}}
+      </option>
+    {{/if}}
   </select>
 </div>
 <div>Priority: {{input value=model.priority}}</div>
