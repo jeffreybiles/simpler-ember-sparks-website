@@ -1,15 +1,15 @@
 <div>Name: {{input value=model.name}}</div>
 <div>Description: {{textarea value=model.description}}</div>
 <div>Tag Type:
-  {{#x-select action='selectTagType' id="tag-type-select" value=model.tagType}}
-    {{#x-option}}Prompt: select something{{/x-option}}
+  <select {{action 'selectTagType' on='change'}} id="tag-type-select">
+    <option>Prompt: select something</option>
     {{#each tagTypes as |type|}}
-      {{#x-option value=type}}{{type}}{{/x-option}}
+      <option value="{{type}}" selected={{eq type model.tagType}}>{{type}}</option>
     {{/each}}
     {{#each model.awesomeOptions as |type|}}
-      {{#x-option value=type}}{{type}}{{/x-option}}
+      <option value="{{type}}" selected={{eq type model.tagType}}>{{type}}</option>
     {{/each}}
-    {{#x-option value="ninja"}}Just a normal person, promise{{/x-option}}
-  {{/x-select}}
+    <option value="{{ninja}}">Just a normal person, promise</option>
+  </select>
 </div>
 <div>Priority: {{input value=model.priority}}</div>
