@@ -17,11 +17,12 @@ ActiveAdmin.register Post do
   index do
     column :id
     column :free
-    column :title
+    column :post do |t|
+      link_to t.title, post_path(t)
+    end
     column :difficulty
     column :seconds
     column :publish_date
-    column :permalink
     default_actions
   end
 
@@ -32,6 +33,22 @@ ActiveAdmin.register Post do
 
     def find_resource
       @post = Post.find_by_permalink(params[:id]) || Post.find(params[:id])
+    end
+  end
+
+  show do
+    attributes_table do
+      row :title do |t|
+        link_to t.title, post_path(t)
+      end
+      row :description
+      row :publish_date
+      row :free
+      row :difficulty
+      row :seconds
+      row :links
+      row :thumbnail_image
+      row :wistia_embed
     end
   end
   
