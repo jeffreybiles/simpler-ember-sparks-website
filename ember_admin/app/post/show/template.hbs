@@ -5,7 +5,7 @@
 <p>VideoUrl: {{model.videoUrl}}</p>
 <p>Length: {{model.seconds}} seconds</p>
 <p>Description: {{model.description}}</p>
-
+<p>Publish Date: {{model.publishDate}}</p>
 <ul>
 {{#each model.taggings as |tagging|}}
   {{#link-to 'tag.show' tagging.tag tagName="li"}}<a href="#">{{tagging.tag.name}}</a>{{/link-to}}

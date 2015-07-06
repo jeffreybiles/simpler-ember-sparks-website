@@ -3,6 +3,7 @@
 <p>VideoUrl: {{input value=model.videoUrl}}</p>
 <p>Length (in seconds): {{input value=model.seconds}}</p>
 <p>Description: {{textarea value=model.description}}</p>
+<p>Publish Date: {{pikaday-input value=model.publishDate}}</p>
 <p>
   {{#file-upload fileInputChanged="receiveFile"}}
     <img id="preview-image" src="{{model.thumbnailImage.thumbnail_image.url}}" class="small-image" />
