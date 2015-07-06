@@ -3,9 +3,10 @@
 {{post/edit-fields model=model}}
 
 <button {{action 'save'}}>Save</button>
-
+<hr>
 <div class="row">
   <div class="col-md-6">
+    <h4>Added tags</h4>
     <ul>
     {{#each model.taggings as |tagging|}}
       <li {{action 'removeTag' tagging}}>{{tagging.tag.name}}</li>
@@ -13,8 +14,11 @@
     </ul>
   </div>
   <div class="col-md-6">
-    {{#each sortedSubjects as |tag|}}
+    <h4>All Tags</h4>
+    <ul>
+    {{#each unusedTags as |tag|}}
       <li {{action 'addTag' tag}}>({{tag.taggings.length}}) {{tag.name}}</li>
     {{/each}}
+    </ul>
   </div>
 </div>

@@ -7,6 +7,11 @@ export default Ember.Controller.extend({
   subjects: Ember.computed.filterBy('tags', 'tagType', 'subject'),
   subjectsSort: ['taggings.length:desc'],
   sortedSubjects: Ember.computed.sort('subjects', 'subjectsSort'),
+  unusedTags: Ember.computed('sortedSubjects.@each', 'model.taggings.@each', function(){
+    var all = this.get('sortedSubjects')
+    var used = this.get('model.taggings').mapBy('tag.content')
+    return _.difference(all, used)
+  }),
   actions: {
     save: function(){
       var file = this.get('model.temporaryThumbnailImage')

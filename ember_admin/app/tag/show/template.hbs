@@ -1,7 +1,6 @@
 <h2>{{model.name}}</h2>
 <p>{{model.description}}</p>
 <div>Tag Type: {{model.tagType}}</div>
-<div>Priority: {{model.priority}}</div>
 <div>{{model.taggings.length}} screencasts totalling {{model.readableTime}}</div>
 <ul>
 {{#each model.taggings as |tagging|}}

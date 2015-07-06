@@ -1,9 +1,10 @@
 {{component 'tag/edit-fields' model=model}}
 
 <button {{action 'save'}}>Save</button>
-
+<hr>
 <div class="row">
   <div class="col-md-6">
+    <h4>Tagged episodes</h4>
     <ul>
     {{#each model.taggings as |tagging|}}
       <li {{action 'removePost' tagging}}>{{tagging.post.title}}</li>
@@ -11,7 +12,8 @@
     </ul>
   </div>
   <div class="col-md-6">
-    {{#each sortedPosts as |post|}}
+    <h4>Taggable episodes</h4>
+    {{#each unusedPosts as |post|}}
       <li {{action 'addPost' post}}>{{post.title}}</li>
     {{/each}}
   </div>
