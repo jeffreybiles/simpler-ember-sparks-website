@@ -15,6 +15,7 @@ export default Ember.Controller.extend({
     save: function(){
       this.get("model").save().then(()=>{
         this.transitionToRoute('tag.show');
+        this.get('flashMessages').success('saved!')
       });
     },
     addPost: function(post){
