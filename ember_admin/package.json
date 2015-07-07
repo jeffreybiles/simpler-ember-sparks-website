@@ -38,7 +38,7 @@
     "ember-data": "1.0.0-beta.18",
     "ember-export-application-global": "^1.0.2",
     "ember-moment": "1.1.1",
-    "ember-pikaday": "https://github.com/jeffreybiles/ember-pikaday.git#fix-disabled",
+    "ember-pikaday": "0.8.0",
     "ember-truth-helpers": "0.0.5",
     "emberx-select": "1.1.3",
     "moment": "2.10.3"
