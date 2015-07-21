@@ -3,3 +3,10 @@ Last name: {{input type='text' value=lastName}}<br>
 Full name: {{fullName}}<br>
 Company: {{input type='text' value=companyName}}<br>
 Business Card: {{businessCard}}
+
+<h1>Relevant Documentaries</h1>
+{{#each documentaries as |documentary|}}
+  {{input value=documentary.name}}, released in {{input value=documentary.release}} for {{input value=documentary.budget}} million dollars<br>
+{{/each}}
+
+Total budget: {{totalDocumentaryBudget}}
