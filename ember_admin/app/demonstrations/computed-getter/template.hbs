@@ -6,7 +6,8 @@ Business Card: {{businessCard}}
 
 <h1>Relevant Documentaries</h1>
 {{#each documentaries as |documentary|}}
-  {{input value=documentary.name}}, released in {{input value=documentary.release}} for {{input value=documentary.budget}} million dollars<br>
+  {{input value=documentary.name}}, released in {{input value=documentary.release}} for ${{input value=documentary.budget}}, bringing in ${{input value=documentary.boxOffice}}.<br>
 {{/each}}
 
-Total budget: {{totalDocumentaryBudget}}
+Total budget: {{totalDocumentaryBudget}}<br>
+Total profit: {{totalDocumentaryProfit}}
