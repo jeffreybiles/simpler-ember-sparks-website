@@ -4,12 +4,10 @@ export default Ember.Controller.extend({
   firstName: 'Tony',
   lastName: 'Stark',
   fullName: Ember.computed('firstName', 'lastName', function(){
-    console.log('computing fullName')
     return `${this.get('firstName')} ${this.get('lastName')}`;
   }),
   companyName: 'Stark Industries',
   businessCard: Ember.computed('fullName', 'companyName', function(){
-    console.log('computing businessCard')
     return `${this.get('fullName')} of ${this.get('companyName')}`
   }),
 
