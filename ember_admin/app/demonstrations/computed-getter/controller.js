@@ -35,6 +35,20 @@ export default Ember.Controller.extend({
     {name: 'Avengers 2', release: '2015', budget: 250000000, boxOffice: 455000000}
   ],
 
+  listOfTitles: Ember.computed('documentaries.@each.name', {
+    get(key){
+      return this.get('documentaries').mapBy('name').join(', ');
+    },
+    set(key, listOfTitles){
+      let arrayOfTitles = listOfTitles.split(', ');
+      arrayOfTitles.forEach((title, index)=>{
+        let documentary = this.get(`documentaries.${index}`)
+        Ember.set(documentary, 'name', title)
+      })
+      return listOfTitles
+    }
+  }),
+
   totalDocumentaryBudget: Ember.computed('documentaries.@each.budget', function(){
     var totalBudget = 0;
     this.get('documentaries').forEach(function(documentary){
