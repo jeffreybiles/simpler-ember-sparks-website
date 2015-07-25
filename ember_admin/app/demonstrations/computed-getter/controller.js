@@ -3,12 +3,28 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   firstName: 'Tony',
   lastName: 'Stark',
-  fullName: Ember.computed('firstName', 'lastName', function(){
-    return `${this.get('firstName')} ${this.get('lastName')}`;
+  fullName: Ember.computed('firstName', 'lastName', {
+    get(key){
+      return `${this.get('firstName')} ${this.get('lastName')}`;
+    },
+    set(key, fullName){
+      let [firstName, lastName] = fullName.split(' ');
+      this.set('firstName', firstName);
+      this.set('lastName', lastName);
+      return fullName;
+    }
   }),
   companyName: 'Stark Industries',
-  businessCard: Ember.computed('fullName', 'companyName', function(){
-    return `${this.get('fullName')} of ${this.get('companyName')}`
+  businessCard: Ember.computed('fullName', 'companyName', {
+    get(key){
+      return `${this.get('fullName')} of ${this.get('companyName')}`;
+    },
+    set(key, businessCard){
+      let [fullName, companyName] = businessCard.split(' of ');
+      this.set('fullName', fullName);
+      this.set('companyName', companyName);
+      return businessCard;
+    }
   }),
 
   documentaries: [
