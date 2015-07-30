@@ -23,18 +23,12 @@ class PostsController < InheritedResources::Base
       video_title: @post.title,
       publish_date: @post.publish_date
     }
-    if @post.free
-      if current_user
-        Analytics.track(user_id: current_user.email, event: 'Viewed Free Video', properties: properties)
-      else
-        Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Free Video', properties: properties)
-      end
+
+    properties['video_type'] = if @post.free then 'Free' else 'Pro' end
+    if current_user
+      Analytics.track(user_id: current_user.email, event: 'Viewed Video Page', properties: properties)
     else
-      if current_user.andand.subscribed
-        Analytics.track(user_id: current_user.email, event: 'Viewed Pro Video', properties: properties)
-      else
-        Analytics.track(anonymous_id: session.id || 'new', event: 'Attempted View Pro Video', properties: properties)
-      end
+      Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Video Page', properties: properties)
     end
   end
 end
