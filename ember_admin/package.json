@@ -42,6 +42,7 @@
     "ember-moment": "1.1.1",
     "ember-pikaday": "0.8.0",
     "ember-truth-helpers": "0.0.5",
+    "ember-validations": "2.0.0-alpha.4",
     "emberx-select": "1.1.3",
     "moment": "2.10.3"
   }

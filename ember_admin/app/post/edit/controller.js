@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import PostValidations from 'ember-admin/mixins/validations/post';
 
-export default Ember.Controller.extend({
+export default Ember.Controller.extend(PostValidations, {
   tags: Ember.computed(function(){
     return this.store.find('tag');
   }),
@@ -14,11 +15,17 @@ export default Ember.Controller.extend({
   }),
   actions: {
     save: function(){
-      var file = this.get('model.temporaryThumbnailImage')
-      this.set('model.thumbnailImage', file);
-      this.get('model').save().then(()=>{
-        this.transitionToRoute('post.show', this.get('model'));
-      });
+      var model = this.get('model')
+      var file = model.get('temporaryThumbnailImage')
+      model.set('thumbnailImage', file);
+      this.validate().then(()=>{
+        model.save().then(()=>{
+          this.transitionToRoute('post.show', model)
+        })
+      }).catch(()=>{
+        console.log(this.get("errors"))
+      })
+
     },
     addTag: function(tag){
       this.store.createRecord('tagging', {
@@ -29,5 +36,5 @@ export default Ember.Controller.extend({
     removeTag: function(tagging){
       tagging.destroyRecord();
     }
-  }
+  },
 });

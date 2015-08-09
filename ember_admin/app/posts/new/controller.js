@@ -1,22 +1,20 @@
 import Ember from 'ember';
+import PostValidations from 'ember-admin/mixins/validations/post';
 
-export default Ember.Controller.extend({
-  newPost: {
-    checked: false,
-    title: '',
-    videoUrl: '',
-    description: ''
-  },
+export default Ember.Controller.extend(PostValidations, {
 
   actions: {
     save: function(){
-      var post = this.store.createRecord('post', this.get('newPost'));
-      var file = document.getElementById('file-field').files[0];
+      var post = this.store.createRecord('post', this.get('model'));
+      var file = post.get('temporaryThumbnailImage')
       post.set('thumbnailImage', file);
-
-      post.save().then((response)=>{
-        this.transitionTo('post.show', response);
-      });
+      this.validate().then(()=>{
+        post.save().then((response)=>{
+          this.transitionTo('post.show', response);
+        });
+      }).catch(()=>{
+        console.log(this.get("errors"))
+      })
     }
   }
 });
