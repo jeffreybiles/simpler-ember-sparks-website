@@ -23,7 +23,15 @@ export default Ember.Controller.extend(PostValidations, {
           this.transitionToRoute('post.show', model)
         })
       }).catch(()=>{
-        console.log(this.get("errors"))
+        var errorHashes = this.get('errors.model')
+        var errorKeys = Object.keys(errorHashes)
+        this.get('flashMessages').clearMessages()
+        errorKeys.forEach((key)=>{
+          errorHashes[key].forEach((error)=>{
+            this.get("flashMessages").danger(`${key} ${error}`, {sticky: true})
+          })
+        })
+        console.log(this.get("errors"), errorKeys)
       })
 
     },
