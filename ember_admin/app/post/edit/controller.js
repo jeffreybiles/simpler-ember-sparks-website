@@ -2,6 +2,7 @@ import Ember from 'ember';
 import PostValidations from 'ember-admin/mixins/validations/post';
 
 export default Ember.Controller.extend(PostValidations, {
+  showErrors: true,
   tags: Ember.computed(function(){
     return this.store.find('tag');
   }),
@@ -31,7 +32,8 @@ export default Ember.Controller.extend(PostValidations, {
             this.get("flashMessages").danger(`${key} ${error}`, {sticky: true})
           })
         })
-        console.log(this.get("errors"), errorKeys)
+
+        console.log(this.get("errors"))
       })
 
     },

@@ -1,7 +1,12 @@
 <p>Title: {{input value=model.title}}</p>
+{{display-errors errors=errors.model.title showErrors=showErrors}}
+
 <p>Free: {{input type="checkbox" checked=model.free}}</p>
 <p>VideoUrl: {{input value=model.videoUrl}}</p>
+
 <p>Length (in seconds): {{input value=model.seconds}}</p>
+{{display-errors errors=errors.model.seconds showErrors=showErrors}}
+
 <p>Description: {{textarea value=model.description}}</p>
 <p>Publish Date: {{pikaday-input value=model.publishDate format="MM-DD-YYYY" placeholder="Publish date"}}</p>
 <p>
