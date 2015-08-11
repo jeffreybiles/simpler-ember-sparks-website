@@ -23,5 +23,6 @@ export default Router.map(function() {
   });
   this.resource('demonstrations', function(){
     this.route('computed-getter')
+    this.route('fancy-validations')
   })
 });

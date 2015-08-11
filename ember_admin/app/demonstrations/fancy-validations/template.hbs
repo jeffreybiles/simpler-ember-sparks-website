@@ -1,0 +1,24 @@
+<h1>(Human) User Signup Form</h1>
+
+<p>Username: {{input value=username}}</p>
+{{display-errors errors=errors.username showErrors=showErrors}}
+
+<p>Email: {{input value=email}}</p>
+{{display-errors errors=errors.email showErrors=showErrors}}
+
+<p>Password: {{input value=password}}</p>
+{{display-errors errors=errors.password showErrors=showErrors}}
+<p>Password Confirmation: {{input value=passwordConfirmation}}</p>
+{{display-errors errors=errors.passwordConfirmation showErrors=showErrors}}
+
+<p>How many 1-digit calculations can do you in your head per second? {{input value=cps}}</p>
+{{display-errors errors=errors.cps showErrors=showErrors}}
+
+<p>LEAVE BLANK (bot detection) {{input value=blank}}</p>
+{{display-errors errors=errors.blank showErrors=showErrors}}
+
+<p>Are you sure you're not a bot? Type 'affirmative' {{input value=notABot}}</p>
+{{display-errors errors=errors.notABot showErrors=showErrors}}
+
+<p>Seriously, what species are you? {{input value=species}}</p>
+{{display-errors errors=errors.species showErrors=showErrors}}
