@@ -21,4 +21,7 @@ export default Router.map(function() {
       this.route('edit');
     });
   });
+  this.resource('demonstrations', function(){
+    this.route('computed-getter')
+  })
 });

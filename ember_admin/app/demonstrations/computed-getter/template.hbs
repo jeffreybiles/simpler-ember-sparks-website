@@ -1,0 +1,17 @@
+First name: {{input type='text' value=firstName}}<br>
+Last name: {{input type='text' value=lastName}}<br>
+Full name: {{input type='texy' value=fullName}}<br>
+Company: {{input type='text' value=companyName}}<br>
+Business Card: {{input type='text' value=businessCard}}
+
+<h1>Relevant Documentaries</h1>
+{{#each documentaries as |documentary|}}
+  {{input value=documentary.name}}, released in {{input value=documentary.release}} for ${{input value=documentary.budget}}, bringing in ${{input value=documentary.boxOffice}}.<br>
+{{/each}}
+
+
+{{textarea value=listOfTitles class='big-text-area'}}
+<br>
+
+Total budget: {{totalDocumentaryBudget}}<br>
+Total profit: {{totalDocumentaryProfit}}
