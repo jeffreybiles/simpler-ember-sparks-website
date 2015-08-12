@@ -2,6 +2,8 @@ import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(EmberValidations, {
+  queryParams: ['specialScrutiny'],
+  specialScrutiny: false,
   showErrors: true,
   validations: {
     username: {
@@ -26,6 +28,20 @@ export default Ember.Controller.extend(EmberValidations, {
     },
     species: {
       exclusion: {in: ['Robot', 'Computer', 'AI', 'Cylon', 'Overlord'], allowBlank: true, message: "We don't serve your kind here"},
+      inclusion: {
+        'if': 'specialScrutiny',
+        in: ['Human', 'Homo Sapiens', 'Person'],
+        message: 'Be more specific'
+      }
     },
+    xor: {
+      acceptance: {message: 'gotta have one or the other'}
+    }
   },
+  xor: Ember.computed('xor1', 'xor2', function(){
+    return ((this.get("xor1") && !this.get("xor2")) ||
+           (this.get("xor2") && !this.get("xor1")))
+  }),
+  xor1: true,
+  xor2: true
 })

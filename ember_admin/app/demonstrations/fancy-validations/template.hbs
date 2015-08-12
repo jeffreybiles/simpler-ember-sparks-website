@@ -22,3 +22,7 @@
 
 <p>Seriously, what species are you? {{input value=species}}</p>
 {{display-errors errors=errors.species showErrors=showErrors}}
+
+<p>Boolean logic, that'll catch'em!</p>
+{{input type='checkbox' checked=xor1}} xor {{input type='checkbox' checked=xor2}}
+{{display-errors errors=errors.xor showErrors=showErrors}}
