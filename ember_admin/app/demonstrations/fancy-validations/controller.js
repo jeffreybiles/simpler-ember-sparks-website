@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import EmberValidations from 'ember-validations';
+import EmberValidations, { validator } from 'ember-validations';
 
 export default Ember.Controller.extend(EmberValidations, {
   queryParams: ['specialScrutiny'],
@@ -35,7 +35,13 @@ export default Ember.Controller.extend(EmberValidations, {
       }
     },
     xor: {
-      acceptance: {message: 'gotta have one or the other'}
+      acceptance: {message: 'gotta have one or the other'},
+      inline: validator(function(){
+        if(!((this.model.get("xor1") && !this.model.get("xor2")) ||
+          (this.model.get("xor2") && !this.model.get("xor1")))){
+             return "Must be xor"
+           }
+      })
     }
   },
   xor: Ember.computed('xor1', 'xor2', function(){
