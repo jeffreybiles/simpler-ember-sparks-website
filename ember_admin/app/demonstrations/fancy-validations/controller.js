@@ -10,7 +10,7 @@ export default Ember.Controller.extend(EmberValidations, {
       presence: true
     },
     email: {
-      format: {with: /.*@.*\..*/, message: "Must be formatted like an email"}
+      email: true,
     },
     password: {
       length: {minimum: 8},
