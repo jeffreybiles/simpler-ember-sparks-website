@@ -35,19 +35,9 @@ export default Ember.Controller.extend(EmberValidations, {
       }
     },
     xor: {
-      acceptance: {message: 'gotta have one or the other'},
-      inline: validator(function(){
-        if(!((this.model.get("xor1") && !this.model.get("xor2")) ||
-          (this.model.get("xor2") && !this.model.get("xor1")))){
-             return "Must be xor"
-           }
-      })
+      xor: {keyOne: 'xor1', keyTwo: 'xor2'}
     }
   },
-  xor: Ember.computed('xor1', 'xor2', function(){
-    return ((this.get("xor1") && !this.get("xor2")) ||
-           (this.get("xor2") && !this.get("xor1")))
-  }),
   xor1: true,
   xor2: true
 })
