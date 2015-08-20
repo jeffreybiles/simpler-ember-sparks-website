@@ -36,6 +36,9 @@ export default Ember.Controller.extend(EmberValidations, {
     },
     xor: {
       xor: {keyOne: 'xor1', keyTwo: 'xor2'}
+    },
+    correctSelections: {
+      selectSome: {selections: ['s1', 's2', 's3'], correctLength: 2}
     }
   },
   xor1: true,

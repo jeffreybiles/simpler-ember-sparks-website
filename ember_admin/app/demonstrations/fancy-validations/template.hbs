@@ -26,3 +26,7 @@
 <p>Boolean logic, that'll catch'em!</p>
 {{input type='checkbox' checked=xor1}} xor {{input type='checkbox' checked=xor2}}
 {{display-errors errors=errors.xor showErrors=showErrors}}
+
+<p>Select two of the following: </p>
+{{input type='checkbox' checked=s1}} || {{input type='checkbox' checked=s2}} || {{input type='checkbox' checked=s3}}
+{{display-errors errors=errors.correctSelections showErrors=showErrors}}
