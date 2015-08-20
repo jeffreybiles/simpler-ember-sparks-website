@@ -1,4 +1,4 @@
-class PostsController < InheritedResources::Base
+class PostsController < ApplicationController
 
   def index
     if current_user
@@ -29,6 +29,14 @@ class PostsController < InheritedResources::Base
       Analytics.track(user_id: current_user.email, event: 'Viewed Video Page', properties: properties)
     else
       Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Video Page', properties: properties)
+    end
+  end
+
+  # Feed constructed with help from https://www.codingfish.com/blog/129-how-to-create-rss-feed-rails-4-3-steps
+  def feed
+    @posts = Post.published.recent_first
+    respond_to do |format|
+        format.rss {render :layout => false}
     end
   end
 end

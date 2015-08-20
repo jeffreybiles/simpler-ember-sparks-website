@@ -1,4 +1,4 @@
-class TagsController < InheritedResources::Base
+class TagsController < ApplicationController
 
   def index
     if current_user

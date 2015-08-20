@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :posts, only: [:show, :index]
+  get 'feed' => 'posts#feed'
   resources :tags, only: [:show, :index]
 
   get 'about', to: 'pages#about'
   get 'mailing_list', to: 'pages#mailing_list'
   get 'thank_you', to: 'pages#thank_you'
   get 'faq', to: 'pages#faq'
-      
+
   get 'account', to: 'accounts#show'
   post 'subscribe', to: 'accounts#subscribe'
   post 'unsubscribe', to: 'accounts#unsubscribe'
