@@ -8,3 +8,5 @@
     <%= render 'posts/post_listing', post: post %>
   <% end %>
 </div>
+
+<% content_for :title, "#{@tag.name}- EmberScreencasts" %>
