@@ -17,6 +17,6 @@
     </div>
     <div class="description"><%= raw @markdown.render post.description %></div>
     <% @post_type = if post.free then 'free' else 'pro' end %>
-    <%= link_to "watch #{@post_type} episode (#{post.readable_time})", post, class: 'btn watch-btn' %>
+    <%= link_to "watch #{@post_type} video (#{post.readable_time})", post, class: 'btn watch-btn' %>
   </div>
 </div>

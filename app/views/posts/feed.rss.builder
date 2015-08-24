@@ -22,7 +22,7 @@ xml.rss :version => "2.0" do
         text = raw @markdown.render post.description
         text += image_tag post.thumbnail_image, class: "img-responsive"
         text += raw "<br>"
-        text += raw "<a href=#{link}>Watch full episode</a>"
+        text += raw "<a href=#{link}>Watch video</a>"
         text += raw "<br>"
         text += raw "<h3>More Like This</h3>"
         post.tags.each do |tag|
