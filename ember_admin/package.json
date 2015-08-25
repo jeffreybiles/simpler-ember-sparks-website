@@ -39,6 +39,7 @@
     "ember-data": "1.0.0-beta.18",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
+    "ember-hold-button": "0.3.2",
     "ember-moment": "1.1.1",
     "ember-pikaday": "0.8.0",
     "ember-truth-helpers": "0.0.5",

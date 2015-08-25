@@ -1,0 +1,15 @@
+.ember-hold-button.rectangle {
+  background: transparent;
+  color: #aaa;
+}
+
+.ember-hold-button.rectangle span {
+  z-index: -1;
+  height: 100%;
+  background-color: black;
+}
+
+
+ .ember-hold-button.rectangle.is-holding {
+   color: red;
+ }

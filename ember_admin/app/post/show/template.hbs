@@ -16,4 +16,6 @@
 <br>
 {{#link-to 'post.edit' model tagName="button"}}Edit{{/link-to}}
 
-<button {{action 'delete'}} class="pull-right">Delete</button>
+{{#hold-button delay=2000 type="rectangle" action="delete" class="pull-right"}}
+  Delete
+{{/hold-button}}
