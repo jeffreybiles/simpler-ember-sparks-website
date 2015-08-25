@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   }),
   postsSort: ['publishDate:desc'],
   sortedPosts: Ember.computed.sort('posts', 'postsSort'),
-  unusedPosts: Ember.computed('sortedPosts.@each', 'model.taggings.@each', function(){
+  unusedPosts: Ember.computed('sortedPosts.[]', 'model.taggings.[]', function(){
     var all = this.get('sortedPosts')
     var used = this.get('model.taggings').mapBy('post.content')
     return _.difference(all, used)

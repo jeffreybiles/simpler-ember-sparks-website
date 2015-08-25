@@ -9,7 +9,7 @@ export default Ember.Controller.extend(PostValidations, {
   subjects: Ember.computed.filterBy('tags', 'tagType', 'subject'),
   subjectsSort: ['taggings.length:desc'],
   sortedSubjects: Ember.computed.sort('subjects', 'subjectsSort'),
-  unusedTags: Ember.computed('sortedSubjects.@each', 'model.taggings.@each', function(){
+  unusedTags: Ember.computed('sortedSubjects.[]', 'model.taggings.[]', function(){
     var all = this.get('sortedSubjects')
     var used = this.get('model.taggings').mapBy('tag.content')
     return _.difference(all, used)
