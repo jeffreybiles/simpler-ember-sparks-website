@@ -1,12 +1,12 @@
 {{#if wearingAHat}}
   You're wearing a <span style="color: {{hatColor}};">{{hatColor}}</span> hat!
   <br>
-  <button {{action 'takeOffHat'}}>Take it off</button>
+  <button {{action 'takeOffHat' on="mouseEnter"}}>Take it off</button>
 {{else}}
   Your hair is naked.
   <br>
   Put on a hat:
   {{#each hatColors as |color|}}
-    <button {{action 'putOnHat' color}} style="color: {{color}}">{{color}}</button>
+    <button {{action 'putOnHat' color on="mouseEnter"}} style="color: {{color}}">{{color}}</button>
   {{/each}}
 {{/if}}
