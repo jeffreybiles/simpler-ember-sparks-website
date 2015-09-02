@@ -5,13 +5,14 @@
   <hr>
 
   <%= link_to "Change your email or password", edit_user_registration_path %>
+  <% content_for :title, "My Account- EmberScreencasts" %>
 <% else %>
-  <h2>All the Pro screencasts you can watch- only $9.95/month</h2>
+  <h2>Become a better developer- only $9.95/month</h2>
   <ul>
-    <li>Large and growing archive- over fifty screencasts.</li>
-    <li>New screencasts every week.</li>
+    <li>Concise screencasts give you a quick knowledge boost without wading through hours of meetup recordings.</li>
+    <li>70+ tutorial videos- and more added every week!</li>
     <li>New screencasts are up to date with the latest developments, including ember-cli.</li>
-    <li>Low risk: No long-term commitment, and unsubscribing is even easier than subscribing.</li>
+    <li>No long-term commitment, and unsubscribing is even easier than subscribing.</li>
   </ul>
   <form action="/subscribe" method="POST">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
@@ -27,6 +28,7 @@
   </form>
   <br>
   <a href='https://www.expeditedssl.com/simple-ssl-scanner/scan?target_domain=www.emberscreencasts.com' target='_blank'><img src='https://www.expeditedssl.com/ssl-secure-badge.png'  alt='Expedited SSL Scanner'></a>
+  <% content_for :title, "Learn like a Pro- sign up for an EmberScreencasts Pro Subscription." %>
 <% end %>
 
-<% content_for :title, "My Account- EmberScreencasts" %>
+<% content_for :meta_description, "Subscribe to an emberscreencasts.com pro account to boost your learning and be a better Ember developer."
