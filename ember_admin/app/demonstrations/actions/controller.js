@@ -1,13 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  wearingAHat: true,
+  hasHat: false,
+  hatColor: "blue",
+  colors: ["blue", "red", "green", "purple", "orange"],
   actions: {
-    putOnHat(){
-      this.set('wearingAHat', true)
+    putOnHat(color){
+      this.set('hatColor', color)
+      this.set('hasHat', true)
     },
     takeOffHat(){
-      this.set('wearingAHat', false)
+      this.set('hasHat', false)
     }
   }
 })
