@@ -11,6 +11,7 @@ export default Ember.Controller.extend({
     },
     takeOffHat(){
       this.set('hasHat', false)
+      return true
     }
   }
 })
