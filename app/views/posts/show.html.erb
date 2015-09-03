@@ -51,14 +51,13 @@
 
   <div class="col-lg-3 col-md-12">
     <div class="description">
-      <h3>Description</h3>
+      <h4>About this video</h4>
       <%= raw @markdown.render @post.description %>
     </div>
 
-    <h3> More like this</h3>
+    <h4> More videos like this</h4>
     <% @post.tags.each do |tag| %>
-      <b><%= tag.tag_type %></b>:  <%= link_to tag.name, tag_path(tag) %>
-      <br>
+      <div class="tag-link"><span class="tag-type"><%= tag.tag_type %></span>:  <%= link_to tag.name, tag_path(tag) %></div>
     <% end %>
 
     <% if @post.links && @post.links.length > 0 %>
