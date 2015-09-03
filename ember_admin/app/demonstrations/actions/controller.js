@@ -13,6 +13,9 @@ export default Ember.Controller.extend({
     takeOffHat(){
       this.set('hasHat', false)
       return true
+    },
+    howToRemoveHat(){
+      alert('we realize it is difficult to remove our proprietary vicelok hats')
     }
   }
 })

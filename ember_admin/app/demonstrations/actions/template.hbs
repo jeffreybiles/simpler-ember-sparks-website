@@ -3,7 +3,7 @@
 {{#if hasHat}}
   <p>You're wearing a <span style="color:{{hatColor}};">{{hatColor}}</span> hat.</p>
 
-  <button {{action 'takeOffHat'}}>Take off the hat</button>
+  <button {{action 'takeOffHat'}}>Take off the hat <button {{action 'howToRemoveHat' bubbles=false}}>How?</button></button>
 {{else}}
   <p>Your hair is naked :(</p>
 
