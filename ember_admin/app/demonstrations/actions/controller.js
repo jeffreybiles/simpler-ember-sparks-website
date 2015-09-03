@@ -8,6 +8,7 @@ export default Ember.Controller.extend({
     putOnHat(color){
       this.set('hatColor', color)
       this.set('hasHat', true)
+      this.send('pressRelease')
     },
     takeOffHat(){
       this.set('hasHat', false)
