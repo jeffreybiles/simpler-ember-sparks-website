@@ -9,7 +9,7 @@
     <h3 class="index-title"><%= link_to post.title, post %></h3>
     <div class="published-on">
       <small>
-        Published on <%= post.publish_date %> -- <%= post.difficulty %>
+        <%= post.publish_date %> -- <%= post.difficulty %>
         <% post.tags.each do |tag| %>
           -- <%= link_to tag.name, tag_path(tag) %>
         <% end %>

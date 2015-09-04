@@ -6,7 +6,8 @@
     <h2 class="index-title"><%= link_to post.title, post %></h2>
     <div class="published-on">
       <small>
-        Published on <%= post.publish_date %> -- <%= post.difficulty %>
+        <%= post.publish_date %> --
+        <a href="/posts?difficulty=<%=post.difficulty%>"><%= post.difficulty %></a>
         <% post.tags.each do |tag| %>
           -- <%= link_to tag.name, tag_path(tag) %>
         <% end %>

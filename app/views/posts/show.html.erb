@@ -42,7 +42,7 @@
       <small>
         <% if @post.free %> Free <% else %> Pro <% end %>
         --
-        Published on <%= @post.publish_date %>
+        <%= @post.publish_date %>
         --
         <a href="/posts?difficulty=<%=@post.difficulty%>"><%= @post.difficulty %></a>
       </small>
