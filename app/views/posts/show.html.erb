@@ -5,8 +5,10 @@
   <script>
     wistiaEmbeds.onFind(function(video) {
       video.videoFoam(true);
-    });
-    wistiaEmbeds.onFind(function(video) {
+      video.addPlugin("dimTheLights", {
+        src: "//fast.wistia.com/labs/dim-the-lights/plugin.js",
+        outsideIframe: true
+      });
       video.addPlugin("resumable", {
         src: "//fast.wistia.com/labs/resumable/plugin.js"
       });
