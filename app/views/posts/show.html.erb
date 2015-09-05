@@ -6,7 +6,13 @@
     wistiaEmbeds.onFind(function(video) {
       video.videoFoam(true);
     });
+    wistiaEmbeds.onFind(function(video) {
+      video.addPlugin("resumable", {
+        src: "//fast.wistia.com/labs/resumable/plugin.js"
+      });
+    });
   </script>
+
 <% end %>
 <% content_for :title, @post.title %>
 <% content_for :meta_description, @post.description %>
