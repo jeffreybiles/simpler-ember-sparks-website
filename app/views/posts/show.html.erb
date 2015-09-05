@@ -1,5 +1,12 @@
 <% content_for :head do %>
   <meta property="og:image" content="<%= @post.thumbnail_image %>">
+
+  <script src="//fast.wistia.com/static/embed_shepherd-v1.js"></script>
+  <script>
+    wistiaEmbeds.onFind(function(video) {
+      video.videoFoam(true);
+    });
+  </script>
 <% end %>
 <% content_for :title, @post.title %>
 <% content_for :meta_description, @post.description %>
