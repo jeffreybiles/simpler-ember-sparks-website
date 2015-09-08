@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     putOnItem(color){
       this.set('color', color)
       this.set('hasItem', true)
-      // this.send('pressRelease')
+      this.sendAction('showMessage', `You put on a ${color} ${this.get('itemName')}`)
     },
     takeOffItem(){
       this.set('hasItem', false)

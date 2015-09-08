@@ -1,10 +1,16 @@
 <h2>HatAndThings.net</h2>
 
-{{accessory-control itemName='hat' bodyPart='hair'}}
-{{accessory-control itemName='shoe' bodyPart='foot'}}
-{{accessory-control itemName='bracelet' bodyPart='wrist'}}
-{{accessory-control itemName='necklace' bodyPart='neck'}}
+{{accessory-control itemName='hat' bodyPart='hair' showMessage='displayModal'}}
+{{accessory-control itemName='shoe' bodyPart='foot' showMessage='displayModal'}}
+{{accessory-control itemName='bracelet' bodyPart='wrist' showMessage='displayModal'}}
+{{accessory-control itemName='necklace' bodyPart='neck' showMessage='displayModal'}}
 <hr>
 <button {{action 'pressRelease'}}>Read our press release!</button>
 <br>
 <button {{action 'receiveAdvice'}}>Help</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close="closeModal" translucentOverlay=true}}
+    {{modalMessage}}
+  {{/modal-dialog}}
+{{/if}}
