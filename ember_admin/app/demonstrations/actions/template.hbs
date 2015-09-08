@@ -1,14 +1,9 @@
-<h2>Hat.io</h2>
+<h2>HatAndThings.net</h2>
 
-{{#if hasHat}}
-  <p>You're wearing a <span style="color:{{hatColor}};">{{hatColor}}</span> hat.</p>
-
-  <button {{action 'takeOffHat'}}>Take off the hat <button {{action 'howToRemoveHat' bubbles=false}}>How?</button></button>
-{{else}}
-  <p>Your hair is naked :(</p>
-
-  {{color-selection colors=colors message="Put on a hat:" putOnHat="putOnHat"}}
-{{/if}}
+{{accessory-control itemName='hat' bodyPart='hair'}}
+{{accessory-control itemName='shoe' bodyPart='foot'}}
+{{accessory-control itemName='bracelet' bodyPart='wrist'}}
+{{accessory-control itemName='necklace' bodyPart='neck'}}
 <hr>
 <button {{action 'pressRelease'}}>Read our press release!</button>
 <br>

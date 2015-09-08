@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    putOnHat(color){
-      this.sendAction('putOnHat', color)
+    putOnItem(color){
+      this.sendAction('putOnItem', color)
     }
   }
 })

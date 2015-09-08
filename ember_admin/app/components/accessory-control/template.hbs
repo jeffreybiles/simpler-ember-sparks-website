@@ -1,0 +1,10 @@
+{{#if hasItem}}
+  <p>You're wearing a <span style="color:{{color}};">{{color}}</span> hat.</p>
+
+  <button {{action 'takeOffItem'}}>Take off the {{itemName}} <button {{action 'howToRemoveItem' bubbles=false}}>How?</button></button>
+{{else}}
+  <p>Your {{bodyPart}} is naked :(</p>
+
+  {{color-selection colors=colors itemName=itemName putOnItem="putOnItem"}}
+{{/if}}
+<br>
