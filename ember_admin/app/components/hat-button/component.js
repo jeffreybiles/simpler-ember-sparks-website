@@ -7,6 +7,6 @@ export default Ember.Component.extend({
     return `color: ${this.get('color')}`
   }),
   click(){
-    this.sendAction('action', this.get('color'))
+    this.attrs.putOnItem(this.get('color'))
   }
 })

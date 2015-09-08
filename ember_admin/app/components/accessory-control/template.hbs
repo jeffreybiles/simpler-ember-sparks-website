@@ -5,6 +5,6 @@
 {{else}}
   <p>Your {{bodyPart}} needs a {{itemName}}</p>
 
-  {{color-selection colors=colors itemName=itemName putOnItem="putOnItem"}}
+  {{color-selection colors=colors itemName=itemName putOnItem=(action "putOnItem")}}
 {{/if}}
 <hr>
