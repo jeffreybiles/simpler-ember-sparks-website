@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
       return true
     },
     howToRemoveHat(){
-      alert('we realize it is difficult to remove our proprietary vicelok hats')
+      this.send('showModalDialog', 'we realize it is difficult to remove our proprietary vicelok hats')
     }
   }
 })

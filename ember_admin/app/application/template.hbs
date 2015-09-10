@@ -5,3 +5,10 @@
 
   {{outlet}}
 </div>
+
+
+{{#if isShowingModal}}
+  {{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
+    {{modalMessage}}
+  {{/modal-dialog}}
+{{/if}}
