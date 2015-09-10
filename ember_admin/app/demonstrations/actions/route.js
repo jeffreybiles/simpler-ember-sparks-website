@@ -2,14 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    takeOffHat(){
-      this.send('showModalDialog', 'We mourn the loss of your hat.')
+    takeOffItem(){
+      this.send('showModalDialog', 'We mourn the loss of your accessory.')
     },
-    putOnHat(){
+    putOnItem(){
       alert('This will never be reached.')
     },
     pressRelease(){
-      this.send('showModalDialog', 'Very hat.  Much disrupt.')
+      this.send('showModalDialog', 'Very accessory.  Much disrupt.')
     }
   }
 })

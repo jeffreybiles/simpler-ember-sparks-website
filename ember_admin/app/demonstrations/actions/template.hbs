@@ -1,17 +1,8 @@
-<h2>Hat.io</h2>
+<h2>Accessor.ly</h2>
 
-{{#if hasHat}}
-  <p>You're wearing a <span style="color:{{hatColor}};">{{hatColor}}</span> hat.</p>
-
-  <button {{action 'takeOffHat'}}>Take off the hat <button {{action 'howToRemoveHat' bubbles=false}}>How?</button></button>
-{{else}}
-  <p>Your hair is naked :(</p>
-
-  Put on a hat:
-  {{#each colors as |color|}}
-    <button {{action 'putOnHat' color}} style="color:{{color}};">{{color}}</button>
-  {{/each}}
-{{/if}}
+{{control-accessory showModalDialog="showModalDialog" pressRelease="pressRelease" takeOffItem="takeOffItem" itemName="hat"}}
+{{control-accessory showModalDialog="showModalDialog" pressRelease="pressRelease" takeOffItem="takeOffItem" itemName="necklaces"}}
+{{control-accessory showModalDialog="showModalDialog" pressRelease="pressRelease" takeOffItem="takeOffItem" itemName="shoes"}}
 <hr>
 <button {{action 'pressRelease'}}>Read our press release!</button>
 <br>
