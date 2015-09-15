@@ -1,7 +1,8 @@
-{{#if hasItem}}
-  <p>You're wearing a <span style="color:{{itemColor}};">{{itemColor}}</span> {{itemName}}.</p>
-
-  <button {{action 'takeOffItem'}}>Take off the {{itemName}} <button {{action 'howToRemoveItem' bubbles=false}}>How?</button></button>
+{{#if noItem}}
+  <p>You have no {{itemName}}</p>
 {{else}}
-  {{color-selector itemName=itemName itemColor=itemColor putOnItem="putOnItem"}}
+  <p>You're wearing a <span style="color:{{itemColor}};">{{itemColor}}</span> {{itemName}}.</p>
 {{/if}}
+
+{{color-selector itemName=itemName itemColor=itemColor changeItem="changeItem"}}
+<hr>

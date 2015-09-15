@@ -1,9 +1,7 @@
 <h2>Accessor.ly</h2>
 
-{{control-accessory showModalDialog="showModalDialog" pressRelease="pressRelease" takeOffItem="takeOffItem" itemName="hat"}}
-{{control-accessory showModalDialog="showModalDialog" pressRelease="pressRelease" takeOffItem="takeOffItem" itemName="necklace"}}
-{{control-accessory showModalDialog="showModalDialog" pressRelease="pressRelease" takeOffItem="takeOffItem" itemName="shoe"}}
-<hr>
+{{control-accessory changeItem="changeHat" itemName="hat" itemColor=hatColor}}
+{{control-accessory changeItem="changeNecklace" itemName="necklace" itemColor=necklaceColor}}
+{{control-accessory changeItem="changeShoe" itemName="shoe" itemColor=shoeColor}}
+
 <button {{action 'pressRelease'}}>Read our press release!</button>
-<br>
-<button {{action 'receiveAdvice'}}>Help</button>

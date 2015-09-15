@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  colors: ["blue", "red", "green", "purple", "orange"],
+  colors: ["blue", "red", "green", "purple", "orange", "none"],
   actions: {
-    putOnItem(color){
-      this.sendAction('putOnItem', color)
+    changeItem(color){
+      this.sendAction('changeItem', color)
     }
   }
 });
