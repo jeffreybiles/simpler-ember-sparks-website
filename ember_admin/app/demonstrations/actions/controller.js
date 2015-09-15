@@ -1,13 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  hatColor: "none",
-  necklaceColor: "blue",
-  shoeColor: "orange",
+  items: ['hat', 'necklace', 'shoe'],
+  itemDetails: Ember.computed(function(){
+    return this.get("items").map(function(itemName){
+      return {
+        itemName: itemName,
+        itemColor: 'none'
+      }
+    })
+  }),
 
   actions: {
-    changeItem(itemColor, newColor){
-      this.set(itemColor, newColor)
+    changeItem(itemName, newColor){
+      this.set(`itemDetails.${itemName}.itemColor`, newColor)
     }
   }
 })

@@ -1,7 +1,7 @@
 <h2>Accessor.ly</h2>
 
-{{control-accessory changeItem=(action "changeItem" "hatColor") itemName="hat" itemColor=hatColor}}
-{{control-accessory changeItem=(action "changeItem" "necklaceColor") itemName="necklace" itemColor=necklaceColor}}
-{{control-accessory changeItem=(action "changeItem" "shoeColor") itemName="shoe" itemColor=shoeColor}}
+{{#each itemDetails as |item index|}}
+  {{control-accessory changeItem=(action "changeItem" index) itemName=item.itemName itemColor=item.itemColor}}
+{{/each}}
 
 <button {{action 'pressRelease'}}>Read our press release!</button>
