@@ -3,8 +3,5 @@
 
   <button {{action 'takeOffItem'}}>Take off the {{itemName}} <button {{action 'howToRemoveItem' bubbles=false}}>How?</button></button>
 {{else}}
-  Put on a {{itemName}}:
-  {{#each colors as |color|}}
-    <button {{action 'putOnItem' color}} style="color:{{color}};">{{color}}</button>
-  {{/each}}
+  {{color-selector itemName=itemName itemColor=itemColor putOnItem="putOnItem"}}
 {{/if}}
