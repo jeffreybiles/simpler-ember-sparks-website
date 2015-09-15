@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  items: ['hat', 'necklace', 'shoe'],
+  items: ['hat', 'necklace', 'shoe', 'slap bracelet', 'scarf'],
   itemDetails: Ember.computed(function(){
     return this.get("items").map(function(itemName){
       return {
