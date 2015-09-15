@@ -6,14 +6,8 @@ export default Ember.Controller.extend({
   shoeColor: "orange",
 
   actions: {
-    changeHat(color){
-      this.set('hatColor', color)
-    },
-    changeNecklace(color){
-      this.set('necklaceColor', color)
-    },
-    changeShoe(color){
-      this.set('shoeColor', color)
+    changeItem(itemColor, newColor){
+      this.set(itemColor, newColor)
     }
   }
 })
