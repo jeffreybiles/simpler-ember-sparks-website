@@ -101,6 +101,8 @@ GEM
       sprockets (>= 2.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-rails (4.4.0.0)
+      railties (>= 3.2, < 5.0)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
     has_permalink (0.1.6)
@@ -242,6 +244,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   ember-cli-rails (~> 0.3.4)
+  font-awesome-rails
   has_permalink
   jquery-rails
   mini_magick

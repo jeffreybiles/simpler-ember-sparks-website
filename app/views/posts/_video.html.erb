@@ -1,5 +1,44 @@
 <% if wistia_embed.present? %>
   <%= raw wistia_embed %>
+
+  <div class="text-center pull-right">
+    <ul class="nav nav-pills centered-pills" data-speed="1.0" data-name="1.0x" data-behavior="video-controls">
+
+      <!-- Skip Backwards Link -->
+      <li><a data-toggle="tooltip" data-behavior="skip-backward" title="Skip backward 30 seconds" href="#"><i class="fa fa-backward"></i></a></li>
+
+      <!-- Playback Speeds -->
+      <li class="dropdown">
+        <a role="button" data-toggle="dropdown" data-behavior="video-speed-button" href="#">Speed <span class="caret"></span></a>
+        <ul data-behavior="video-speed-dropdown" class="dropdown-menu" role="menu" aria-labelledby="playback_speed_drop">
+            <li role="presentation">
+              <a tabindex="-1" role="menuitem" data-speed="0.5" data-name="0.5x" href="#">0.5x</a>
+            </li>
+            <li role="presentation">
+              <a tabindex="-1" role="menuitem" data-speed="0.75" data-name="0.75x" href="#">0.75x</a>
+            </li>
+            <li role="presentation">
+              <a tabindex="-1" role="menuitem" data-speed="1.0" data-name="1x" href="#">1x</a>
+            </li>
+            <li role="presentation">
+              <a tabindex="-1" role="menuitem" data-speed="1.25" data-name="1.25x" href="#">1.25x</a>
+            </li>
+            <li role="presentation">
+              <a tabindex="-1" role="menuitem" data-speed="1.5" data-name="1.5x" href="#">1.5x</a>
+            </li>
+            <li role="presentation">
+              <a tabindex="-1" role="menuitem" data-speed="1.75" data-name="1.75x" href="#">1.75x</a>
+            </li>
+            <li role="presentation">
+              <a tabindex="-1" role="menuitem" data-speed="2.0" data-name="2x" href="#">2x</a>
+            </li>
+        </ul>
+      </li>
+
+      <!-- Skip Forwards Link -->
+      <li><a data-toggle="tooltip" data-behavior="skip-forward" title="Skip forward 30 Seconds" href="#"><i class="fa fa-forward"></i></a></li>
+    </ul>
+  </div>
 <% else %>
 <div class='video'>
   <iframe src="<%= video_url %>?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
