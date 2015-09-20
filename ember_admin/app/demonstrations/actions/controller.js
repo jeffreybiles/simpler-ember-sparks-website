@@ -11,9 +11,17 @@ export default Ember.Controller.extend({
     })
   }),
 
+  matchesAnotherItem(itemIndex){
+    var color = this.get(`itemDetails.${itemIndex}.itemColor`)
+    return this.get('itemDetails').any(function(item, index){
+      return Ember.get(item, 'itemColor') == color && index != itemIndex
+    })
+  },
+
   actions: {
-    changeItem(itemName, newColor){
-      this.set(`itemDetails.${itemName}.itemColor`, newColor)
+    changeItem(itemIndex, newColor){
+      this.set(`itemDetails.${itemIndex}.itemColor`, newColor)
+      return this.matchesAnotherItem(itemIndex)
     }
   }
 })
