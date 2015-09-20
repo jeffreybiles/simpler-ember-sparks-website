@@ -1,7 +1,7 @@
 <h2>Accessor.ly</h2>
 {{#each itemDetails as |item index|}}
-  {{#collapsible-box as |close|}}
-    {{control-accessory changeItem=(action "changeItem" index) itemName=item.itemName itemColor=item.itemColor}}
+  {{#collapsible-box  changeItem=(action "changeItem" index) as |close changeItem|}}
+    {{control-accessory changeItem=(action changeItem) itemName=item.itemName itemColor=item.itemColor}}
     <button {{action close}}>Close Box</button>
   {{/collapsible-box}}
 {{/each}}
