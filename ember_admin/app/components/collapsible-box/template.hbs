@@ -1,7 +1,7 @@
 <div style="border: 1px solid black">
   {{#if isShowing}}
     <button {{action 'close'}} class="pull-right">x</button>
-    {{yield}}
+    {{yield (action 'close')}}
   {{else}}
     <button {{action 'open'}}>Click to reopen</button>
   {{/if}}
