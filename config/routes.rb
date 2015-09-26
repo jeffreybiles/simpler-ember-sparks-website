@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'mailing_list', to: 'pages#mailing_list'
   get 'thank_you', to: 'pages#thank_you'
   get 'faq', to: 'pages#faq'
+  get 'email_intro_free_validations_display', to: 'pages#email_intro_free_validations_display'
 
   get 'account', to: 'accounts#show'
   post 'subscribe', to: 'accounts#subscribe'
