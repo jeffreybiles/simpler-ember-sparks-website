@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['collapsible-box'],
   isShowing: true,
   actions: {
     close(){
