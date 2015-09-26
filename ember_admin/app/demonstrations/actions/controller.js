@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  items: ['hat', 'necklace', 'shoe', 'slap bracelet', 'scarf'],
-  itemDetails: Ember.computed(function(){
+  items: Ember.computed.alias('global.accessoryTypes'),
+  itemDetails: Ember.computed('items', function(){
     return this.get("items").map(function(itemName){
       return {
         itemName: itemName,
