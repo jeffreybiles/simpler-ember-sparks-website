@@ -7,13 +7,16 @@
   <%= link_to "Change your email or password", edit_user_registration_path %>
   <% content_for :title, "My Account- EmberScreencasts" %>
 <% else %>
-  <h2>Become a better developer- only $9.95/month</h2>
+  <h1>The best resource for intermediate Ember developers</h1>
+  <p>For just $9.95/month, you get <em>instant</em> <em>on-demand</em> access to every single video in the emberscreencasts library.</p>
+
   <ul>
-    <li>Concise screencasts give you a quick knowledge boost without wading through hours of meetup recordings.</li>
-    <li>70+ tutorial videos- and more added every week!</li>
-    <li>New screencasts are up to date with the latest developments, including ember-cli.</li>
-    <li>No long-term commitment, and unsubscribing is even easier than subscribing.</li>
+      <li>New up-to-date videos every week.</li>
+      <li>Over 7 hours of fast-paced content.</li>
+      <li>No commitment- unsubscribing is instant and easy.</li>
   </ul>
+
+  <h2>Save time.  Learn more.  Be better.</h2>
   <form action="/subscribe" method="POST">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
     <script
