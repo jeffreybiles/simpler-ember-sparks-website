@@ -2,9 +2,7 @@ var GlobalConfig = Ember.Object.extend({
   globals: Ember.computed(function(){
     return $('#global-stash').data('globals')
   }),
-  accessoryTypes: Ember.computed('globals', function(){
-    return this.get("globals.accessories")
-  })
+  accessoryTypes: Ember.computed.alias('globals.accessories')
 })
 
 export function initialize(application) {

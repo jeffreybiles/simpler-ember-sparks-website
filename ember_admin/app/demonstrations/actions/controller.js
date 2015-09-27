@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   items: Ember.computed.alias('global.accessoryTypes'),
-  itemDetails: Ember.computed('items', function(){
+  itemDetails: Ember.computed(function(){
     return this.get("items").map(function(itemName){
       return {
         itemName: itemName,
