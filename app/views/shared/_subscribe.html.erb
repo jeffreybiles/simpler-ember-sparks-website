@@ -1,0 +1,12 @@
+<form action="/subscribe" method="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+    data-name="EmberScreencasts.com"
+    data-description="Monthly Subscription"
+    data-label="Subscribe for $9.95/month"
+    data-panel-label="Subscribe {{amount}}/month"
+    data-amount="995">
+  </script>
+</form> 

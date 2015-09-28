@@ -12,18 +12,7 @@
         <p>You can <%= link_to 'explore different series and subjects', tags_path %>, start off with <%= link_to 'my favorites', tag_path('greatest-hits') %>, or see <%= link_to 'the latest screencasts', posts_path %>.</p>
         <% unless current_user && current_user.subscribed %>
           <div class="text-center">
-            <form action="/subscribe" method="POST">
-              <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-              <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
-                data-name="EmberScreencasts.com"
-                data-description="Monthly Subscription"
-                data-label="Subscribe for $9.95/month"
-                data-panel-label="Subscribe {{amount}}/month"
-                data-amount="995">
-              </script>
-            </form> (<a href='/account'>more details</a>)
+            <%= render 'shared/subscribe' %>(<a href='/account'>more details</a>)
           </div>
         <% end %>
       </div>
