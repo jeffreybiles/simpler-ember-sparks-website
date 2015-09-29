@@ -17,7 +17,7 @@
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="/"></a>
 
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1">
           <span class="sr-only">Toggle navigation</span>
@@ -29,11 +29,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="myDefaultNavbar1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Explore</a></li>
-          <li><a href="#">Latest</a></li>
-          <li><a href="#">FAQ</a></li>
-
+          <%= nav_link "Home", root_path %>
+          <%= nav_link "Explore", tags_path %>
+          <%= nav_link "Latest", posts_path %>
+          <%= nav_link "FAQ", faq_path %>
         </ul>
         <!-- <form class="navbar-form navbar-right" role="search">
           <div class="form-group">
