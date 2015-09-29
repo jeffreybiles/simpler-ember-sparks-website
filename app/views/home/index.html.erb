@@ -1,4 +1,110 @@
-<div class="row">
+<section>
+  <div class="jumbotron text-center">
+
+   <div id="video-container">
+      <video loop muted autoplay poster="img/videoframe.jpg" class="fillWidth">
+          <source src="/img/ember-video-background-loop-v4b.mp4" type="video/mp4">
+      </video>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs12">
+          <h1>Video Tutorials for Creating Ambitious Developers.</h1>
+          <h2>Discover new tools and techniques level up your Ember skills with concise twice-weekly screencasts.</h2>
+          <p>You can explore different series and subjects, start with <a href="#">my favorites</a>, or see <a href="#">the latest screencasts</a>. </p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Subscribe for $9.95/month</a></p>
+          <p><a href="#">More Details</a></p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</section>
+<section>
+  <div class="container">
+    <div class="row"></div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <div class="media">
+          <h1>Newest free Video
+          </h1>
+          <div class="media-top"> <a href="#"> <%= image_tag("400x400.gif") %> </a> </div>
+          <div class="media-body">
+            <h2 class="media-heading">70 - ember-hold-button</h2>
+Ever accidentally delete a record or send a message before it's complete?ember-hold-button is a fantastic addon that lets you put a small time barrier in front of sensitive actions so you don't complete them by accident. </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <div class="media pro-media">
+          <div class="media-top">
+            <h1>Newest Pro Video </h1><a href="#"><%= image_tag("400x400.gif")%></a>
+          </div>
+          <div class="media-body">
+            <h2 class="media-heading">71 - Upgrade Ember with ember-cli-deprecation-workflow</h2>
+Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+          <div id="testimonial1" class="testimonial">
+            <p>Worth every penny!</p>
+            <p class="person">- Philip Poots</p>
+            <p><a href="#">Link</a></p>
+          </div>
+          <div id="testimonial2" class="testimonial">
+            <p>A must watch for embereños of all stripes.</p>
+            <p class="person">person</p>
+              <p><a href="#">link</a></p>
+          </div>
+          <div id="testimonial3" class="testimonial">
+            <p>Highly recommend, awesome resource to expand knowledge into</p>
+            <p class="person">person</p>
+              <p><a href="#">link</a></p>
+          </div>
+         </div>
+    </div>
+  </div>
+</section>
+
+<section>
+	<div class="container">
+    <p><br></p>
+		<div class="row" id="socialproof2">
+    	<div class="text-center col-md-4 col-lg-4" id="library">
+     	  <p><%= image_tag("seal-library.png") %></p>
+        <p>Unlimited access to every video in our library</p>
+      </div>
+    	<div class="text-center col-md-4 col-lg-4" id="brand2">
+     	  <p><%= image_tag("eslogo2.png") %></p>
+      </div>
+    	<div class="text-center col-md-4 col-lg-4" id="updates">
+     	  <p><%= image_tag("seal-updates.png") %></p>
+     	  <p>New Courses Added Every Week</p>
+    	</div>
+    </div>
+    <hr>
+  </div>
+</section>
+<hr>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <button type="button" class="btn btn-success">Read About Pro</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="row">
   <div class="col-md-8">
     <div class="row">
       <div class="col-md-2">
@@ -58,7 +164,7 @@
     <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a> Your sparkcasts are awesome, thanks for providing great content to the community</p>&mdash; Alex DiLiberto (@alex_diliberto) <a href="https://twitter.com/alex_diliberto/status/568070481229836289">February 18, 2015</a></blockquote>
   </div>
   </div>
-</div>
+</div> -->
 
 <% content_for :title, "EmberScreencasts.com" %>
 <% content_for :meta_description, "Video tutorials for creating ambitious web developers.  Discover new tools and techniques level up your Ember skills with concise twice-weekly screencasts." %>

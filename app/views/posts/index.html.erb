@@ -1,4 +1,46 @@
-<h1>Latest Screencasts</h1>
+<section>
+  <div class="jumbotron text-center video_list">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs12">
+          <h1>Video List</h1>
+          <h2>Tag</h2>
+          <p class="stats">Back to Explore</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row"></div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div>
+        <ul class="media-list">
+          <% @posts.each do |post| %>
+            <%= render 'post_listing', post: post%>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-sm-12">
+        <div id="testimonial_random" class="testimonial">
+          <p>“Pro Account Random-Testimony, What a Value!”</p>
+          <p class="person">-Attribution</p>
+          <p><a href="#">link</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">&nbsp;</div>
+      <div class="col-lg-6">&nbsp;</div>
+    </div>
+  </div>
+</section>
+<!-- <h1>Latest Screencasts</h1>
 <div>
   Filter by Difficulty:
   <a href="/posts?difficulty=basic">Basic</a>
@@ -11,7 +53,7 @@
   <% @posts.each do |post| %>
     <%= render 'post_listing', post: post%>
   <% end %>
-</div>
+</div> -->
 
 <a href="https://mixpanel.com/f/partner" class="pull-right"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
 

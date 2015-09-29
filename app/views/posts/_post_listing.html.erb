@@ -1,3 +1,20 @@
+<li class="media clickable-media-link <%= if !post.free then (if current_user.andand.subscribed then 'pro-subscriber' else'pro-media' end) end %>" data-url="<%= post_path(post) %>">
+  <%= link_to post_path(post) do %>
+    <div class="media-left"><%= image_tag(post.thumbnail_image, class: 'media-object img-responsive') %></div>
+    <div class="media-body">
+      <h4 class="media-heading"><%= link_to post.title, post %></h4>
+      <p><%= post.publish_date %> --
+        <a href="/posts?difficulty=<%=post.difficulty%>"><%= post.difficulty %></a>
+        <% post.tags.each do |tag| %>
+          -- <%= link_to tag.name, tag_path(tag) %>
+        <% end %>
+      </p>
+      <p class="playtime"><%= post.readable_time %></p>
+      <p><%= raw @markdown.render post.description %></p>
+    </div>
+  <% end %>
+</li>
+<!--
 <div class="post row">
   <div class="col-md-3 col-sm-4">
     <%= link_to image_tag(post.thumbnail_image, class: "img-responsive"), post %>
@@ -18,4 +35,4 @@
     <%= link_to "watch #{@post_type} video (#{post.readable_time})", post, class: 'btn watch-btn' %>
   </div>
 </div>
-<hr>
+<hr> -->
