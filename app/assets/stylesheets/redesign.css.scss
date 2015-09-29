@@ -52,7 +52,7 @@ hr {
 	color: #000000;
 	font-size: 25px;
 	font-weight: 400;
-	transform: scale(0.429,0.429);
+	// transform: scale(0.429,0.429);
 }
 .jumbotron h2 {
 	font-family: 'MavenProBlack';
@@ -328,8 +328,8 @@ div.pro-subscriber {
 
 /*end testimonials mobile */
 
-#single-video h1 {
-		color: #e24845;
+#single-video .header-1 {
+	color: #e24845;
 	font: 24px 'Maven Pro', sans-serif;
 	text-transform: uppercase;
 	background: image_url('chapter-mark.png') no-repeat;
@@ -337,7 +337,7 @@ div.pro-subscriber {
 	border-bottom: 2px solid black;
 	padding-bottom: 5px;
 }
-#single-video h2 {	font: 14px 'Maven Pro', sans-serif;border-bottom: 2px solid black;
+#single-video .header-2 {	font: 14px 'Maven Pro', sans-serif;border-bottom: 2px solid black;
 padding-bottom: 5px;
 	margin-top: 32px;
 }
@@ -366,7 +366,6 @@ padding-bottom: 5px;
 
   .jumbotron h1 {
     font-size: 48px;
-  	width: 700px;
   	margin: auto;
   }
   .jumbotron h2 {
@@ -433,11 +432,7 @@ padding-bottom: 5px;
 		a.navbar-brand {
 			background: image_url('Logo.png') 0 -3px no-repeat transparent;
 			width: 220px;
-			height: 237px;
 			position: absolute;
-		}
-		#single-video a.navbar-brand {
-			height: 45px;
 		}
 
 		ul.nav.navbar-nav {
