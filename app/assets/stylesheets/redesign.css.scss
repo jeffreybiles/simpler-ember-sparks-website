@@ -217,11 +217,12 @@ h4.media-heading {
 	color: silver;
 }
 
-.pro-media h2.media-heading, .pro-media, .pro-media h1 {
-	color: #dcdbc0;
-}
 .media img {
 	width: 100%;
+}
+
+.media-heading {
+	padding: 8px;
 }
 
 /* explore */

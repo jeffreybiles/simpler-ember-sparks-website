@@ -7,7 +7,6 @@
       </video>
     </div>
 
-
     <div class="container">
       <div class="row">
         <div class="col-xs12">
@@ -18,8 +17,6 @@
           <p><a href="#">More Details</a></p>
         </div>
       </div>
-
-
     </div>
   </div>
 
@@ -34,22 +31,14 @@
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="media">
-          <h1>Newest free Video
-          </h1>
-          <div class="media-top"> <a href="#"> <%= image_tag("400x400.gif") %> </a> </div>
-          <div class="media-body">
-            <h2 class="media-heading">70 - ember-hold-button</h2>
-Ever accidentally delete a record or send a message before it's complete?ember-hold-button is a fantastic addon that lets you put a small time barrier in front of sensitive actions so you don't complete them by accident. </div>
+          <h1>Newest free Video</h1>
+          <%= render 'latest_post', post: @posts.free.first %>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6">
         <div class="media pro-media">
-          <div class="media-top">
-            <h1>Newest Pro Video </h1><a href="#"><%= image_tag("400x400.gif")%></a>
-          </div>
-          <div class="media-body">
-            <h2 class="media-heading">71 - Upgrade Ember with ember-cli-deprecation-workflow</h2>
-Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
+          <h1>Newest Pro Video</h1>
+          <%= render 'latest_post', post: @posts.pro.first %>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6">
