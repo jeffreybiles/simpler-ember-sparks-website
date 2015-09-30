@@ -1,0 +1,25 @@
+#single-video section div.container div.row.video-info div.col-md-9 p button.btn.btn-success {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+#single-video .header-1 {
+	color: #e24845;
+	font: 24px 'Maven Pro', sans-serif;
+	text-transform: uppercase;
+	background: image_url('chapter-mark.png') no-repeat;
+	padding-left: 25px;
+	border-bottom: 2px solid black;
+	padding-bottom: 5px;
+}
+#single-video .header-2 {
+	font: 14px 'Maven Pro', sans-serif;
+	border-bottom: 2px solid black;
+	padding-bottom: 5px;
+	margin-top: 32px;
+}
+
+#single-video section.video_single {
+	background-color: white;
+	margin-top: -32px;
+}

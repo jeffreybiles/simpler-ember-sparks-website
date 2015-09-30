@@ -1,13 +1,20 @@
 <section>
-  <div class="jumbotron text-center video_list">
+  <div class="jumbotron video_list">
     <div class="container">
-      <div class="row">
-        <div class="col-xs12">
-          <h1>Video List</h1>
-          <h2>Tag</h2>
-          <p class="stats">Back to Explore</p>
+      <% if @tag %>
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="modified-headline"><%= @tag.name %></h1>
+            <br>
+            <div class="tag-description"><%= @tag.description %></div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="pull-right"><%= @tag.taggings.length %> videos, <%= @tag.seconds / 60 %> minutes</h2>
+          </div>
         </div>
-      </div>
+      <% else %>
+        <h1 class="text-center">Latest Videos</h1>
+      <% end %>
     </div>
   </div>
 </section>
@@ -22,7 +29,7 @@
       <div>
         <ul class="media-list">
           <% @posts.each do |post| %>
-            <%= render 'post_listing', post: post%>
+            <%= render 'posts/post_listing', post: post%>
           <% end %>
         </ul>
       </div>
@@ -51,7 +58,6 @@
 <hr>
 <div class="posts">
   <% @posts.each do |post| %>
-    <%= render 'post_listing', post: post%>
   <% end %>
 </div> -->
 

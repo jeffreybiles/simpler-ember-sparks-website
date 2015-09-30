@@ -29,5 +29,6 @@ class TagsController < ApplicationController
     else
       Analytics.track(anonymous_id: session.id || 'new', event: 'Viewed Tag Page', properties: properties)
     end
+    render 'posts/index'
   end
 end

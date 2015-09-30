@@ -33,6 +33,12 @@
 h1, h2, h3, h4, h5, h6, .navbar {
 //   font-family: 'Lato', serif;
   @include no-underline;
+  color: #000;
+}
+
+a.link-but-normal {
+  @include no-underline;
+  color: #000;
 }
 //
 // h1, h2, h3, h4, h5, h6 {

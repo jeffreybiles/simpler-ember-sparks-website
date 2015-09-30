@@ -1,0 +1,93 @@
+
+/*testimonials */
+	.testimonial   {
+	padding-top: 58px;
+	padding-right: 8px;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	background-color: lightblue;
+	margin-bottom: 12px;
+	font-family: 'MavenProRegular';
+	background: no-repeat center image_url('testimonial-mobile.png');
+	width: 268px;
+	margin: auto;
+	font-style: oblique;
+		}
+	.testimonial p {
+	color: #ffffff;
+	font-size: 26.12px;
+	font-weight: 400;
+	line-height: 32px;
+	text-align: center;
+		padding-top: 0px;
+		}
+	.testimonial .person {
+		font: 18px 'MavenProBold';
+		color: #ffffff;
+		line-height: 24px;
+		text-align: right;
+
+		}
+	.testimonial a {
+		color: #ffffff;
+		font-size: 13px;
+		font-weight: 400;
+		text-align: right;
+		display:block;
+		text-decoration:underline;
+		opacity: .4;
+		}
+	#testimonial2, #testimonial3 {display: none;}
+
+  #testimonial1 {
+  	padding-top: 69px;
+  	padding-bottom: 12px;
+  }
+
+  	#testimonial_random{
+
+
+  		background: none;
+  		margin: 40px 10px 10px;
+  		padding: 40px 10px 10px;
+  		width: 100%;
+  	}
+
+  #testimonial_random p, #testimonial_random a {
+  	color: black;
+  	}
+
+  /*end testimonials mobile */
+
+@media (min-width: 768px) {
+  /*testimonials */
+	.testimonial {
+		background: no-repeat center image_url('testimonial-1.png');
+		padding: 22px 14px 58px;
+		width: auto;
+	}
+	#testimonial2, #testimonial3 {
+		display: block;
+	}
+	.testimonial p {
+		font-size: 27px;
+		line-height: 26px;
+	}
+
+	#testimonial1 {
+    padding-top: 42px;
+		padding-bottom: 30px;
+	}
+	#testimonial2 {
+    background: no-repeat center image_url('testimonial-2.png');
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+	#testimonial3 {
+    background: no-repeat center image_url('testimonial-3.png');
+		padding-bottom: 30px;
+		padding-top: 60px;
+	}
+
+	/*end testimonials desktop */
+}

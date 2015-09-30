@@ -1,0 +1,54 @@
+.navbar.navbar-default {
+	background-color: rgb(232, 74, 54);
+	background-image: inherit;
+	border-style: none;
+	-moz-box-shadow: 0 0 2px #000000;
+	opacity: 1;
+}
+.nav.navbar-nav li a {
+	color: white;
+	font-family: 'Maven Pro', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.icon-bar {
+	color: white;
+}
+
+a.navbar-brand {
+	background: image_url('Nav_copy.png') 0 center #f5f5f5;
+	width: 320px;
+	height: 47px;
+	padding-top: 4px;
+	margin-top: 3px;
+}
+
+.navbar-brand img {
+	margin: -15PX AUTO;
+}
+
+@media (min-width: 768px) {
+  form.navbar-form.navbar-right {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  a.navbar-brand {
+    background: image_url('Logo.png') 0 -3px no-repeat transparent;
+    width: 220px;
+    position: absolute;
+  }
+
+  ul.nav.navbar-nav {
+    padding-left: 200px;
+  }
+
+  ul.nav.navbar-nav.navbar-right {
+    padding-left: 0;
+  }
+
+  form.navbar-form.navbar-right {
+    display: block;
+  }
+}

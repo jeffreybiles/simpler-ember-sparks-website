@@ -1,0 +1,73 @@
+.jumbotron {
+	background: #f5f5f5 image_url('heropattern_free.jpg');
+  background-color: #F3A18A;
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding-top: 16px;
+	padding-bottom: 15px;
+	position: relative;
+	top: -21px;
+	z-index: -1;
+}
+hr {
+	border-bottom-color: transparent;
+	border: 0 none transparent;
+	background-color: transparent;
+}
+.jumbotron h1.modified-headline {
+	font-family: 'MavenProRegular';
+	color: #000000;
+	font-size: 25px;
+	font-weight: 400;
+	// transform: scale(0.429,0.429);
+}
+.jumbotron h2.modified-headline {
+	font-family: 'MavenProBlack';
+	color: #000000;
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+	display: none;
+}
+.jumbotron p {
+	font-family: 'Arial';
+	color: #000000;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 24px;
+	display: none;
+}
+
+.jumbotron .tag-description {
+	font-family: 'Arial';
+	font-size: 15px;
+	font-weight: 200px;
+	line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .jumbotron h1.modified-headline {
+    font-size: 48px;
+  	margin: auto;
+  }
+  .jumbotron h2.modified-headline {
+  	display: block;
+  	width: 740px;
+  	margin: 30px auto 20px;
+  	font-size: 24px;
+  	line-height: 1.25em;
+	}
+	.jumbotron p {
+    font-size: 15px;
+		width: 50%;
+		margin: auto;
+		display: block;
+	}
+}
+
+@media (min-width: 1200px) {
+	.jumbotron p {
+		width: 30%;
+	}
+}
