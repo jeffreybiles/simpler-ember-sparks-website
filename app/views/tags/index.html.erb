@@ -35,8 +35,7 @@
                 <li class="media">
                   <div class="media-body">
                     <%= link_to subject do %><h4 class="media-heading"><%= subject.name %></h4><% end %>
-                    <p><%= subject.taggings.length %> Videos</p>
-                    <p>Total Playtime: <%= subject.seconds / 60 %> minutes</p>
+                    Length: <%= subject.taggings.length %> videos, <%= subject.seconds / 60 %> minutes
                   </div>
                 </li>
               </div>
