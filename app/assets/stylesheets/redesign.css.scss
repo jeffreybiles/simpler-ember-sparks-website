@@ -123,7 +123,6 @@ section.explore-section {
 
 .series-list li {
 	background: image_url('badge_fallback.png') 10px 10px no-repeat #5a96bb;
-	height: 140px;
 	margin: 0 0 10px;
 	border-top-style: solid;
 	border-top-color: #96b7cc;
@@ -161,8 +160,6 @@ section.explore-section {
 
 .tag-list li.media {
 	margin: 0;
-	border-top: 1px solid silver;
-
 }
 .esplore li.media img, li.media p {
 	display: block;
