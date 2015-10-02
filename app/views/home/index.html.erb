@@ -1,22 +1,20 @@
 <section>
   <div class="jumbotron text-center">
 
-   <div id="video-container">
+   <!-- <div id="video-container">
       <video loop muted autoplay poster="img/videoframe.jpg" class="fillWidth">
           <source src="/img/ember-video-background-loop-v4b.mp4" type="video/mp4">
       </video>
-    </div>
+    </div> -->
 
     <div class="container">
       <div class="row">
-        <div class="col-xs12">
           <h1>Video Tutorials for Creating Ambitious Developers.</h1>
           <h2 class="modified-headline">Discover new tools and techniques and level up your Ember skills with concise twice-weekly screencasts.</h2>
           <% unless current_user && current_user.subscribed %>
             <br>
             <%= render 'shared/subscribe' %><p>(<a href='/account'>more details</a>)</p>
           <% end %>
-        </div>
       </div>
     </div>
   </div>
