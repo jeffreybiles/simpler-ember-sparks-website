@@ -30,7 +30,7 @@
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-9">
-          <% if current_user && current_user.subscribed %>
+          <% if @post.free || (current_user && current_user.subscribed) %>
             <%= render 'video', wistia_embed: @post.wistia_embed %>
           <% else %>
             <div class="sales-box">
