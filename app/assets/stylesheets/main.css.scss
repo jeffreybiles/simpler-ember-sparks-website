@@ -15,7 +15,7 @@ $near-black: #1D1D1D;
   };
 }
 
-.clickable-media-link {
+.clickable-media-link, .clickable-external-link {
   cursor: pointer;
 }
 @media (min-width: 468px){

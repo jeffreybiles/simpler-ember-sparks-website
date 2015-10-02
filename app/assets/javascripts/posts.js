@@ -3,7 +3,11 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on('click', '.clickable-media-link', function(event){
-  console.log("it got a click")
   path = $(this).data('url')
   window.location.href = path
+})
+
+$(document).on('click', '.clickable-external-link', function(event){
+  path = $(this).data('url')
+  window.open(path)
 })
