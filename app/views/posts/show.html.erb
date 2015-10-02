@@ -32,7 +32,19 @@
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-9">
-          <%= render 'video', wistia_embed: @post.wistia_embed %>
+          <% if current_user && current_user.subscribed %>
+            <%= render 'video', wistia_embed: @post.wistia_embed %>
+          <% else %>
+            <div class="sales-box">
+              <h2>You can view pro screencasts by subscribing</h2>
+              <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
+              <%= render 'shared/subscribe' %>
+              <span class="btn free-screencasts-button"><a href="/posts?free=true">Show me only Free screencasts</a></span>
+            </div>
+            <a href="/account">
+              <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
+            </a>
+          <% end %>
         </div>
         <div class="col-md-3" id="playtime">
           <h2 class="header-2"><%= @post.publish_date %> | <%= @post.readable_time %> | <a href="/posts?difficulty<%=@post.difficulty%>"><%=@post.difficulty%></a></h2>
