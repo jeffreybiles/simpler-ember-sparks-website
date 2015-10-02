@@ -1,0 +1,26 @@
+#video-container {
+  display: none;
+}
+
+@media (min-width: 756px) {
+
+#video-container {
+  display: block;
+  	top: 0;
+  	left:0;
+  	overflow: hidden;
+  	width:100%;
+  	z-index: -1;
+  	position: absolute;
+  	height: 100%;
+  }
+  video.fillWidth {
+      position: absolute;
+      background-size: 100% 100%;
+      top: 0px;
+      left: 0px; /* fixed to left. Replace it by right if you want.*/
+      min-width: 100%;
+      width: auto;
+      height: auto;
+  }
+}

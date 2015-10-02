@@ -10,72 +10,75 @@
       });
     });
   </script>
-
 <% end %>
 <% content_for :title, @post.title %>
 <% content_for :meta_description, @post.description %>
 
-<p id="notice"><%= notice %></p>
-
-<h1>
-  <%= @post.title %>
-</h1>
-
-<div class="row">
-  <div class="col-lg-9 col-md-12">
-    <% if current_user.try(:subscribed) or @post.free %>
-      <%= render 'video', video_url: @post.video_url, wistia_embed: @post.wistia_embed %>
-    <% else %>
-      <div class="sales-box">
-        <h2>You can view Pro screencasts by subscribing</h2>
-        <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
-        <form action="/subscribe" method="POST">
-          <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-          <script
-            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
-            data-name="EmberScreencasts.com"
-            data-description="Monthly Subscription"
-            data-label="Subscribe for $9.95/month"
-            data-panel-label="Subscribe {{amount}}/month"
-            data-amount="995">
-          </script>
-        </form>
-        <span class="btn free-screencasts-button"><a href="/posts?free=true">Show me only Free screencasts</a></span>
+<div id="single-video">
+  <section>
+    <div class="jumbotron text-center video_single">
+      <div class="container">
+        <div class="row">
+          <h1><%= @post.title %></h1>
+        </div>
       </div>
-      <hr>
-      <a href="/account">
-        <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
-      </a>
-    <% end %>
-
-    <div class="published-on">
-      <small>
-        <% if @post.free %> Free <% else %> Pro <% end %>
-        --
-        <%= @post.publish_date %>
-        --
-        <a href="/posts?difficulty=<%=@post.difficulty%>"><%= @post.difficulty %></a>
-      </small>
     </div>
-  </div>
+  </section>
 
-  <div class="col-lg-3 col-md-12">
-    <div class="description">
-      <h4>About this video</h4>
-      <%= raw @markdown.render @post.description %>
+  <section class="video_single">
+    <div class="container">
+      <p id="notice"><%= notice %></p>
+      <div class="row">
+        <div class="col-md-9">
+          <% if current_user && current_user.subscribed %>
+            <%= render 'video', wistia_embed: @post.wistia_embed %>
+          <% else %>
+            <div class="sales-box">
+              <h2>You can view pro screencasts by subscribing</h2>
+              <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
+              <%= render 'shared/subscribe' %>
+              <span class="btn free-screencasts-button"><a href="/posts?free=true">Show me only Free screencasts</a></span>
+            </div>
+            <a href="/account">
+              <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
+            </a>
+          <% end %>
+        </div>
+        <div class="col-md-3" id="playtime">
+          <h2 class="header-2"><%= @post.publish_date %> | <%= @post.readable_time %> | <a href="/posts?difficulty<%=@post.difficulty%>"><%=@post.difficulty%></a></h2>
+          <p><strong>About this video</strong></p>
+          <p><%= raw @markdown.render @post.description %></p>
+          <!-- put buttons for code, transcript, comments here -->
+          <p><strong>More videos like this </strong></p>
+          <% @post.tags.each do |tag| %>
+            <div class="tag-link"><span class="tag-type"><%= tag.tag_type %></span>:  <%= link_to tag.name, tag_path(tag) %></div>
+          <% end %>
+          <% if @post.links && @post.links.length > 0 %>
+            <br>
+            <p><strong>Links</strong></p>
+            <%= raw @markdown.render(@post.links) %>
+          <% end %>
+          <!-- <p align="center"><button type="button" class="btn btn-success">Next Video In Series</button></p>
+          <p align="center"><a href="#">Back to Explore</a></p> -->
+        </div>
+      </div>
+    <div>
+  </section>
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+  		    <div id="transcript">
+            <p><strong>Transcript</strong></p>
+            <p>First, we will clarify the main concepts of the framework. Next, we’ll go in depth with a step-by-step tutorial that teaches you how to build a simple Web app with Ember.js and Ember-Data, which is Ember’s data storage layer. Then, we will see how views and components help with handling user interactions. Finally, we will dig a little more into Ember-Data and template precompiling.</p>
+            <p>Suppose our application handles a collection of users. Well, those users and their informations would be the model. Think of them as the database data. Models may be retrieved and updated by implementing AJAX callbacks inside your routes, or you can rely on Ember-Data (a data-storage abstraction layer) to greatly simplify the retrieval, updating and persistence of models over a REST API.</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <h4> More videos like this</h4>
-    <% @post.tags.each do |tag| %>
-      <div class="tag-link"><span class="tag-type"><%= tag.tag_type %></span>:  <%= link_to tag.name, tag_path(tag) %></div>
-    <% end %>
-
-    <% if @post.links && @post.links.length > 0 %>
-    <div class="links">
-      <h4>Links</h4>
-      <%= raw @markdown.render(@post.links) %>
-    </div>
-    <% end %>
-  </div>
+  </section> -->
+  <section id="comments" align="center">
+    comment plugin
+  </section>
+  <hr>
 </div>

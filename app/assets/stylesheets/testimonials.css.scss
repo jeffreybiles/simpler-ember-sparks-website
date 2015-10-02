@@ -1,0 +1,24 @@
+.testimonial {
+	padding: 10px;
+	background-color: lightblue;
+	margin-bottom: 12px;
+	font-family: 'MavenProRegular';
+
+	.person-photo {
+		float: right;
+		img {
+			max-width: 70px;
+			max-height: 70px;
+		}
+	}
+
+	.quote {
+		font-size: 26px;
+		line-height: 26px;
+		font-family: 'MavenProRegular';
+	}
+
+	p {
+		margin: 10px 0 10px 0;
+	}
+}

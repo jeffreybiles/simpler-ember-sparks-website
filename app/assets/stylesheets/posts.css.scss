@@ -1,3 +1,118 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* video list */
+.video_list {
+	background: image_url('background_green.jpg') #b6e3bc;
+}
+.explore {
+	background: image_url('background_info.png') #84b0cb;
+}
+.video_list h2, .explore h2  {
+	display: block;
+}
+li.media {
+	margin: 10px 30px;
+	padding: 10px;
+}
+li.media:first-child {
+border: none;
+}
+
+li.pro-media {
+	border-bottom-color: silver;
+}
+li.media img, li.media p {
+	display: none;
+	margin-bottom: 0;
+}
+.series-list li.media p {
+	display: block;
+}
+ li.media p.playtime {
+	display: block;
+	visibility: visible;
+}
+
+li.media div.media-body {
+	padding-left: 40px;
+	background: image_url('video-list-play.png') no-repeat;
+}
+
+li.pro-media div.media-body {
+	padding-left: 40px;
+	background: image_url('video-list-lock.png') 3px no-repeat;
+}
+
+
+/* video list */
+@media (min-width: 768px) {
+  li.media {
+		padding: 0;
+		margin: 0;
+  }
+
+  li.media div.media-body {
+    padding-left: 15px;
+    background: url(none) transparent;
+		p {
+			padding-bottom: 8px;
+		}
+  }
+
+  div.media-left {
+    width: 250px;
+    float: left;
+    margin: 0;
+		padding: 0;
+  }
+  li.media img, li.media p {
+    display: block;
+  }
+  li.media {
+    .corner-flag {
+			content: image_url('cornerflag_free.png');
+			position: absolute;
+		}
+    padding: 0;
+		padding: 20px;
+    margin: 0;
+  }
+  li.pro-media {
+    .corner-flag{content: image_url('cornerflag_pro.png');}
+  }
+  li.pro-subscriber {
+    .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
+  }
+
+  .series-list li {
+    background: image_url('badge_fallback.png') 10px 10px no-repeat #5a96bb;
+    margin: 0 0 10px;
+    padding-left: 80px;
+  }
+
+  .tag-list li.media {
+    background: url(none) left top no-repeat;
+
+    padding-bottom: 11px;
+    padding-top: 0;
+  }
+
+  h4.media-heading {
+    text-transform: uppercase;
+    text-align: left;
+    color: #F1603E;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  ul.tag-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tag-list h4 {
+    margin: 0 !important;
+  }
+}

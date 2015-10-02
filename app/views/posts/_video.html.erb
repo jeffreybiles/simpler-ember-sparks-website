@@ -1,7 +1,7 @@
 <% if wistia_embed.present? %>
   <%= raw wistia_embed %>
 
-  <div class="text-center pull-right">
+  <div class="text-center pull-right dropdown-container">
     <ul class="nav nav-pills centered-pills" data-speed="1.0" data-name="1.0x" data-behavior="video-controls">
 
       <!-- Skip Backwards Link -->
@@ -39,8 +39,4 @@
       <li><a data-toggle="tooltip" data-behavior="skip-forward" title="Skip forward 30 Seconds" href="#"><i class="fa fa-forward"></i></a></li>
     </ul>
   </div>
-<% else %>
-<div class='video'>
-  <iframe src="<%= video_url %>?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
 <% end %>

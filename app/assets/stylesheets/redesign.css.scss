@@ -1,0 +1,191 @@
+/* @override
+	http://ember.multimediabychris.com/css/style.css */
+
+@charset "UTF-8";
+/* @group Mobile */
+
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500);
+/*CSS is mobile first for foundation, then the desktop 768-min overides later */
+
+section#comments {
+	background-color: white;
+	padding: 40px;
+	margin-bottom: -20px;
+}
+
+div#transcript {
+	padding: 20px 0 10px 0;
+}
+
+body {
+	background-color: rgb(246, 244, 215);
+}
+
+// bottom of home page
+
+#socialproof2 {
+	text-align: center;
+	// background: image_url('radiowaves.png') center center no-repeat;
+	padding-top: 10px;
+}
+#socialproof2 .img-responsive {
+	margin: auto;
+}
+#socialproof2 .img-responsive.animated {
+	margin-top: 60px;
+}
+#brand2 .btn.btn-success {
+	font-family: 'MavenProBold';
+	color: #ffffff;
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 24px;
+	background-color:#F1603E;
+	border-color: #ee6f4a;
+	margin: 30px;
+}
+
+footer {
+	background-color: #3279b7;
+	color: white;
+	padding-top: 10px;
+
+	a, a:link, a:visited {color: white;}
+}
+
+.media h1 {
+	font-family: MavenProBlack;
+	color: #000000;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h2.media-heading, h4.media-heading {
+	font: 24px MavenProBold;
+	color: #e24845;
+	font-weight: bold;
+	line-height: 24px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h4.media-heading {
+	text-transform: uppercase;
+	text-align: left;
+	color: black;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+.pro-media h4.media-heading {
+	color: silver;
+}
+
+.media img {
+	width: 100%;
+}
+
+.media-heading {
+	padding: 8px 0 8px 0;
+}
+
+/* explore */
+
+section.explore-section {
+	background-color: white;
+	position: relative;
+	top: -31px;
+
+}
+.series-list li.media div.media-body {
+	background-image: url(none);
+	padding-left: 0;
+}
+
+.series-list li {
+	background: image_url('badge_fallback.png') 10px 10px no-repeat #5a96bb;
+	margin: 0 0 10px;
+	border-top-style: solid;
+	border-top-color: #96b7cc;
+	border-bottom-color: #315e7a;
+	border-bottom-style: solid;
+	padding-left: 80px;
+}
+.series-list {
+	margin: 0;
+	padding: 9px 0 0;
+	width: 110%;
+	left: -15px;
+	background-color: #1e394a;
+}
+.series-list li p {
+	color: white;
+	letter-spacing: 1px;
+	line-height: 21px;
+}
+
+.series-list div.media-body {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.series-list div.media-body h4{
+	color: white;
+	margin-bottom: 6px;
+	margin-top: 0;
+}
+.series-list div.media-body a{color: white;
+	text-decoration: underline;
+}
+
+
+
+.tag-list li.media {
+	margin: 0;
+}
+.esplore li.media img, li.media p {
+	display: block;
+}
+.tag-list h4 {
+	margin: 0 !important;
+	text-transform: none;
+	text-decoration: underline;
+	color: #e55b3b;
+}
+
+.tag-list li.media div.media-body {
+	padding: 0 !important;
+	background-image: url(none);
+}
+/* homepage features videos */
+
+div.media {
+	padding: 4%;
+	.corner-flag {
+		content: image_url('cornerflag_free.png');
+		position: absolute;
+	};
+}
+div.pro-media {
+  .corner-flag{content: image_url('cornerflag_pro.png');}
+}
+div.pro-subscriber {
+  .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
+}
+
+@media (min-width: 468px){}
+
+@media (min-width: 768px) {
+	.media:hover {
+		background-color: #ccc;
+	}
+
+	.btn.btn-primary.btn-lg {
+		font-size:1.2em;
+	}
+	.stats {
+		text-align: right;
+		float: right;
+	}
+}

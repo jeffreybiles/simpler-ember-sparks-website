@@ -1,119 +1,133 @@
-@import "bootstrap";
-@import url(https://fonts.googleapis.com/css?family=Port+Lligat+Slab:400,700|Lato);
+// @import url(https://fonts.googleapis.com/css?family=Port+Lligat+Slab:400,700|Lato);
 
-$primary-red: #FF373B;
-$primary-blue: #3E25E8;
-$primary-brown: #CC4B18;
-$dark-red: #99644F;
-$mid-green: #9BDC4A;
-$dark-green: #7cad3c;
+// $primary-red: #FF373B;
+// $primary-blue: #3E25E8;
+// $primary-brown: #CC4B18;
+// $dark-red: #99644F;
+// $mid-green: #9BDC4A;
+// $dark-green: #7cad3c;
 $near-black: #1D1D1D;
-$near-white: #F5F5F5;
-$footer-height: 40px;
-
+// $near-white: #F5F5F5;
+//
 @mixin no-underline {
   a, a:visited, a:hover, a:link {
     text-decoration: none
   };
 }
 
+.clickable-media-link, .clickable-external-link {
+  cursor: pointer;
+}
+@media (min-width: 468px){
+  .dropdown-container {
+    margin-top: -25px;
+  }
+}
+
+.image-fit img {
+  width: 100%;
+}
+//
 html {
   position: relative;
   min-height: 100%;
 }
-
+//
 body {
-  font-family: 'Lato', serif;
-  background-color: $near-white;
-  color: $near-black;
-  font-size: 16px;
-  margin-bottom: $footer-height;
-  line-height: 1.3;
+// //   font-family: 'Lato', serif;
+// //   background-color: $near-white;
+// //   color: $near-black;
+// //   font-size: 16px;
+  margin-bottom: 90px;
+// //   line-height: 1.3;
 }
-
+//
 h1, h2, h3, h4, h5, h6, .navbar {
-  font-family: 'Lato', serif;
+//   font-family: 'Lato', serif;
   @include no-underline;
+  color: #000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+a.link-but-normal {
+  @include no-underline;
+  color: #000;
 }
+//
+// h1, h2, h3, h4, h5, h6 {
+//   font-weight: bold;
+// }
+//
+// a, a:hover, a:link {
+//   color: $primary-brown;
+// }
+//
+// a:visited {
+//   color: $dark-red;
+// }
+//
+// .sparks-header {
+//   background-color: $primary-brown;
+// }
+//
+// #application-nav.navbar-default.navbar {
+//   .navbar-toggle {
+//     border-color: $near-black;
+//
+//     .icon-bar {
+//       background-color: $near-black;
+//     }
+//   }
+//
+//   a {
+//     font-family: 'Kameron', serif;
+//     text-decoration: none;
+//     color: $near-black;
+//     cursor: pointer;
+//
+//     &.navbar-brand {
+//       font-weight: bold;
+//     }
+//   }
+// }
+//
 
-a, a:hover, a:link {
-  color: $primary-brown;
-}
-
-a:visited {
-  color: $dark-red;
-}
-
-.sparks-header {
-  background-color: $primary-brown;
-}
-
-#application-nav.navbar-default.navbar {
-  .navbar-toggle {
-    border-color: $near-black;
-
-    .icon-bar {
-      background-color: $near-black;
-    }
-  }
-
-  a {
-    font-family: 'Kameron', serif;
-    text-decoration: none;
-    color: $near-black;
-    cursor: pointer;
-
-    &.navbar-brand {
-      font-weight: bold;
-    }
-  }
-}
-
-.btn {
-  font-family: 'Kameron', serif;
-  font-weight: bold;
-  background-color: $near-black;
-}
-a.btn.watch-btn {
-  color: $mid-green;
-}
-
-a:visited.btn.watch-btn {
-  color: $dark-green;
-}
-
-a.btn {
-  text-decoration: none;
-  color: $near-black;
-}
-
-.description {
-  margin: 15px 0;
-}
-
-.main-content {
-  margin-bottom: 60px;
-}
-
-.index-title {
-  margin-top: 0px;
-  margin-bottom: 4px;
-}
-
-#edit_user, #new_user {
-  input {
-    margin-bottom: 10px;
-  }
-}
-
+// a.btn.watch-btn {
+//   color: $mid-green;
+// }
+//
+// a:visited.btn.watch-btn {
+//   color: $dark-green;
+// }
+//
+// a.btn {
+//   text-decoration: none;
+//   color: $near-black;
+// }
+//
+// .description {
+//   margin: 15px 0;
+// }
+//
+// .main-content {
+//   margin-bottom: 60px;
+// }
+//
+// .index-title {
+//   margin-top: 0px;
+//   margin-bottom: 4px;
+// }
+//
+// #edit_user, #new_user {
+//   input {
+//     margin-bottom: 10px;
+//   }
+// }
+//
 .sales-box {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 10px;
   background-color: white;
 
   h2 {
@@ -125,29 +139,33 @@ a.btn {
   }
 
   span.free-screencasts-button a {
-    color: #B99;
+    color: #F5AB98;
     text-decoration: none;
   }
   span.login-path-button a {
-    color: #9B9;
+    color: #9CCC88;
     text-decoration: none;
+  }
+
+  .btn {
+    font-family: 'MavenProRegular', serif;
+    background-color: $near-black;
   }
 }
 
-.footer {
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: $footer-height;
   vertical-align: center;
   text-align: center;
 }
-
-.small-image {
-  width: 200px;
-}
-
-.big-text-area {
-  width: 300px;
-  height: 70px;
-}
+//
+// .small-image {
+//   width: 200px;
+// }
+//
+// .big-text-area {
+//   width: 300px;
+//   height: 70px;
+// }
