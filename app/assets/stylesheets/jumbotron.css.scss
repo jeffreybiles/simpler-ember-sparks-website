@@ -33,8 +33,6 @@ hr {
 	font-size: 19px;
 	font-weight: 400;
 	line-height: 24px;
-	// text-transform: uppercase;
-	display: none;
 }
 .jumbotron p {
 	font-family: 'Arial';
@@ -42,7 +40,6 @@ hr {
 	font-size: 11px;
 	font-weight: 400;
 	line-height: 24px;
-	display: none;
 }
 
 .jumbotron .tag-description {
@@ -59,7 +56,7 @@ hr {
   }
   .jumbotron h2.modified-headline {
   	display: block;
-  	width: 740px;
+  	max-width: 600px;
   	margin: 30px auto 20px;
   	font-size: 24px;
   	line-height: 1.25em;
