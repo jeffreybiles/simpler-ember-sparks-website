@@ -64,8 +64,6 @@
 
   <%= yield %>
   <%= render 'shared/script_footer' %>
-  <% unless current_page?(root_path) %>
-    <%= render 'shared/footer' %>
-  <% end %>
+  <%= render 'shared/footer' %>
 </body>
 </html>
