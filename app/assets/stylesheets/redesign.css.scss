@@ -178,13 +178,16 @@ section.explore-section {
 
 div.media {
 	padding: 4%;
-	background: no-repeat top left image_url('cornerflag_free.png');
+	.corner-flag {
+		content: image_url('cornerflag_free.png');
+		position: absolute;
+	};
 }
 div.pro-media {
-  background: no-repeat top left image_url('cornerflag_pro.png');
+  .corner-flag{content: image_url('cornerflag_pro.png');}
 }
 div.pro-subscriber {
-  background: no-repeat top left image_url('cornerflag_pro-unlocked.png');
+  .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
 }
 
 @media (min-width: 468px){}

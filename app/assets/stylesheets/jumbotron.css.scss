@@ -9,25 +9,31 @@
 	top: -21px;
 	z-index: -1;
 }
+
 hr {
 	border-bottom-color: transparent;
 	border: 0 none transparent;
 	background-color: transparent;
 }
-.jumbotron h1.modified-headline {
+
+.jumbotron h1 {
 	font-family: 'MavenProRegular';
 	color: #000000;
 	font-size: 25px;
 	font-weight: 400;
-	// transform: scale(0.429,0.429);
+	max-width: 700px;
 }
+
+.jumbotron h2 {
+	font-family: "MavenProBlack";
+}
+
 .jumbotron h2.modified-headline {
-	font-family: 'MavenProBlack';
 	color: #000000;
 	font-size: 19px;
 	font-weight: 400;
 	line-height: 24px;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	display: none;
 }
 .jumbotron p {
@@ -47,7 +53,7 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .jumbotron h1.modified-headline {
+  .jumbotron h1 {
     font-size: 48px;
   	margin: auto;
   }
