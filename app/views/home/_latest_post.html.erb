@@ -1,17 +1,19 @@
-<%= link_to post_path(post) do %>
-  <div class="corner-flag"></div>
-  <div class="media-top">
-    <%= link_to image_tag(post.thumbnail_image, class: "img-responsive"), post %>
-  </div>
+<div class="media clickable-media-link <%= if !post.free then (if current_user.andand.subscribed then 'pro-subscriber' else'pro-media' end) end %>" data-url="<%= post_path(post) %>">
+  <%= link_to post do %>
+    <div class="corner-flag"></div>
+    <div class="media-top">
+      <%= link_to image_tag(post.thumbnail_image, class: "img-responsive"), post %>
+    </div>
 
-  <div class="media-body">
-    <h2 class="media-heading"><%= post.title %></h2>
-    <p>
-      <%= post.publish_date %> -- <%= post.readable_time %> -- <a href="/posts?difficulty=<%=post.difficulty%>"><%= post.difficulty %></a>
-      <% post.tags.each do |tag| %>
-        -- <%= link_to tag.name, tag_path(tag) %>
-      <% end %>
-    </p>
-    <%= raw @markdown.render post.description %>
-  </div>
-<% end %>
+    <div class="media-body">
+      <h2 class="media-heading"><%= post.title %></h2>
+      <p>
+        <%= post.publish_date %> -- <%= post.readable_time %> -- <a href="/posts?difficulty=<%=post.difficulty%>"><%= post.difficulty %></a>
+        <% post.tags.each do |tag| %>
+          -- <%= link_to tag.name, tag_path(tag) %>
+        <% end %>
+      </p>
+      <%= raw @markdown.render post.description %>
+    </div>
+  <% end %>
+</div>
