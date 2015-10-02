@@ -70,7 +70,7 @@
 </section>
 
 <section>
-	<div class="container">
+	<div class="container clickable-media-link" data-url="/account">
     <p><br></p>
 		<div class="row" id="socialproof2">
     	<div class="text-center col-md-4 col-lg-4" id="library">
@@ -78,7 +78,10 @@
         <p>Unlimited access to every video in our library</p>
       </div>
     	<div class="text-center col-md-4 col-lg-4" id="brand2">
-     	  <p><%= image_tag("eslogo2.png") %></p>
+     	  <p class="image-fit"><%= image_tag("eslogo2.png") %></p>
+        <% unless current_user && current_user.subscribed %>
+          <button type="button" class="btn btn-success">Read About Pro</button>
+        <% end %>
       </div>
     	<div class="text-center col-md-4 col-lg-4" id="updates">
      	  <p><%= image_tag("seal-updates.png") %></p>
@@ -93,9 +96,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <% unless current_user && current_user.subscribed %>
-        <button type="button" class="btn btn-success">Read About Pro</button>
-        <% end %>
+
 
       </div>
     </div>
