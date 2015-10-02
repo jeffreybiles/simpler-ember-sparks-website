@@ -19,8 +19,10 @@
 .clickable-media-link {
   cursor: pointer;
 }
-.dropdown-container {
-  margin-top: -25px;
+@media (min-width: 468px){
+  .dropdown-container {
+    margin-top: -25px;
+  }
 }
 //
 // html {
