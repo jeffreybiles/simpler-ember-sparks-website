@@ -7,6 +7,14 @@
 	padding-bottom: 15px;
 	position: relative;
 	top: -21px;
+
+	.container, .row {
+		z-index: 1;
+		position: relative;
+	}
+	h2 {
+		font-size: 1.2em;
+	}
 }
 
 hr {

@@ -1,16 +1,17 @@
 #video-container {
+  pointer-events: none;
   display: none;
 }
 
 @media (min-width: 756px) {
 
-#video-container {
-  display: block;
+  #video-container {
+    display: block;
   	top: 0;
   	left:0;
   	overflow: hidden;
   	width:100%;
-  	z-index: -1;
+  	z-index: 0;
   	position: absolute;
   	height: 100%;
   }
