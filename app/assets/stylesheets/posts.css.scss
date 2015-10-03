@@ -23,26 +23,12 @@ border: none;
 li.pro-media {
 	border-bottom-color: silver;
 }
-li.media img, li.media p {
-	display: none;
-	margin-bottom: 0;
-}
 .series-list li.media p {
 	display: block;
 }
  li.media p.playtime {
 	display: block;
 	visibility: visible;
-}
-
-li.media div.media-body {
-	padding-left: 40px;
-	background: image_url('video-list-play.png') no-repeat;
-}
-
-li.pro-media div.media-body {
-	padding-left: 40px;
-	background: image_url('video-list-lock.png') 3px no-repeat;
 }
 
 
@@ -62,8 +48,6 @@ li.pro-media div.media-body {
   }
 
   div.media-left {
-    width: 250px;
-    float: left;
     margin: 0;
 		padding: 0;
   }
