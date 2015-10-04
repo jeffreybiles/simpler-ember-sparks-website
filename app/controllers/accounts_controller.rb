@@ -46,7 +46,7 @@ class AccountsController < ApplicationController
   def change_credit_card
     customer = Stripe::Customer.retrieve(current_user.stripe_customer_id)
     card = customer.sources.create(source: params['stripeToken'])
-    customer.default_source = card
+    customer.default_source = card.id
     customer.save
     flash[:success] = "Changed credit card info"
     redirect_to account_path
