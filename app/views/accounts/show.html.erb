@@ -6,6 +6,19 @@
     <hr>
 
     <%= link_to "Change your email or password", edit_user_registration_path %>
+    <form action="/change_credit_card" method="POST">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
+        data-name="EmberScreencasts.com"
+        data-description="Next charge will be with new card."
+        data-label="Change Credit Card"
+        data-email="<%= current_user.email %>"
+        data-panel-label="Change Credit Card">
+      </script>
+    </form>
+
     <% content_for :title, "My Account- EmberScreencasts" %>
   <% else %>
     <h1>The best resource for intermediate Ember developers</h1>
