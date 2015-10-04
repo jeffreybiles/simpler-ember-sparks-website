@@ -4,7 +4,6 @@
 @charset "UTF-8";
 /* @group Mobile */
 
-@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500);
 /*CSS is mobile first for foundation, then the desktop 768-min overides later */
 
 section#comments {
@@ -35,7 +34,7 @@ body {
 	margin-top: 60px;
 }
 #brand2 .btn.btn-success {
-	font-family: 'MavenProBold';
+	font-family: 'Maven Pro';
 	color: #ffffff;
 	font-size: 19px;
 	font-weight: 400;
@@ -54,7 +53,7 @@ footer {
 }
 
 .media h1 {
-	font-family: MavenProBlack;
+	font-family: 'Maven Pro';
 	color: #000000;
 	font-size: 24px;
 	font-weight: 400;
@@ -64,7 +63,7 @@ footer {
 }
 
 h2.media-heading, h4.media-heading {
-	font: 24px MavenProBold;
+	font: 24px 'Maven Pro';
 	color: #e24845;
 	font-weight: bold;
 	line-height: 24px;
@@ -100,7 +99,6 @@ section.explore-section {
 
 }
 .series-list li.media div.media-body {
-	background-image: url(none);
 	padding-left: 0;
 }
 
