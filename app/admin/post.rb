@@ -1,6 +1,6 @@
 ActiveAdmin.register Post do
-  # permit_params :title, :publish_date, :video_url, :description, :transcript, :thumbnail_image, :links
-  
+  # permit_params :title, :publish_date, :description, :transcript, :thumbnail_image, :links
+
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -51,7 +51,7 @@ ActiveAdmin.register Post do
       row :wistia_embed
     end
   end
-  
+
   form do |f|
     f.inputs "post" do
       f.input :title
@@ -59,12 +59,11 @@ ActiveAdmin.register Post do
       f.input :seconds
       f.input :difficulty, :as => :select, :collection => ['basic', 'intermediate', 'advanced']
       f.input :publish_date
-      f.input :video_url
       f.input :wistia_embed
       f.input :thumbnail_image
       f.input :description
       f.input :links
     end
     f.actions
-  end  
+  end
 end

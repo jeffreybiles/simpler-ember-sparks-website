@@ -5,7 +5,6 @@ export default Ember.Route.extend({
     return {
       checked: false,
       title: '',
-      videoUrl: '',
       description: ''
     }
   }
