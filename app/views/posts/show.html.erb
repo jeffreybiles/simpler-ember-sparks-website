@@ -48,6 +48,12 @@
           <h2 class="header-2"><%= @post.publish_date %> | <%= @post.readable_time %> | <a href="/posts?difficulty<%=@post.difficulty%>"><%=@post.difficulty%></a></h2>
           <p><strong>About this video</strong></p>
           <p><%= raw @markdown.render @post.description %></p>
+          <div class="buttons">
+            <a class="btn light-button" href="#comments">Comments</a>
+            <% if @post.code %><a class="btn light-button" href="#code">Code</a><% end %>
+            <% if @post.transcript %><a class="btn light-button" href="#transcript">Transcript</a><% end %>
+          </div>
+          <br>
           <!-- put buttons for code, transcript, comments here -->
           <p><strong>More videos like this </strong></p>
           <% @post.tags.each do |tag| %>
@@ -92,4 +98,24 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </section>
+  <% if @post.code %>
+    <section id="code">
+      <div class="container">
+        <div class="row">
+          <h2>Code</h2>
+          <%= raw @markdown.render @post.code %>
+        </div>
+      </div>
+    </section>
+  <% end %>
+  <% if @post.transcript %>
+    <section id="transcript">
+      <div class="container">
+        <div class="row">
+          <h2>Transcript</h2>
+          <%= raw @markdown.render @post.transcript %>
+        </div>
+      </div>
+    </section>
+  <% end %>
 </div>

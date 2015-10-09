@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621144747) do
+ActiveRecord::Schema.define(version: 20151009065542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150621144747) do
     t.string   "difficulty"
     t.integer  "seconds"
     t.text     "wistia_embed"
+    t.text     "code"
   end
 
   add_index "posts", ["permalink"], name: "index_posts_on_permalink", using: :btree
