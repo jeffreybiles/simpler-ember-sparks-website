@@ -14,7 +14,7 @@
           <h2 class="modified-headline">Discover new tools and techniques and level up your Ember skills with concise twice-weekly screencasts.</h2>
           <% unless current_user && current_user.subscribed %>
             <br>
-            <%= render 'shared/subscribe' %><p>(<a href='/account'>more details</a>)</p>
+            <a class="btn btn-primary link-but-normal" href="/#video_archive" style="background-color: #ADD8E6; text-decoration: none;">Video Archive</a>
           <% end %>
       </div>
     </div>
@@ -91,50 +91,26 @@
   </div>
 </section>
 <hr>
-<section>
+<section id="video_archive">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h1>Video Archive</h1>
+        <h3><%= link_to 'See with details', posts_path %></h3>
 
-
+        <ul>
+          <% @posts.each do |post| %>
+            <li><%= link_to post.title, post %></li>
+          <% end %>
+        </ul>
       </div>
+      <div class="col-md-2"></div>
     </div>
   </div>
 </section>
 
-
-<!-- <div class="row">
-  <div class="col-md-8">
-    <div class="row">
-      <div class="col-md-2">
-      </div>
-
-      <div class="col-md-8">
-        <h1 class="text-center">Video tutorials for creating ambitious developers</h1>
-
-        <p>Discover new tools and techniques and level up your Ember skills with concise twice-weekly screencasts.</p>
-
-        <p>You can <%= link_to 'explore different series and subjects', tags_path %>, start off with <%= link_to 'my favorites', tag_path('greatest-hits') %>, or see <%= link_to 'the latest screencasts', posts_path %>.</p>
-        <% unless current_user && current_user.subscribed %>
-          <div class="text-center">
-            <%= render 'shared/subscribe' %>(<a href='/account'>more details</a>)
-          </div>
-        <% end %>
-      </div>
-      <div class="col-md-2">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="text-center">Newest Free Video</h2>
-        <%= render 'latest_post', post: @posts.free.first %>
-      </div>
-      <div class="col-md-6">
-        <h2 class="text-center">Newest Pro Video</h2>
-        <%= render 'latest_post', post: @posts.pro.first %>
-      </div>
-    </div>
-  </div>
+<!--
   <div class="col-md-4">
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -162,8 +138,7 @@
 
     <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a> Your sparkcasts are awesome, thanks for providing great content to the community</p>&mdash; Alex DiLiberto (@alex_diliberto) <a href="https://twitter.com/alex_diliberto/status/568070481229836289">February 18, 2015</a></blockquote>
   </div>
-  </div>
-</div> -->
+-->
 
 <% content_for :title, "EmberScreencasts.com" %>
 <% content_for :meta_description, "Video tutorials for creating ambitious web developers.  Discover new tools and techniques level up your Ember skills with concise twice-weekly screencasts." %>

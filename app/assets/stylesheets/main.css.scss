@@ -57,6 +57,23 @@ a.link-but-normal {
   @include no-underline;
   color: #000;
 }
+
+#video_archive ul li {
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-family: 'Maven Pro';
+
+  @include no-underline;
+
+  a:hover {
+    color: #5897AB;
+  }
+
+  a {
+    color: #38476B;
+  }
+}
 //
 // h1, h2, h3, h4, h5, h6 {
 //   font-weight: bold;

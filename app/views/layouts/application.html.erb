@@ -31,7 +31,7 @@
         <ul class="nav navbar-nav">
           <%= nav_link "Home", root_path %>
           <%= nav_link "Explore", tags_path %>
-          <%= nav_link "Latest", posts_path %>
+          <%= nav_link "Latest", posts_path(latest: true) %>
           <%= nav_link "FAQ", faq_path %>
         </ul>
         <!-- <form class="navbar-form navbar-right" role="search">

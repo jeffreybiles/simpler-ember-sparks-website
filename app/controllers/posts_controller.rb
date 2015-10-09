@@ -13,6 +13,10 @@ class PostsController < ApplicationController
     if params[:difficulty]
       @posts = @posts.where(difficulty: params[:difficulty])
     end
+    if params[:latest]
+      @latest = true
+      @posts = @posts.limit(10)
+    end
     @posts = @posts.published.recent_first
   end
 

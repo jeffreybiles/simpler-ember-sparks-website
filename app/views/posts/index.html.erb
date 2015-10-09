@@ -34,10 +34,12 @@
         </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-6">&nbsp;</div>
-      <div class="col-lg-6">&nbsp;</div>
-    </div>
+    <% if @latest %>
+      <div class="row text-center">
+        <p>This has been the latest 10 videos...</p>
+        <h2><a class="btn btn-primary link-but-normal" href="/posts" style="background-color: #ADD8E6; text-decoration: none;">See All Videos</a></h2>
+      </div>
+    <% end %>
   </div>
 </section>
 <!-- <h1>Latest Screencasts</h1>
