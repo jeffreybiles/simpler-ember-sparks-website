@@ -16,12 +16,12 @@ li.media {
 	margin: 10px 30px;
 	padding: 10px;
 }
-li.media:first-child {
-border: none;
-}
 
-li.pro-media {
-	border-bottom-color: silver;
+.latest-post {
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #eee;
+	margin-bottom: 10px;
 }
 .series-list li.media p {
 	display: block;

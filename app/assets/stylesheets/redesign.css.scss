@@ -172,13 +172,13 @@ div.pro-subscriber {
   .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
 }
 
+
+.media:hover {
+	background-color: #ddd;
+}
 @media (min-width: 468px){}
 
 @media (min-width: 768px) {
-	.media:hover {
-		background-color: #ccc;
-	}
-
 	.btn.btn-primary.btn-lg {
 		font-size:1.2em;
 	}
