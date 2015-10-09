@@ -6,6 +6,10 @@
 
 /*CSS is mobile first for foundation, then the desktop 768-min overides later */
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Maven Pro';
+}
+
 section#comments {
 	background-color: white;
 	padding: 40px;
@@ -53,7 +57,6 @@ footer {
 }
 
 .media h1 {
-	font-family: 'Maven Pro';
 	color: #000000;
 	font-size: 24px;
 	font-weight: 400;
@@ -63,7 +66,7 @@ footer {
 }
 
 h2.media-heading, h4.media-heading {
-	font: 24px 'Maven Pro';
+	font: 24px;
 	color: #e24845;
 	font-weight: bold;
 	line-height: 24px;
