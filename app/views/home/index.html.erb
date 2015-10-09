@@ -75,9 +75,6 @@
       </div>
     	<div class="text-center col-md-4 col-lg-4" id="brand2">
      	  <p class="image-fit"><%= image_tag("eslogo2.png") %></p>
-        <% unless current_user && current_user.subscribed %>
-          <button type="button" class="btn btn-success">Read About Pro</button>
-        <% end %>
       </div>
     	<div class="text-center col-md-4 col-lg-4" id="updates">
      	  <p><%= image_tag("seal-updates.png") %></p>
@@ -91,18 +88,38 @@
 <section id="video_archive">
   <div class="container">
     <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
+      <div class="col-md-12">
         <h1>Video Archive</h1>
-        <h3><%= link_to 'See with details', posts_path %></h3>
-
+        <div class="buttons">
+          <a class="light-button btn" href="/posts">More episode details</a>
+          <a class="light-button btn" href="/tags">Arrange by subject</a>
+        </div>
+        <br>
+        <% unless current_user && current_user.subscribed %>
+          <h3>
+            <a class="btn pro-button" href="/account">Pro subscribers get access to all free and paid videos</a>
+          </h3>
+        <% end %>
         <ul>
           <% @posts.each do |post| %>
-            <li><%= link_to post.title, post %></li>
+            <li style="line-height: 1.2em;">
+              <%= link_to post do %>
+                <% unless current_user && current_user.subscribed %>
+                  <div class="archive-image" style="width: 40px; display: inline-block;">
+                    <% unless post.free %>
+                      <%= image_tag 'icon-locked.png' %>
+                    <% end %>
+                  </div>
+                <% end %>
+                <div class="archive-publish-date" style="width: 150px; display: inline-block;">
+                  <%= post.publish_date %>
+                </div>
+                <%= post.title %>
+              <% end %>
+            </li>
           <% end %>
         </ul>
       </div>
-      <div class="col-md-2"></div>
     </div>
   </div>
 </section>
