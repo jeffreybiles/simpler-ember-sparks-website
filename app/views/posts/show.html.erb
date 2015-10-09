@@ -30,7 +30,7 @@
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-9">
-          <% if @post.free || (current_user && current_user.subscribed) %>
+          <% if @viewable_by_user %>
             <%= render 'video', wistia_embed: @post.wistia_embed %>
           <% else %>
             <div class="sales-box">
@@ -50,8 +50,8 @@
           <p><%= raw @markdown.render @post.description %></p>
           <div class="buttons">
             <a class="btn light-button" href="#comments">Comments</a>
-            <% if @post.code %><a class="btn light-button" href="#code">Code</a><% end %>
-            <% if @post.transcript %><a class="btn light-button" href="#transcript">Transcript</a><% end %>
+            <% if @code_present %><a class="btn light-button" href="#code">Code</a><% end %>
+            <% if @transcript_present %><a class="btn light-button" href="#transcript">Transcript</a><% end %>
           </div>
           <br>
           <!-- put buttons for code, transcript, comments here -->
@@ -98,22 +98,30 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </section>
-  <% if @post.code %>
+  <% if @code_present %>
     <section id="code">
       <div class="container">
         <div class="row">
           <h2>Code</h2>
-          <%= raw @markdown.render @post.code %>
+          <% if @viewable_by_google %>
+            <%= raw @markdown.render @post.code %>
+          <% else %>
+            <p>Code is for subscribers only.</p>
+          <% end %>
         </div>
       </div>
     </section>
   <% end %>
-  <% if @post.transcript %>
+  <% if @transcript_present %>
     <section id="transcript">
       <div class="container">
         <div class="row">
           <h2>Transcript</h2>
-          <%= raw @markdown.render @post.transcript %>
+          <% if @viewable_by_google %>
+            <%= raw @markdown.render @post.transcript %>
+          <% else %>
+            <p>Transcript is for subscribers only.</p>
+          <% end %>
         </div>
       </div>
     </section>

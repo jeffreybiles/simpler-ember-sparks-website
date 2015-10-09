@@ -28,6 +28,13 @@ class PostsController < ApplicationController
       publish_date: @post.publish_date
     }
 
+    @viewable_by_user = @post.free || (current_user && current_user.subscribed)
+    @referrer = request.referrer
+    @first_click_free = @referrer =~ /.*\.google\..*/
+    @viewable_by_google = @first_click_free || @viewable_by_user
+    @transcript_present = @post.transcript && @post.transcript != 'null'
+    @code_present = @post.code && @post.code != 'null'
+
     properties['video_type'] = if @post.free then 'Free' else 'Pro' end
     if current_user
       Analytics.track(user_id: current_user.email, event: 'Viewed Video Page', properties: properties)
