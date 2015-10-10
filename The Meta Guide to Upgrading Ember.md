@@ -12,7 +12,7 @@ This is your worry-free guide to upgrading EmberJS. It has 5 parts:
 4. [Notes specific to each upgrade](#release-specific-notes)
 5. [Credits and comments](#credits-and-comments)
 
-This guide, especially part 4, is a living document.  Please send me suggestions or [post a comment](#credits-and-comments).
+This guide, especially part 4, is a living document.  Please <a href="mailto:jeffrey@emberscreencasts.com">send me suggestions</a> or [post a comment](#credits-and-comments).
 
 # <a name="general-guidelines"></a>General guidelines
 
@@ -189,6 +189,6 @@ ember-cli 1.13.9 has a new destroyApp helper.  Theres an [ember-watson task](htt
 <a name="credits-and-comments"></a>Credits
 ----
 
-I’d like to thank altSchool, which commissioned the first version of this document.  They’re wonderful to work with, they’re doing amazing work, and they’re hiring Ember devs. Find out more by visiting https://www.altschool.com/jobs.
+I’d like to thank altSchool, which commissioned the first version of this document and provided valuable feedback.  They’re wonderful to work with, they’re doing amazing work, and they’re hiring Ember devs. Find out more by visiting [their jobs page](https://www.altschool.com/jobs).
 
 If you enjoyed this, I’m putting out new videos about Ember every week at [emberscreencasts.com](www.emberscreencasts.com).  You might enjoy learning from them.
