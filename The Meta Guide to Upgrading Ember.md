@@ -4,12 +4,13 @@
 
 I’ve seen lot of fretting about how to keep up with Ember.  Most of that fretting has been unnecessary.
 
-This is a post in 4 parts:
+This is a post in 5 parts:
 
 1. [General Guidelines (and why you’re worrying too much)](#general-guidelines)
 2. [Step-by-step guide to doing a minor version upgrade](#step-by-step-minor)
 3. [Step-by-step guide to doing a major version upgrade](#step-by-step-major)
 4. [Notes specific to each upgrade](#release-specific-notes)
+5. [Credits and comments](#credits-and-comments)
 
 This guide, especially part 4, is a living document.  Please send me suggestions.
 
@@ -120,7 +121,7 @@ Use your judgment on which ones you should take advantage of, based on how much 
 3. Set the version of Ember in bower.json to the next major version, run bower install, restart your app.
 4. Make sure tests and performance are still good.  If you did step 2 correctly then the tests should be fine, and performance should have improved.
 
-These are just slightly mixed-up versions of some of the steps for doing a minor version update, so I'm not going to do detailed notes on each one.  Major versions are actually super easy (after you’ve done the massive amount of groundwork involved in getting rid of deprecations).  Yay!
+These are just slightly mixed-up versions of some of the steps for [doing a minor version update](#step-by-step-minor), so I'm not going to do detailed notes on each one.  Major versions are actually super easy (after you’ve done the massive amount of groundwork involved in getting rid of deprecations).  Yay!
 
 ## <a name="release-specific-notes"></a>Release-specific notes
 
@@ -185,9 +186,9 @@ Other
 ----
 ember-cli 1.13.9 has a new destroyApp helper.  Theres an [ember-watson task](https://github.com/abuiles/ember-watson#ember-watsonuse-destroy-app-helper-path) to help you upgrade.
 
-PostScript
+<a name="credits-and-comments"></a>Credits
 ----
 
 I’d like to thank altSchool, which commissioned the first version of this document.  They’re wonderful to work with, they’re doing amazing work, and they’re hiring Ember devs. Find out more by visiting https://www.altschool.com/jobs.
 
-If you enjoyed this, I’m putting out new videos about Ember every week on emberscreencasts.com.  You might enjoy learning from them.
+If you enjoyed this, I’m putting out new videos about Ember every week at [emberscreencasts.com](www.emberscreencasts.com).  You might enjoy learning from them.
