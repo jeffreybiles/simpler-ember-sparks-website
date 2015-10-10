@@ -32,7 +32,16 @@
           <%= nav_link "Home", root_path %>
           <%= nav_link "Explore", tags_path %>
           <%= nav_link "Latest", posts_path(latest: true) %>
-          <%= nav_link "FAQ", faq_path %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu navbar-dropdown">
+              <%= nav_link "FAQ", faq_path %>
+              <%= nav_link "About", about_path %>
+              <%= nav_link "Meta Guide to Upgrading Ember", meta_guide_to_upgrading_ember_path %>
+            </ul>
+          </li>
         </ul>
         <!-- <form class="navbar-form navbar-right" role="search">
           <div class="form-group">

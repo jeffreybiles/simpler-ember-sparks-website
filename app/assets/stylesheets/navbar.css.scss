@@ -1,5 +1,7 @@
+$nav-background: rgb(232, 74, 54);
+
 .navbar.navbar-default {
-	background-color: rgb(232, 74, 54);
+	background-color: $nav-background;
 	background-image: inherit;
 	border-style: none;
 	-moz-box-shadow: 0 0 2px #000000;
@@ -30,4 +32,14 @@ a.navbar-brand {
   form.navbar-form.navbar-right {
     display: none;
   }
+}
+
+.navbar-dropdown {
+	background-color: $nav-background;
+	color: #EEE;
+
+	li a:hover {
+		color: #000;
+		background-color: $nav-background;
+	}
 }
