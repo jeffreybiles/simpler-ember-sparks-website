@@ -32,6 +32,15 @@ p {
 .image-fit img {
   width: 100%;
 }
+
+.article {
+  max-width: 800px;
+  font-size: 1.1em;
+  font-family: 'Maven Pro';
+  h1, h2, h3, h4 {
+    font-weight: bold;
+  }
+}
 //
 html {
   position: relative;

@@ -6,8 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :markdown_renderer
 
   def markdown_renderer
-    @renderer ||= MyRenderer.new(:filter_html => true,
-                                :hard_wrap => true)
+    @renderer ||= MyRenderer.new(:hard_wrap => true)
     @markdown ||= Redcarpet::Markdown.new(@renderer,
       autolink: true,
       no_intra_emphasis: true,
