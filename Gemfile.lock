@@ -240,6 +240,7 @@ DEPENDENCIES
   bootstrap-sass
   carrierwave
   carrierwave-aws
+  coderay
   coffee-rails (~> 4.0.0)
   devise
   dotenv-rails

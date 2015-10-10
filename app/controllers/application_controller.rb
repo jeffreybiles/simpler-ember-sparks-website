@@ -6,11 +6,20 @@ class ApplicationController < ActionController::Base
   before_action :markdown_renderer
 
   def markdown_renderer
-    @markdown ||= Redcarpet::Markdown.new(RenderWithNewPhotos, autolink: true)
+    @renderer ||= MyRenderer.new(:filter_html => true,
+                                :hard_wrap => true)
+    @markdown ||= Redcarpet::Markdown.new(@renderer,
+      autolink: true,
+      no_intra_emphasis: true,
+      fenced_code_blocks: true,
+      disable_indented_code_blocks: true)
   end
 end
 
-class RenderWithNewPhotos < Redcarpet::Render::HTML
+class MyRenderer < Redcarpet::Render::HTML
+  def block_code(code, language)
+    CodeRay.scan(code, language).div
+  end
   def image(link, title, alt_text)
     return ''
     # We'll have to figure out a way to get the images out of ghost

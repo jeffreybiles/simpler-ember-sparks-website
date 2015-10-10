@@ -104,7 +104,7 @@
         <div class="row">
           <h2>Code</h2>
           <% if @viewable_by_google %>
-            <%= raw @markdown.render @post.code %>
+            <%= @markdown.render(@post.code).html_safe %>
           <% else %>
             <p>Code is for subscribers only.</p>
           <% end %>

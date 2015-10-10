@@ -22,6 +22,7 @@ gem 'stripe-rails'
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 
 gem 'redcarpet'
+gem 'coderay'
 gem "font-awesome-rails"
 
 gem 'carrierwave'
