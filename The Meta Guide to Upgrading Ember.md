@@ -4,7 +4,7 @@
 
 I’ve seen lot of fretting about how to keep up with Ember.  Most of that fretting has been unnecessary.
 
-This is a post in 5 parts:
+This is your worry-free guide to upgrading EmberJS. It has 5 parts:
 
 1. [General Guidelines (and why you’re worrying too much)](#general-guidelines)
 2. [Step-by-step guide to doing a minor version upgrade](#step-by-step-minor)
@@ -12,7 +12,7 @@ This is a post in 5 parts:
 4. [Notes specific to each upgrade](#release-specific-notes)
 5. [Credits and comments](#credits-and-comments)
 
-This guide, especially part 4, is a living document.  Please send me suggestions.
+This guide, especially part 4, is a living document.  Please send me suggestions or [post a comment](#credits-and-comments).
 
 # <a name="general-guidelines"></a>General guidelines
 
