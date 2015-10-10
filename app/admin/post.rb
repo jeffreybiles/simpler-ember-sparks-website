@@ -17,6 +17,12 @@ ActiveAdmin.register Post do
   index do
     column :id
     column :free
+    column :code do |t|
+      t.code.present? && t.code != 'null'
+    end
+    column :transcript do |t|
+      t.transcript.present? && t.transcript != 'null'
+    end
     column :post do |t|
       link_to t.title, post_path(t)
     end
@@ -49,6 +55,8 @@ ActiveAdmin.register Post do
       row :links
       row :thumbnail_image
       row :wistia_embed
+      row :code
+      row :transcript
     end
   end
 
@@ -63,6 +71,8 @@ ActiveAdmin.register Post do
       f.input :thumbnail_image
       f.input :description
       f.input :links
+      f.input :code
+      f.input :transcript
     end
     f.actions
   end
