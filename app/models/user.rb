@@ -10,7 +10,9 @@ class User < ActiveRecord::Base
     user = User.find_by_stripe_customer_id(customer.id)
     if customer.delinquent
       user.subscribed = false
-      user.save!
+    else
+      user.subscribed = true
     end
+    user.save!
   end
 end
