@@ -15,5 +15,6 @@
 /log/*.log
 /tmp
 .env
+*.csv
 
 latest.dump
