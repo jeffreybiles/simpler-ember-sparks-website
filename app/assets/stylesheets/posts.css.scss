@@ -9,6 +9,9 @@
 .explore {
 	background: image_url('background_info.png') #84b0cb;
 }
+.explore-jumbotron {
+	height: 70px;
+}
 .video_list h2, .explore h2  {
 	display: block;
 }
@@ -31,9 +34,18 @@ li.media {
 	visibility: visible;
 }
 
+@media (min-width: 468px){
+	.explore-jumbotron {
+		height: 50px;
+	}
+}
 
 /* video list */
 @media (min-width: 768px) {
+	.explore-jumbotron {
+		height: 110px;
+	}
+
   li.media {
 		padding: 0;
 		margin: 0;
