@@ -133,10 +133,19 @@ These notes are about significant new features, deprecation warnings, and perfor
 
 You can jump directly to the upgrade you're doing:
 
+* [1.10](#1.10)
 * [1.11](#1.11)
 * [1.12](#1.12)
 * [1.13](#1.13)
 * [2.0](#2.0)
+
+<a name="1.10"></a>1.10
+----
+* htmlbars released! [Some changes to your npm and bower packages may be required](http://emberjs.com/blog/2015/02/07/ember-1-10-0-released.html#toc_htmlbars-0-8-5)
+* New feature: Injected Properties.  This improves the 'needs' syntax, provides a more elegant alternative to certain classes of initializers, and allows for [Services](https://www.emberscreencasts.com/posts/82-introduction-to-services) to replace Service Controllers.  ember-watson has a recipe for [replacing 'needs' with the new injection syntax](https://www.emberscreencasts.com/posts/82-introduction-to-services).
+* New Feature: [Chained else blocks](http://emberjs.com/blog/2015/02/07/ember-1-10-0-released.html#toc_chained-else-blocks)
+* New Feature: [Block params](http://emberjs.com/blog/2015/02/07/ember-1-10-0-released.html#toc_block-params)
+* Performance improvements: 12% increase from 1.7, up to 50% increase from 1.9 (1.8 introduced a performance regression).
 
 <a name="1.11"></a>1.11
 ----
