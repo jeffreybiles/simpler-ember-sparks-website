@@ -2,10 +2,15 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+module.exports = function(defaults){
+  var app = new EmberApp(defaults, {});
+
+  app.import('bower_components/underscore/underscore-min.js');
+
+  return app.toTree();
+}
 
 
-app.import('bower_components/underscore/underscore-min.js');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
@@ -18,5 +23,3 @@ app.import('bower_components/underscore/underscore-min.js');
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
-
-module.exports = app.toTree();
