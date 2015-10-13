@@ -96,60 +96,10 @@ a.light-button {
 // h1, h2, h3, h4, h5, h6 {
 //   font-weight: bold;
 // }
-//
-// a, a:hover, a:link {
-//   color: $primary-brown;
-// }
-//
-// a:visited {
-//   color: $dark-red;
-// }
-//
-// .sparks-header {
-//   background-color: $primary-brown;
-// }
-//
-// #application-nav.navbar-default.navbar {
-//   .navbar-toggle {
-//     border-color: $near-black;
-//
-//     .icon-bar {
-//       background-color: $near-black;
-//     }
-//   }
-//
-//   a {
-//     font-family: 'Kameron', serif;
-//     text-decoration: none;
-//     color: $near-black;
-//     cursor: pointer;
-//
-//     &.navbar-brand {
-//       font-weight: bold;
-//     }
-//   }
-// }
-//
 
-// a.btn.watch-btn {
-//   color: $mid-green;
-// }
-//
-// a:visited.btn.watch-btn {
-//   color: $dark-green;
-// }
-//
-// a.btn {
-//   text-decoration: none;
-//   color: $near-black;
-// }
-//
+
 // .description {
 //   margin: 15px 0;
-// }
-//
-// .main-content {
-//   margin-bottom: 60px;
 // }
 //
 // .index-title {
@@ -201,11 +151,11 @@ footer {
   text-align: center;
 }
 //
-// .small-image {
-//   width: 200px;
-// }
-//
-// .big-text-area {
-//   width: 300px;
-//   height: 70px;
-// }
+.small-image {
+  width: 200px;
+}
+
+.big-text-area {
+  width: 300px;
+  height: 70px;
+}
