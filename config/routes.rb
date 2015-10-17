@@ -31,6 +31,8 @@ Rails.application.routes.draw do
     resources :posts
     resources :tags
     resources :taggings
+    resources :users
+    resources :organizations
   end
 
   # Example of regular route:
