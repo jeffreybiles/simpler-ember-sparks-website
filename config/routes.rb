@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post 'change_credit_card', to: 'accounts#change_credit_card'
 
   get 'ember_admin', to: 'pages#ember_admin'
-  get 'enterprise_user_admin', to: 'pages#enterprise_user_admin'
+  get 'organization_admin', to: 'pages#organization_admin'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'enterprise-user-admin',
     environment: environment,
-    baseURL: '/enterprise_user_admin/',
+    baseURL: '/organization_admin/',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
