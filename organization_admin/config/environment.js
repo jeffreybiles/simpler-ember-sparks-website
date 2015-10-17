@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'enterprise-user-admin',
+    modulePrefix: 'organization-admin',
     environment: environment,
     baseURL: '/organization_admin/',
     locationType: 'hash',
