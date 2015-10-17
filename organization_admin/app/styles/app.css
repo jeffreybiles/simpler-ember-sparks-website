@@ -1,3 +1,7 @@
+.large-text-area {
+  height: 300px;
+  width: 300px;
+}
 /*hacking around the fact that ember stuff no longer put in .main-content*/
 
 .main-content {
