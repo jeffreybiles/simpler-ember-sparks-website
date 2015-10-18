@@ -9,14 +9,19 @@ class InvitationManager
                              organization_permission_level: 'user')
       UserInvitationMailer.accept_invitation_email(invited_user, current_user).deliver
     else
-      invited_user = User.create(email: email,
-                         password: token,
-                         password_confirmation: token,
-                         invitation_status: 'created',
-                         invitation_token: token,
-                         organization_id: current_user.organization_id,
-                         organization_permission_level: 'user')
-      UserInvitationMailer.set_password_email(invited_user, current_user).deliver
+      begin
+        invited_user = User.create(email: email,
+                           password: token,
+                           password_confirmation: token,
+                           invitation_status: 'created',
+                           invitation_token: token,
+                           organization_id: current_user.organization_id,
+                           organization_permission_level: 'user')
+        UserInvitationMailer.set_password_email(invited_user, current_user).deliver
+      rescue StandardError
+        # I know it's terrible just swallowing this, but it's better than it crashing everything else
+        puts "There was an error"
+      end
     end
   end
 end
