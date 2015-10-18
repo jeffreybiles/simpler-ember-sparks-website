@@ -8,7 +8,7 @@ class Api::UsersController < Api::ApplicationController
   def bulk_add
     emails = params[:users]
     emails.each do |email|
-      InvitationManager.invite_to_organization(current_user.organization, email)
+      InvitationManager.invite_to_organization(current_user, email)
     end
     head 200
   end
