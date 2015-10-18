@@ -1,5 +1,17 @@
 <div class="container">
-  <% if current_user.try(:subscribed) %>
+  <% if organization = current_user.organization %>
+    <h2>Account Management</h2>
+
+    <p>You are part of the <%= organization.name %> organization.</p>
+    <%= link_to "Change your email or password", edit_user_registration_path %>
+    <hr>
+    <p>To make other changes to your account, please contact one of the admins:</p>
+    <ul>
+      <% organization.admin_users.each do |user| %>
+        <li><%= user.email %></li>
+      <% end %>
+    </ul>
+  <% elsif current_user.try(:subscribed) %>
     <h2>Thank you for your support!</h2>
     <p>Feel free to <%= link_to 'watch any video on the site', posts_path %>.  Or, if you're done with learning from me, you can <%= link_to 'unsubscribe', unsubscribe_path, method: :post, data: {confirm: "You hit the 'unsubscribe' link. Hitting OK means you'll no longer have access to Pro videos.  OK?"} %>.</p>
 
@@ -18,6 +30,8 @@
         data-panel-label="Change Credit Card">
       </script>
     </form>
+    <hr>
+    <a href="/organization_admin#/new">I want to create an organization from this account.</a>
 
     <% content_for :title, "My Account- EmberScreencasts" %>
   <% else %>
@@ -35,7 +49,7 @@
     <br>
     <a href='https://www.expeditedssl.com/simple-ssl-scanner/scan?target_domain=www.emberscreencasts.com' target='_blank'><img src='https://www.expeditedssl.com/ssl-secure-badge.png'  alt='Expedited SSL Scanner'></a>
     <br>
-    <a href="/organization_admin#/new">Buying for your organization?</a>
+    <p>Buying for your organization?  You can add more users to your account after signing up.</p>
 
     <!-- Lots of testimonials -->
     <!-- Another subscribe button -->

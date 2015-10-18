@@ -13,4 +13,8 @@ class Organization < ActiveRecord::Base
     end
     organization.save!
   end
+
+  def admin_users
+    users.where(organization_permission_level: 'admin')
+  end
 end
