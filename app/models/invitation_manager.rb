@@ -7,6 +7,7 @@ class InvitationManager
                              invitation_token: token,
                              organization_id: current_user.organization_id,
                              organization_permission_level: 'user')
+      UserInvitationMailer.accept_invitation_email(invited_user, current_user).deliver
     else
       invited_user = User.create(email: email,
                          password: token,

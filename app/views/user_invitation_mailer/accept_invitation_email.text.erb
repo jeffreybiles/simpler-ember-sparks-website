@@ -1,0 +1,15 @@
+Hey there,
+
+Your organization, <%= @organization.name %>, wants you to join them on emberscreencasts.com.
+
+<% if @user.subscribed %>
+  If you accept, then <%= @organization.name %> will start paying for your pro account.
+<% else %>
+  If you accept, then your account will be upgraded to a pro account, courtesy of <%= @organization.name %>.
+<% end %>
+
+<%= link_to "Join #{@organization.name}", controller: "users", action: "accept_invitation", user_id: @user.id, token: @user.invitation_token, host: @host %>.
+
+If you have any questions, feel free to email me (jeffrey@emberscreencasts.com) or the person who set up this account for you (<%= @inviter.email %>).
+
+--Jeffrey

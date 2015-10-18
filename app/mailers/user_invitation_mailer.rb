@@ -8,4 +8,12 @@ class UserInvitationMailer < ActionMailer::Base
     @host = if Rails.env == 'production' then 'www.emberscreencasts.com' else 'localhost:3000' end
     mail(to: @user.email, subject: "#{@organization.name} has invited you to emberscreencasts.com")
   end
+
+  def accept_invitation_email(invited_user, inviter)
+    @user = invited_user
+    @inviter = inviter
+    @organization = inviter.organization
+    @host = if Rails.env == 'production' then 'www.emberscreencasts.com' else 'localhost:3000' end
+    mail(to: @user.email, subject: "#{@organization.name} has invited you to join their organization on emberscreencasts.com")
+  end
 end

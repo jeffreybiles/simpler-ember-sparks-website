@@ -35,11 +35,7 @@ class AccountsController < ApplicationController
 
   def unsubscribe
     Analytics.track(user_id: current_user.email, event: 'Unsubscribe')
-    customer = Stripe::Customer.retrieve(current_user.stripe_customer_id)
-    customer.subscriptions.each do |subscription| #just in case we accidentally got 2 subscriptions
-      customer.subscriptions.retrieve(subscription.id).delete
-    end
-    current_user.update(subscribed: false)
+    StripeManager.unsubscribe(user)
     redirect_to account_path
   end
 
