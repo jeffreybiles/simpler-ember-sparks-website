@@ -6,4 +6,11 @@ class StripeManager
     end
     user.update(subscribed: false)
   end
+
+  def self.update_quantity(organization)
+    customer = Stripe::Customer.retrieve(organization.stripe_customer_id)
+    subscription = customer.subscriptions.first
+    subscription.quantity = organization.users.count
+    subscription.save
+  end
 end

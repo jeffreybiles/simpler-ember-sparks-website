@@ -10,6 +10,7 @@ class Api::UsersController < Api::ApplicationController
     emails.each do |email|
       InvitationManager.invite_to_organization(current_user, email)
     end
+    StripeManager.update_quantity(current_user.organization)
     head 200
   end
 
