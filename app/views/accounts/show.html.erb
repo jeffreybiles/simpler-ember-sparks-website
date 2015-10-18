@@ -1,16 +1,23 @@
 <div class="container">
-  <% if organization = current_user.organization %>
+  <% if organization = current_user.try(:organization) %>
     <h2>Account Management</h2>
 
     <p>You are part of the <%= organization.name %> organization.</p>
     <%= link_to "Change your email or password", edit_user_registration_path %>
     <hr>
-    <p>To make other changes to your account, please contact one of the admins:</p>
-    <ul>
-      <% organization.admin_users.each do |user| %>
-        <li><%= user.email %></li>
-      <% end %>
-    </ul>
+    <% if current_user.organization_admin %>
+      <p>As an admin, you can add and remove users or change your credit card.</p>
+      <a href="/organization_admin" class="btn btn-primary light-button">Manage Users</a>
+      <hr>
+      <%= render 'shared/change_credit_card' %>
+    <% else %>
+      <p>To make other changes to your account, please contact one of the admins:</p>
+      <ul>
+        <% organization.admin_users.each do |user| %>
+          <li><%= user.email %></li>
+        <% end %>
+      </ul>
+    <% end %>
   <% elsif current_user.try(:subscribed) %>
     <h2>Thank you for your support!</h2>
     <p>Feel free to <%= link_to 'watch any video on the site', posts_path %>.  Or, if you're done with learning from me, you can <%= link_to 'unsubscribe', unsubscribe_path, method: :post, data: {confirm: "You hit the 'unsubscribe' link. Hitting OK means you'll no longer have access to Pro videos.  OK?"} %>.</p>
@@ -18,20 +25,9 @@
     <hr>
 
     <%= link_to "Change your email or password", edit_user_registration_path %>
-    <form action="/change_credit_card" method="POST">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-      <script
-        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>"
-        data-name="EmberScreencasts.com"
-        data-description="Next charge will be with new card."
-        data-label="Change Credit Card"
-        data-email="<%= current_user.email %>"
-        data-panel-label="Change Credit Card">
-      </script>
-    </form>
+    <%= render 'shared/change_credit_card' %>
     <hr>
-    <a href="/organization_admin#/new">I want to create an organization from this account.</a>
+    <a href="/organization_admin#/new" class="btn btn-primary light-button">I want to create an organization from this account.</a>
 
     <% content_for :title, "My Account- EmberScreencasts" %>
   <% else %>
