@@ -11,6 +11,8 @@ class Api::UsersController < Api::ApplicationController
       InvitationManager.invite_to_organization(current_user, email)
     end
     StripeManager.update_quantity(current_user.organization)
+    invoice = StripeManager.create_invoice(current_user.organization)
+    invoice.pay
     head 200
   end
 

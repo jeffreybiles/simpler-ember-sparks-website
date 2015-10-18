@@ -7,6 +7,9 @@ export default Ember.Controller.extend({
     var users = lines.filter( line => line !== '')
     return users
   }),
+  monthlyBill: Ember.computed('users', function(){
+    return Math.round(this.get('users.length') * 9.95 * 100)/100;
+  }),
   actions: {
     addUsers(){
       $.ajax('api/users/bulk_add', {

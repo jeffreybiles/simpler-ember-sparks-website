@@ -13,4 +13,9 @@ class StripeManager
     subscription.quantity = organization.users.count
     subscription.save
   end
+
+  def self.create_invoice(organization)
+    invoice = Stripe::Invoice.create(customer: organization.stripe_customer_id)
+    invoice
+  end
 end
