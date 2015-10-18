@@ -1,11 +1,34 @@
 class Api::OrganizationsController < Api::ApplicationController
-  before_filter :authorize_admin, :except => [:index, :show]
+  before_filter :authorize_org_admin, except: [:create]
 
   def resource_class_name
     'organization'
   end
 
-  def authorize_admin
+  def create
+    @organization = Organization.create!(name: params[:organization][:name])
+    @organization.update_attributes(
+      stripe_customer_id: current_user.stripe_customer_id,
+      subscribed: true
+    )
+
+    current_user.update_attributes(
+      organization_id: @organization.id,
+      subscribed: false,
+      organization_permission_level: 'admin'
+    )
+    current_user.save
+
+    render json: @organization
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
+  def authorize_org_admin
     unless current_user && current_user.organization_admin
       head 401
     end

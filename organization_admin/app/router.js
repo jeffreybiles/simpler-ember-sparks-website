@@ -6,7 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('new')
+  this.route('new');
+  // this.route('edit');
+  // this.route('home', {path: '/'});
+  this.route('bulk-add')
 });
 
 export default Router;

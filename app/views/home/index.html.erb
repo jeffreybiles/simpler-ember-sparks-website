@@ -95,7 +95,7 @@
           <a class="light-button btn" href="/tags">Arrange by subject</a>
         </div>
         <br>
-        <% unless current_user && current_user.subscribed %>
+        <% unless current_user && current_user.can_watch_pro %>
           <h3>
             <a class="btn pro-button" href="/account">Pro subscribers get access to all free and paid videos</a>
           </h3>
@@ -104,7 +104,7 @@
           <% @posts.each do |post| %>
             <li style="line-height: 1.2em;">
               <%= link_to post do %>
-                <% unless current_user && current_user.subscribed %>
+                <% unless current_user && current_user.can_watch_pro %>
                   <div class="archive-image" style="width: 40px; display: inline-block;">
                     <% unless post.free %>
                       <%= image_tag 'icon-locked.png' %>

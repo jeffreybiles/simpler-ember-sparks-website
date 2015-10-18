@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
     end
     user.save!
   end
+
+  def can_watch_pro
+    subcribed || (organization && organization.subscribed)
+  end
 end

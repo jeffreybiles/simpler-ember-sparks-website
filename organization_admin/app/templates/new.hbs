@@ -1,28 +1,10 @@
 <h1>New Organization</h1>
-
 <p>
   Organization Name
   <br>
   {{input type="text" value=organizationName}}
 </p>
-<p>
-  Your email
-  <br>
-  {{input type="text" value=email}}
-</p>
-<p>
-  Your password
-  <br>
-  {{input type="password" value=password}}
-</p>
-<p>
-  Others on your team (emails, separated by newline, no commas)
-  <br>
-  {{textarea value=newLineSeparatedUsers class="large-text-area"}}
-  {{!-- put an example off to the side --}}
-  <br>
-  You've added {{users.length}} team members.  You may add or remove more team members later.
-</p>
-<p>
 
-</p>
+<a class="btn btn-primary light-button" {{action 'createOrganization'}}>Create my Organization</a>
+<p>Your billing information and subscription will be transferred over to the organization.
+<br> Your card will not be charged until you create more users.</p>

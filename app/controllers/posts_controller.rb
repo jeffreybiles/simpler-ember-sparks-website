@@ -28,7 +28,7 @@ class PostsController < ApplicationController
       publish_date: @post.publish_date
     }
 
-    @viewable_by_user = @post.free || (current_user && current_user.subscribed)
+    @viewable_by_user = @post.free || (current_user && current_user.can_watch_pro)
     @referrer = request.referrer
     @first_click_free = @referrer =~ /.*\.google\..*/
     @viewable_by_google = @first_click_free || @viewable_by_user
