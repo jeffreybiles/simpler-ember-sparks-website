@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   end
 
   def can_watch_pro
-    subcribed || (organization && organization.subscribed)
+    subscribed || (organization && organization.subscribed)
   end
 
   def organization_admin

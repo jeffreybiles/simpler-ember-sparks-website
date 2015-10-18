@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'ember_admin', to: 'pages#ember_admin'
   get 'organization_admin', to: 'pages#organization_admin'
   get 'set_password/:user_id/:token', to: 'users#set_password'
+  post 'set_password/:user_id/:token', to: 'users#activate_organization_user'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

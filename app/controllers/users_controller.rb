@@ -1,6 +1,28 @@
 class UsersController < ApplicationController
   def set_password
-    # get the user_id and token
-    # if they match, yay!  If not, redirect with error message
+    @user = User.find_by(id: params[:user_id])
+    check_token_match
+    @user.update_attributes(invitation_status: 'accepted')
+  end
+
+  def activate_organization_user
+    @user = User.find_by(id: params[:user_id])
+    check_token_match
+    if @user.update(password: params[:set_password][:password],
+                 password_confirmation: params[:set_password][:password_confirmation])
+      sign_in(@user)
+      flash[:success] = "You have updated your password and logged in."
+      redirect_to root_path
+    else
+      flash[:error] = @user.errors.full_messages.to_sentence
+      render 'set_password'
+    end
+  end
+
+  def check_token_match
+    unless @user && (@user.invitation_token == params[:token])
+      flash[:error] = "The user id and token did not match"
+      redirect_to root_path and return
+    end
   end
 end
