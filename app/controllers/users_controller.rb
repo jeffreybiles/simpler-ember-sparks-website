@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def set_password
     @user = User.find_by(id: params[:user_id])
     check_token_match
-    @user.update_attributes(invitation_status: 'accepted')
+    @user.update_attributes(invitation_status: 'activated')
   end
 
   def activate_organization_user
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   def accept_invitation
     @user = User.find_by(id: params[:user_id])
     check_token_match
-    @user.update_attributes(invitation_status: 'accepted')
+    @user.update_attributes(invitation_status: 'activated')
     StripeManager.unsubscribe(@user)
     sign_in(@user)
   end

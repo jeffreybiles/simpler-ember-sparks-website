@@ -1,0 +1,37 @@
+<h1>Organization User Management</h1>
+
+<h3>{{model.length}} team members in your organization</h3>
+{{#link-to 'bulk-add' class="btn btn-primary light-button"}}Invite More Members{{/link-to}}
+<hr>
+<div class="user-management-table">
+  <div class="row">
+    <div class="col-sm-1 col-xs-2">
+      Permissions
+    </div>
+    <div class="col-sm-1 col-xs-2">
+      Invite Status
+    </div>
+    <div class="col-sm-10 col-xs-8">
+      Email Address
+    </div>
+  </div>
+  <hr>
+  {{#each model as |user|}}
+    <div class="row">
+      <div class="col-sm-1 col-xs-2">
+        {{user.organizationPermissionLevel}}
+      </div>
+      <div class="col-sm-1 col-xs-2">
+        {{user.invitationStatus}}
+      </div>
+      <div class="col-sm-10 col-xs-8">
+        {{user.email}}
+      </div>
+    </div>
+  {{/each}}
+</div>
+<hr>
+<h2>What do the invite statuses mean?</h2>
+<p>"Created" means that you've created a new user and you're waiting on them to activate.</p>
+<p>"Invited" means they were already a user, and you're waiting on them to accept the invitation.</p>
+<p>"Activated" means they have visited the site as part of your organization.</p>
