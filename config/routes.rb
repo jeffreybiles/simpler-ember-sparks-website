@@ -31,7 +31,11 @@ Rails.application.routes.draw do
     resources :posts
     resources :tags
     resources :taggings
-    resources :users
+    resources :users do
+      collection do
+        post 'bulk_add'
+      end
+    end
     resources :organizations
   end
 

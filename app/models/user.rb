@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
   def can_watch_pro
     subcribed || (organization && organization.subscribed)
   end
+
+  def organization_admin
+    organization_permission_level == 'admin'
+  end
 end
