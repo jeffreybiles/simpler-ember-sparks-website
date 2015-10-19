@@ -37,6 +37,7 @@ Rails.application.routes.draw do
     resources :users do
       collection do
         post 'bulk_add'
+        post 'bulk_remove'
       end
     end
     resources :organizations

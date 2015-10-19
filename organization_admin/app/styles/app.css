@@ -11,3 +11,12 @@
 .main-ember-content {
   margin-bottom: 100px;
 }
+
+a.btn {
+  text-decoration: none;
+  color: #000;
+}
+
+a.btn.btn-danger {
+  color: white;
+}

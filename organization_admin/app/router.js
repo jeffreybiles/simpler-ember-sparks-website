@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('new');
   this.route('home', {path: '/'});
+  this.route('remove-users')
   this.route('bulk-add')
 });
 

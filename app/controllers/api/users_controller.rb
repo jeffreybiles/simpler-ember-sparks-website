@@ -27,6 +27,17 @@ class Api::UsersController < Api::ApplicationController
   def update
   end
 
+  def bulk_remove
+    ids = params[:users]
+    ids.each do |id|
+      user = User.find(id)
+      user.update_attributes(organization_id: nil)
+      # TODO: send an email saying they've been removed from org, asking them to sign up on their own
+    end
+    StripeManager.update_quantity(current_user.organization)
+    head 204
+  end
+
   def destroy
   end
 
