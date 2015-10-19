@@ -2,12 +2,13 @@ class InvitationManager
   def self.invite_to_organization(current_user, email)
     token = SecureRandom.base64(15).gsub('/', '')
     if invited_user = User.find_by(email: email)
-      # send an email asking if they'd like to join
-      invited_user.update_attributes(invitation_status: 'invited',
-                             invitation_token: token,
-                             organization_id: current_user.organization_id,
-                             organization_permission_level: 'user')
-      UserInvitationMailer.accept_invitation_email(invited_user, current_user).deliver
+      unless invited_user.organization_admin #security measure so malicious users don't snipe admins of other teams
+        invited_user.update_attributes(invitation_status: 'invited',
+                               invitation_token: token,
+                               organization_id: current_user.organization_id,
+                               organization_permission_level: 'user')
+        UserInvitationMailer.accept_invitation_email(invited_user, current_user).deliver
+      end
     else
       begin
         invited_user = User.create(email: email,
