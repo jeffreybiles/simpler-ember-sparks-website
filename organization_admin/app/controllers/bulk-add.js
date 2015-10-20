@@ -16,7 +16,7 @@ export default Ember.Controller.extend({
         method: 'POST',
         data: {users: this.get('users')}
       })
-      this.transitionToRoute('home')
+      window.location.href = '/organization_admin'
     }
   }
 })
