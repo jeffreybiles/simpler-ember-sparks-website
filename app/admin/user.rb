@@ -22,6 +22,8 @@ ActiveAdmin.register User do
     column :created_at
     column :updated_at
     column :last_sign_in_at
+    column :organization_id
+    column :organization_permission_level
     default_actions
   end
 
@@ -40,6 +42,11 @@ ActiveAdmin.register User do
       row :created_at
       row :updated_at
       row :last_sign_in_at
+      row :organization do |t|
+        t.organization.try(:name)
+      end
+      row :organization_permission_level
+      row :invitation_status
     end
   end
 
