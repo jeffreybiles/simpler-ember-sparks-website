@@ -12,13 +12,16 @@ class Api::OrganizationsController < Api::ApplicationController
       subscribed: true
     )
 
-    current_user.update_attributes(
+    user = current_user
+    puts "Gonna update the user!"
+    puts user
+    user.update_attributes(
       organization_id: @organization.id,
       subscribed: false,
       organization_permission_level: 'admin'
     )
     current_user.save
-
+    puts user
     render json: @organization
   end
 
