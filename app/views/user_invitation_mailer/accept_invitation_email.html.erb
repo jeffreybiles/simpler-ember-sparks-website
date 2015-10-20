@@ -1,15 +1,17 @@
-Hey there,
+<p>Hey there,</p>
 
-Your organization, <%= @organization.name %>, wants you to join them on emberscreencasts.com.
+<p>Your organization, <%= @organization.name %>, wants you to join them on emberscreencasts.com.</p>
 
+<p>
 <% if @user.subscribed %>
   If you accept, then <%= @organization.name %> will start paying for your pro account.
 <% else %>
   If you accept, then your account will be upgraded to a pro account, courtesy of <%= @organization.name %>.
 <% end %>
+</p>
 
-<%= link_to "Join #{@organization.name}", controller: "users", action: "accept_invitation", user_id: @user.id, token: @user.invitation_token, host: @host %>.
+<p><%= link_to "Join #{@organization.name}", controller: "users", action: "accept_invitation", user_id: @user.id, token: @user.invitation_token, host: @host %>.</p>
 
-If you have any questions, feel free to email me (jeffrey@emberscreencasts.com) or the person who set up this account for you (<%= @inviter.email %>).
+<p>If you have any questions, feel free to email me (jeffrey@emberscreencasts.com) or the person who set up this account for you (<%= @inviter.email %>).</p>
 
---Jeffrey
+<p>--Jeffrey</p>
