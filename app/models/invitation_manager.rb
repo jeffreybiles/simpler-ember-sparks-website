@@ -1,6 +1,6 @@
 class InvitationManager
   def self.invite_to_organization(current_user, email)
-    token = SecureRandom.base64(15).gsub('/', '')
+    token = SecureRandom.urlsafe_base64(15)
     if invited_user = User.find_by(email: email)
       unless invited_user.organization_admin #security measure so malicious users don't snipe admins of other teams
         invited_user.update_attributes(invitation_status: 'invited',
