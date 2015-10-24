@@ -8,6 +8,8 @@ xml.rss :version => "2.0" do
     xml.description "Concise weekly screencasts about Ember and friends"
     xml.link "https://emberscreencasts.com"
     xml.language "en"
+    xml.copyright "Copyright 2014-2015 Happy Programmer LLC"
+    xml.image("url" => "https://s3.amazonaws.com/spark-casts/logo.jpg", "link" => "https://emberscreencasts.com", "title" => "EmberScreencasts")
 
     for post in @posts
       xml.item do
@@ -17,7 +19,9 @@ xml.rss :version => "2.0" do
         xml.author "Jeffrey Biles"
         xml.pubDate post.publish_date.to_s(:rfc822)
         xml.link link
-        xml.guid post.id
+        xml.source link
+        xml.guid post.guid
+        xml.enclosure("url" => "https://embed-ssl.wistia.com/deliveries/#{post.guid}/file.mp4?rss=true", "length" => 0, "type" => 'video/mp4')
 
         text = raw @markdown.render post.description
         text += image_tag post.thumbnail_image, class: "img-responsive"
@@ -34,7 +38,9 @@ xml.rss :version => "2.0" do
           text += raw "<h3>External Links</h3>"
           text += raw "<div class='links'>#{raw @markdown.render post.links}</div>"
         end
-        xml.description text
+        xml.description do
+          xml.cdata! text
+        end
       end
     end
   end

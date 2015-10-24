@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_with_basic_auth, only: :feed
 
   def index
     if current_user
@@ -46,8 +47,27 @@ class PostsController < ApplicationController
   # Feed constructed with help from https://www.codingfish.com/blog/129-how-to-create-rss-feed-rails-4-3-steps
   def feed
     @posts = Post.published.recent_first
+    unless current_user.try(:subscribed)
+      @posts = @posts.free
+    end
     respond_to do |format|
-        format.rss {render :layout => false}
+      format.rss {render :layout => false}
+    end
+  end
+
+  def authenticate_with_basic_auth
+    case request.format
+    when Mime::XML, Mime::ATOM, Mime::RSS
+      user = authenticate_with_http_basic do |username, password|
+        found_user = User.find_by(email: username) || User.new
+        found_user.valid_password?(password) ? found_user : nil
+      end
+
+      if user.try(:subscribed)
+        sign_in(user)
+      else
+        request_http_basic_authentication
+      end
     end
   end
 end

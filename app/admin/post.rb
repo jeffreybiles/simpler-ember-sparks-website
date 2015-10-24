@@ -17,6 +17,7 @@ ActiveAdmin.register Post do
   index do
     column :id
     column :free
+    column :guid
     column :code do |t|
       t.code.present? && t.code != 'null'
     end
@@ -47,6 +48,7 @@ ActiveAdmin.register Post do
       row :title do |t|
         link_to t.title, post_path(t)
       end
+      row :guid
       row :description
       row :publish_date
       row :free
@@ -64,6 +66,7 @@ ActiveAdmin.register Post do
     f.inputs "post" do
       f.input :title
       f.input :free
+      f.input :guid
       f.input :seconds
       f.input :difficulty, :as => :select, :collection => ['basic', 'intermediate', 'advanced']
       f.input :publish_date
