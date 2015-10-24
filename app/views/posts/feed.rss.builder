@@ -9,7 +9,11 @@ xml.rss :version => "2.0" do
     xml.link "https://emberscreencasts.com"
     xml.language "en"
     xml.copyright "Copyright 2014-2015 Happy Programmer LLC"
-    xml.image("url" => "https://s3.amazonaws.com/spark-casts/logo.jpg", "link" => "https://emberscreencasts.com", "title" => "EmberScreencasts")
+    xml.image do
+      xml.url "https://s3.amazonaws.com/spark-casts/logo.jpg"
+      xml.link "https://emberscreencasts.com"
+      xml.title "EmberScreencasts"
+    end
 
     for post in @posts
       xml.item do
