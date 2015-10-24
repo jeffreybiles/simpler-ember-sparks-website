@@ -21,7 +21,7 @@ xml.rss :version => "2.0" do
 
         xml.title post.title
         xml.author "Jeffrey Biles"
-        xml.pubDate post.publish_date.to_s(:rfc822)
+        xml.pubDate post.publish_date.iso8601
         xml.link link
         xml.source link
         xml.guid post.guid
