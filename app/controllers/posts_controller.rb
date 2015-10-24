@@ -63,8 +63,10 @@ class PostsController < ApplicationController
         found_user.valid_password?(password) ? found_user : nil
       end
 
-      if user.try(:subscribed)
-        sign_in(user)
+      if user
+        if user.subscribed
+          sign_in(user)
+        end
       else
         request_http_basic_authentication
       end
