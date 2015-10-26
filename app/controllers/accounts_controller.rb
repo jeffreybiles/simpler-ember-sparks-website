@@ -35,7 +35,7 @@ class AccountsController < ApplicationController
 
   def unsubscribe
     Analytics.track(user_id: current_user.email, event: 'Unsubscribe')
-    StripeManager.unsubscribe(user)
+    StripeManager.unsubscribe(current_user)
     redirect_to account_path
   end
 
