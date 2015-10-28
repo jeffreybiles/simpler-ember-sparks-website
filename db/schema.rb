@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025173518) do
+ActiveRecord::Schema.define(version: 20151028054652) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,16 @@ ActiveRecord::Schema.define(version: 20151025173518) do
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
   add_index "tags", ["permalink"], name: "index_tags_on_permalink", using: :btree
+
+  create_table "testimonials", force: true do |t|
+    t.string   "link"
+    t.string   "testifier"
+    t.string   "credentials"
+    t.string   "quote"
+    t.integer  "weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                         default: "",    null: false
