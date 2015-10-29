@@ -20,31 +20,47 @@ class AccountsController < ApplicationController
     else
       Analytics.alias(previous_id: session.id, user_id: user.email)
       Analytics.track(user_id: user.email, event: 'Subscription')
-      customer = Stripe::Customer.create(
-        :card => params[:stripeToken],
-        :plan => "pro_2",
-        :email => user.email
-      )
-      user.update(stripe_customer_id: customer.id, subscribed: true)
+      begin
+        customer = Stripe::Customer.create(
+          :card => params[:stripeToken],
+          :plan => "pro_2",
+          :email => user.email
+        )
+        user.update(stripe_customer_id: customer.id, subscribed: true)
 
-      sign_in(user)
+        sign_in(user)
 
-      redirect_to thank_you_path
+        redirect_to thank_you_path
+      rescue Stripe::StripeError => e
+        flash[:danger] = "There was an error in Stripe: #{e}"
+        render 'show'
+      end
+
     end
   end
 
   def unsubscribe
-    Analytics.track(user_id: current_user.email, event: 'Unsubscribe')
-    StripeManager.unsubscribe(current_user)
-    redirect_to account_path
+    begin
+      Analytics.track(user_id: current_user.email, event: 'Unsubscribe')
+      StripeManager.unsubscribe(current_user)
+      redirect_to account_path
+    rescue Stripe::StripeError => e
+      flash[:danger] = "There was an error in Stripe: #{e}"
+      render 'show'
+    end
   end
 
   def change_credit_card
-    customer = Stripe::Customer.retrieve(current_user.stripe_customer_id)
-    card = customer.sources.create(source: params['stripeToken'])
-    customer.default_source = card.id
-    customer.save
-    flash[:success] = "Changed credit card info"
-    redirect_to account_path
+    begin
+      customer = Stripe::Customer.retrieve(current_user.stripe_customer_id)
+      card = customer.sources.create(source: params['stripeToken'])
+      customer.default_source = card.id
+      customer.save
+      flash[:success] = "Changed credit card info"
+      redirect_to account_path
+    rescue Stripe::StripeError => e
+      flash[:danger] = "There was an error in Stripe: #{e}"
+      render 'show'
+    end
   end
 end
