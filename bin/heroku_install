@@ -4,10 +4,10 @@ set -e
 
 bower="$(pwd)/node_modules/.bin/bower"
 
-for app in "ember_admin" "organization_admin"; do
-  cd $app &&
-    npm prune &&
-    npm install &&
-    $bower prune &&
-    $bower install
-done
+# for app in "ember_admin" "organization_admin"; do
+#   cd $app &&
+#     npm prune &&
+#     npm install &&
+#     $bower prune &&
+#     $bower install
+# done
