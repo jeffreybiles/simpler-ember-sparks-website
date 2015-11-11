@@ -1,1 +1,15 @@
-{}
+{
+  "scripts": {
+    "postinstall": "./bin/heroku_install"
+  },
+  "devDependencies": {
+    "bower": "*"
+  },
+  "cacheDirectories": [
+    "ember_admin/node_modules",
+    "ember_admin/bower_components",
+    "organization_admin/node_modules",
+    "organization_admin/bower_components",
+    "node_modules"
+  ]
+}
