@@ -3,5 +3,13 @@
     {{flash-message flash=flash}}
   {{/each}}
 
+  <div class="bread-crumbs container">
+    <div class="col-md-12">
+      {{#each breadCrumbs as |breadCrumb|}}
+        {{#link-to breadCrumb.path}}{{breadCrumb.name}}{{/link-to}} /
+      {{/each}}
+    </div>
+  </div>
+  <br>
   {{outlet}}
 </div>

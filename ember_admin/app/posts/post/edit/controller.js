@@ -21,7 +21,7 @@ export default Ember.Controller.extend(PostValidations, {
       model.set('thumbnailImage', file);
       this.validate().then(()=>{
         model.save().then(()=>{
-          this.transitionToRoute('post.show', model)
+          this.transitionToRoute('posts.post.show', model)
         })
       }).catch(()=>{
         var errorHashes = this.get('errors.model')

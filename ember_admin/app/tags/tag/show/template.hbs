@@ -1,0 +1,12 @@
+<h2>{{model.name}}</h2>
+<p>{{model.description}}</p>
+<div>Tag Type: {{model.tagType}}</div>
+<div>{{model.taggings.length}} screencasts totalling {{model.readableTime}}</div>
+<ul>
+{{#each model.taggings as |tagging|}}
+  {{#link-to 'posts.post.show' tagging.post tagName="li"}}<a href="#">{{tagging.post.title}}</a>{{/link-to}}
+{{/each}}
+</ul>
+<hr>
+{{#link-to 'tags.tag.edit' model tagName="button"}}Edit{{/link-to}}
+<button {{action 'delete'}} class="pull-right">Delete</button>

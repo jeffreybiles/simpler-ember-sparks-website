@@ -7,12 +7,12 @@
 <p>Publish Date: {{model.publishDate}}</p>
 <ul>
 {{#each model.taggings as |tagging|}}
-  {{#link-to 'tag.show' tagging.tag tagName="li"}}<a href="#">{{tagging.tag.name}}</a>{{/link-to}}
+  {{#link-to 'tags.tag.show' tagging.tag tagName="li"}}<a href="#">{{tagging.tag.name}}</a>{{/link-to}}
 {{/each}}
 </ul>
 
 <img src="{{model.thumbnailImage.thumbnail_image.url}}" class="small-image" />
 <br>
-{{#link-to 'post.edit' model tagName="button"}}Edit{{/link-to}}
+{{#link-to 'posts.post.edit' model tagName="button"}}Edit{{/link-to}}
 
 <button {{action 'delete'}} class="pull-right">Delete</button>

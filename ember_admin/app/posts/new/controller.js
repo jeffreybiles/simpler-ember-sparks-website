@@ -10,7 +10,7 @@ export default Ember.Controller.extend(PostValidations, {
       post.set('thumbnailImage', file);
       this.validate().then(()=>{
         post.save().then((response)=>{
-          this.transitionTo('post.show', response);
+          this.transitionTo('posts.post.show', response);
         });
       }).catch(()=>{
         this.set('showErrors', true)

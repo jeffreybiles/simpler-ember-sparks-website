@@ -4,7 +4,7 @@
     {{#link-to 'tags.index'}}Index{{/link-to}}
     <ul>
       {{#each model as |tag|}}
-        <li>{{#link-to 'tag.show' tag}}{{tag.name}}{{/link-to}} ({{tag.taggings.length}})</li>
+        <li>{{#link-to 'tags.tag.show' tag}}{{tag.name}}{{/link-to}} ({{tag.taggings.length}})</li>
       {{/each}}
     </ul>
   </div>

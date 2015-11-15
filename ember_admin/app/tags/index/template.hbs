@@ -7,7 +7,7 @@
     <ul>
     {{#each series as |tag|}}
       <li>
-      {{#link-to 'tag.show' tag}}
+      {{#link-to 'tags.tag.show' tag}}
         {{tag.name}}
       {{/link-to}}
       </li>
@@ -19,7 +19,7 @@
     <ul>
     {{#each subjects as |tag|}}
       <li>
-      {{#link-to 'tag.show' tag}}
+      {{#link-to 'tags.tag.show' tag}}
         {{tag.name}}
       {{/link-to}}
       </li>
@@ -31,7 +31,7 @@
     <ul>
     {{#each uncategorized as |tag|}}
       <li>
-      {{#link-to 'tag.show' tag}}
+      {{#link-to 'tags.tag.show' tag}}
         {{tag.name}}
       {{/link-to}}
       </li>
