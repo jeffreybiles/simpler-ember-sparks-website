@@ -17,7 +17,7 @@ This guide, especially part 4, is a living document.  Please <a href="mailto:jef
 # <a name="general-guidelines"></a>General guidelines
 
 ## 1. Ignore RFCs
- 
+
 RFCs are amazing.  I get a thrill when I look at them.  They’re literally the future!  And the fact that all this important work is being done in the open never ceases to astound me.
 
 However, they are also very dangerous to your psyche.  When you read one, you think “this is how Ember is supposed to be.  This is the correct way to Ember”. However, those features often don’t get implemented for several months to a year after the RFC is released.  During that year-long gap, you have in your mind the new RFC method as the “right” way, and the old way of doing it as the “wrong” way- but the only way you have available is the old “wrong” way.  This leads to a predictable amount of fretting about being “always behind”.
@@ -69,7 +69,7 @@ So, now that you're ready to do a proper upgrade, here's more details on how you
 
 
 ### <a name="step-1"></a>1. Upgrade version number of Ember in bower.json, run bower install
-	
+
 Upgrade it by one minor version at a time.  Be sure to run `bower install` and then restart your app.
 
 This is the easiest of the steps.  Enjoy this.
@@ -104,7 +104,7 @@ Once you’ve gotten your file of deprecations that you’ve blocked, just start
 
 If there are some deprecations that don’t seem to be solvable, check your addons.  Fixing those deprecations may be as simple as upgrading an addon.  If the problem is in an addon but they don’t have a new version out yet, consider submitting a PR to the addon that fixes the deprecation warning.  Hundreds (or thousands, depending on the addon) of embereños will thank you.
 
-There are some deprecation warnings that are just really stubborn.  If they’re not for an about-to-be-broken private API, they don’t technically have to be fixed until you do a major version upgrade. 
+There are some deprecation warnings that are just really stubborn.  If they’re not for an about-to-be-broken private API, they don’t technically have to be fixed until you do a major version upgrade.
 
 ### 6. <a name="step-6"></a>Scan the new features added in Ember upgrade
 
@@ -149,7 +149,7 @@ You can jump directly to the upgrade you're doing:
 
 <a name="1.11"></a>1.11
 ----
-* new feature: [bound attribute syntax](http://emberjs.com/blog/2015/03/27/ember-1-11-0-released.html).  It’s amazing!  Will save you code! 
+* new feature: [bound attribute syntax](http://emberjs.com/blog/2015/03/27/ember-1-11-0-released.html).  It’s amazing!  Will save you code!
 * bound attribute syntax creates [some concerns about escaping your code properly](http://emberjs.com/blog/2015/03/27/ember-1-11-0-released.html#toc_escaping-content-in-htmlbars)
 * new feature: inline if `{{if isEnabled 'active' 'disabled’}}`
 * new feature: each block has an index block param
@@ -200,4 +200,4 @@ ember-cli 1.13.9 has a new destroyApp helper.  Theres an [ember-watson task](htt
 
 I’d like to thank altSchool, which commissioned the first version of this document and provided valuable feedback.  They’re wonderful to work with, they’re doing amazing work, and they’re hiring Ember devs. Find out more by visiting [their jobs page](https://www.altschool.com/jobs).
 
-If you enjoyed this, I’m putting out new videos about Ember every week at [emberscreencasts.com](www.emberscreencasts.com).  You might enjoy learning from them.
+If you enjoyed this, I’m putting out new videos about Ember every week at [emberscreencasts.com](https://www.emberscreencasts.com).  You might enjoy learning from them.
