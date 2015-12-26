@@ -62,7 +62,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'ember-cli-rails', '~> 0.4.3'
+gem 'ember-cli-rails', '~> 0.7.0'
 gem 'quiet_assets', group: :development
 gem 'active_model_serializers'
 

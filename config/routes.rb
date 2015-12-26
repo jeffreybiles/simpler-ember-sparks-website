@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   post 'set_password/:user_id/:token', to: 'users#activate_organization_user'
   get 'accept_invitation/:user_id/:token', to: 'users#accept_invitation'
 
+  mount_ember_app :ember_admin, to: "/"
+  mount_ember_app :organization_admin, to: "/"
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
