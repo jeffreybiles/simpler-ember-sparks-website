@@ -16,14 +16,12 @@ Rails.application.routes.draw do
   post 'unsubscribe', to: 'accounts#unsubscribe'
   post 'change_credit_card', to: 'accounts#change_credit_card'
 
-  get 'ember_admin', to: 'pages#ember_admin'
-  get 'organization_admin', to: 'pages#organization_admin'
   get 'set_password/:user_id/:token', to: 'users#set_password'
   post 'set_password/:user_id/:token', to: 'users#activate_organization_user'
   get 'accept_invitation/:user_id/:token', to: 'users#accept_invitation'
 
-  mount_ember_app :ember_admin, to: "/"
-  mount_ember_app :organization_admin, to: "/"
+  mount_ember_app :ember_admin, to: "/ember_admin", controller: "pages", action: "ember_admin"
+  mount_ember_app :organization_admin, to: "/organization_admin", controller: "pages", action: "organization_admin"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
