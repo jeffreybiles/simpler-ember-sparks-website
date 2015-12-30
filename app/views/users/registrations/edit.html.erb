@@ -19,6 +19,7 @@
 
     <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password, autocomplete: "off" %></div>
+      <div><i><%= link_to "(I don't know my password- reset it through email)", reset_password_through_email_path, method: :post %></i></div>
 
     <div><%= f.submit "Update" %></div>
   <% end %>

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post 'subscribe', to: 'accounts#subscribe'
   post 'unsubscribe', to: 'accounts#unsubscribe'
   post 'change_credit_card', to: 'accounts#change_credit_card'
+  post 'reset_password_through_email', to: 'accounts#reset_password_through_email'
 
   get 'set_password/:user_id/:token', to: 'users#set_password'
   post 'set_password/:user_id/:token', to: 'users#activate_organization_user'

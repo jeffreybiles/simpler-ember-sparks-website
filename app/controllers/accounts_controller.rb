@@ -29,6 +29,7 @@ class AccountsController < ApplicationController
         user.update(stripe_customer_id: customer.id, subscribed: true)
 
         sign_in(user)
+        AccountMailer.set_password_email(user).deliver
 
         redirect_to thank_you_path
       rescue Stripe::StripeError => e
@@ -61,6 +62,18 @@ class AccountsController < ApplicationController
     rescue Stripe::StripeError => e
       flash[:danger] = "There was an error in Stripe: #{e}"
       render 'show'
+    end
+  end
+
+  def reset_password_through_email
+    begin
+      @user = current_user
+      AccountMailer.reset_password_email(@user).deliver
+      flash[:success] = "A link has been sent to #{@user.email}.  Click it to reset your password."
+      redirect_to account_path
+    rescue StandardError => e
+      flash[:danger] = "There was an error.  Please contact jeffrey@emberscreencasts.com."
+      redirect_to edit_user_registration_path
     end
   end
 end

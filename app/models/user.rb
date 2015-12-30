@@ -26,4 +26,9 @@ class User < ActiveRecord::Base
   def organization_admin
     organization_permission_level == 'admin'
   end
+
+  def reset_invitation_token
+    self.invitation_token = SecureRandom.urlsafe_base64(15)
+    self.save!
+  end
 end

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.update(password: params[:set_password][:password],
                  password_confirmation: params[:set_password][:password_confirmation])
       sign_in(@user)
-      flash[:success] = "You have updated your password and logged in.  The entire library of videos is available to you now."
+      flash[:success] = "You have updated your password and logged in."
       redirect_to root_path
     else
       flash[:error] = @user.errors.full_messages.to_sentence
