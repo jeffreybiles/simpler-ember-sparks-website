@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
     },
     removeUsers(){
       var userIds = this.get('markedUsers').mapBy('id')
-      $.ajax('api/users/bulk_remove', {
+      $.ajax('/api/users/bulk_remove', {
         method: 'POST',
         data: {users: userIds}
       })

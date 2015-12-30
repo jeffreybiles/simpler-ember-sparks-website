@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
   }),
   actions: {
     addUsers(){
-      $.ajax('api/users/bulk_add', {
+      $.ajax('/api/users/bulk_add', {
         method: 'POST',
         data: {users: this.get('users')}
       })
