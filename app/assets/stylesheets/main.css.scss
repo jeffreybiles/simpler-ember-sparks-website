@@ -78,9 +78,19 @@ a.light-button {
 }
 #video_archive ul li {
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2em;
   font-family: 'Maven Pro';
+
+  .archive-publish-date {
+    width: 150px;
+    display: inline-block;
+  }
+  .archive-image {
+    width: 40px;
+    display: inline-block;
+  }
+
 
   @include no-underline;
 
@@ -90,6 +100,29 @@ a.light-button {
 
   a {
     color: #38476B;
+  }
+
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    .archive-publish-date {display: none;}
+    .archive-image {
+      width: 15px;
+      img {
+        height: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 720px) and (min-width: 480px) {
+    font-size: 15px;
+    .archive-publish-date {width: 100px;}
+    .archive-image {
+      width: 20px;
+      img {
+        height: 15px;
+      }
+    }
   }
 }
 //

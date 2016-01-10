@@ -102,16 +102,16 @@
         <% end %>
         <ul>
           <% @posts.each do |post| %>
-            <li style="line-height: 1.2em;">
+            <li class="archive-title">
               <%= link_to post do %>
                 <% unless current_user && current_user.can_watch_pro %>
-                  <div class="archive-image" style="width: 40px; display: inline-block;">
+                  <div class="archive-image">
                     <% unless post.free %>
                       <%= image_tag 'icon-locked.png' %>
                     <% end %>
                   </div>
                 <% end %>
-                <div class="archive-publish-date" style="width: 150px; display: inline-block;">
+                <div class="archive-publish-date">
                   <%= post.publish_date %>
                 </div>
                 <%= post.title %>
