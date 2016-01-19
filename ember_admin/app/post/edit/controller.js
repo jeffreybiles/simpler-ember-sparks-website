@@ -1,14 +1,14 @@
 import Ember from 'ember';
 import PostValidations from 'ember-admin/mixins/validations/post';
-
+import {filterBy, sort} from 'ember-computed-decorators'
 export default Ember.Controller.extend(PostValidations, {
   showErrors: true,
   tags: Ember.computed(function(){
     return this.store.find('tag');
   }),
-  subjects: Ember.computed.filterBy('tags', 'tagType', 'subject'),
+  @filterBy('tags', 'tagType', 'subject') subjects,
   subjectsSort: ['taggings.length:desc'],
-  sortedSubjects: Ember.computed.sort('subjects', 'subjectsSort'),
+  @sort('subjects', 'subjectsSort') sortedSubjects,
   unusedTags: Ember.computed('sortedSubjects.@each', 'model.taggings.@each', function(){
     var all = this.get('sortedSubjects')
     var used = this.get('model.taggings').mapBy('tag.content')

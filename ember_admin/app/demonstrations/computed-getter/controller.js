@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import computed from 'ember-computed-decorators'
 
 export default Ember.Controller.extend({
   firstName: 'Tony',
@@ -35,11 +36,12 @@ export default Ember.Controller.extend({
     {name: 'Avengers 2', release: '2015', budget: 250000000, boxOffice: 455000000}
   ],
 
-  listOfTitles: Ember.computed('documentaries.@each.name', {
-    get(key){
-      return this.get('documentaries').mapBy('name').join(', ');
+  @computed('documentaries.@each.name')
+  listOfTitles: {
+    get(documentaries){
+      return documentaries.mapBy('name').join(', ');
     },
-    set(key, listOfTitles){
+    set(listOfTitles, documentaries){
       let arrayOfTitles = listOfTitles.split(', ');
       arrayOfTitles.forEach((title, index)=>{
         let documentary = this.get(`documentaries.${index}`)
@@ -47,22 +49,24 @@ export default Ember.Controller.extend({
       })
       return listOfTitles
     }
-  }),
+  },
 
-  totalDocumentaryBudget: Ember.computed('documentaries.@each.budget', function(){
+  @computed('documentaries.@each.budget')
+  totalDocumentaryBudget(documentaries){
     var totalBudget = 0;
-    this.get('documentaries').forEach(function(documentary){
+    documentaries.forEach(function(documentary){
       totalBudget += Number(documentary.budget);
     })
     return totalBudget
-  }),
+  },
 
-  totalDocumentaryProfit: Ember.computed('documentaries.@each.{budget,boxOffice}', function(){
+  @computed('documentaries.@each.{budget,boxOffice}')
+  totalDocumentaryProfit(documentaries){
     var totalProfit = 0;
-    this.get('documentaries').forEach(function(documentary){
+    documentaries.forEach(function(documentary){
       totalProfit += Number(documentary.boxOffice);
       totalProfit -= Number(documentary.budget);
     })
     return totalProfit
-  })
+  }
 });
