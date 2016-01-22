@@ -19,7 +19,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'stripe-rails'
-gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 
 gem 'redcarpet'
 gem 'rouge'
