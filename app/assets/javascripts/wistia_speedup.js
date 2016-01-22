@@ -110,7 +110,8 @@ Video = (function() {
 
 jQuery(function() {
   var video;
-  if (typeof wistiaEmbed !== "undefined" && wistiaEmbed !== null) {
+  if (!!wistiaEmbeds && wistiaEmbeds.length > 0) {
+    var wistiaEmbed = wistiaEmbeds[0]
     return video = new Video(wistiaEmbed);
   }
 });
