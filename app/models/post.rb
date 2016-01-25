@@ -15,4 +15,5 @@ class Post < ActiveRecord::Base
       "#{seconds/60}m#{seconds%60}s"
     end
   end
+
 end

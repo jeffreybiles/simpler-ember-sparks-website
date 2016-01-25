@@ -27,6 +27,13 @@
 
   <section class="video_single">
     <div class="container">
+      <% if @previous_post %>
+      <%= link_to "Previous", @previous_post, class: 'btn light-button' %>
+      <% end %>
+      <%= link_to "View All", posts_path, class: 'btn light-button' %>
+      <% if @next_post %>
+      <%= link_to "Next", @next_post, class: 'btn light-button' %>
+      <% end %>
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-9">
@@ -48,8 +55,8 @@
           <h2 class="header-2"><%= @post.publish_date %> | <%= @post.readable_time %> | <a href="/posts?difficulty<%=@post.difficulty%>"><%=@post.difficulty%></a></h2>
           <p><strong>About this video</strong></p>
           <p><%= raw @markdown.render @post.description %></p>
+          <p><%= @post.id %>
           <div class="buttons">
-            <a class="btn light-button" href="#comments">Comments</a>
             <% if @code_present %><a class="btn light-button" href="#code">Code</a><% end %>
             <% if @transcript_present %><a class="btn light-button" href="#transcript">Transcript</a><% end %>
           </div>
