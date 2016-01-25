@@ -28,7 +28,7 @@ namespace :one_timers do
 end
 
 def generate_yaml(post, file)
-  file.puts "- title: #{post.title}"
+  file.puts "- title: '#{post.title}'"
   file.puts "  author_ids:"
   file.puts "  - 58"
   file.puts "  date: #{post.publish_date}"
