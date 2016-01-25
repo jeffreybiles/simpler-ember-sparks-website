@@ -18,13 +18,14 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by_permalink(params[:id]) || Post.find(params[:id])
-
+    @next_post        = Post.find_by_id(@post.id + 1)
+    @previous_post    = Post.find_by_id(@post.id - 1)
     @viewable_by_user = @post.free || (current_user && current_user.can_watch_pro)
-    @referrer = request.referrer
+    @referrer         = request.referrer
     @first_click_free = @referrer =~ /.*\.google\..*/
     @viewable_by_google = @first_click_free || @viewable_by_user
     @transcript_present = @post.transcript && @post.transcript != 'null'
-    @code_present = @post.code && @post.code != 'null'
+    @code_present     = @post.code && @post.code != 'null'
   end
 
   # Feed constructed with help from https://www.codingfish.com/blog/129-how-to-create-rss-feed-rails-4-3-steps
