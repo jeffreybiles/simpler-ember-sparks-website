@@ -27,6 +27,15 @@
 
   <section class="video_single">
     <div class="container">
+      <% if @previous_post %>
+      <%= link_to "Previous", @previous_post, class: "btn light-button" %>
+      <% end %>
+      <%= link_to "View All", posts_path, class: "btn light-button" %>
+      <% if @next_post %>
+      <%= link_to "Next", @next_post, class: "btn light-button" %>
+      <% end %>
+
+
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-9">
