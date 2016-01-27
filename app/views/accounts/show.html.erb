@@ -34,7 +34,7 @@
     <% content_for :title, "My Account- EmberScreencasts" %>
   <!-- Anonymous Sales Page -->
   <% else %>
-  <%= render 'shared/sales' %>
+  <%= controller.redirect_to sales_path %>
   <% end %>
 
   <% content_for :meta_description, "Subscribe to an emberscreencasts.com pro account to boost your learning and be a better Ember developer." %>
