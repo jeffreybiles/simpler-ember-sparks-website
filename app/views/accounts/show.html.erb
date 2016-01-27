@@ -20,6 +20,7 @@
         <% end %>
       </ul>
     <% end %>
+  <!-- User Account Page  -->
   <% elsif current_user.try(:subscribed) %>
     <h2>Thank you for your support!</h2>
     <p>Feel free to <%= link_to 'watch any video on the site', posts_path %>.  Or, if you're done with learning from me, you can <%= link_to 'unsubscribe', unsubscribe_path, method: :post, data: {confirm: "You hit the 'unsubscribe' link. Hitting OK means you'll no longer have access to Pro videos.  OK?"} %>.</p>
@@ -32,6 +33,7 @@
     <a href="/organization_admin#/new" class="btn btn-primary light-button">I want to create an organization from this account.</a>
 
     <% content_for :title, "My Account- EmberScreencasts" %>
+    <!-- Anonymous Sales Page -->
   <% else %>
     <h1>The best resource for intermediate Ember developers</h1>
     <p>For just $9.95/month, you get <em>instant</em> <em>on-demand</em> access to every single video in the emberscreencasts library.</p>
