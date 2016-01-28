@@ -2,6 +2,11 @@ class AccountsController < ApplicationController
   include Devise::Controllers::SignInOut
 
   def show
+    if !current_user || !current_user.subscribed
+      redirect_to sales_path
+    else
+      render 'show'
+    end
   end
 
   def subscribe
