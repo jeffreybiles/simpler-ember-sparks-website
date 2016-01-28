@@ -9,6 +9,14 @@ class AccountsController < ApplicationController
     end
   end
 
+  def billing
+    if current_user
+      render 'billing'
+    else
+      redirect_to sales_path
+    end
+  end
+
   def subscribe
     user = current_user ||
            User.find_by(email: params[:stripeEmail]) ||

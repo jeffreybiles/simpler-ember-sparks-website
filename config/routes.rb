@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get 'account', to: 'accounts#show'
   get 'sales', to: 'accounts#sales'
+  get 'add_credit_card', to: 'accounts#billing'
   post 'subscribe', to: 'accounts#subscribe'
   post 'unsubscribe', to: 'accounts#unsubscribe'
   post 'change_credit_card', to: 'accounts#change_credit_card'
