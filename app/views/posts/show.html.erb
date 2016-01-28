@@ -35,7 +35,7 @@
           <% else %>
             <div class="sales-box">
               <h2>You can view pro screencasts by subscribing</h2>
-              <% if current_user && current_user.subscribed %>
+              <% if !current_user || current_user.subscribed %>
               <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
               <% end %>
               <%= render 'shared/subscribe' %>
