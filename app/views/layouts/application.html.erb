@@ -53,14 +53,17 @@
         </form> -->
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
+            <li><%= link_to current_user.email, account_path %></li>
+            <% unless current_user.subscribed %>
+              <li><a href="/sales">Subscribe to Pro</a></li>
+            <% end %>
+            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
             <% if current_user.admin %>
               <li><%= link_to 'ActiveAdmin', '/admin' %></li>
               <li><%= link_to 'Ember Admin', '/ember_admin' %></li>
             <% end %>
-            <li><%= link_to current_user.email, account_path %></li>
-            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><a href="/account">Subscribe to Pro</a></li>
+            <li><a href="/sales">Subscribe to Pro</a></li>
             <li><a href="/users/sign_in">Sign In</a></li>
           <% end %>
         </ul>

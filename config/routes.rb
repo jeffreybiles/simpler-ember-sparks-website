@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'meta_guide_to_upgrading_ember', to: 'pages#meta_guide_to_upgrading_ember'
 
   get 'account', to: 'accounts#show'
+  get 'sales', to: 'accounts#sales'
   post 'subscribe', to: 'accounts#subscribe'
   post 'unsubscribe', to: 'accounts#unsubscribe'
   post 'change_credit_card', to: 'accounts#change_credit_card'
