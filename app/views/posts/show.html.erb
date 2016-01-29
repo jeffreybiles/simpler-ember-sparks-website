@@ -19,7 +19,19 @@
     <div class="jumbotron text-center video_single">
       <div class="container">
         <div class="row">
-          <h1><%= @post.title %></h1>
+          <div class="col-sm-2">
+            <% if @previous_post %>
+              <%= link_to "Previous: #{@previous_post.title}", @previous_post, class: 'previous-link' %>
+            <% end %>
+          </div>
+          <div class="col-sm-8">
+            <h1><%= @post.title %></h1>
+          </div>
+          <div class="col-sm-2">
+            <% if @next_post %>
+              <%= link_to "Next: #{@next_post.title}", @next_post, class: "next-link"%>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
@@ -27,15 +39,6 @@
 
   <section class="video_single">
     <div class="container">
-      <% if @previous_post %>
-      <%= link_to "Previous", @previous_post, class: "btn light-button" %>
-      <% end %>
-      <%= link_to "View All", posts_path, class: "btn light-button" %>
-      <% if @next_post %>
-      <%= link_to "Next", @next_post, class: "btn light-button" %>
-      <% end %>
-
-
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-9">
@@ -63,35 +66,21 @@
             <% if @transcript_present %><a class="btn light-button" href="#transcript">Transcript</a><% end %>
           </div>
           <br>
-          <!-- put buttons for code, transcript, comments here -->
           <p><strong>More videos like this </strong></p>
           <% @post.tags.each do |tag| %>
             <div class="tag-link"><span class="tag-type"><%= tag.tag_type %></span>:  <%= link_to tag.name, tag_path(tag) %></div>
           <% end %>
+
           <% if @post.links && @post.links.length > 0 %>
             <br>
             <p><strong>Links</strong></p>
             <%= raw @markdown.render(@post.links) %>
           <% end %>
-          <!-- <p align="center"><button type="button" class="btn btn-success">Next Video In Series</button></p>
-          <p align="center"><a href="#">Back to Explore</a></p> -->
         </div>
       </div>
     <div>
   </section>
-  <!-- <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-  		    <div id="transcript">
-            <p><strong>Transcript</strong></p>
-            <p>First, we will clarify the main concepts of the framework. Next, we’ll go in depth with a step-by-step tutorial that teaches you how to build a simple Web app with Ember.js and Ember-Data, which is Ember’s data storage layer. Then, we will see how views and components help with handling user interactions. Finally, we will dig a little more into Ember-Data and template precompiling.</p>
-            <p>Suppose our application handles a collection of users. Well, those users and their informations would be the model. Think of them as the database data. Models may be retrieved and updated by implementing AJAX callbacks inside your routes, or you can rely on Ember-Data (a data-storage abstraction layer) to greatly simplify the retrieval, updating and persistence of models over a REST API.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
+
   <section id="comments" align="center">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
