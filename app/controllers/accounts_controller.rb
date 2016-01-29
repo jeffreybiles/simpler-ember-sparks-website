@@ -9,8 +9,12 @@ class AccountsController < ApplicationController
     end
   end
 
-  def billing #will be subscribe
-
+  def billing #before subscribe
+    if !current_user
+      redirect_to new_user_session_path
+    else
+      render :partial => "shared/subscribe"
+    end
   end
 
   def subscribe

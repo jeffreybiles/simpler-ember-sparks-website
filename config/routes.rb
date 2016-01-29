@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get 'account', to: 'accounts#show'
   get 'sales', to: 'accounts#sales'
+  get 'billing', to: 'accounts#billing'
   get 'subscribe', to: 'accounts#subscribe'
   post 'subscribe', to: 'accounts#subscribe'
   post 'unsubscribe', to: 'accounts#unsubscribe'
