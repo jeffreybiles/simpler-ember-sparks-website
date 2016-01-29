@@ -35,8 +35,8 @@
           <% else %>
             <div class="sales-box">
               <h2>You can view pro screencasts by subscribing</h2>
-              <% if !current_user || current_user.subscribed %>
-              <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
+              <% unless current_user %>
+                <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
               <% end %>
               <%= render 'shared/subscribe' %>
               <span class="btn free-screencasts-button"><a href="/posts?free=true">Show me only Free screencasts</a></span>
