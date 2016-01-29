@@ -19,7 +19,19 @@
     <div class="jumbotron text-center video_single">
       <div class="container">
         <div class="row">
-          <h1><%= @post.title %></h1>
+          <div class="col-sm-2">
+            <% if @previous_post %>
+              <%= link_to "Previous: #{@previous_post.title}", @previous_post, class: 'previous-link' %>
+            <% end %>
+          </div>
+          <div class="col-sm-8">
+            <h1><%= @post.title %></h1>
+          </div>
+          <div class="col-sm-2">
+            <% if @next_post %>
+              <%= link_to "Next: #{@next_post.title}", @next_post, class: "next-link"%>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
@@ -27,15 +39,6 @@
 
   <section class="video_single">
     <div class="container">
-      <% if @previous_post %>
-      <%= link_to "Previous", @previous_post, class: "btn light-button" %>
-      <% end %>
-      <%= link_to "View All", posts_path, class: "btn light-button" %>
-      <% if @next_post %>
-      <%= link_to "Next", @next_post, class: "btn light-button" %>
-      <% end %>
-
-
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-9">
