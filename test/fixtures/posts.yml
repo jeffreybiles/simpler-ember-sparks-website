@@ -1,10 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  video_url: MyString
-  description: MyText
-  transcript: MyText
+  id: 1
+  title: 'Title'
+  video_url: 'wistia.com'
+  description: 'This is a video'
+  transcript: 'Talking talking talking'
   publish_date: 2014-05-12
 
 two:
