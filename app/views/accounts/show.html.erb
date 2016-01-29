@@ -20,8 +20,7 @@
         <% end %>
       </ul>
     <% end %>
-  <!-- Subscriber Account Page  -->
-  <% else current_user.try(:subscribed) %>
+  <% elsif current_user.try(:subscribed) %>
     <h2>Thank you for your support!</h2>
     <p>Feel free to <%= link_to 'watch any video on the site', posts_path %>.  Or, if you're done with learning from me, you can <%= link_to 'unsubscribe', unsubscribe_path, method: :post, data: {confirm: "You hit the 'unsubscribe' link. Hitting OK means you'll no longer have access to Pro videos.  OK?"} %>.</p>
 
@@ -30,8 +29,12 @@
     <%= render 'shared/change_credit_card' %>
     <hr>
     <a href="/organization_admin#/new" class="btn btn-primary light-button">I want to create an organization from this account.</a>
-
-    <% content_for :title, "My Account- EmberScreencasts" %>
+  <% else %> <!-- Non-pro users -->
+    <h2>Hi <%= current_user.email %></h2>
+    <p>You are currently not a pro subscriber</p>
+    <%= render 'shared/subscribe' %>
+    <hr>
+    <%= link_to "Change your email or password", edit_user_registration_path %>
   <% end %>
-  <% content_for :meta_description, "Subscribe to an emberscreencasts.com pro account to boost your learning and be a better Ember developer." %>
+  <% content_for :title, "My Account- EmberScreencasts" %>
 </div>
