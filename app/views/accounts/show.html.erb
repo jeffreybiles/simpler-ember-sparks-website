@@ -21,7 +21,7 @@
       </ul>
     <% end %>
   <!-- Subscriber Account Page  -->
-  <% else current_user.try(:subscribed) %>
+  <% else  %>
     <h2>Thank you for your support!</h2>
     <p>Feel free to <%= link_to 'watch any video on the site', posts_path %>.  Or, if you're done with learning from me, you can <%= link_to 'unsubscribe', unsubscribe_path, method: :post, data: {confirm: "You hit the 'unsubscribe' link. Hitting OK means you'll no longer have access to Pro videos.  OK?"} %>.</p>
 
