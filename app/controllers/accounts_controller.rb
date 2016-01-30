@@ -13,37 +13,31 @@ class AccountsController < ApplicationController
     if !current_user
       redirect_to new_user_session_path
     else
+      @user = current_user
       render :partial => "shared/subscribe"
     end
   end
 
   def subscribe
-    if !current_user
-      redirect_to new_user_session_path
+    user = current_user
+    if user.subscribed #shouldn't need this if we remove all possibilities of reaching billing page
+      flash[:warning] = "A user with that email address has already subscribed. Your current subscription will not change."
+      redirect_to root_path
     else
-      user = current_user ||
-             User.find_by(email: params[:stripeEmail]) ||
-             User.create(email: params[:stripeEmail], password: 'temporaryPassword')
-      if user.subscribed
-        flash[:warning] = "A user with the email address has already subscribed... please sign in!  Your current subscription will not change."
-        redirect_to new_user_session_path
-      else
-        begin
-          customer = Stripe::Customer.create(
-            :card => params[:stripeToken],
-            :plan => "pro_2",
-            :email => user.email
-          )
-          user.update(stripe_customer_id: customer.id, subscribed: true)
+      begin
+        customer = Stripe::Customer.create(
+          :card => params[:stripeToken],
+          :plan => "pro_2",
+          :email => user.email
+        )
+        user.update(stripe_customer_id: customer.id, subscribed: true)
 
-          sign_in(user)
-          AccountMailer.set_password_email(user).deliver
+        AccountMailer.set_password_email(user).deliver
 
-          redirect_to thank_you_path
-        rescue Stripe::StripeError => e
-          flash[:danger] = "There was an error in Stripe: #{e}"
-          render 'show'
-        end
+        redirect_to thank_you_path
+      rescue Stripe::StripeError => e
+        flash[:danger] = "There was an error in Stripe: #{e}"
+        render 'show'
       end
     end
   end
