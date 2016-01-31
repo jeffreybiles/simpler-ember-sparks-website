@@ -1,9 +1,9 @@
-<%= javascript_include_tag "https://js.stripe.com/v2/"
+<!-- <%# javascript_include_tag "https://js.stripe.com/v2/"
       :javascript
-        Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh'); %> <!--this is the key from the tutorial-->
+        Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh'); %> this is the key from the tutorial-->
 
 <!-- form syntax error - where??-->
-<% form_for @user, url: edit_user_registration_path(@user), authenticity_token: 'external_token', html: { method: :put } |f| %> <!--PUT to update user to subscribed =>true-->
+<% form_for @user, url: edit_user_registration_path(@user), authenticity_token: 'external_token', html: { method: :put } do |f| %> <!--PUT to update user to subscribed =>true-->
 <!--field tags required as no attributes for these fields-->
   <div class="field">
     <%= f.hidden_field :email, value: current_user.email %>
@@ -12,7 +12,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :cvc %><br> <!--limit size to 3 digits-->
+    <%= f.label :cvc %><br>
     <%= f.text_field_tag :cvc, :size => 3, :data => {:stripe => 'cvc'}, class: "form-control" %>
   </div>
 
@@ -27,7 +27,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :exp_yr_YYYY %><br> <!-- size 4-->
+    <%= f.label :exp_yr_YYYY %><br>
     <%= f.text_field_tag :year, :size => 4, :data => {:stripe => 'exp-year'}, class: "form-control" %>
   </div>
 
