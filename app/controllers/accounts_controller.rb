@@ -14,7 +14,6 @@ class AccountsController < ApplicationController
       redirect_to new_user_session_path
     else
       @user = current_user
-      render :partial => "shared/subscribe"
     end
   end
 

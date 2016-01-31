@@ -29,9 +29,8 @@ stripeResponseHandler = function (status, response) {
     return false;
   };
 
-  show_error = function (message) {
-    $("#flash-messages").html('<div class="alert alert-warning"><a class="close" data-dismiss="alert">×</a><div id="flash_alert">' + message + '</div></div>');
-    $('.alert').delay(5000).fadeOut(3000);
-    return false;
-  };
-});
+show_error = function (message) {
+  $("#flash-messages").html('<div class="alert alert-warning"><a class="close" data-dismiss="alert">×</a><div id="flash_alert">' + message + '</div></div>');
+  $('.alert').delay(5000).fadeOut(3000);
+  return false;
+};
