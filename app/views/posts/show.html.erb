@@ -38,7 +38,7 @@
               <% if !current_user || current_user.subscribed %>
               <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
               <% end %>
-              <!-- change styling on button -- >
+              <!-- change styling on button -->
               <%= link_to "Subscribe for $9.99/month", billing_path, class: "btn btn-primary light-button" %>
               <span class="btn free-screencasts-button"><a href="/posts?free=true">Show me only Free screencasts</a></span>
             </div>
