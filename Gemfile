@@ -68,6 +68,13 @@ gem 'active_model_serializers'
 gem "rails_12factor", group: [:staging, :production]
 
 gem 'minitest-rails'
+
 group :test do
   gem 'minitest-rails-capybara'
+  gem 'ruby-prof'
+end
+
+group :development do
+  gem 'guard'
+  gem 'guard-minitest'
 end
