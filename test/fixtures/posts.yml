@@ -7,10 +7,15 @@ one:
   description: 'This is a video'
   transcript: 'Talking talking talking'
   publish_date: 2014-05-12
+  free: true
+  permalink: '1-this-is-a-video'
 
 two:
+  id: 2
   title: MyString
   video_url: MyString
   description: MyText
   transcript: MyText
   publish_date: 2014-05-12
+  free: false
+  permalink: '2-my-sttring'
