@@ -3,7 +3,6 @@
 
 <%= form_for @user, url: subscribe_path, authenticity_token: 'external_token', html: { method: :post } do |f| %>
   <div class="field">
-    <%= f.hidden_field :email, value: current_user.email, :data => {:stripe => 'email' } %>
     <%= f.label :card_number_16_digits %><br>
     <%= text_field_tag :card_number, nil, :maxlength => 16, :data => {:stripe => 'number'}, class: "form-control"  %>
   </div>
