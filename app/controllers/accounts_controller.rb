@@ -36,7 +36,7 @@ class AccountsController < ApplicationController
         redirect_to thank_you_path
       rescue Stripe::StripeError => e
         flash[:danger] = "There was an error in Stripe: #{e}"
-        render 'show'
+        redirect_to account_path
       end
     end
   end

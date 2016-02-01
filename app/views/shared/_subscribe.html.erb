@@ -1,18 +1,16 @@
 
-<%= javascript_include_tag "https://js.stripe.com/v2/" %> <!--this is the key from the tutorial-->
+<%= javascript_include_tag "https://js.stripe.com/v2/" %>
 
-<!-- form syntax error - where?? -->
-<%= form_for @user, url: edit_user_registration_path(@user), authenticity_token: 'external_token', html: { method: :put } do |f| %> <!--PUT to update user to subscribed =>true-->
-<!--field tags required as no attributes for these fields-->
+<%= form_for @user, url: subscribe_path, authenticity_token: 'external_token', html: { method: :post } do |f| %>
   <div class="field">
-    <%= f.hidden_field :email, value: current_user.email %>
-    <%= f.label :card_number %><br>
-    <%= text_field_tag :card_number, nil, :placeholder => "Card Number", :size => 16, :data => {:stripe => 'number'}, class: "form-control"  %>
+    <%= f.hidden_field :email, value: current_user.email, :data => {:stripe => 'email' } %>
+    <%= f.label :card_number_16_digits %><br>
+    <%= text_field_tag :card_number, nil, :maxlength => 16, :data => {:stripe => 'number'}, class: "form-control"  %>
   </div>
 
   <div class="field">
-    <%= f.label :cvc %><br> <!--limit size to 3 digits-->
-    <%= text_field_tag :cvc, nil, :size => 3, :data => {:stripe => 'cvc'}, class: "form-control" %>
+    <%= f.label :cvc %><br>
+    <%= text_field_tag :cvc, nil, :maxlength => 3, :data => {:stripe => 'cvc'}, class: "form-control" %>
   </div>
 
   <div class="field">
@@ -22,13 +20,9 @@
 
   <div class="field">
     <%= f.label :exp_month_MM %><br>
-    <%= text_field_tag :month, nil, :size => 2, :data => {:stripe => 'exp-month'}, class: "form-control" %>
-  </div>
-
-  <div class="field">
-
-    <%= f.label :exp_yr_YYYY %><br> <!-- size 4-->
-    <%= text_field_tag :year, nil, :size => 4, :data => {:stripe => 'exp-year'}, class: "form-control" %>
+    <%= text_field_tag :month, nil, :maxlength => 2, :size => 2, :data => {:stripe => 'exp-month'} %> /
+    <%= f.label :exp_yr_YYYY %><br>
+    <%= text_field_tag :year, nil, :maxlength => 4, :size => 4, :data => {:stripe => 'exp-year'} %>
   </div>
 
 
