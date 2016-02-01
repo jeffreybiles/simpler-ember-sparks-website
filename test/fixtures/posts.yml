@@ -2,20 +2,41 @@
 
 one:
   id: 1
-  title: 'Title'
+  title: 'My first video'
   video_url: 'wistia.com'
   description: 'This is a video'
   transcript: 'Talking talking talking'
-  publish_date: 2014-05-12
+  publish_date: 2014-05-10
   free: true
-  permalink: '1-this-is-a-video'
+  permalink: '1-my-first-video'
 
 two:
   id: 2
-  title: MyString
+  title: 'My second video'
   video_url: MyString
   description: MyText
   transcript: MyText
   publish_date: 2014-05-12
   free: false
-  permalink: '2-my-sttring'
+  permalink: '2-my-second-video'
+
+
+ten:
+  id: 10
+  title: '10: My last free video'
+  video_url: 'video-video'
+  description: 'This is my last free video'
+  transcript: MyText
+  publish_date: 2015-01-10
+  free: true
+  permalink: '10-my-last-free-video'
+
+eleven:
+  id: 11
+  title: '11: My last pro video'
+  video_url: 'video-video'
+  description: 'This is my last free video'
+  transcript: MyText
+  publish_date: 2015-01-12
+  free: false
+  permalink: '11-my-last-pro-video'
