@@ -21,3 +21,11 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+class Capybara::Rails::TestCase
+  include Warden::Test::Helpers
+  def create_user_and_login(email: "user@example.com", password: "isaac1sloan", subscribed: true)
+    u = User.create(email: email, password: password, password_confirmation: password, subscribed: subscribed)
+    login_as(u)
+  end
+end
