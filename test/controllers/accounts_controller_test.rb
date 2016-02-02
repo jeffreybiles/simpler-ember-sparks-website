@@ -2,7 +2,7 @@ require 'test_helper'
 require 'stripe_mock'
 
 class AccountsControllerTest < ActionController::TestCase
-  def setup
+  setup do
     StripeMock.start
     @stripe_helper = StripeMock.create_test_helper
     @stripe_helper.create_plan(id: 'pro_2', amount: 995)
@@ -12,7 +12,7 @@ class AccountsControllerTest < ActionController::TestCase
     StripeMock.stop
   end
 
-  test "happy path subscription" do
+  test "subscribe (happy path)" do
     post :subscribe, stripeEmail: "example@test.com",
                      stripeToken: @stripe_helper.generate_card_token
     assert_redirected_to thank_you_path

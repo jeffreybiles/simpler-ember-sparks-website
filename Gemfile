@@ -73,6 +73,7 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'ruby-prof'
   gem 'stripe-ruby-mock', '~> 2.2.1', :require => 'stripe_mock'
+  gem 'selenium-webdriver'
 end
 
 group :development do
