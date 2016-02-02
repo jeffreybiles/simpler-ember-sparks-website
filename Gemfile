@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.14.1'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
@@ -66,3 +66,17 @@ gem 'quiet_assets', group: :development
 gem 'active_model_serializers'
 
 gem "rails_12factor", group: [:staging, :production]
+
+gem 'minitest-rails'
+
+group :test do
+  gem 'minitest-rails-capybara'
+  gem 'ruby-prof'
+  gem 'stripe-ruby-mock', '~> 2.2.1', :require => 'stripe_mock'
+  gem 'selenium-webdriver'
+end
+
+group :development do
+  gem 'guard'
+  gem 'guard-minitest'
+end

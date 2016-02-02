@@ -43,7 +43,9 @@
       <div class="row">
         <div class="col-md-9">
           <% if @viewable_by_user %>
-            <%= render 'video', wistia_embed: @post.wistia_embed %>
+            <div id="video-box">
+              <%= render 'video', wistia_embed: @post.wistia_embed %>
+            </div>
           <% else %>
             <div class="sales-box">
               <h2>You can view pro screencasts by subscribing</h2>

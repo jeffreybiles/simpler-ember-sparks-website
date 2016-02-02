@@ -15,7 +15,7 @@ class AccountsController < ApplicationController
     else
       begin
         customer = Stripe::Customer.create(
-          :card => params[:stripeToken],
+          :source => params[:stripeToken],
           :plan => "pro_2",
           :email => user.email
         )
@@ -23,13 +23,11 @@ class AccountsController < ApplicationController
 
         sign_in(user)
         AccountMailer.set_password_email(user).deliver
-
         redirect_to thank_you_path
       rescue Stripe::StripeError => e
         flash[:danger] = "There was an error in Stripe: #{e}"
-        render 'show'
+        redirect_to 'show'
       end
-
     end
   end
 
