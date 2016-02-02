@@ -72,6 +72,7 @@ gem 'minitest-rails'
 group :test do
   gem 'minitest-rails-capybara'
   gem 'ruby-prof'
+  gem 'stripe-ruby-mock', '~> 2.2.1', :require => 'stripe_mock'
 end
 
 group :development do

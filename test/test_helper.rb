@@ -29,3 +29,7 @@ class Capybara::Rails::TestCase
     login_as(u)
   end
 end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+end

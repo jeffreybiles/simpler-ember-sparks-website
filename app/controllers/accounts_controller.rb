@@ -15,7 +15,7 @@ class AccountsController < ApplicationController
     else
       begin
         customer = Stripe::Customer.create(
-          :card => params[:stripeToken],
+          :source => params[:stripeToken],
           :plan => "pro_2",
           :email => user.email
         )
