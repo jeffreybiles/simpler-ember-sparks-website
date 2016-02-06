@@ -23,6 +23,7 @@ class AccountsController < ApplicationController
 
         sign_in(user)
         AccountMailer.set_password_email(user).deliver
+        ZapierRuby::Zapper.new(:signup).zap(email: user.email, subscribed: true)
         redirect_to thank_you_path
       rescue Stripe::StripeError => e
         flash[:danger] = "There was an error in Stripe: #{e}"

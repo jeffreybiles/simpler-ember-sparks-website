@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'stripe-rails'
+gem 'zapier_ruby'
 
 gem 'redcarpet'
 gem 'rouge'
