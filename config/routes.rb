@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations'}
   resources :posts, only: [:show, :index]
   get 'feed' => 'posts#feed'
   resources :tags, only: [:show, :index]
