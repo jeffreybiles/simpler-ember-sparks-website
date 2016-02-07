@@ -27,4 +27,9 @@ namespace :utils do
     # note that there will be some differences in email address between stripe & DB.
     # This sucks, but 5 minutes of comparing stripe_customer_ids should do the trick
   end
+
+  desc 'resetting the caches'
+  task :set_caches => :environment do
+    Tag.find_each { |tag| Tag.reset_counters(tag.id, :taggings) }
+  end
 end
