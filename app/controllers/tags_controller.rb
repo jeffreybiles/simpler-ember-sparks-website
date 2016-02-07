@@ -16,7 +16,7 @@ class TagsController < ApplicationController
       else
         @posts = @posts.sort {|a, b| b.publish_date <=> a.publish_date}
       end
+      render 'posts/index'
     end
-    render 'posts/index'
   end
 end
