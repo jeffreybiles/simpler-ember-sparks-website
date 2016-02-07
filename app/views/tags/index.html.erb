@@ -27,21 +27,11 @@
         </ul>
       </div>
       <div class="col-md-8 col-xs-12">
-
-        <ul class="tag-list">
-          <div class="row">
-            <% @subjects.each do |subject| %>
-              <div class="col-md-6 col-xs-12">
-                <li class="media">
-                  <div class="media-body">
-                    <%= link_to subject do %><h4 class="media-heading"><%= subject.name %></h4><% end %>
-                    Length: <%= subject.taggings.length %> videos, <%= subject.seconds / 60 %> minutes
-                  </div>
-                </li>
-              </div>
-            <% end %>
-          </div>
-        </ul>
+        <div id="tag_cloud">
+          <% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
+            <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

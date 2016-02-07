@@ -15,4 +15,9 @@ class Post < ActiveRecord::Base
       "#{seconds/60}m#{seconds%60}s"
     end
   end
+
+  def self.tag_counts
+    Tag.select("tags.*, tags.name, count(taggings.tag_id) as count").
+      joins(:taggings).group("taggings.tag_id, tags.id, tags.name")
+  end
 end
