@@ -13,7 +13,7 @@
 <section class="explore-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-xs-12">
+      <div class="col-md-9 col-sm-8 col-xs-12">
         <ul class="tag-list">
           <% @series.each do |series| %>
             <li class="media">
@@ -26,7 +26,8 @@
           <% end %>
         </ul>
       </div>
-      <div class="col-md-8 col-xs-12">
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <br>
         <div id="tag_cloud">
           <% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
             <%= link_to tag.name, tag_path(tag.name), class: css_class %>
