@@ -2,7 +2,6 @@ class TagsController < ApplicationController
 
   def index
     @series = Tag.where(tag_type: 'series')
-    @subjects = Tag.where(tag_type: 'subject')
   end
 
   def show
