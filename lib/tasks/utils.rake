@@ -31,5 +31,6 @@ namespace :utils do
   desc 'resetting the caches'
   task :set_caches => :environment do
     Tag.find_each { |tag| Tag.reset_counters(tag.id, :taggings) }
+    Tag.find_each { |tag| tag.updated_publish_date}
   end
 end

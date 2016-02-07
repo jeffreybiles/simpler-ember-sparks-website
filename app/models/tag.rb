@@ -13,4 +13,8 @@ class Tag < ActiveRecord::Base
       "#{seconds/60}m#{seconds%60}s"
     end
   end
+
+  def updated_publish_date
+    update_attribute(:most_recent_publish_date, posts.map(&:publish_date).max)
+  end
 end

@@ -28,7 +28,7 @@ class Api::ApplicationController < ApplicationController
   end
 
   def destroy
-    resource.delete
+    resource.destroy
     head 204
   end
 
@@ -43,7 +43,7 @@ class Api::ApplicationController < ApplicationController
   end
 
   def resource
-    @resource ||= resource_class.send(:find, params[:id])    
+    @resource ||= resource_class.send(:find, params[:id])
   end
 
   def authorize_admin

@@ -1,7 +1,7 @@
 class TagsController < ApplicationController
 
   def index
-    @series = Tag.where(tag_type: 'series')
+    @series = Tag.where(tag_type: 'series').order('most_recent_publish_date DESC')
     @subjects = Tag.where(tag_type: 'subject').shuffle
   end
 

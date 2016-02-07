@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  after_save { tags.map(&:updated_publish_date) }
+  after_destroy { tags.map(&:updated_publish_date)}
+
   scope :published, ->{where("publish_date <= ?", Date.today)}
   scope :recent_first, -> {order('publish_date DESC')}
   scope :free, -> {where(free: true)}
