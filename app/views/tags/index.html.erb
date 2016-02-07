@@ -19,7 +19,10 @@
             <li class="media">
               <div class="media-body">
                 <%= link_to series do %><h4 class="media-heading"><%= series.name %></h4><% end %>
-                Length: <%= series.taggings.length %> videos, <%= series.seconds / 60 %> minutes<br />
+                Length: <%= series.taggings.length %> videos, <%= series.seconds / 60 %> minutes
+                <br/>
+                Most recent video: <%= series.most_recent_publish_date %>
+                <br/><br/>
                 <%= series.description %>
               </div>
             </li>
