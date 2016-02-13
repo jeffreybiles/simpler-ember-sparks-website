@@ -35,6 +35,7 @@ class AccountsController < ApplicationController
   def unsubscribe
     begin
       StripeManager.unsubscribe(current_user)
+      ZapierRuby::Zapper.new(:unsubscribe).zap(email: current_user.email)
       redirect_to account_path
     rescue Stripe::StripeError => e
       flash[:danger] = "There was an error in Stripe: #{e}"
