@@ -1,6 +1,6 @@
 class Tagging < ActiveRecord::Base
-  after_save { tag.updated_publish_date }
-  after_destroy { tag.updated_publish_date}
+  after_update { if tag then tag.updated_publish_date end }
+  after_destroy { if tag then tag.updated_publish_date end}
 
   belongs_to :tag, counter_cache: true
   belongs_to :post

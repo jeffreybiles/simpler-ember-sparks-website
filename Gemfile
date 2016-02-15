@@ -37,6 +37,7 @@ gem 'andand'
 gem 'has_permalink'
 
 gem "letter_opener", :group => :development
+gem 'seed_dump', :group => :development
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
