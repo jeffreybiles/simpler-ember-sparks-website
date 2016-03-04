@@ -62,14 +62,6 @@ footer {
 	text-align: center;
 }
 
-h2.media-heading, h4.media-heading {
-	font: 24px;
-	color: #e24845;
-	font-weight: bold;
-	line-height: 24px;
-	text-transform: uppercase;
-	text-align: center;
-}
 
 h4.media-heading {
 	text-transform: uppercase;
@@ -156,12 +148,6 @@ section.explore-section {
 }
 /* homepage features videos */
 
-div.media {
-	padding: 4%;
-	.corner-flag {
-		position: absolute;
-	};
-}
 div.pro-media {
   .corner-flag{content: image_url('cornerflag_pro.png');}
 }
@@ -169,10 +155,6 @@ div.pro-subscriber {
   .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
 }
 
-
-.media:hover {
-	background-color: #ddd;
-}
 @media (min-width: 468px){}
 
 @media (min-width: 768px) {

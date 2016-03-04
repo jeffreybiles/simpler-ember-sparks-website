@@ -1,7 +1,6 @@
 <div class="media clickable-media-link <%= if !post.free then (if current_user.andand.subscribed then 'pro-subscriber' else'pro-media' end) end %>" data-url="<%= post_path(post) %>">
-  <%= link_to post do %>
     <div class="media-left media-middle">
-      <%= link_to image_tag(post.thumbnail_image, class: "media-object", width: '80px'), post %>
+      <%= link_to image_tag(post.thumbnail_image, class: "media-object", style: "height:100px;width:100px"), post %>
     </div>
 
     <div class="media-body">
@@ -14,18 +13,4 @@
       </p>
       <%= raw @markdown.render post.description %>
     </div>
-  <% end %>
-</div>
-
-
-<div class="media">
-  <div class="media-left media-middle">
-    <a href="#">
-      <img class="media-object" src="..." alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Middle aligned media</h4>
-    This is bullshit
-  </div>
 </div>

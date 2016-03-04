@@ -61,12 +61,10 @@
 <section>
   <div class="container">
     <h3>Latest Videos</h3>
-    <div class="media latest-post" id="newest_free_video">
-      <h1>Newest free Video</h1>
+    <div class="latest-post" id="newest_free_video">
       <%= render 'latest_post', post: @posts.free.first %>
     </div>
-    <div class="media pro-media latest-post" id="newest_pro_video">
-      <h1>Newest Pro Video</h1>
+    <div class="pro-media latest-post" id="newest_pro_video">
       <%= render 'latest_post', post: @posts.pro.first %>
     </div>
   </div>

@@ -10,9 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap
- *= require variables
- *= require_tree .
- *= require font-awesome
  *= require_self
+ *= require import
  */
