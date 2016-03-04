@@ -1,6 +1,5 @@
 .jumbotron {
-	background: #f5f5f5 image_url('heropattern_free.jpg');
-  background-color: #F3A18A;
+  	background-color: rgb(232, 74, 54);
 	margin-top: 0;
 	margin-bottom: 10px;
 	padding-top: 16px;
@@ -30,8 +29,9 @@ a.previous-link, a.next-link {
 }
 
 .jumbotron h1 {
-	color: #000000;
 	font-size: 25px;
+	color: #FFFFFF;
+	text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
 	font-weight: 400;
 	max-width: 700px;
 }
@@ -59,8 +59,9 @@ a.previous-link, a.next-link {
 
 @media (min-width: 768px) {
   .jumbotron h1 {
-    font-size: 48px;
+    font-size: 38px;
   	margin: auto;
+  	margin-top: 40px;
   }
   .jumbotron h2.modified-headline {
   	display: block;
