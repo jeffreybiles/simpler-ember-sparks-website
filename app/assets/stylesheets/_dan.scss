@@ -1,0 +1,63 @@
+.clickable-media-link.media {
+	border-bottom: 1px solid #333;
+}
+
+.free .media-heading:after {
+	content: 'FREE';
+	font-size: 12px;
+	background: #4A90E2;
+	color: white;
+	border-radius: 5px;
+	padding: 4px;
+	margin-left: 5px;
+}
+
+.card-well {
+	.well {
+		background: transparent;
+		border: none;
+		box-shadow: none;
+	}
+	img {
+		width: 100%;
+	}
+	.details {
+		background: #cfcfcf;
+		padding: 5px;
+		border: 1px solid #333;
+	}
+}
+
+.text-white {
+	color: #fff;
+}
+
+.btn-ghost.btn-line {
+	position: relative;
+	top: -40px;
+	background: rgb(232, 74, 54);
+}
+
+.well.prime-well {
+	background: rgb(232, 74, 54);
+	color: #fff;
+	h1 {
+		font-size: 100px;
+		margin-top: 0px;
+		letter-spacing: -9px;
+	}
+	h3 {
+		font-size: 36px;
+		margin-top: 0px;
+	}
+}
+.well.card {
+	background: #fff;
+}
+.top-buffer {
+	margin-top: 20px;
+}
+.lead.line {
+	border-bottom: 1px solid #333;
+	margin-top: 40px;
+}
