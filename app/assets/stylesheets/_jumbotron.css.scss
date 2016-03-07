@@ -11,29 +11,21 @@
 		z-index: 1;
 		position: relative;
 	}
+	h1 {
+		font-size: 25px;
+		color: #FFFFFF;
+		text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+		padding-bottom: 30px;
+	}
 	h2 {
 		font-size: 1.2em;
 	}
-}
-
-hr {
-	border-bottom-color: transparent;
-	border: 0 none transparent;
-	background-color: transparent;
 }
 
 a.previous-link, a.next-link {
 	color: black;
 	text-decoration: none;
 	text-align: center;
-}
-
-.jumbotron h1 {
-	font-size: 25px;
-	color: #FFFFFF;
-	text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
-	font-weight: 400;
-	max-width: 700px;
 }
 
 .jumbotron h2.modified-headline {
