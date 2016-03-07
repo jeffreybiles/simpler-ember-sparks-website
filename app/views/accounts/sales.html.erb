@@ -1,23 +1,63 @@
 <!-- Page rendered when anonymous or unsubscribed sign up -->
+<section>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>Save Time. Learn more. Level up.</h1>
+    </div>
+  </div>
+</section>
+
 <div class="container">
-  <h1>The best resource for intermediate Ember developers</h1>
-  <p>For just $9.95/month, you get <em>instant</em> <em>on-demand</em> access to every single video in the emberscreencasts library.</p>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <p class="lead text-center">Get access to every video, every course, every update. New Ember screencasts are published once a week. You can cancel anytime.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="well prime-well text-center">
+        <h3>Monthly</h3>
+        <h1>$10</h1>
+        <a href="#" class="btn btn-primary btn-lg center-block">Subscribe Now</a>
+      </div>
+    </div>
+  </div>
+  <p class='lead line'>Frequently Asked Questions</p>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well card">
+        <h3>What do I get when I subscribe</h3>
+        <p>You get access to dozens of Pro screencasts, as well as a warm fuzzy feeling inside for helping the community.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well card">
+        <h3>How do I unsubscribe?</h3>
+        <p>You go to your account page and hit the unsubscribe button. You will be unsubscribed immediately and your credit card will no longer be charged.
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well card">
+        <h3>Can you cover a specific subject I want?</h3>
+        <p>Demand plays a role in how I decide screencast topics. Email me to make your voice heard.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well card">
+        <h3>Do you teach personal sessions?</h3>
+        <p>Contact me at my personal email address to discuss team, or corporate training.
+      </div>
+    </div>
+  </div>
+  <p class="lead line">As Seen On Twitter</p>
+  <%= render 'shared/twitter_mentions' %>
 
-  <ul>
-      <li>New up-to-date videos every week.</li>
-      <li>Over 10 hours of fast-paced content.</li>
-      <li>No commitment - unsubscribing is instant and easy.</li>
-  </ul>
+  <div class="text-center">
+    <%= link_to 'Subscribe Now', '#', class: 'btn btn-primary btn-lg' %>
+  </div>
 
-  <h2>Save time.  Learn more.  Be better.</h2>
-  <%= render 'shared/subscribe' %>
-  <br>
-  <a href='https://www.expeditedssl.com/simple-ssl-scanner/scan?target_domain=www.emberscreencasts.com' target='_blank'><img src='https://www.expeditedssl.com/ssl-secure-badge.png'  alt='Expedited SSL Scanner'></a>
-  <br>
-  <p>Buying for your organization?  You can add more users to your account after signing up.</p>
-
-  <!-- Lots of testimonials -->
-  <!-- Another subscribe button -->
 
   <% content_for :title, "Learn like a Pro- sign up for an EmberScreencasts Pro Subscription." %>
   <% content_for :meta_description, "Subscribe to an emberscreencasts.com pro account to boost your learning and be a better Ember developer." %>
