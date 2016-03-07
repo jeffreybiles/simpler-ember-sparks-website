@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'email_intro_free_validations_display', to: 'pages#email_intro_free_validations_display'
   get 'meta_guide_to_upgrading_ember', to: 'pages#meta_guide_to_upgrading_ember'
 
+  get 'pay', to: 'accounts#pay'
   get 'account', to: 'accounts#show'
   get 'sales', to: 'accounts#sales'
   post 'subscribe', to: 'accounts#subscribe'
