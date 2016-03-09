@@ -1,3 +1,37 @@
+<% content_for :head do %>
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script type="text/javascript">
+    Stripe.setPublishableKey("<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>");
+
+    var stripeResponseHandler = function(status, response) {
+      var $form = $('#payment-form');
+      if (response.error) {
+        // Show the errors on the form
+        $form.find('.payment-errors').text(response.error.message);
+        $form.find('button').prop('disabled', false);
+      } else {
+        // token contains id, last4, and card type
+        var token = response.id;
+        // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        // and re-submit
+        $form.get(0).submit();
+      }
+    };
+
+    jQuery(function($) {
+      $('#payment-form').submit(function(e) {
+        var $form = $(this);
+        // Disable the submit button to prevent repeated clicks
+        $form.find('button').prop('disabled', true);
+        Stripe.card.createToken($form, stripeResponseHandler);
+        // Prevent the form from submitting with the default action
+        return false;
+      });
+    });
+</script>
+<% end %>
+
 <section>
   <div class="jumbotron text-center">
     <div class="container">
@@ -7,30 +41,41 @@
 </section>
 <p class="lead text-center">Satisfaction Guarantee, cancel anytime.</p>
 <div class="well card center-block" style="max-width:600px">
-	<form>
+	<form action="/subscribe" method="POST" id="payment-form">
+    <span class="payment-errors"></span>
 	  <div class="form-group">
 	    <label for="email">Email</label>
-	    <input type="email" class="form-control" id="email" placeholder="Email">
+	    <input type="email" class="form-control" name="email" placeholder="Email">
 	  </div>
-	  <div class="form-group">
-	    <label for="password">Password</label>
-	    <input type="password" class="form-control" id="password" placeholder="Password">
-	  </div>
+      <%# phase 2, requires some controller changes, and security assurances
+    	  <div class="form-group">
+    	    <label for="password">Password</label>
+    	    <input type="password" class="form-control" id="password" placeholder="Password">
+    	  </div>
+      %>
 	  <hr />
 	  <div class="form-group">
 	    <label for="card">Card Number</label>
-	    <input type="tel" class="form-control" id="card" placeholder="Credit Card Number">
+	    <input type="tel" class="form-control" size="20" data-stripe="number"
+        placeholder="Credit Card Number">
 	  </div>
 	  <div class="form-group">
 	    <label for="ccv">CCV Code</label>
-	    <input type="tel" class="form-control" id="ccv" placeholder="Security Code">
+	    <input type="tel" class="form-control" size="4" data-stripe="cvc"
+        placeholder="Security Code">
 	  </div>
 	  <div class="form-group">
-	    <label for="exp">Card Expiration</label>
-	    <input type="tel" class="form-control" id="exp" placeholder="Expiration Date">
+	    <label for="exp">Card Expiration (MM/YYYY)</label>
+	    <input type="tel" class="form-control" size="2" data-stripe="exp-month"
+        placeholder="XX">
+      <span> / </span>
+      <input type="tel" class="form-control" size="4" data-stripe="exp-year"
+        placeholder="20XX">
 	  </div>
 	  <div class="text-center">
-	  	<%= link_to 'Confirm Payment ($10)', '#', class: 'btn btn-success btn-lg' %>
+      <button type="submit" class="btn btn-success btn-lg">
+        Confirm Payment ($10)
+      </button>
 	  </div>
 	</form>
 </div>
