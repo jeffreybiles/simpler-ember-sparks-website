@@ -71,7 +71,7 @@ a.light-button {
 #video_archive ul li {
   list-style: none;
   font-size: 18px;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-family: 'Maven Pro';
 
   .archive-publish-date {
@@ -81,6 +81,8 @@ a.light-button {
   .archive-image {
     width: 40px;
     display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 3px;
   }
 
 
