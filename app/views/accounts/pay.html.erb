@@ -40,8 +40,9 @@
         var $form = $(this);
         $form.find('button').prop('disabled', true);
         var cardType = $.payment.cardType($('.cc-number').val());
+        var expiries = $('.cc-exp').val().split(' / ')
         $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
-        $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').val()));
+        $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry(expiries[0], expiries[1]));
         $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
         $('.cc-brand').text(cardType);
         Stripe.card.createToken($form, stripeResponseHandler);
