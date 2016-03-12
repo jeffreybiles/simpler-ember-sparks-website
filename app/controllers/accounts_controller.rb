@@ -32,6 +32,8 @@ class AccountsController < ApplicationController
       rescue Stripe::StripeError => e
         flash[:danger] = "There was an error in Stripe: #{e}"
         redirect_to '/pay'
+      rescue StandardError => e
+        flash[:danger] = "There was an error: #{e}"
       end
     end
   end
