@@ -63,11 +63,22 @@ a.btn-ghost {
   font-size: 18px;
 }
 
+a.btn-ghost:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a.btn-ghost:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
 a.light-button {
   background-color: #ADD8E6;
   text-decoration: none;
   color: #000;
 }
+
 #video_archive ul li {
   list-style: none;
   font-size: 18px;
