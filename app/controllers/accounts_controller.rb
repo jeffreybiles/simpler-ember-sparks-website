@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
   def subscribe
     user = current_user ||
            User.find_by(email: params[:email]) ||
-           User.create(email: params[:email], password: 'temporaryPassword')
+           User.create(email: params[:email], password: params[:password])
     if user.subscribed
       flash[:warning] = "A user with the email address has already subscribed... please sign in!  Your current subscription will not change."
       redirect_to new_user_session_path
@@ -26,7 +26,6 @@ class AccountsController < ApplicationController
         user.update(stripe_customer_id: customer.id, subscribed: true)
 
         sign_in(user)
-        AccountMailer.set_password_email(user).deliver
         ZapierRuby::Zapper.new(:signup).zap(email: user.email, subscribed: true)
         redirect_to thank_you_path
       rescue Stripe::StripeError => e

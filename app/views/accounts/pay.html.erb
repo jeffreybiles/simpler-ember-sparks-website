@@ -64,18 +64,18 @@
 	<form novalidate autocomplete="on" action="/subscribe" method="POST"
     id="payment-form">
     <h4 class="payment-errors text-center" style="color:red;"></h4>
-	  <div class="form-group">
-	    <label for="email">User Email</label>
-	    <input type="email" class="form-control" name="email" placeholder="Email"
-        required>
-	  </div>
-      <%# phase 2, requires some controller changes, and security assurances
-    	  <div class="form-group">
-    	    <label for="password">Password</label>
-    	    <input type="password" class="form-control" id="password" placeholder="Password">
-    	  </div>
-      %>
-	  <hr />
+    <% unless current_user %>
+  	  <div class="form-group">
+  	    <label for="email">Email</label>
+  	    <input type="email" class="form-control" name="email" placeholder="Email"
+          required>
+  	  </div>
+  	  <div class="form-group">
+  	    <label for="password">Password</label>
+  	    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+  	  </div>
+	     <hr />
+    <% end %>
 	  <div class="form-group">
 	    <label for="cc-number">Card Number</label>
 	    <input id="cc-number" type="tel" class="form-control cc-number"
