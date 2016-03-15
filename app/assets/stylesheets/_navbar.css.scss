@@ -6,6 +6,7 @@ $nav-background: rgb(232, 74, 54);
 	border-style: none;
 	-moz-box-shadow: 0 0 2px #000000;
 	opacity: 1;
+	border-radius: 0;
 }
 .nav.navbar-nav li a {
 	color: #EEE;
@@ -21,7 +22,6 @@ $nav-background: rgb(232, 74, 54);
 a.navbar-brand {
 	background: image_url('Logo.jpg') 0 center;
 	width: 240px;
-	height: 47px;
 }
 
 .navbar-brand img {
@@ -32,6 +32,15 @@ a.navbar-brand {
   form.navbar-form.navbar-right {
     display: none;
   }
+  .nav-cta {
+  	border: 1px white solid;
+  	padding-top: 5px !important;
+  	padding-bottom: 5px !important;
+  	margin-top: 10px;
+  	&:hover {
+  		background-color:#fff!important;
+  	}
+  }
 }
 
 .navbar-dropdown {
@@ -40,6 +49,5 @@ a.navbar-brand {
 
 	li a:hover {
 		color: #000;
-		background-color: $nav-background;
 	}
 }

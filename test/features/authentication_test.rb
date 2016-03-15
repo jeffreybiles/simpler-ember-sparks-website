@@ -10,7 +10,7 @@ class AuthenticationTest < Capybara::Rails::TestCase
     fill_in "user_email", with: "hallo@there.com"
     fill_in "user_password", with: 'password'
     fill_in "user_password_confirmation", with: 'password'
-    click_button "Sign up"
+    click_button "Create Account"
     assert page.has_content?('Welcome! You have signed up successfully.')
     assert page.has_content?('Subscribe to Pro')
     refute page.has_content?('Sign In')

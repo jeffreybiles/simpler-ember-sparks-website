@@ -29,7 +29,6 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="myDefaultNavbar1">
         <ul class="nav navbar-nav">
-          <%= nav_link "Home", root_path %>
           <%= nav_link "Explore", tags_path %>
           <%= nav_link "Latest", posts_path(latest: true) %>
           <li><a href="http://blog.emberscreencasts.com">Blog</a></li>
@@ -65,7 +64,7 @@
               <li><%= link_to 'Ember Admin', '/ember_admin' %></li>
             <% end %>
           <% else %>
-            <li><a href="/sales">Subscribe to Pro</a></li>
+            <li><a href="/sales" class="nav-cta">Subscribe to Pro</a></li>
             <li><a href="/users/sign_in">Sign In</a></li>
           <% end %>
         </ul>

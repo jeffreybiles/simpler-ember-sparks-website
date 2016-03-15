@@ -1,18 +1,11 @@
 <section>
   <div class="jumbotron text-center">
 
-   <div id="video-container">
-     <%= image_tag 'flame-background-3.png', class: 'fillWidth'%>
-    </div>
 
     <div class="container">
       <div class="row">
-          <h1>Twice-weekly screencasts for ambitious web developers</h1>
-          <br>
-          <h2 class="modified-headline">
-            <!-- Random testimonial -->
-          </h2>
-          <a class="btn btn-primary light-button" href="/#video_archive">Video Archive</a>
+          <h1>The largest library of ember screencasts</h1>
+          <a class="btn btn-ghost" href="/archive">View Library</a>
       </div>
     </div>
   </div>
@@ -20,139 +13,84 @@
 </section>
 <section>
   <div class="container">
-    <div class="row"></div>
+    <h3>Featured Classes</h3>
+    <div class="row">
+
+      <% Tag.limit(3).where(tag_type: 'series').order('most_recent_publish_date DESC').each do |series| %>
+        <div class="col-md-4 card-well">
+          <div class="well">
+            <%= link_to series, class: 'link-but-normal' do %>
+
+              <!-- Series Image used here -->
+              <%= image_tag 'fallback_thumbnail.jpg', class: "img-responsive" %>
+
+              <div class="details">
+                <h4 class="media-heading"><%= series.name %></h4>
+                <%= series.taggings.length %> videos in the series
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "View All Classes", tags_path, class: 'btn btn-link btn-lg' %>
+      </div>
+
+    </div>
   </div>
 </section>
+
+<section class="bg-prime">
+  <div class="container">
+    <div class="text-center">
+      <h3 class="text-white">Do you want to take your Ember.js skills to the next level?</h3>
+      <hr style="margin-top: 60px">
+      <%= link_to 'Learn More', '#', class: 'btn btn-ghost btn-line' %>
+    </div>
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <div class="well well-sm text-center">
+          <h3>Free Account</h3>
+          <ul class="list-unstyled">
+            <li>Access to all Free videos</li>
+            <li>Get notified about new videos</li>
+            <li>Recieve one free pro video</li>
+            <li>Upgrade to Pro account anytime</li>
+          </ul>
+          <%= link_to "Sign up for Free", "/users/sign_up", class: "btn btn-primary btn-lg" %>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-sm text-center">
+          <h3>Subscribe to Pro</h3>
+          <ul class="list-unstyled">
+            <li>Access to over 150+ Videos</li>
+            <li>Get notified about new videos</li>
+            <li>Level up through Courses</li>
+            <li>Satisfaction Guarantee</li>
+          </ul>
+          <%= link_to "Become an Ember Pro", "/sales", class: "btn btn-primary btn-lg" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="media latest-post" id="newest_free_video">
-          <h1>Newest free Video</h1>
-          <%= render 'latest_post', post: @posts.free.first %>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="media pro-media latest-post" id="newest_pro_video">
-          <h1>Newest Pro Video</h1>
-          <%= render 'latest_post', post: @posts.pro.first %>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="testimonial clickable-external-link" data-url='https://twitter.com/cowboyd/status/566350618315345920?ref_src=twsrc%5Etfw'>
-          <p class="person-photo"><%= image_tag "clowell-quote-pic.jpg" %></p>
-          <p class="quote">A must watch for embereños of all stripes.</p>
-          <p class="person-name">-Charles Lowell, founder of The Frontside</p>
-        </div>
-        <div class="testimonial clickable-external-link" data-url='https://twitter.com/bdougieYO/status/587211334120566784?ref_src=twsrc%5Etfw'>
-          <p class="person-photo"><%= image_tag "bdouglas-quote-pic.jpg" %></p>
-          <p class="quote">Highly recommend Ember Screencasts, awesome resource.</p>
-          <p class="person-name">-Brian Douglas, Software Developer</p>
-        </div>
-        <div class="testimonial clickable-external-link" data-url='https://twitter.com/Krista_A_Nelson/status/595082772328251393?ref_src=twsrc%5Etfw'>
-          <p class="person-photo"><%= image_tag "knelson-quote-pic.jpeg" %></p>
-          <p class="quote">Wish I would of found these a few months ago!</p>
-          <p class="person-name">-Krista Nelson, Software Developer</p>
-        </div>
-        <div class="testimonial clickable-external-link" data-url="https://twitter.com/pootsbook/status/606386501988040704?ref_src=twsrc%5Etfw">
-          <p class="person-photo"><%= image_tag "ppoots-quote-pic.jpg" %></p>
-          <p class="quote">Worth every penny!</p>
-          <p class="person-name">-Philip Poots, creator of EmberWatch</p>
-          <br>
+      <div class="col-md-8 col-md-offset-2">
+        <h3>Latest Videos</h3>
+        <%= render 'latest_post', post: @posts.free.first %>
+        <%= render 'latest_post', post: @posts.pro.first %>
+        <div class="text-center">
+          <%= link_to 'View All Videos', posts_path(latest: true), class: 'btn btn-lg btn-link' %>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--
-<section>
-	<div class="container clickable-media-link" data-url="/account">
-    <p><br></p>
-		<div class="row" id="socialproof2">
-    	<div class="text-center col-md-4 col-lg-4" id="library">
-     	  <p><%= image_tag("seal-library.png") %></p>
-        <p>Unlimited access to every video in our library</p>
-      </div>
-    	<div class="text-center col-md-4 col-lg-4" id="brand2">
-     	  <p class="image-fit"><%= image_tag("eslogo2.png") %></p>
-      </div>
-    	<div class="text-center col-md-4 col-lg-4" id="updates">
-     	  <p><%= image_tag("seal-updates.png") %></p>
-     	  <p>New Courses Added Every Week</p>
-    	</div>
-    </div>
-    <hr>
-  </div>
-</section> -->
-<hr>
-<section id="video_archive">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Video Archive</h1>
-        <div class="buttons">
-          <a class="light-button btn" href="/posts">More episode details</a>
-          <a class="light-button btn" href="/tags">Arrange by subject</a>
-        </div>
-        <br>
-        <% unless current_user && current_user.can_watch_pro %>
-          <h3>
-            <a class="btn pro-button" href="/account">Pro subscribers get access to all free and paid videos</a>
-          </h3>
-        <% end %>
-        <ul>
-          <% @posts.each do |post| %>
-            <li class="archive-title">
-              <%= link_to post do %>
-                <% unless current_user && current_user.can_watch_pro %>
-                  <div class="archive-image">
-                    <% unless post.free %>
-                      <%= image_tag 'icon-locked.png' %>
-                    <% end %>
-                  </div>
-                <% end %>
-                <div class="archive-publish-date">
-                  <%= post.publish_date %>
-                </div>
-                <%= post.title %>
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--
-  <div class="col-md-4">
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Just signed up for <a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a>’ Ember.js screencasts at <a href="https://twitter.com/emberscreencast">@emberscreencast</a>. Worth every penny!</p>&mdash; Philip Poots (@pootsbook) <a href="https://twitter.com/pootsbook/status/606386501988040704">June 4, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a> Just signed up for your Ember screencasts! They have been great so far! Wish I would of found these a few months ago!</p>&mdash; Krista Nelson (@Krista_A_Nelson) <a href="https://twitter.com/Krista_A_Nelson/status/595082772328251393">May 4, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Loving the videos on Ember SparkCasts <a href="http://t.co/LGwcJEnx3V">http://t.co/LGwcJEnx3V</a> kudos to <a href="https://twitter.com/JeffreyBiles">@jeffreybiles</a> for putting them out there!</p>&mdash; Ember Talk (@emberjstalk) <a href="https://twitter.com/emberjstalk/status/472004689459163136">May 29, 2014</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Highly recommend Ember Screencasts, awesome resource to expand knowledge into Ember and its addons <a href="http://t.co/Bgv6DcGNFQ">http://t.co/Bgv6DcGNFQ</a></p>&mdash; Brian Douglas (@brianllamar) <a href="https://twitter.com/brianllamar/status/587211334120566784">April 12, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Simple, basic awesomeness 😎 Ember Screencasts <a href="https://t.co/nYA67PmZf6">https://t.co/nYA67PmZf6</a></p>&mdash; Rob Park (@robpark) <a href="https://twitter.com/robpark/status/619101232293146624">July 9, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">If you&#39;re looking for some great training videos for <a href="https://twitter.com/hashtag/EmberJS?src=hash">#EmberJS</a>, make sure you check out @emberscreencasts! <a href="http://t.co/UBAKiZbpSC">http://t.co/UBAKiZbpSC</a></p>&mdash; HTML Fusion (@htmlfusion) <a href="https://twitter.com/htmlfusion/status/623282264709943296">July 21, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">great to see <a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a> is back to spark-casting. <a href="http://t.co/uH7D6faeUq">http://t.co/uH7D6faeUq</a> A must watch for embereños of all stripes.</p>&mdash; Charles Lowell (@cowboyd) <a href="https://twitter.com/cowboyd/status/566350618315345920">February 13, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Great tutorial on <a href="https://twitter.com/hashtag/emberjs?src=hash">#emberjs</a> computed properties <a href="http://t.co/gWszGzOdBA">http://t.co/gWszGzOdBA</a>. Didn&#39;t know Ember.computed had all these macros! <a href="https://twitter.com/hashtag/JavaScript?src=hash">#JavaScript</a></p>&mdash; David Tang (@skaterdav85) <a href="https://twitter.com/skaterdav85/status/600364515553714176">May 18, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">For anyone interested in the <a href="https://twitter.com/emberjs">@emberjs</a> framework, <a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a> does some great tutorials at <a href="http://t.co/kKZxO8hgbh">http://t.co/kKZxO8hgbh</a> <a href="https://t.co/Bq7wpKSWU0">https://t.co/Bq7wpKSWU0</a></p>&mdash; Christa Marie Clark (@ChristaMClark) <a href="https://twitter.com/ChristaMClark/status/589657849229348864">April 19, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Definitely check out Ember Screencasts! Support the community and learn a thing or two from <a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a> <a href="http://t.co/pHYeEQh8Pd">http://t.co/pHYeEQh8Pd</a></p>&mdash; Julian Tescher (@jatescher) <a href="https://twitter.com/jatescher/status/576813921744523264">March 14, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Starting with <a href="https://twitter.com/emberjs">@emberjs</a>? <a href="http://t.co/iEfxtSWWvU">http://t.co/iEfxtSWWvU</a> is the perfect place to start learning! <a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a></p>&mdash; Jaime (@jaimemguajardo) <a href="https://twitter.com/jaimemguajardo/status/604075429889064960">May 29, 2015</a></blockquote>
-
-    <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/JeffreyBiles">@JeffreyBiles</a> Your sparkcasts are awesome, thanks for providing great content to the community</p>&mdash; Alex DiLiberto (@alex_diliberto) <a href="https://twitter.com/alex_diliberto/status/568070481229836289">February 18, 2015</a></blockquote>
-  </div>
--->
 
 <% content_for :title, "EmberScreencasts.com" %>
 <% content_for :meta_description, "Video tutorials for creating ambitious web developers.  Discover new tools and techniques level up your Ember skills with concise twice-weekly screencasts." %>

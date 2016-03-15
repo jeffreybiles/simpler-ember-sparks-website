@@ -19,13 +19,6 @@ li.media {
 	margin: 10px 30px;
 	padding: 10px;
 }
-
-.latest-post {
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: #eee;
-	margin-bottom: 10px;
-}
 .series-list li.media p {
 	display: block;
 }
@@ -55,10 +48,6 @@ li.media {
     padding-left: 15px;
   }
 
-  div.media-left {
-    margin: 0;
-		padding: 0;
-  }
   li.media img, li.media p {
     display: block;
   }
@@ -86,14 +75,6 @@ li.media {
   .tag-list li.media {
     padding-bottom: 11px;
     padding-top: 0;
-  }
-
-  h4.media-heading {
-    text-transform: uppercase;
-    text-align: left;
-    color: #F1603E;
-    font-size: 24px;
-    text-decoration: none;
   }
 
   ul.tag-list {

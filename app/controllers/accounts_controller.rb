@@ -1,5 +1,9 @@
 class AccountsController < ApplicationController
   include Devise::Controllers::SignInOut
+  # getting occasional errors without this
+  skip_before_action :verify_authenticity_token, only: :subscribe
+
+
 
   def show
     redirect_to sales_path unless current_user
@@ -7,8 +11,8 @@ class AccountsController < ApplicationController
 
   def subscribe
     user = current_user ||
-           User.find_by(email: params[:stripeEmail]) ||
-           User.create(email: params[:stripeEmail], password: 'temporaryPassword')
+           User.find_by(email: params[:email]) ||
+           User.create(email: params[:email], password: params[:password])
     if user.subscribed
       flash[:warning] = "A user with the email address has already subscribed... please sign in!  Your current subscription will not change."
       redirect_to new_user_session_path
@@ -22,12 +26,13 @@ class AccountsController < ApplicationController
         user.update(stripe_customer_id: customer.id, subscribed: true)
 
         sign_in(user)
-        AccountMailer.set_password_email(user).deliver
         ZapierRuby::Zapper.new(:signup).zap(email: user.email, subscribed: true)
         redirect_to thank_you_path
       rescue Stripe::StripeError => e
         flash[:danger] = "There was an error in Stripe: #{e}"
-        redirect_to 'show'
+        redirect_to '/pay'
+      rescue StandardError => e
+        flash[:danger] = "There was an error: #{e}"
       end
     end
   end
