@@ -22,7 +22,7 @@
             <%= link_to series, class: 'link-but-normal' do %>
 
               <!-- Series Image used here -->
-              <%= image_tag 'fallback_thumbnail.jpg', class: "img-responsive" %>
+              <%= image_tag series.thumbnail_image, class: "img-responsive" %>
 
               <div class="details">
                 <h4 class="media-heading"><%= series.name %></h4>
