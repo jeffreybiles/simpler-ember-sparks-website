@@ -7,7 +7,7 @@
     <h4 class="media-heading"><%= post.title %></h2>
     <p>
       <% post.tags.each do |tag| %>
-        -- <%= link_to tag.name, tag_path(tag) %>
+        <%= link_to tag.name, tag_path(tag) %>
       <% end %>
     </p>
     <%= raw @markdown.render post.description %>

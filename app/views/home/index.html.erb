@@ -77,13 +77,14 @@
 </section>
 
 
-<section>
+<section id="latest">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h3>Latest Videos</h3>
-        <%= render 'latest_post', post: @posts.free.first %>
-        <%= render 'latest_post', post: @posts.pro.first %>
+        <h3><a href="#latest" style="color: #005;">Latest Videos</a></h3>
+        <% @posts.limit(5).each do |post| %>
+          <%= render 'latest_post', post: post %>
+        <% end %>
         <div class="text-center">
           <%= link_to 'View All Videos', library_path, class: 'btn btn-lg btn-link' %>
         </div>
