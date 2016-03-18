@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
           <h1>The largest library of ember screencasts</h1>
-          <a class="btn btn-ghost" href="/archive">View Library</a>
+          <%= link_to 'View Library', library_path, class: "btn btn-ghost" %>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
             <%= link_to series, class: 'link-but-normal' do %>
 
               <!-- Series Image used here -->
-              <%= image_tag 'fallback_thumbnail.jpg', class: "img-responsive" %>
+              <%= image_tag series.thumbnail_image, class: "img-responsive" %>
 
               <div class="details">
                 <h4 class="media-heading"><%= series.name %></h4>
@@ -52,10 +52,10 @@
         <div class="well well-sm text-center">
           <h3>Free Account</h3>
           <ul class="list-unstyled">
-            <li>Access to all Free videos</li>
+            <li>Access to all Free videos (50+)</li>
             <li>Get notified about new videos</li>
-            <li>Recieve one free pro video</li>
             <li>Upgrade to Pro account anytime</li>
+            <li><br></li>
           </ul>
           <%= link_to "Sign up for Free", "/users/sign_up", class: "btn btn-primary btn-lg" %>
         </div>
@@ -64,10 +64,10 @@
         <div class="well well-sm text-center">
           <h3>Subscribe to Pro</h3>
           <ul class="list-unstyled">
-            <li>Access to over 150+ Videos</li>
+            <li>Access to ALL videos (120+)</li>
             <li>Get notified about new videos</li>
-            <li>Level up through Courses</li>
-            <li>Satisfaction Guarantee</li>
+            <li>Level up through extended series</li>
+            <li>Satisfaction Guaranteed</li>
           </ul>
           <%= link_to "Become an Ember Pro", "/sales", class: "btn btn-primary btn-lg" %>
         </div>
@@ -85,7 +85,7 @@
         <%= render 'latest_post', post: @posts.free.first %>
         <%= render 'latest_post', post: @posts.pro.first %>
         <div class="text-center">
-          <%= link_to 'View All Videos', posts_path(latest: true), class: 'btn btn-lg btn-link' %>
+          <%= link_to 'View All Videos', library_path, class: 'btn btn-lg btn-link' %>
         </div>
       </div>
     </div>
