@@ -1,4 +1,4 @@
-<li class="media clickable-media-link <%= if !post.free then (if current_user.andand.subscribed then 'pro-subscriber' else'pro-media' end) end %>" data-url="<%= post_path(post) %>">
+<li class="media clickable-media-link" data-url="<%= post_path(post) %>">
   <%= link_to post do %>
     <div class="row">
       <div class="col-xs-12 col-md-4 col-sm-5">
@@ -7,8 +7,18 @@
       </div>
       <div class="col-xs-12 col-md-8 col-sm-7">
         <div class="media-body">
-          <h4 class="media-heading"><%= link_to post.title, post %></h4>
+          <h4 class="media-heading">
+            <%= link_to post do %>
+              <%= post.title %>
+              <% unless current_user && current_user.can_watch_pro %>
+                <% if post.free %>
+                  <span class="icon free" style="display: inline-block;">FREE</span>
+                <% end %>
+              <% end %>
+            <% end %>
+          </h4>
           <p>
+
             <%= post.publish_date %> -- <%= post.readable_time %> --
             <a href="/posts?difficulty=<%=post.difficulty%>"><%= post.difficulty %></a>
             <% post.tags.each do |tag| %>

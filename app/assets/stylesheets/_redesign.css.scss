@@ -26,17 +26,6 @@ body {
 
 // bottom of home page
 
-#socialproof2 {
-	text-align: center;
-	// background: image_url('radiowaves.png') center center no-repeat;
-	padding-top: 10px;
-}
-#socialproof2 .img-responsive {
-	margin: auto;
-}
-#socialproof2 .img-responsive.animated {
-	margin-top: 60px;
-}
 .btn.pro-button {
 	font-family: 'Maven Pro';
 	color: #000;
@@ -116,13 +105,6 @@ section.explore-section {
 	background-image: url(none);
 }
 /* homepage features videos */
-
-div.pro-media {
-  .corner-flag{content: image_url('cornerflag_pro.png');}
-}
-div.pro-subscriber {
-  .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
-}
 
 @media (min-width: 468px){}
 
