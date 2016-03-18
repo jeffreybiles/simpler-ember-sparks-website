@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:show, :index]
 
   get 'about', to: 'pages#about'
-  get 'archive', to: 'pages#archive'
+  get 'library', to: 'pages#library'
   get 'mailing_list', to: 'pages#mailing_list'
   get 'thank_you', to: 'pages#thank_you'
   get 'faq', to: 'pages#faq'

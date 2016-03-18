@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
           <h1>The largest library of ember screencasts</h1>
-          <a class="btn btn-ghost" href="/archive">View Library</a>
+          <%= link_to 'View Library', library_path, class: "btn btn-ghost" %>
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@
         <%= render 'latest_post', post: @posts.free.first %>
         <%= render 'latest_post', post: @posts.pro.first %>
         <div class="text-center">
-          <%= link_to 'View All Videos', posts_path(latest: true), class: 'btn btn-lg btn-link' %>
+          <%= link_to 'View All Videos', library_path, class: 'btn btn-lg btn-link' %>
         </div>
       </div>
     </div>

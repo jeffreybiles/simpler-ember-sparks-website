@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   end
 
-  def archive
+  def library
     @posts = Post.all.published.recent_first
   end
 
