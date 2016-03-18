@@ -13,10 +13,10 @@
 </section>
 <section>
   <div class="container">
-    <h3>Featured Classes</h3>
+    <h3>Featured Series</h3>
     <div class="row">
 
-      <% Tag.limit(3).where(tag_type: 'series').order('most_recent_publish_date DESC').each do |series| %>
+      <% @tags.each do |series| %>
         <div class="col-md-4 card-well">
           <div class="well">
             <%= link_to series, class: 'link-but-normal' do %>
