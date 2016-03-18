@@ -15,7 +15,7 @@
 		font-size: 25px;
 		color: #FFFFFF;
 		text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
-		padding-bottom: 30px;
+		padding-bottom: 20px;
 	}
 	h2 {
 		font-size: 1.2em;
@@ -42,18 +42,11 @@ a.previous-link, a.next-link {
 	line-height: 24px;
 }
 
-.jumbotron .tag-description {
-	font-family: 'Arial';
-	font-size: 15px;
-	font-weight: 200px;
-	line-height: 20px;
-}
-
 @media (min-width: 768px) {
   .jumbotron h1 {
     font-size: 38px;
   	margin: auto;
-  	margin-top: 40px;
+  	margin-top: 20px;
   }
   .jumbotron h2.modified-headline {
   	display: block;
@@ -64,14 +57,14 @@ a.previous-link, a.next-link {
 	}
 	.jumbotron p {
     font-size: 15px;
-		width: 50%;
 		margin: auto;
 		display: block;
+
+    a {
+      color: #004;
+    }
 	}
 }
 
 @media (min-width: 1200px) {
-	.jumbotron p {
-		width: 30%;
-	}
 }
