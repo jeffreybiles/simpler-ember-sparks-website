@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   mount_ember_app :ember_admin, to: "/ember_admin", controller: "pages", action: "ember_admin"
   mount_ember_app :organization_admin, to: "/organization_admin", controller: "pages", action: "organization_admin"
+  mount_ember_app :pacman, to: "/pacman", controller: "pages", action: "pacman"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

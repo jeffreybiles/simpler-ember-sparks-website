@@ -1,0 +1,9 @@
+/*hacking around the fact that ember stuff no longer put in .main-content*/
+
+.main-content {
+  margin-bottom: 0;
+}
+
+.main-ember-content {
+  margin-bottom: 100px;
+}
