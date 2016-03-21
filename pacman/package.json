@@ -38,6 +38,6 @@
     "ember-export-application-global": "^1.0.4",
     "ember-keyboard-shortcuts": "^0.3.0",
     "ember-resolver": "^2.0.3",
-    "pac-man": "~0.0.2"
+    "pac-man": "~0.0.4"
   }
 }
