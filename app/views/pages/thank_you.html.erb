@@ -1,3 +1,28 @@
+<% if ENV['RENDER_ANALYTICS'] == true %>
+  <%
+    user = current_user
+  %>
+  <% content_for :scripts do %>
+    <script>
+      ga('require', 'ecommerce');
+      ga('ecommerce:addTransaction', {
+        'id': "<%= user.stripe_customer_id %>",
+        'affiliation': 'EmberScreencasts',
+        'revenue': '9.95'
+      });
+      ga('ecommerce:addItem', {
+        'id': "<%= user.stripe_customer_id %>",
+        'name': 'Monthly Pro Subscriber',
+        'sku': 'pro_2',
+        'category': 'Subscriptions',
+        'price': '9.95',
+        'quantity': '1'
+      });
+      ga('ecommerce:send');
+    </script>
+  <% end %>
+<% end %>
+
 <div class="container">
   <h1>Thank You!</h1>
   <h4>You can now view every screencast on the site.</h4>
