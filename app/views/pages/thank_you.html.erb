@@ -8,14 +8,14 @@
       ga('ecommerce:addTransaction', {
         'id': "<%= user.stripe_customer_id %>",
         'affiliation': 'EmberScreencasts',
-        'revenue': '9.99'
+        'revenue': '9.95'
       });
       ga('ecommerce:addItem', {
         'id': "<%= user.stripe_customer_id %>",
         'name': 'Monthly Pro Subscriber',
         'sku': 'pro_2',
         'category': 'Subscriptions',
-        'price': '9.99',
+        'price': '9.95',
         'quantity': '1'
       });
       ga('ecommerce:send');
