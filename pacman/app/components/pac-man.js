@@ -5,6 +5,14 @@ import MsPac2 from 'pac-man/models/ms-pac-2';
 import MsPac3 from 'pac-man/models/ms-pac-3';
 import MsPac4 from 'pac-man/models/ms-pac-4';
 
+var levels = [MsPac1, MsPac2, MsPac3, MsPac4];
+
+levels.forEach(function(level){
+  level.reopen({
+    squareSize: 20
+  })
+})
+
 export default PacMan.extend({
-  levels: [MsPac1, MsPac2, MsPac3, MsPac4]
+  levels: levels
 })
