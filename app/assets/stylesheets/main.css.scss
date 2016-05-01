@@ -63,15 +63,24 @@ a.btn-ghost {
   font-size: 18px;
 }
 
+a.btn-ghost:hover {
+  background: #fff;
+}
+
+a.btn-ghost:active {
+  color: #fff;
+}
+
 a.light-button {
   background-color: #ADD8E6;
   text-decoration: none;
   color: #000;
 }
+
 #video_archive ul li {
   list-style: none;
   font-size: 18px;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-family: 'Maven Pro';
 
   .archive-publish-date {
@@ -81,6 +90,8 @@ a.light-button {
   .archive-image {
     width: 40px;
     display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 3px;
   }
 
 
@@ -167,4 +178,11 @@ footer {
 .big-text-area {
   width: 300px;
   height: 70px;
+}
+
+#pac-man {
+  margin-bottom: 0;
+  #pac-man-title {
+    margin-top: 0;
+  }
 }

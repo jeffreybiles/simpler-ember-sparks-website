@@ -10,30 +10,51 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <p class="lead text-center">Get access to every video, every course, every update. New Ember screencasts are published once a week. You can cancel anytime.</p>
+      <p class="lead text-center">Get access to every video, every course,
+        every update. New Ember screencasts are published once a week.
+        Cancel anytime.
+      </p>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
       <div class="well prime-well text-center">
         <h3>Monthly</h3>
-        <h1>$10</h1>
-        <a href="/pay" class="btn btn-primary btn-lg center-block">Subscribe Now</a>
+        <h1><%= number_to_currency(10, precision:0) %></h1>
+        <a href="/pay" class="btn btn-ghost btn-lg center-block">Subscribe Now</a>
       </div>
     </div>
   </div>
-  <p class='lead line'>Frequently Asked Questions</p>
+  <p class='lead line' id="faq">Frequently Asked Questions</p>
   <div class="row">
     <div class="col-md-6">
       <div class="well card">
-        <h3>What do I get when I subscribe</h3>
-        <p>You get access to dozens of Pro screencasts, as well as a warm fuzzy feeling inside for helping the community.
+        <h3>What do I get when I subscribe?</h3>
+        <p>You get access to over a hundred knowledge-packed screencasts, as well as a warm fuzzy feeling inside for helping the community.</p>
       </div>
     </div>
     <div class="col-md-6">
       <div class="well card">
         <h3>How do I unsubscribe?</h3>
-        <p>You go to your account page and hit the unsubscribe button. You will be unsubscribed immediately and your credit card will no longer be charged.
+        <p>You go to your account page and hit the unsubscribe button. You will be unsubscribed immediately and your credit card will no longer be charged.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well card">
+        <h3>I'm just starting out.  Is this for me?</h3>
+        <p>The Beginning Ember series will be starting mid-April.  Until then, here are
+              <a href="https://leanpub.com/buildpacman">some</a>
+              <a href="https://leanpub.com/ember-cli-101">great</a>
+              <a href="http://balinterdi.com/rock-and-roll-with-emberjs/">beginner</a>
+              <a href="https://embergrep.com/">materials</a>.  Come back after you've read/watched one of those.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well card">
+        <h3>Can you release more than two videos/week?</h3>
+        <p>I'm done with my contracting work April 29th.  I expect to be able to record screencasts more often after that.</p>
       </div>
     </div>
   </div>
@@ -41,13 +62,13 @@
     <div class="col-md-6">
       <div class="well card">
         <h3>Can you cover a specific subject I want?</h3>
-        <p>Demand plays a role in how I decide screencast topics. Email me to make your voice heard.
+        <p>Demand plays a role in how I decide screencast topics. <a href="mailto:jeffrey@emberscreencasts.com">Email me</a> to make your voice heard.</p>
       </div>
     </div>
     <div class="col-md-6">
       <div class="well card">
-        <h3>Do you teach personal sessions?</h3>
-        <p>Contact me at my personal email address to discuss team, or corporate training.
+        <h3>I want in-person training!</h3>
+        <p>Contact me at <a href="mailto:bilesjeffrey@gmail.com">my personal email address</a> to discuss in-person training.</p>
       </div>
     </div>
   </div>

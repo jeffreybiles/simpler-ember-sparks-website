@@ -52,18 +52,9 @@ li.media {
     display: block;
   }
   li.media {
-    .corner-flag {
-			position: absolute;
-		}
     padding: 0;
 		padding: 20px;
     margin: 0;
-  }
-  li.pro-media {
-    .corner-flag{content: image_url('cornerflag_pro.png');}
-  }
-  li.pro-subscriber {
-    .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
   }
 
   .series-list li {

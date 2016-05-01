@@ -12,8 +12,6 @@ This is your worry-free guide to upgrading EmberJS. It has 5 parts:
 4. [Notes specific to each upgrade](#release-specific-notes)
 5. [Credits and comments](#credits-and-comments)
 
-This guide, especially part 4, is a living document.  Please <a href="mailto:jeffrey@emberscreencasts.com">send me suggestions</a> or [post a comment](#credits-and-comments).
-
 # <a name="general-guidelines"></a>General guidelines
 
 ## 1. Ignore RFCs
@@ -178,18 +176,11 @@ You can jump directly to the upgrade you're doing:
 * new feature: [Helper API revamped](http://emberjs.com/blog/2015/06/12/ember-1-13-0-released.html#toc_new-ember-js-helper-api)
 * new feature: [new keywords in component blocks](http://emberjs.com/blog/2015/06/12/ember-1-13-0-released.html#toc_component-block-info)
 
-<a name="2.0"></a>2.0
+<a name="2.0"></a>2.0+
 ----
 IF all deprecation warnings from 1.13 are taken care of, you should be able to upgrade with no fuss.  There were purposefully no new features or deprecations released in 2.0, just removal of code that supported the previously-deprecated features.
 
-<a name="2.1"></a>2.1
-----
-
-Coming soon
-
-<a name="2.2"></a>2.2
-----
-Coming soon
+They've also been doing a great job of documenting stuff lately, and every release after 1.13 has either been faster or neutral with regard to performance, so no need for this to continue.
 
 Other
 ----

@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
           <h1>The largest library of ember screencasts</h1>
-          <a class="btn btn-ghost" href="/#video_archive">View Library</a>
+          <%= link_to 'View Library', library_path, class: "btn btn-ghost" %>
       </div>
     </div>
   </div>
@@ -13,16 +13,16 @@
 </section>
 <section>
   <div class="container">
-    <h3>Featured Classes</h3>
+    <h3>Featured Series</h3>
     <div class="row">
 
-      <% Tag.limit(3).where(tag_type: 'series').order('most_recent_publish_date DESC').each do |series| %>
+      <% @tags.each do |series| %>
         <div class="col-md-4 card-well">
           <div class="well">
             <%= link_to series, class: 'link-but-normal' do %>
 
               <!-- Series Image used here -->
-              <%= image_tag 'fallback_thumbnail.jpg', class: "img-responsive" %>
+              <%= image_tag series.thumbnail_image, class: "img-responsive" %>
 
               <div class="details">
                 <h4 class="media-heading"><%= series.name %></h4>
@@ -33,7 +33,7 @@
         </div>
       <% end %>
       <div class="text-center">
-        <%= link_to "View All Classes", tags_path, class: 'btn btn-link btn-lg' %>
+        <%= link_to "View All Series", tags_path, class: 'btn btn-link btn-lg' %>
       </div>
 
     </div>
@@ -52,10 +52,10 @@
         <div class="well well-sm text-center">
           <h3>Free Account</h3>
           <ul class="list-unstyled">
-            <li>Access to all Free videos</li>
+            <li>Access to all Free videos (50+)</li>
             <li>Get notified about new videos</li>
-            <li>Recieve one free pro video</li>
             <li>Upgrade to Pro account anytime</li>
+            <li><br></li>
           </ul>
           <%= link_to "Sign up for Free", "/users/sign_up", class: "btn btn-primary btn-lg" %>
         </div>
@@ -64,10 +64,10 @@
         <div class="well well-sm text-center">
           <h3>Subscribe to Pro</h3>
           <ul class="list-unstyled">
-            <li>Access to over 150+ Videos</li>
+            <li>Access to ALL videos (120+)</li>
             <li>Get notified about new videos</li>
-            <li>Level up through Courses</li>
-            <li>Satisfaction Guarantee</li>
+            <li>Level up through extended series</li>
+            <li>Satisfaction Guaranteed</li>
           </ul>
           <%= link_to "Become an Ember Pro", "/sales", class: "btn btn-primary btn-lg" %>
         </div>
@@ -77,15 +77,16 @@
 </section>
 
 
-<section>
+<section id="latest">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h3>Latest Videos</h3>
-        <%= render 'latest_post', post: @posts.free.first %>
-        <%= render 'latest_post', post: @posts.pro.first %>
+        <h3><a href="#latest" style="color: #005;">Latest Videos</a></h3>
+        <% @posts.limit(5).each do |post| %>
+          <%= render 'latest_post', post: post %>
+        <% end %>
         <div class="text-center">
-          <%= link_to 'View All Videos', posts_path(latest: true), class: 'btn btn-lg btn-link' %>
+          <%= link_to 'View All Videos', library_path, class: 'btn btn-lg btn-link' %>
         </div>
       </div>
     </div>

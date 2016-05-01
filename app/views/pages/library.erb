@@ -1,0 +1,37 @@
+<section id="video_archive">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Video Archive</h1>
+        <div class="buttons">
+          <a class="light-button btn" href="/posts">More episode details</a>
+          <a class="light-button btn" href="/tags">Arrange by subject</a>
+        </div>
+        <% unless current_user && current_user.can_watch_pro %>
+          <h3>
+            <a class="btn pro-button" href="/account">Pro subscribers get access to all free and paid videos</a>
+          </h3>
+        <% end %>
+        <ul>
+          <% @posts.each do |post| %>
+            <li class="archive-title">
+              <%= link_to post do %>
+                <% unless current_user && current_user.can_watch_pro %>
+                  <div class="archive-image">
+                    <% if post.free %>
+                      <div class="icon free">FREE</div>
+                    <% end %>
+                  </div>
+                <% end %>
+                <div class="archive-publish-date">
+                  <%= post.publish_date %>
+                </div>
+                <%= post.title %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -37,6 +37,9 @@ a.navbar-brand {
   	padding-top: 5px !important;
   	padding-bottom: 5px !important;
   	margin-top: 10px;
+  	&:hover {
+  		background-color:#fff!important;
+  	}
   }
 }
 
@@ -46,6 +49,5 @@ a.navbar-brand {
 
 	li a:hover {
 		color: #000;
-		background-color: $nav-background;
 	}
 }

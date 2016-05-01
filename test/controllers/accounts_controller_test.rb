@@ -13,7 +13,7 @@ class AccountsControllerTest < ActionController::TestCase
   end
 
   test "subscribe (happy path)" do
-    post :subscribe, stripeEmail: "example@test.com",
+    post :subscribe, email: "example@test.com",
                      stripeToken: @stripe_helper.generate_card_token
     assert_redirected_to thank_you_path
   end

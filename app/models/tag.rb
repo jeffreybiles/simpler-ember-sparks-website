@@ -2,6 +2,8 @@ class Tag < ActiveRecord::Base
   has_many :taggings, dependent: :destroy
   has_many :posts, through: :taggings
 
+  mount_uploader :thumbnail_image, ImageUploader
+
   has_permalink :name
 
   def seconds

@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   resources :tags, only: [:show, :index]
 
   get 'about', to: 'pages#about'
+  get 'library', to: 'pages#library'
   get 'mailing_list', to: 'pages#mailing_list'
   get 'thank_you', to: 'pages#thank_you'
-  get 'faq', to: 'pages#faq'
   get 'email_intro_free_validations_display', to: 'pages#email_intro_free_validations_display'
   get 'meta_guide_to_upgrading_ember', to: 'pages#meta_guide_to_upgrading_ember'
 
@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   mount_ember_app :ember_admin, to: "/ember_admin", controller: "pages", action: "ember_admin"
   mount_ember_app :organization_admin, to: "/organization_admin", controller: "pages", action: "organization_admin"
+  mount_ember_app :pacman, to: "/pacman", controller: "pages", action: "pacman"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
