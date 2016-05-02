@@ -18,30 +18,22 @@
   <section>
     <div class="jumbotron text-center video_single">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-2">
-            <% if @previous_post %>
-              <%= link_to "Previous: #{@previous_post.title}", @previous_post, class: 'previous-link' %>
-            <% end %>
-          </div>
-          <div class="col-sm-8">
-            <h1><%= @post.title %></h1>
-          </div>
-          <div class="col-sm-2">
-            <% if @next_post %>
-              <%= link_to "Next: #{@next_post.title}", @next_post, class: "next-link"%>
-            <% end %>
-          </div>
-        </div>
+        <!-- Insert Series title if exist -->
+        <h5 class="text-white text-uppercase">Series: Introduction to Ember Data 2.0</h5>
+        <h3 class="title_callout"><%= @post.title %></h3>
+        <h5 class="text-white">Published on <%= @post.publish_date %></h5>
       </div>
     </div>
   </section>
 
   <section class="video_single">
     <div class="container">
+      <div class="text-center top-buffer">
+        <%= raw @markdown.render @post.description %>
+      </div>
       <p id="notice"><%= notice %></p>
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
           <% if @viewable_by_user %>
             <div id="video-box">
               <%= render 'video', wistia_embed: @post.wistia_embed %>
@@ -65,61 +57,74 @@
             </a>
           <% end %>
         </div>
-        <div class="col-md-3" id="playtime">
-          <h2 class="header-2"><%= @post.publish_date %> | <%= @post.readable_time %> | <a href="/posts?difficulty<%=@post.difficulty%>"><%=@post.difficulty%></a></h2>
-          <p><strong>About this video</strong></p>
-          <p><%= raw @markdown.render @post.description %></p>
-          <div class="buttons">
-            <% if @code_present %><a class="btn light-button" href="#code">Code</a><% end %>
-            <% if @transcript_present %><a class="btn light-button" href="#transcript">Transcript</a><% end %>
-            <a class="btn light-button" href="#comments">Comments</a>
-          </div>
-          <br>
-          <p><strong>More videos like this </strong></p>
-          <% @post.tags.each do |tag| %>
-            <div class="tag-link"><span class="tag-type"><%= tag.tag_type %></span>:  <%= link_to tag.name, tag_path(tag) %></div>
-          <% end %>
-
-          <% if @post.links && @post.links.length > 0 %>
-            <br>
-            <p><strong>Links</strong></p>
-            <%= raw @markdown.render(@post.links) %>
-          <% end %>
-        </div>
+        
       </div>
     <div>
   </section>
 
-  <% if @code_present %>
-    <section id="code">
-      <div class="container">
-        <div class="row">
-          <h2>Code</h2>
-          <% if @viewable_by_google %>
-            <%= @markdown.render(@post.code).html_safe %>
-          <% else %>
-            <p>Code is for subscribers only.</p>
-          <% end %>
+  <div class="container top-buffer">
+    <div class="row">
+      <div class="col-md-8">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab">Notes</a></li>
+          <li role="presentation"><a href="#transcript" aria-controls="transcript" role="tab" data-toggle="tab">Transcript</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="notes">
+            <% if @post.links && @post.links.length > 0 %>
+              <br>
+              <p><strong>Links</strong></p>
+              <%= raw @markdown.render(@post.links) %>
+            <% end %>
+            <% if @code_present %>
+              <section id="code">
+                    <h2>Code</h2>
+                    <% if @viewable_by_google %>
+                      <%= @markdown.render(@post.code).html_safe %>
+                    <% else %>
+                      <p>Code is for subscribers only.</p>
+                    <% end %>
+              </section>
+            <% end %>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="transcript">
+            <% if @transcript_present %>
+              <section id="transcript">
+                    <h2>Transcript</h2>
+                    <% if @viewable_by_google %>
+                      <%= raw @markdown.render @post.transcript %>
+                    <% else %>
+                      <p>Transcript is for subscribers only.</p>
+                    <% end %>
+              </section>
+            <% end %>
+          </div>
         </div>
       </div>
-    </section>
-  <% end %>
-  <% if @transcript_present %>
-    <section id="transcript">
-      <div class="container">
-        <div class="row">
-          <h2>Transcript</h2>
-          <% if @viewable_by_google %>
-            <%= raw @markdown.render @post.transcript %>
-          <% else %>
-            <p>Transcript is for subscribers only.</p>
-          <% end %>
+      
+      <div class="col-md-4">
+        <%= link_to 'Introduction to Ember Data 2.0', '#', class: "btn btn-success well-title" %>
+        <div class="series-list side-well">
+          <ol>
+            <li>Getting Started, Basics or something</li>
+            <li>Getting data from the server</li>
+            <li>Store manipulation with Peek, Unload, and More</li>
+            <li>Getting Data from the Server with findRecord and findAll</li>
+          </ol>
         </div>
       </div>
-    </section>
-  <% end %>
-  <section id="comments" align="center">
-    <div id="disqus_thread"></div>
+    </div>
+
+
+  
+  
+  <section id="comments" align="center" class="top-buffer">
+      <div id="disqus_thread"></div>
+  </section>
     <script>
     /**
     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -142,3 +147,44 @@
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
+
+
+<!-- <div class="col-md-3" id="playtime">
+  <h2 class="header-2"><%= @post.publish_date %> | <%= @post.readable_time %> | <a href="/posts?difficulty<%=@post.difficulty%>"><%=@post.difficulty%></a></h2>
+  <p><strong>About this video</strong></p>
+  <p><%= raw @markdown.render @post.description %></p>
+  <div class="buttons">
+    <% if @code_present %><a class="btn light-button" href="#code">Code</a><% end %>
+    <% if @transcript_present %><a class="btn light-button" href="#transcript">Transcript</a><% end %>
+    <a class="btn light-button" href="#comments">Comments</a>
+  </div>
+  <br>
+  <p><strong>More videos like this </strong></p>
+  <% @post.tags.each do |tag| %>
+    <div class="tag-link"><span class="tag-type"><%= tag.tag_type %></span>:  <%= link_to tag.name, tag_path(tag) %></div>
+  <% end %>
+
+  <% if @post.links && @post.links.length > 0 %>
+    <br>
+    <p><strong>Links</strong></p>
+    <%= raw @markdown.render(@post.links) %>
+  <% end %>
+</div> -->
+
+
+
+  <!-- <div class="row">
+    <div class="col-sm-2">
+      <% if @previous_post %>
+        <%= link_to "Previous: #{@previous_post.title}", @previous_post, class: 'previous-link' %>
+      <% end %>
+    </div>
+    <div class="col-sm-8">
+    </div>
+    <div class="col-sm-2">
+      <% if @next_post %>
+        <%= link_to "Next: #{@next_post.title}", @next_post, class: "next-link"%>
+      <% end %>
+    </div>
+  </div>
+</div> -->

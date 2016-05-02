@@ -74,3 +74,40 @@
 	border-bottom: 1px solid #333;
 	margin-top: 40px;
 }
+
+.title_callout {
+	display: inline-block;
+	background: #ed7364;
+	padding: 15px;
+	margin: 0;
+	color: white;
+}
+
+.tab-content {
+	background: #fff;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 15px;
+}
+
+.series-list > ol {
+	padding-left: 15px;
+	& > li {
+		margin-top: 6px;
+	}
+}
+
+.side-well {
+	background: #fff;
+	border: 1px solid #ddd;
+	padding:10px;
+}
+
+.well-title {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom: 0;
+	padding: 10px;
+}
+
