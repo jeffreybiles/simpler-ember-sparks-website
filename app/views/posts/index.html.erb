@@ -1,11 +1,12 @@
 <section>
-  <div class="jumbotron video_list">
+  <div class="jumbotron">
     <div class="container">
       <% if @tag %>
         <div class="row">
           <div class="col-md-12">
-            <h2 class="pull-right"><%= @tag.taggings.length %> videos, <%= @tag.seconds / 60 %> minutes</h2>
             <h1 class="modified-headline"><%= @tag.name %></h1>
+            <span class="icon"><%= @tag.taggings.length %> videos</span>
+            <span class="icon"><%= @tag.seconds / 60 %> minutes</span>
             <br>
             <% if @tag.description %>
               <div class="tag-description"><%= raw @markdown.render @tag.description %></div>
@@ -26,12 +27,13 @@
 <section>
   <div class="container">
     <div class="row">
-      <div>
-        <ul class="media-list">
-          <% @posts.each do |post| %>
+      <div class="col-sm-8 col-sm-offset-2">
+        <h4>Series Lessons</h4>
+        <ol>
+          <% @posts.reverse_each do |post| %>
             <%= render 'posts/post_listing', post: post%>
           <% end %>
-        </ul>
+        </ol>
       </div>
     </div>
     <% if @latest %>

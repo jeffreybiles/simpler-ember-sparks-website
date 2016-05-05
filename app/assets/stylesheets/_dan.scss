@@ -12,17 +12,21 @@
 	margin-left: 5px;
 }
 
-.icon.free {
-	content: 'FREE';
-	font-size: 10px;
+.icon {
 	background: #4A90E2;
 	color: white;
 	border-radius: 3px;
 	text-align: center;
 	margin: 2px;
 	line-height: 1.5em;
-	min-width: 35px;
+	padding: 5px 8px;
 	vertical-align: middle;
+	&.free {
+		content: 'FREE';
+		font-size: 10px;
+		padding:2px 4px;
+
+	}
 }
 
 .card-well {
@@ -109,5 +113,9 @@
 	border-bottom-left-radius: 0;
 	border-bottom: 0;
 	padding: 10px;
+}
+
+ol > a:hover {
+	text-decoration: none
 }
 

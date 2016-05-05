@@ -1,6 +1,19 @@
-<li class="media clickable-media-link" data-url="<%= post_path(post) %>">
-  <%= link_to post do %>
-    <div class="row">
+<%= link_to post do %>
+  <li data-url="<%= post_path(post) %>">
+    <h4 class="media-heading">
+        <%= truncate(post.title, length: 50) %>
+        <% unless current_user && current_user.can_watch_pro %>
+          <% if post.free %>
+            <span class="icon free" style="display: inline-block;">FREE</span>
+          <% end %>
+        <% end %>
+        <span class="play-time pull-right">
+          <%= post.readable_time %>
+        </span>
+    </h4>
+  </li>
+<% end %>
+    <!-- <div class="row">
       <div class="col-xs-12 col-md-4 col-sm-5">
         <%= image_tag(post.thumbnail_image, class: 'media-object img-responsive') %>
       </div>
@@ -27,6 +40,4 @@
           <%= raw @markdown.render post.description %>
         </div>
       </div>
-    </div>
-  <% end %>
-</li>
+    </div> -->
