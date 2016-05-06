@@ -25,7 +25,6 @@
 		content: 'FREE';
 		font-size: 10px;
 		padding:2px 4px;
-
 	}
 }
 
@@ -117,5 +116,25 @@
 
 ol > a:hover {
 	text-decoration: none
+}
+
+.card-series {
+	.card-well {
+		width: calc(99.99% * 1/4 - (30px - 30px * 1/4));
+		margin-bottom: 60px;
+		position: relative;
+		&:nth-child(1n) {
+			float: left;
+			margin-right: 30px;
+			clear: none;
+		}
+		&:nth-child(4n) {
+			margin-right: 0;
+			float: right;
+		}
+		&:nth-child(4n+1) {
+			clear: left;
+		}
+	}
 }
 
