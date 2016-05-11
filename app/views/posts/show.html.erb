@@ -28,9 +28,7 @@
 
   <section class="video_single">
     <div class="container">
-      <div class="text-center top-buffer">
-        <%= raw @markdown.render @post.description %>
-      </div>
+
       <p id="notice"><%= notice %></p>
       <div class="row">
         <div class="col-md-12">
@@ -39,27 +37,27 @@
               <%= render 'video', wistia_embed: @post.wistia_embed %>
             </div>
           <% else %>
+            
+
             <div class="sales-box">
-              <h2>You can view pro screencasts by subscribing</h2>
-              <% unless current_user %>
-                <span class="btn login-path-button"><a href="/users/sign_in">Already a Subscriber? Log in</a></span>
-              <% end %>
+              <h2>Invest in yourself</h2>
+              <p class="lead">Pro subscribers get access to all videos and content</p>
               <%# rails helper number_to_currency for internationalization %>
-              <span class="btn btn-primary">
-                <a href="/sales">
-                  Subscribe for <%= number_to_currency(10, precision:0) %>/month
+              <div>
+                <a href="/sales" class="btn btn-lg btn-success">
+                  Become a Pro for <%= number_to_currency(10, precision:0) %>/month
                 </a>
-              </span>
-              <span class="btn free-screencasts-button"><a href="/posts?free=true">Show me only Free screencasts</a></span>
-            </div>
-            <a href="/account">
-              <%= image_tag @post.thumbnail_image, class: "img-responsive" %>
-            </a>
+              </div>
+              <% unless current_user %>
+                <a href="/users/sign_in" class="btn btn-lg btn-link top-buffer">Already a Subscriber? Log in</a>
+              <% end %>
+            </div>          
+
           <% end %>
         </div>
         
       </div>
-    <div>
+    </div>
   </section>
 
   <div class="container top-buffer">
@@ -75,6 +73,7 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="notes">
+            <%= raw @markdown.render @post.description %>
             <% if @post.links && @post.links.length > 0 %>
               <br>
               <p><strong>Links</strong></p>
