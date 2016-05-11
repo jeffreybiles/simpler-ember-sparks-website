@@ -3,14 +3,19 @@
     <div class="container">
       <% if @tag %>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-4">
+            <%= image_tag @tag.thumbnail_image, class: "img-responsive" %>
+          </div>
+          <div class="col-md-8">
             <h1 class="modified-headline"><%= @tag.name %></h1>
-            <span class="icon"><%= @tag.taggings.length %> videos</span>
-            <span class="icon"><%= @tag.seconds / 60 %> minutes</span>
-            <br>
             <% if @tag.description %>
               <div class="tag-description"><%= raw @markdown.render @tag.description %></div>
             <% end %>
+            <br>
+              <ul class="list-inline" style="margin-left: 0px">
+                <li class="white-well"><%= @tag.taggings.length %> videos</li>
+                <li class="white-well"><%= @tag.seconds / 60 %> minutes</li>
+              </ul>
           </div>
         </div>
       <% else %>

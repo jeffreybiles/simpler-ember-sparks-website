@@ -54,7 +54,7 @@ a.link-but-normal {
   color: #000;
 }
 
-a.btn-ghost {
+.btn-ghost {
   background-color: transparent;
   color: #fff;
   text-decoration: none;
@@ -63,11 +63,11 @@ a.btn-ghost {
   font-size: 18px;
 }
 
-a.btn-ghost:hover {
+.btn-ghost:hover {
   background: #fff;
 }
 
-a.btn-ghost:active {
+.btn-ghost:active {
   color: #fff;
 }
 
@@ -134,34 +134,15 @@ a.light-button {
 }
 
 .sales-box {
-  border: 1px solid black;
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: white;
+  margin-bottom: 30px;
+  background-color: #eee;
+  color: #333;
+  padding:100px 30px;
+  text-align: center;
 
-  h2 {
-    margin-top: 0px;
-  }
-
-  form {
-    display: inline-block;
-  }
-
-  span.free-screencasts-button a {
-    color: #F5AB98;
-    text-decoration: none;
-  }
-  span.login-path-button a {
-    color: #9CCC88;
-    text-decoration: none;
-  }
-
-  .btn {
-    font-family: 'Maven Pro', sans-serif;
-    background-color: $near-black;
-  }
 }
+  
 
 footer {
   position: absolute;
