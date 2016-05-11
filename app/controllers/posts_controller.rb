@@ -27,6 +27,7 @@ class PostsController < ApplicationController
     @viewable_by_google = @first_click_free || @viewable_by_user
     @transcript_present = @post.transcript && @post.transcript != 'null'
     @code_present       = @post.code && @post.code != 'null'
+    @series             = @post.tags.where(tag_type: 'series').last
   end
 
   # Feed constructed with help from https://www.codingfish.com/blog/129-how-to-create-rss-feed-rails-4-3-steps
