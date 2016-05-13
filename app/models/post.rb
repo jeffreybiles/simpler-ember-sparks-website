@@ -18,4 +18,8 @@ class Post < ActiveRecord::Base
       "#{seconds/60}m#{seconds%60}s"
     end
   end
+  
+  def display_title
+    title.split('-')[1].strip
+  end
 end
