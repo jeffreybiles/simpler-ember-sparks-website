@@ -1,7 +1,7 @@
 <%= link_to post do %>
   <li data-url="<%= post_path(post) %>">
     <h4 class="media-heading">
-        <%= truncate(post.title, length: 50) %>
+        <%= truncate(post.display_title, length: 50) %>
         <% unless current_user && current_user.can_watch_pro %>
           <% if post.free %>
             <span class="icon free" style="display: inline-block;">FREE</span>
@@ -21,7 +21,7 @@
         <div class="media-body">
           <h4 class="media-heading">
             <%= link_to post do %>
-              <%= post.title %>
+              <%= post.display_title %>
               <% unless current_user && current_user.can_watch_pro %>
                 <% if post.free %>
                   <span class="icon free" style="display: inline-block;">FREE</span>

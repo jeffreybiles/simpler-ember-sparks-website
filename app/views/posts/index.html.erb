@@ -35,7 +35,7 @@
       <div class="col-sm-8 col-sm-offset-2">
         <h4>Series Lessons</h4>
         <ol>
-          <% @posts.reverse_each do |post| %>
+          <% @posts.each do |post| %>
             <%= render 'posts/post_listing', post: post%>
           <% end %>
         </ol>

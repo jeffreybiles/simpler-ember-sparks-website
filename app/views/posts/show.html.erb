@@ -22,7 +22,7 @@
           <h5 class="text-white text-uppercase">Series: <%= @series.name %></h5>
          <% end %>
         <h3 class="title_callout"><%= @post.title %></h3>
-        <h5 class="text-white">Published on <%= @post.publish_date %></h5>
+        <h5 class="text-white">Published on <%= @post.publish_date.strftime('%b %d, %Y') %></h5>
       </div>
     </div>
   </section>
@@ -111,8 +111,8 @@
           <%= link_to @series.name, tag_path(@series), class: "btn btn-success well-title" %>
           <div class="series-list side-well">
             <ol>
-              <% @series.posts.each do |post| %>
-                <li><%= link_to post.title, post_path(post) %></li>
+              <% @series.posts.published.recent_first.reverse_each do |post| %>
+                <li><%= link_to post.display_title, post_path(post) %></li>
               <% end %>
             </ol>
           </div>
