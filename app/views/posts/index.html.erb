@@ -33,12 +33,14 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h4>Series Lessons</h4>
-        <ol>
-          <% @posts.each do |post| %>
-            <%= render 'posts/post_listing', post: post%>
-          <% end %>
-        </ol>
+        <h4 class="text-center">Series Lessons</h4>
+        <div class="list-group">
+          <ol style="padding-left:0">
+            <% @posts.each do |post| %>
+              <%= render 'posts/post_listing', post: post%>
+            <% end %>
+          </ol>
+        </div>
       </div>
     </div>
     <% if @latest %>
@@ -49,19 +51,7 @@
     <% end %>
   </div>
 </section>
-<!-- <h1>Latest Screencasts</h1>
-<div>
-  Filter by Difficulty:
-  <a href="/posts?difficulty=basic">Basic</a>
-  <a href="/posts?difficulty=intermediate">Intermediate</a>
-  <a href="/posts?difficulty=advanced">Advanced</a>
-</div>
 
-<hr>
-<div class="posts">
-  <% @posts.each do |post| %>
-  <% end %>
-</div> -->
 
 <a href="https://mixpanel.com/f/partner" class="pull-right"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
 
