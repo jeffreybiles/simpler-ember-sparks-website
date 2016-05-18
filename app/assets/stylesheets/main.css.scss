@@ -146,10 +146,12 @@ a.light-button {
 
 footer {
   position: absolute;
-  bottom: 0;
+  height: 80px;
   width: 100%;
-  vertical-align: center;
   text-align: center;
+  background-color: #E84A36;
+  padding: 16px;
+  bottom: 0;
 }
 //
 .small-image {
