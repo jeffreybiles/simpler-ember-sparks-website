@@ -1,3 +1,5 @@
+
+<% content_for :title, "EmberScreencasts Lesson Series" %>
 <section>
   <div class="jumbotron">
     <div class="container">
@@ -25,15 +27,18 @@
           <% end %>
     </div>
   </div>
-</div>
+</section>
 
-<% content_for :title, "Explore- EmberScreencasts" %>
-<% content_for :meta_description, "View Ember.js videos, sorted by subject." %>
-      <!-- <div class="col-md-3 col-sm-4 col-xs-12">
-        <br>
-        <div id="tag_cloud">
-          <% tag_cloud @subjects, %w[s m l] do |tag, css_class| %>
-            <%= link_to tag.name, tag_path(tag), class: css_class %>
-          <% end %>
-        </div>
-      </div> -->
+<section>
+<div class="container">
+  <div id="tag_cloud">
+    <ul class="list-inline">
+      <% tag_cloud @subjects, %w[s m l] do |tag| %>
+        <li>
+          <%= link_to tag.name, tag_path(tag) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+</section>
