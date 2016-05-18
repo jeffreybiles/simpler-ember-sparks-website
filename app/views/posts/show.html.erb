@@ -19,9 +19,11 @@
     <div class="jumbotron text-center video_single">
       <div class="container">
         <% if @series %>
-          <h5 class="text-white text-uppercase">Series: <%= @series.name %></h5>
-         <% end %>
-        <h3 class="title_callout"><%= @post.title %></h3>
+          <h4>
+            <%= link_to "Series: #{@series.name}", @series, class: 'white-well spacer' %>
+          </h4>
+        <% end %>
+        <h3 class="text-white" style="margin-top:10px"><%= @post.display_title %></h3>
         <h5 class="text-white">Published on <%= @post.publish_date.strftime('%b %d, %Y') %></h5>
       </div>
     </div>
@@ -35,6 +37,12 @@
         <div class="col-md-12">
           <% if @viewable_by_user %>
             <div id="video-box">
+              <% if @previous_post %>
+                <%= link_to "< #{@previous_post.display_title}", @previous_post, class: 'spacer' %>
+              <% end %>
+              <% if @next_post %>
+                <%= link_to "#{@next_post.display_title} >", @next_post, class: 'spacer pull-right' %>
+              <% end %>
               <%= render 'video', wistia_embed: @post.wistia_embed %>
             </div>
           <% else %>
@@ -55,6 +63,12 @@
             </div>          
 
           <% end %>
+          <ul class="list-inline">
+            <li>Tags:</li>
+            <% @post.tags.each do |tag| %>
+              <li><%= link_to tag.name, tag_path(tag), class: "btn btn-sm btn-primary" %></li>
+            <% end %>
+          </ul>
         </div>
         
       </div>
@@ -172,20 +186,3 @@
   <% end %>
 </div> -->
 
-
-
-  <!-- <div class="row">
-    <div class="col-sm-2">
-      <% if @previous_post %>
-        <%= link_to "Previous: #{@previous_post.title}", @previous_post, class: 'previous-link' %>
-      <% end %>
-    </div>
-    <div class="col-sm-8">
-    </div>
-    <div class="col-sm-2">
-      <% if @next_post %>
-        <%= link_to "Next: #{@next_post.title}", @next_post, class: "next-link"%>
-      <% end %>
-    </div>
-  </div>
-</div> -->
