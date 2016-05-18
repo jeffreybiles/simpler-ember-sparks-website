@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'stripe-rails'
 gem 'zapier_ruby'
+gem 'algoliasearch-rails'
 
 gem 'redcarpet'
 gem 'rouge'

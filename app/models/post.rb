@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  include AlgoliaSearch
+  
   after_save { tags.map(&:updated_publish_date) }
   after_destroy { tags.map(&:updated_publish_date)}
 
@@ -17,5 +19,11 @@ class Post < ActiveRecord::Base
     if seconds && seconds != 0
       "#{seconds/60}m#{seconds%60}s"
     end
+  end
+  
+  algoliasearch per_environment: true do
+    attribute :title, :video_url, :description, :transcript,
+      :publish_date, :links, :thumbnail_image, :permalink,
+      :free, :difficulty, :seconds, :wistia_embed
   end
 end
