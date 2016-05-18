@@ -22,8 +22,11 @@ class Post < ActiveRecord::Base
   end
   
   algoliasearch per_environment: true do
-    attribute :title, :video_url, :description, :transcript,
-      :publish_date, :links, :thumbnail_image, :permalink,
-      :free, :difficulty, :seconds, :wistia_embed
+    attribute :title, :description, :transcript,
+      :publish_date, :links, :permalink,
+      :free, :difficulty, :seconds
+    attribute :thumbnail_image_url do
+      thumbnail_image.url
+    end
   end
 end

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :posts, only: [:show, :index]
   get 'feed' => 'posts#feed'
   resources :tags, only: [:show, :index]
-
+  resources :search, only: :index
+  
   get 'about', to: 'pages#about'
   get 'library', to: 'pages#library'
   get 'mailing_list', to: 'pages#mailing_list'

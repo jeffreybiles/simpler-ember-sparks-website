@@ -1,0 +1,77 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+<%# looks like require_tree is not in application.css. ember stuff? %>
+<%# this double loads i thin, if you add to assets.rb stylesheet_link_tag 'search' %>
+
+<style>
+  .ais-hits div {
+    padding: 10px;
+  }
+  
+  .highlight {
+    background-color: lightgoldenrodyellow;
+  }
+  
+  #search-box {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+    border-radius: 8px;
+  }
+</style>
+
+<div class="container">
+  <input type="text" id="search-box" class='center-block'/>
+  <div id="hits-container"></div>
+  <div id="pagination-container"></div>
+</div>
+
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+<script>
+  var hitTemplate = `
+    <div class="row">
+      <div class="col-sm-4">
+        <img style="max-width: 300px; max-height: 200px;" src={{thumbnail_image_url}} />
+      </div>
+      <div class="col-sm-8">
+        <b>{{{_highlightResult.title.value}}}</b> 
+        <br />
+        {{difficulty}} -- {{seconds}} seconds
+        <br /> 
+        {{{_highlightResult.description.value}}}
+      </div>
+    </div>
+  `
+  
+  
+  var search = instantsearch({
+    appId: "<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>",
+    apiKey: "<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>",
+    indexName: "Post_<%= Rails.env %>",
+    urlSync: true
+  });
+  
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: '#search-box',
+      placeholder: 'What do you want to learn today?'
+    })
+  );
+  
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#hits-container',
+      templates: {
+        item: hitTemplate
+      }
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.pagination({
+      container: '#pagination-container'
+    })
+  );
+  
+  search.start();
+ </script>
