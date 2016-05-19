@@ -20,7 +20,7 @@
       <div class="container">
         <% if @series %>
           <h4>
-            <%= link_to "Series: #{@series.name}", @series, class: 'white-well spacer' %>
+            <%= link_to "Series: #{@series.name}", @series, class: 'white-well spacer btn', style: 'font-size: 16px' %>
           </h4>
         <% end %>
         <h3 class="text-white" style="margin-top:10px"><%= @post.display_title %></h3>
@@ -33,16 +33,22 @@
     <div class="container">
 
       <p id="notice"><%= notice %></p>
+      <div class="row spacer">
+        <div class="col-xs-6">
+          <% if @previous_post %>
+            <%= link_to "< #{@previous_post.display_title}", @previous_post, class: 'spacer' %>
+          <% end %>
+        </div>
+        <div class="col-xs-6 text-right">
+          <% if @next_post %>
+            <%= link_to "#{@next_post.display_title} >", @next_post, class: 'spacer' %>
+          <% end %>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-12">
           <% if @viewable_by_user %>
             <div id="video-box">
-              <% if @previous_post %>
-                <%= link_to "< #{@previous_post.display_title}", @previous_post, class: 'spacer' %>
-              <% end %>
-              <% if @next_post %>
-                <%= link_to "#{@next_post.display_title} >", @next_post, class: 'spacer pull-right' %>
-              <% end %>
               <%= render 'video', wistia_embed: @post.wistia_embed %>
             </div>
           <% else %>
@@ -63,7 +69,7 @@
             </div>          
 
           <% end %>
-          <ul class="list-inline">
+          <ul class="list-inline top-buffer">
             <li>Tags:</li>
             <% @post.tags.each do |tag| %>
               <li><%= link_to tag.name, tag_path(tag), class: "btn btn-sm btn-primary" %></li>

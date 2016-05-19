@@ -2,6 +2,9 @@
 .socialbar_button {
 	display: none!important;
 }
+.wistia_socialbar {
+	display: none!important;
+}
 
 .clickable-media-link.media {
 	border-bottom: 1px solid #333;
@@ -183,6 +186,9 @@ ol > a:hover {
 			clear: none;
 		}
 	}
+}
+h4.media-heading {
+	font-size: 16px;
 }
 
 
