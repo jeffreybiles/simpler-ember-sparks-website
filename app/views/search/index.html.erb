@@ -1,6 +1,5 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
 <%# looks like require_tree is not in application.css. ember stuff? %>
-<%# this double loads i thin, if you add to assets.rb stylesheet_link_tag 'search' %>
 
 <style>
   .ais-hits div {
@@ -21,7 +20,8 @@
 </style>
 
 <div class="container">
-  <input type="text" id="search-box" class='center-block'/>
+  <input type="text" id="search-box" class="center-block"/>
+  Search videos by <span id="sort-by-container"></span>
   <div id="hits-container"></div>
   <div id="pagination-container"></div>
 </div>
@@ -34,9 +34,9 @@
         <img style="max-width: 300px; max-height: 200px;" src={{thumbnail_image_url}} />
       </div>
       <div class="col-sm-8">
-        <b>{{{_highlightResult.title.value}}}</b> 
+        <b><a href="posts/{{permalink}}">{{{_highlightResult.title.value}}}</a></b> 
         <br />
-        {{difficulty}} -- {{seconds}} seconds
+        {{difficulty}} -- {{seconds}} seconds -- Published: {{publish_date}}
         <br /> 
         {{{_highlightResult.description.value}}}
       </div>
@@ -55,6 +55,16 @@
     instantsearch.widgets.searchBox({
       container: '#search-box',
       placeholder: 'What do you want to learn today?'
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.sortBySelector({
+      container: '#sort-by-container',
+      indices: [
+        {name: "<%= "Post_#{Rails.env}" %>", label: 'Date'},
+        {name: "<%= "Post_#{Rails.env}_popularity" %>", label: 'Popularity'}
+      ]
     })
   );
   
