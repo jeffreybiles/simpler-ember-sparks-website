@@ -27,6 +27,7 @@
   <div class='search-bar'>
     <input type="text" id="search-box"/>
     Sort videos by <span id="sort-by-container"></span>
+    <span id='stats-container' class='pull-right'></span>
   </div>
   <div id="hits-container"></div>
   <div id="pagination-container"></div>
@@ -36,15 +37,15 @@
 <script>
   var hitTemplate = `
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-6 col-md-4">
         <img style="max-width: 300px; max-height: 200px;" src={{thumbnail_image_url}} />
       </div>
-      <div class="col-sm-8">
-        <b><a href="posts/{{permalink}}">{{{_highlightResult.title.value}}}</a></b> 
+      <div class="col-sm-6 col-md-8">
+        <b><a href="posts/{{permalink}}">{{{title}}}</a></b> 
         <br />
         {{difficulty}} -- {{seconds}} seconds -- Published: {{publish_date}}
         <br /> 
-        {{{_highlightResult.description.value}}}
+        {{{description}}}
       </div>
     </div>
   `
@@ -74,6 +75,15 @@
     })
   );
   
+  search.addWidget(
+    instantsearch.widgets.stats({
+      container: '#stats-container',
+      templates: {
+        body: "{{nbHits}} videos found"
+      }
+    })
+  );
+
   search.addWidget(
     instantsearch.widgets.hits({
       container: '#hits-container',
