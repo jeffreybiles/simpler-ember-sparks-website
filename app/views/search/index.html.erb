@@ -10,18 +10,24 @@
     background-color: lightgoldenrodyellow;
   }
   
+  .search-bar {
+    margin-left: 15px;
+  }
+  
   #search-box {
     margin-bottom: 10px;
     text-align: center;
     padding: 10px;
-    width: 80%;
+    width: 100%;
     border-radius: 8px;
   }
 </style>
 
 <div class="container">
-  <input type="text" id="search-box" class="center-block"/>
-  Search videos by <span id="sort-by-container"></span>
+  <div class='search-bar'>
+    <input type="text" id="search-box"/>
+    Sort videos by <span id="sort-by-container"></span>
+  </div>
   <div id="hits-container"></div>
   <div id="pagination-container"></div>
 </div>
@@ -62,8 +68,8 @@
     instantsearch.widgets.sortBySelector({
       container: '#sort-by-container',
       indices: [
-        {name: "<%= "Post_#{Rails.env}" %>", label: 'Date'},
-        {name: "<%= "Post_#{Rails.env}_popularity" %>", label: 'Popularity'}
+        {name: "<%= "Post_#{Rails.env}" %>", label: 'Newest '},
+        {name: "<%= "Post_#{Rails.env}_publish_date_asc" %>", label: 'Oldest'}
       ]
     })
   );
