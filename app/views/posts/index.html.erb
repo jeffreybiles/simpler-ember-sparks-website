@@ -1,15 +1,23 @@
 <section>
-  <div class="jumbotron video_list">
+  <div class="jumbotron">
     <div class="container">
       <% if @tag %>
         <div class="row">
-          <div class="col-md-12">
-            <h2 class="pull-right"><%= @tag.taggings.length %> videos, <%= @tag.seconds / 60 %> minutes</h2>
+          <div class="col-md-4">
+            <% if @tag.tag_type == 'series' %>
+              <%= image_tag @tag.thumbnail_image, class: "img-responsive" %>
+            <% end %>
+          </div>
+          <div class="col-md-8">
             <h1 class="modified-headline"><%= @tag.name %></h1>
-            <br>
             <% if @tag.description %>
               <div class="tag-description"><%= raw @markdown.render @tag.description %></div>
             <% end %>
+            <br>
+              <ul class="list-inline" style="margin-left: 0px">
+                <li class="white-well"><%= @tag.taggings.length %> videos</li>
+                <li class="white-well"><%= @tag.seconds / 60 %> minutes</li>
+              </ul>
           </div>
         </div>
       <% else %>
@@ -26,12 +34,15 @@
 <section>
   <div class="container">
     <div class="row">
-      <div>
-        <ul class="media-list">
-          <% @posts.each do |post| %>
-            <%= render 'posts/post_listing', post: post%>
-          <% end %>
-        </ul>
+      <div class="col-sm-8 col-sm-offset-2">
+        <h4 class="text-center">Series Lessons</h4>
+        <div class="list-group">
+          <ul style="padding-left:0">
+            <% @posts.each_with_index do |post, index| %>
+              <%= render 'posts/post_listing', post: post, index: index, type: @tag.tag_type %>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
     <% if @latest %>
@@ -42,19 +53,7 @@
     <% end %>
   </div>
 </section>
-<!-- <h1>Latest Screencasts</h1>
-<div>
-  Filter by Difficulty:
-  <a href="/posts?difficulty=basic">Basic</a>
-  <a href="/posts?difficulty=intermediate">Intermediate</a>
-  <a href="/posts?difficulty=advanced">Advanced</a>
-</div>
 
-<hr>
-<div class="posts">
-  <% @posts.each do |post| %>
-  <% end %>
-</div> -->
 
 <a href="https://mixpanel.com/f/partner" class="pull-right"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
 

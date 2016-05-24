@@ -21,6 +21,10 @@ class Post < ActiveRecord::Base
     end
   end
   
+  def display_title
+    title.split('-')[1].strip
+  end
+  
   algoliasearch per_environment: true do
     attributesToIndex [:publish_date, :title, :description, :transcript]
     customRanking ["desc(publish_date)"]
