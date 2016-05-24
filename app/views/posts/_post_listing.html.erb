@@ -1,7 +1,9 @@
 <div style="padding-left:25px" class="list-group-item">
   <%= link_to post do %>
     <div style="display: flex; justify-content: space-between;">
-      <span style="width: 40px; color: black;"><%= index %></span>
+      <% if type == 'series' %>
+        <span style="width: 40px; color: black;"><%= index %></span>
+      <% end %>
       <span style="width: 100%;">
         <h4 class="media-heading" style="display: inline-block;">
           <%= post.display_title %>

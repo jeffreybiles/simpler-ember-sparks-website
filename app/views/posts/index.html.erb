@@ -4,7 +4,9 @@
       <% if @tag %>
         <div class="row">
           <div class="col-md-4">
-            <%= image_tag @tag.thumbnail_image, class: "img-responsive" %>
+            <% if @tag.tag_type == 'series' %>
+              <%= image_tag @tag.thumbnail_image, class: "img-responsive" %>
+            <% end %>
           </div>
           <div class="col-md-8">
             <h1 class="modified-headline"><%= @tag.name %></h1>
@@ -37,7 +39,7 @@
         <div class="list-group">
           <ul style="padding-left:0">
             <% @posts.each_with_index do |post, index| %>
-              <%= render 'posts/post_listing', post: post, index: index%>
+              <%= render 'posts/post_listing', post: post, index: index, type: @tag.tag_type %>
             <% end %>
           </ul>
         </div>
