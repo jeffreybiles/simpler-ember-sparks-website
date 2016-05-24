@@ -1,4 +1,4 @@
-//rm this after turning it off through wisita 
+//rm this after turning it off through wisita
 .socialbar_button {
 	display: none!important;
 }
@@ -108,7 +108,7 @@
 	padding: 15px;
 }
 
-.series-list > ol {
+.series-list > ul {
 	padding-left: 15px;
 	& > li {
 		margin-top: 6px;
@@ -128,7 +128,7 @@
 	padding: 10px;
 }
 
-ol > a:hover {
+ul > a:hover {
 	text-decoration: none
 }
 
@@ -191,4 +191,9 @@ h4.media-heading {
 	font-size: 16px;
 }
 
-
+.list-group-item {
+	text-decoration: none;
+	:hover {
+		text-decoration: none;
+	}
+}

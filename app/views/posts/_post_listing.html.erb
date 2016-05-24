@@ -1,17 +1,22 @@
 <div style="padding-left:25px" class="list-group-item">
-<li data-url="<%= post_path(post) %>">
-<%= link_to post do %>
-    <h4 class="media-heading">
-        <%= post.display_title %>
+  <%= link_to post do %>
+    <div style="display: flex; justify-content: space-between;">
+      <span style="width: 40px; color: black;"><%= index %></span>
+      <span style="width: 100%;">
+        <h4 class="media-heading" style="display: inline-block;">
+          <%= post.display_title %>
+        </h4>
         <% unless current_user && current_user.can_watch_pro %>
           <% if post.free %>
             <span class="icon free" style="display: inline-block;">FREE</span>
           <% end %>
         <% end %>
-        <span class="play-time pull-right">
+      </span>
+      <span style="width: 60px; color: black;">
+        <span class="play-time">
           <%= post.readable_time %>
         </span>
-    </h4>
-<% end %>
-  </li>
+      </span>
+    </div>
+  <% end %>
 </div>

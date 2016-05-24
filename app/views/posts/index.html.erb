@@ -35,11 +35,11 @@
       <div class="col-sm-8 col-sm-offset-2">
         <h4 class="text-center">Series Lessons</h4>
         <div class="list-group">
-          <ol style="padding-left:0">
-            <% @posts.each do |post| %>
-              <%= render 'posts/post_listing', post: post%>
+          <ul style="padding-left:0">
+            <% @posts.each_with_index do |post, index| %>
+              <%= render 'posts/post_listing', post: post, index: index%>
             <% end %>
-          </ol>
+          </ul>
         </div>
       </div>
     </div>
