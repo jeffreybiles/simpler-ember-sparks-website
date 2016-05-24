@@ -22,11 +22,22 @@ class Post < ActiveRecord::Base
   end
   
   algoliasearch per_environment: true do
+    attributesToIndex [:publish_date, :title, :description, :transcript]
+    customRanking ["desc(publish_date)"]
+    
     attribute :title, :description, :transcript,
       :publish_date, :links, :permalink,
       :free, :difficulty, :seconds
     attribute :thumbnail_image_url do
       thumbnail_image.url
+    end
+
+    add_slave 'Post_by_publish_date_asc', per_environment: true do
+      customRanking ["asc(publish_date)"]
+    end
+
+    add_slave 'Post_by_publish_date_desc', per_environment: true do
+      customRanking ["desc(publish_date)"]
     end
   end
 end
