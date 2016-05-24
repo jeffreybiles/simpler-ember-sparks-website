@@ -20,13 +20,12 @@ $nav-background: rgb(232, 74, 54);
 }
 
 a.navbar-brand {
-	background: image_url('Logo.jpg') 0 center;
+	background: image_url('logo-high-res.png') 0 center;
 	width: 240px;
+	background-size: 240px;
+	background-repeat: no-repeat;
 }
 
-.navbar-brand img {
-	margin: -15PX AUTO;
-}
 
 @media (min-width: 768px) {
   form.navbar-form.navbar-right {

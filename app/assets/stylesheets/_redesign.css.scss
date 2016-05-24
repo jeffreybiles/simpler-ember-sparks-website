@@ -34,58 +34,12 @@ body {
 	text-decoration: none;
 }
 
-footer {
-	background-color: #555;
-	padding-top: 16px;
-}
-
-
 /* explore */
 
 section.explore-section {
 	background-color: white;
 	position: relative;
 }
-.series-list li.media div.media-body {
-	padding-left: 0;
-}
-
-.series-list li {
-	background: image_url('badge_fallback.png') 10px 10px no-repeat #5a96bb;
-	margin: 0 0 10px;
-	border-top-style: solid;
-	border-top-color: #96b7cc;
-	border-bottom-color: #315e7a;
-	border-bottom-style: solid;
-	padding-left: 80px;
-}
-.series-list {
-	margin: 0;
-	padding: 9px 0 0;
-	width: 110%;
-	left: -15px;
-	background-color: #1e394a;
-}
-.series-list li p {
-	color: white;
-	letter-spacing: 1px;
-	line-height: 21px;
-}
-
-.series-list div.media-body {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-}
-.series-list div.media-body h4{
-	color: white;
-	margin-bottom: 6px;
-	margin-top: 0;
-}
-.series-list div.media-body a{color: white;
-	text-decoration: underline;
-}
-
-
 
 .tag-list li.media {
 	margin: 0;

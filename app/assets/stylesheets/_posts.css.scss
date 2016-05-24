@@ -19,9 +19,6 @@ li.media {
 	margin: 10px 30px;
 	padding: 10px;
 }
-.series-list li.media p {
-	display: block;
-}
  li.media p.playtime {
 	display: block;
 	visibility: visible;
@@ -55,12 +52,6 @@ li.media {
     padding: 0;
 		padding: 20px;
     margin: 0;
-  }
-
-  .series-list li {
-    background: image_url('badge_fallback.png') 10px 10px no-repeat #5a96bb;
-    margin: 0 0 10px;
-    padding-left: 80px;
   }
 
   .tag-list li.media {
