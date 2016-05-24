@@ -22,16 +22,21 @@ class Post < ActiveRecord::Base
   end
   
   def display_title
-    title.split('-')[1].strip
+    title.split('-')[1].try(:strip)
   end
   
   algoliasearch per_environment: true do
-    attributesToIndex [:publish_date, :title, :description, :transcript]
+    attributesToIndex [:publish_date, :display_title, :title, :description, :transcript]
     customRanking ["desc(publish_date)"]
     
-    attribute :title, :description, :transcript,
+    attribute :title, :display_title, :description, :transcript,
       :publish_date, :links, :permalink,
       :free, :difficulty, :seconds
+      
+    tags do
+      [free? ? 'free' : 'premium']
+    end
+    
     attribute :thumbnail_image_url do
       thumbnail_image.url
     end
