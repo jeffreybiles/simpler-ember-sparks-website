@@ -39,7 +39,7 @@
         <div class="list-group">
           <ul style="padding-left:0">
             <% @posts.each_with_index do |post, index| %>
-              <%= render 'posts/post_listing', post: post, index: index, type: @tag.tag_type %>
+              <%= render 'posts/post_listing', post: post, index: index + 1, type: @tag.tag_type %>
             <% end %>
           </ul>
         </div>
