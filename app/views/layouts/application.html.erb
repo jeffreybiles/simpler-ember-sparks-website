@@ -31,12 +31,12 @@
         <ul class="nav navbar-nav">
           <%= nav_link "Explore", tags_path %>
           <%= nav_link "Library", library_path %>
-          <li><a href="http://blog.emberscreencasts.com">Blog</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               More
             </a>
             <ul class="dropdown-menu navbar-dropdown">
+              <li><a href="http://blog.emberscreencasts.com">Blog</a></li>
               <li><a href="https://leanpub.com/buildpacman">BUILD PACMAN (book)</a></li>
               <li><a href="http://real-world-ember.com/">Real World Ember podcast</a></li>
               <%= nav_link "FAQ", '/sales#faq' %>
@@ -44,6 +44,12 @@
               <li><a href="http://blog.codeschool.io/2015/10/26/7-reasons-to-use-ember-js/">7 Reasons to Use Ember.js</a></li>
               <li><%= link_to 'EmberScreencasts RSS feed', '/feed.rss' %></li>
             </ul>
+          </li>
+          <li class='nav-search'>
+            <i class='fa fa-search'></i>
+            <form action='/search' method='index'>
+              <input name='q' type='text'/>
+            </form>
           </li>
         </ul>
         <!-- <form class="navbar-form navbar-right" role="search">

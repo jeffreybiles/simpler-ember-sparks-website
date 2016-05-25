@@ -1,0 +1,103 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+<%# looks like require_tree is not in application.css. ember stuff? %>
+
+<style>
+  .ais-hits div {
+    padding: 10px;
+  }
+  
+  .highlight {
+    background-color: lightgoldenrodyellow;
+  }
+  
+  .search-bar {
+    margin-left: 15px;
+  }
+  
+  #search-box {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+  }
+</style>
+
+<div class="container">
+  <div class='search-bar'>
+    <input type="text" id="search-box"/>
+    Sort videos by <span id="sort-by-container"></span>
+    <span id='stats-container' class='pull-right'></span>
+  </div>
+  <div id="hits-container"></div>
+  <div id="pagination-container"></div>
+</div>
+
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+<script>
+  var hitTemplate = `
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <img style="max-width: 300px; max-height: 200px;" src={{thumbnail_image_url}} />
+      </div>
+      <div class="col-sm-6 col-md-8">
+        <b><a href="posts/{{permalink}}" class='media-heading'>{{{display_title}}}</a></b> 
+        <br />
+        {{_tags}} -- {{difficulty}} -- {{readable_time}} -- Published: {{formatted_publish_date}} 
+        <br /> 
+        {{{description}}}
+      </div>
+    </div>
+  `
+  
+  
+  var search = instantsearch({
+    appId: "<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>",
+    apiKey: "<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>",
+    indexName: "Post_<%= Rails.env %>",
+    urlSync: true
+  });
+  
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: '#search-box',
+      placeholder: 'What do you want to learn today?'
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.sortBySelector({
+      container: '#sort-by-container',
+      indices: [
+        {name: "<%= "Post_#{Rails.env}" %>", label: 'Newest '},
+        {name: "<%= "Post_by_publish_date_asc_#{Rails.env}" %>", label: 'Oldest'}
+      ]
+    })
+  );
+  
+  search.addWidget(
+    instantsearch.widgets.stats({
+      container: '#stats-container',
+      templates: {
+        body: "{{nbHits}} videos found"
+      }
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#hits-container',
+      templates: {
+        item: hitTemplate
+      }
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.pagination({
+      container: '#pagination-container'
+    })
+  );
+  
+  search.start();
+ </script>

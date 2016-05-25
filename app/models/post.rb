@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  include AlgoliaSearch
+  
   after_save { tags.map(&:updated_publish_date) }
   after_destroy { tags.map(&:updated_publish_date)}
 
@@ -21,5 +23,34 @@ class Post < ActiveRecord::Base
 
   def display_title
     title.split(/[-:]/)[1..-1].map(&:strip).join('-')
+  end
+  
+  def formatted_publish_date
+    publish_date.strftime('%b %d, %Y')
+  end
+  
+  algoliasearch per_environment: true do
+    attributesToIndex [:publish_date, :display_title, :title, :description, :transcript]
+    customRanking ["desc(publish_date)"]
+    
+    attribute :title, :display_title, :description, :transcript,
+      :publish_date, :formatted_publish_date, :links, :permalink,
+      :free, :difficulty, :readable_time
+      
+    tags do
+      [free? ? 'free' : 'premium']
+    end
+    
+    attribute :thumbnail_image_url do
+      thumbnail_image.url
+    end
+    
+    add_slave 'Post_by_publish_date_asc', per_environment: true do
+      customRanking ["asc(publish_date)"]
+    end
+
+    add_slave 'Post_by_publish_date_desc', per_environment: true do
+      customRanking ["desc(publish_date)"]
+    end
   end
 end
