@@ -22,7 +22,11 @@ class Post < ActiveRecord::Base
   end
   
   def display_title
-    title.split('-')[1].try(:strip)
+    title.split('-', 2)[1].try(:strip)
+  end
+  
+  def formatted_publish_date
+    publish_date.strftime('%b %d, %Y')
   end
   
   algoliasearch per_environment: true do
@@ -30,8 +34,8 @@ class Post < ActiveRecord::Base
     customRanking ["desc(publish_date)"]
     
     attribute :title, :display_title, :description, :transcript,
-      :publish_date, :links, :permalink,
-      :free, :difficulty, :seconds
+      :publish_date, :formatted_publish_date, :links, :permalink,
+      :free, :difficulty, :readable_time
       
     tags do
       [free? ? 'free' : 'premium']
@@ -40,7 +44,7 @@ class Post < ActiveRecord::Base
     attribute :thumbnail_image_url do
       thumbnail_image.url
     end
-
+    
     add_slave 'Post_by_publish_date_asc', per_environment: true do
       customRanking ["asc(publish_date)"]
     end
