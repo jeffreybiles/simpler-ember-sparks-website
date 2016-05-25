@@ -20,9 +20,9 @@ class Post < ActiveRecord::Base
       "#{seconds/60}m#{seconds%60}s"
     end
   end
-  
+
   def display_title
-    title.split('-', 2)[1].try(:strip)
+    title.split(/[-:]/)[1..-1].map(&:strip).join('-')
   end
   
   def formatted_publish_date
