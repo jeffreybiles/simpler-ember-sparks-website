@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
   end
   
   algoliasearch per_environment: true do
-    attributesToIndex [:publish_date, :display_title, :title, :description, :transcript]
+    attributesToIndex [:display_title, :description, :transcript]
     customRanking ["desc(publish_date)"]
     
     attribute :title, :display_title, :description, :transcript,
