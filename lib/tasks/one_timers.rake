@@ -12,6 +12,27 @@ namespace :one_timers do
     end
   end
 
+  task :generate_for_ember_links => :environment do
+    CSV.open('emberscreencasts_for_ember_links.csv', 'wb') do |csv|
+      csv << ['number', 'title', 'date', 'link', 'free', 'hashid', 'embed']
+      Post.recent_first.each do |post|
+        number = post.title.split(/[-:]/)[0]
+        title = post.display_title
+        link = "https://www.emberscreencasts.com/posts/#{post.permalink}"
+        if post.free then
+          src = /fast.wistia.net\/embed\/iframe\/(\S{10})/.match(post.wistia_embed)
+          if !src then src = /wistia_async_(\S{10})/.match(post.wistia_embed) end
+          if !src then src = /id="wistia_(\S{10})"/.match(post.wistia_embed) end
+          hashid = if src then src.captures[0] else nil end
+          if !hashid then puts "no hashid for #{number}- #{title}" end
+            embed = '<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+              <div class="wistia_embed wistia_async_' + hashid + ' videoFoam=true" style="width:640px;height:360px;">&nbsp;</div>'
+        end
+        csv << [number, title, post.publish_date, link, post.free, hashid, embed]
+      end
+    end
+  end
+
   task :resize_wistia => :environment do
     new_width = 800
     new_height = 500
