@@ -4,13 +4,14 @@ Rails.application.routes.draw do
   get 'feed' => 'posts#feed'
   resources :tags, only: [:show, :index]
   resources :search, only: :index
-  
+
   get 'about', to: 'pages#about'
   get 'library', to: 'pages#library'
   get 'mailing_list', to: 'pages#mailing_list'
   get 'thank_you', to: 'pages#thank_you'
   get 'email_intro_free_validations_display', to: 'pages#email_intro_free_validations_display'
   get 'meta_guide_to_upgrading_ember', to: 'pages#meta_guide_to_upgrading_ember'
+  get 'ember_school_ember_cli_deploy', to: 'pages#ember_school_ember_cli_deploy'
 
   get 'pay', to: 'accounts#pay'
   get 'account', to: 'accounts#show'
