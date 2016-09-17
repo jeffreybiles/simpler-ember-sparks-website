@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318153800) do
+ActiveRecord::Schema.define(version: 20160917132451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20160318153800) do
     t.text     "wistia_embed"
     t.text     "code"
     t.string   "guid"
+    t.string   "embed_id"
   end
 
   add_index "posts", ["permalink"], name: "index_posts_on_permalink", using: :btree
@@ -110,12 +111,12 @@ ActiveRecord::Schema.define(version: 20160318153800) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                         default: "",    null: false
-    t.string   "encrypted_password",            default: "",    null: false
+    t.string   "email",                                                 default: "",    null: false
+    t.string   "encrypted_password",                                    default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                 default: 0,     null: false
+    t.integer  "sign_in_count",                                         default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -124,11 +125,12 @@ ActiveRecord::Schema.define(version: 20160318153800) do
     t.datetime "updated_at"
     t.boolean  "subscribed"
     t.string   "stripe_customer_id"
-    t.boolean  "admin",                         default: false
+    t.boolean  "admin",                                                 default: false
     t.integer  "organization_id"
     t.string   "organization_permission_level"
     t.string   "invitation_token"
     t.string   "invitation_status"
+    t.decimal  "default_playback_speed",        precision: 4, scale: 2, default: 1.0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

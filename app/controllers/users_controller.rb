@@ -27,6 +27,11 @@ class UsersController < ApplicationController
     sign_in(@user)
   end
 
+  def update_playback_speed
+    current_user.update_attributes(default_playback_speed: params[:playback_speed])
+    head 200
+  end
+
   def check_token_match
     unless @user && (@user.invitation_token == params[:token])
       flash[:error] = "The user id and token did not match"

@@ -1,15 +1,6 @@
 <% content_for :head do %>
   <meta property="og:image" content="<%= @post.thumbnail_image %>">
-
-  <script src="//fast.wistia.com/static/embed_shepherd-v1.js"></script>
-  <script>
-    wistiaEmbeds.onFind(function(video) {
-      video.videoFoam(true);
-      video.addPlugin("resumable", {
-        src: "//fast.wistia.com/labs/resumable/plugin.js"
-      });
-    });
-  </script>
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <% end %>
 <% content_for :title, @post.title %>
 <% content_for :meta_description, @post.description %>
@@ -49,10 +40,10 @@
         <div class="col-md-12">
           <% if @viewable_by_user %>
             <div id="video-box">
-              <%= render 'video', wistia_embed: @post.wistia_embed %>
+              <%= render 'video', embed_id: @post.embed_id, current_user: current_user %>
             </div>
           <% else %>
-            
+
 
             <div class="sales-box">
               <h2>Invest in yourself</h2>
@@ -66,7 +57,7 @@
               <% unless current_user %>
                 <a href="/users/sign_in" class="btn btn-lg btn-link top-buffer">Already a Subscriber? Log in</a>
               <% end %>
-            </div>          
+            </div>
 
           <% end %>
           <ul class="list-inline top-buffer">
@@ -76,7 +67,7 @@
             <% end %>
           </ul>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -125,7 +116,7 @@
           </div>
         </div>
       </div>
-      
+
       <% if @series %>
         <div class="col-md-4">
           <%= link_to @series.name, tag_path(@series), class: "btn btn-success well-title" %>
@@ -140,12 +131,9 @@
       <% end %>
     </div>
 
-
-  
-  
-  <section id="comments" align="center" class="top-buffer">
-      <div id="disqus_thread"></div>
-  </section>
+    <section id="comments" align="center" class="top-buffer">
+        <div id="disqus_thread"></div>
+    </section>
     <script>
     /**
     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -191,4 +179,3 @@
     <%= raw @markdown.render(@post.links) %>
   <% end %>
 </div> -->
-

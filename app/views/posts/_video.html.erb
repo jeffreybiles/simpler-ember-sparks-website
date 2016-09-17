@@ -1,3 +1,16 @@
-<% if wistia_embed.present? %>
-  <%= raw wistia_embed %>
-<% end %>
+<div class="wistia_embed wistia_async_<%= embed_id %> videoFoam=true">&nbsp;</div>
+<script>
+  window._wq = window._wq || []
+  window._wq.push({ id: '<%= embed_id %>', onReady: function(video) {
+    video.playbackRate('<%= current_user.default_playback_speed %>')
+    video.bind("playbackratechange", function(chosenSpeed){
+      $.ajax({
+        method: "POST",
+        url: "/update_playback_speed",
+        data: {
+          playback_speed: chosenSpeed
+        }
+      })
+    })
+  }});
+</script>

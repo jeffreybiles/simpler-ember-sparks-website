@@ -56,7 +56,7 @@ ActiveAdmin.register Post do
       row :seconds
       row :links
       row :thumbnail_image
-      row :wistia_embed
+      row :embed_id
       row :code
       row :transcript
     end
@@ -70,7 +70,7 @@ ActiveAdmin.register Post do
       f.input :seconds
       f.input :difficulty, :as => :select, :collection => ['basic', 'intermediate', 'advanced']
       f.input :publish_date
-      f.input :wistia_embed
+      f.input :embed_id
       f.input :thumbnail_image
       f.input :description
       f.input :links
