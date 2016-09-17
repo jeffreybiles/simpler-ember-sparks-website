@@ -2,7 +2,10 @@
 <script>
   window._wq = window._wq || []
   window._wq.push({ id: '<%= embed_id %>', onReady: function(video) {
-    video.playbackRate('<%= current_user.default_playback_speed %>')
+    var default_playback_speed = '<%= current_user && current_user.default_playback_speed %>'
+    if(!!default_playback_speed){
+      video.playbackRate(default_playback_speed)
+    }
     video.bind("playbackratechange", function(chosenSpeed){
       $.ajax({
         method: "POST",
