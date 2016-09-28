@@ -1,5 +1,4 @@
 <%= render 'shared/snippets/analytics' if ENV['RENDER_ANALYTICS'] == 'true' %>
-<%= render 'shared/snippets/optimizations' if ENV['RENDER_OPTIMIZATIONS'] == 'true' %>
 <% if content_for?(:scripts) %>
   <%= yield(:scripts) %>
 <% end %>
