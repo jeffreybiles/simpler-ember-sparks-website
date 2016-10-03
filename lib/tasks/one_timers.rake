@@ -33,6 +33,18 @@ namespace :one_timers do
     end
   end
 
+
+  task :users_since => :environment do
+    since_date = Date.new(2016, 6, 30)
+    users = User.where("created_at > ?", since_date)
+    CSV.open('users_since_time.csv', 'wb') do |csv|
+      csv << ['email']
+      users.each do |user|
+        csv << [user.email]
+      end
+    end
+  end
+  
   task :resize_wistia => :environment do
     new_width = 800
     new_height = 500
