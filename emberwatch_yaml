@@ -1,0 +1,1584 @@
+- title: '183- ember-pikaday-2.x'
+  author_ids:
+  - 58
+  date: 2016-09-30
+  url: http://www.emberscreencasts.com/posts/183-ember-pikaday-2x
+  videos:
+  - http://www.emberscreencasts.com/posts/183-ember-pikaday-2x
+  series: EmberScreencasts
+  price: $9/month
+- title: '182- ember-math-helpers'
+  author_ids:
+  - 58
+  date: 2016-09-28
+  url: http://www.emberscreencasts.com/posts/182-ember-math-helpers
+  videos:
+  - http://www.emberscreencasts.com/posts/182-ember-math-helpers
+  series: EmberScreencasts
+- title: '181- ember-let'
+  author_ids:
+  - 58
+  date: 2016-09-23
+  url: http://www.emberscreencasts.com/posts/181-ember-let
+  videos:
+  - http://www.emberscreencasts.com/posts/181-ember-let
+  series: EmberScreencasts
+  price: $9/month
+- title: '180- Using Non-Ember libraries with ember-inject-script'
+  author_ids:
+  - 58
+  date: 2016-09-21
+  url: http://www.emberscreencasts.com/posts/180-using-non-ember-libraries-with-ember-inject-script
+  videos:
+  - http://www.emberscreencasts.com/posts/180-using-non-ember-libraries-with-ember-inject-script
+  series: EmberScreencasts
+- title: '179- Giving Back'
+  author_ids:
+  - 58
+  date: 2016-09-16
+  url: http://www.emberscreencasts.com/posts/179-giving-back
+  videos:
+  - http://www.emberscreencasts.com/posts/179-giving-back
+  series: EmberScreencasts
+- title: '178- Getting Hired'
+  author_ids:
+  - 58
+  date: 2016-09-14
+  url: http://www.emberscreencasts.com/posts/178-getting-hired
+  videos:
+  - http://www.emberscreencasts.com/posts/178-getting-hired
+  series: EmberScreencasts
+- title: '177- Shopping Cart Part 4- Sold Out'
+  author_ids:
+  - 58
+  date: 2016-09-09
+  url: http://www.emberscreencasts.com/posts/177-shopping-cart-part-4-sold-out
+  videos:
+  - http://www.emberscreencasts.com/posts/177-shopping-cart-part-4-sold-out
+  series: EmberScreencasts
+  price: $9/month
+- title: '176- Shopping Cart Part 3- Checkout and Payment with Stripe'
+  author_ids:
+  - 58
+  date: 2016-09-06
+  url: http://www.emberscreencasts.com/posts/176-shopping-cart-part-3-checkout-and-payment-with-stripe
+  videos:
+  - http://www.emberscreencasts.com/posts/176-shopping-cart-part-3-checkout-and-payment-with-stripe
+  series: EmberScreencasts
+- title: '175- Shopping Cart Part 2: Persistence with LocalStorage'
+  author_ids:
+  - 58
+  date: 2016-09-02
+  url: http://www.emberscreencasts.com/posts/175-shopping-cart-part-2-persistence-with-localstorage
+  videos:
+  - http://www.emberscreencasts.com/posts/175-shopping-cart-part-2-persistence-with-localstorage
+  series: EmberScreencasts
+  price: $9/month
+- title: '174- Shopping Cart Part 1- Basics'
+  author_ids:
+  - 58
+  date: 2016-08-31
+  url: http://www.emberscreencasts.com/posts/174-shopping-cart-part-1-basics
+  videos:
+  - http://www.emberscreencasts.com/posts/174-shopping-cart-part-1-basics
+  series: EmberScreencasts
+- title: '173- Custom Validators'
+  author_ids:
+  - 58
+  date: 2016-08-26
+  url: http://www.emberscreencasts.com/posts/173-custom-validators
+  videos:
+  - http://www.emberscreencasts.com/posts/173-custom-validators
+  series: EmberScreencasts
+  price: $9/month
+- title: '172- Displaying Errors Inline with ember-changeset-validations'
+  author_ids:
+  - 58
+  date: 2016-08-24
+  url: http://www.emberscreencasts.com/posts/172-displaying-errors-inline-with-ember-changeset-validations
+  videos:
+  - http://www.emberscreencasts.com/posts/172-displaying-errors-inline-with-ember-changeset-validations
+  series: EmberScreencasts
+- title: '171- Introduction to ember-changeset-validations'
+  author_ids:
+  - 58
+  date: 2016-08-19
+  url: http://www.emberscreencasts.com/posts/171-introduction-to-ember-changeset-validations
+  videos:
+  - http://www.emberscreencasts.com/posts/171-introduction-to-ember-changeset-validations
+  series: EmberScreencasts
+  price: $9/month
+- title: '170- Are You Sure You Want To Leave This Page?'
+  author_ids:
+  - 58
+  date: 2016-08-17
+  url: http://www.emberscreencasts.com/posts/170-are-you-sure-you-want-to-leave-this-page
+  videos:
+  - http://www.emberscreencasts.com/posts/170-are-you-sure-you-want-to-leave-this-page
+  series: EmberScreencasts
+- title: '169- Advanced ember-changeset: Visualizing Changes'
+  author_ids:
+  - 58
+  date: 2016-08-12
+  url: http://www.emberscreencasts.com/posts/169-advanced-ember-changeset-visualizing-changes
+  videos:
+  - http://www.emberscreencasts.com/posts/169-advanced-ember-changeset-visualizing-changes
+  series: EmberScreencasts
+  price: $9/month
+- title: '168- Introduction to ember-changeset'
+  author_ids:
+  - 58
+  date: 2016-08-10
+  url: http://www.emberscreencasts.com/posts/168-introduction-to-ember-changeset
+  videos:
+  - http://www.emberscreencasts.com/posts/168-introduction-to-ember-changeset
+  series: EmberScreencasts
+- title: '167- The Amazing Get Helper'
+  author_ids:
+  - 58
+  date: 2016-08-05
+  url: http://www.emberscreencasts.com/posts/166-the-amazing-get-helper
+  videos:
+  - http://www.emberscreencasts.com/posts/166-the-amazing-get-helper
+  series: EmberScreencasts
+  price: $9/month
+- title: '166- Controllers in Ember 2'
+  author_ids:
+  - 58
+  date: 2016-08-03
+  url: http://www.emberscreencasts.com/posts/166-controllers-in-ember-2
+  videos:
+  - http://www.emberscreencasts.com/posts/166-controllers-in-ember-2
+  series: EmberScreencasts
+- title: '165- Yielding Data into Block Components'
+  author_ids:
+  - 58
+  date: 2016-07-29
+  url: http://www.emberscreencasts.com/posts/165-yielding-data-into-block-components
+  videos:
+  - http://www.emberscreencasts.com/posts/165-yielding-data-into-block-components
+  series: EmberScreencasts
+  price: $9/month
+- title: '164- Block Components'
+  author_ids:
+  - 58
+  date: 2016-07-27
+  url: http://www.emberscreencasts.com/posts/164-block-components
+  videos:
+  - http://www.emberscreencasts.com/posts/164-block-components
+  series: EmberScreencasts
+- title: '163- Positional Params in Components'
+  author_ids:
+  - 58
+  date: 2016-07-22
+  url: http://www.emberscreencasts.com/posts/163-positional-params-in-components
+  videos:
+  - http://www.emberscreencasts.com/posts/163-positional-params-in-components
+  series: EmberScreencasts
+  price: $9/month
+- title: '162- Nested Components'
+  author_ids:
+  - 58
+  date: 2016-07-20
+  url: http://www.emberscreencasts.com/posts/162-nested-components
+  videos:
+  - http://www.emberscreencasts.com/posts/162-nested-components
+  series: EmberScreencasts
+- title: '161- Sorting in Ember 2.0 (Replacing SortableMixin)'
+  author_ids:
+  - 58
+  date: 2016-07-15
+  url: http://www.emberscreencasts.com/posts/161-sorting-in-ember-20-replacing-sortablemixin
+  videos:
+  - http://www.emberscreencasts.com/posts/161-sorting-in-ember-20-replacing-sortablemixin
+  series: EmberScreencasts
+  price: $9/month
+- title: '160- Introduction to Visual Regression Testing'
+  author_ids:
+  - 58
+  date: 2016-07-13
+  url: http://www.emberscreencasts.com/posts/160
+  videos:
+  - http://www.emberscreencasts.com/posts/160
+  series: EmberScreencasts
+- title: '159- Nested Routes'
+  author_ids:
+  - 58
+  date: 2016-07-08
+  url: http://www.emberscreencasts.com/posts/159-nested-routes
+  videos:
+  - http://www.emberscreencasts.com/posts/159-nested-routes
+  series: EmberScreencasts
+  price: $9/month
+- title: '158- Finding Records with URL Parameters'
+  author_ids:
+  - 58
+  date: 2016-07-06
+  url: http://www.emberscreencasts.com/posts/158-finding-records-with-url-parameters
+  videos:
+  - http://www.emberscreencasts.com/posts/158-finding-records-with-url-parameters
+  series: EmberScreencasts
+- title: '157- URL Parameters'
+  author_ids:
+  - 58
+  date: 2016-07-01
+  url: http://www.emberscreencasts.com/posts/157-url-parameters
+  videos:
+  - http://www.emberscreencasts.com/posts/157-url-parameters
+  series: EmberScreencasts
+  price: $9/month
+- title: '156- Navbar and Outlets'
+  author_ids:
+  - 58
+  date: 2016-06-29
+  url: http://www.emberscreencasts.com/posts/156-navbar-and-outlets
+  videos:
+  - http://www.emberscreencasts.com/posts/156-navbar-and-outlets
+  series: EmberScreencasts
+- title: '155- The link-to helper'
+  author_ids:
+  - 58
+  date: 2016-06-24
+  url: http://www.emberscreencasts.com/posts/155-the-link-to-helper
+  videos:
+  - http://www.emberscreencasts.com/posts/155-the-link-to-helper
+  series: EmberScreencasts
+  price: $9/month
+- title: '154- Router.js and the URL'
+  author_ids:
+  - 58
+  date: 2016-06-22
+  url: http://www.emberscreencasts.com/posts/154-routerjs-and-the-url
+  videos:
+  - http://www.emberscreencasts.com/posts/154-routerjs-and-the-url
+  series: EmberScreencasts
+- title: '153- ember-cli-deploy: Lightning Strategy part 2: Production'
+  author_ids:
+  - 58
+  date: 2016-06-17
+  url: http://www.emberscreencasts.com/posts/153-ember-cli-deploy-lightning-pack-part-2-production
+  videos:
+  - http://www.emberscreencasts.com/posts/153-ember-cli-deploy-lightning-pack-part-2-production
+  series: EmberScreencasts
+  price: $9/month
+- title: '152- ember-cli-deploy: Lightning Strategy Part 1: Development'
+  author_ids:
+  - 58
+  date: 2016-06-15
+  url: http://www.emberscreencasts.com/posts/152-ember-cli-deploy-lightning-strategy-part-1-development
+  videos:
+  - http://www.emberscreencasts.com/posts/152-ember-cli-deploy-lightning-strategy-part-1-development
+  series: EmberScreencasts
+- title: '151- ember-cli-deploy: Versioned Deploys'
+  author_ids:
+  - 58
+  date: 2016-06-10
+  url: http://www.emberscreencasts.com/posts/151-ember-cli-deploy-versioned-deploys
+  videos:
+  - http://www.emberscreencasts.com/posts/151-ember-cli-deploy-versioned-deploys
+  series: EmberScreencasts
+  price: $9/month
+- title: '150- ember-cli-deploy: Connecting to your API'
+  author_ids:
+  - 58
+  date: 2016-06-08
+  url: http://www.emberscreencasts.com/posts/150-ember-cli-deploy-connecting-to-your-api
+  videos:
+  - http://www.emberscreencasts.com/posts/150-ember-cli-deploy-connecting-to-your-api
+  series: EmberScreencasts
+- title: '149- ember-cli-deploy: Amazon S3'
+  author_ids:
+  - 58
+  date: 2016-06-03
+  url: http://www.emberscreencasts.com/posts/149-ember-cli-deploy-amazon-s3
+  videos:
+  - http://www.emberscreencasts.com/posts/149-ember-cli-deploy-amazon-s3
+  series: EmberScreencasts
+  price: $9/month
+- title: '148- ember-cli-deploy: Intro and Installation'
+  author_ids:
+  - 58
+  date: 2016-06-01
+  url: http://www.emberscreencasts.com/posts/148-ember-cli-deploy-intro-and-installation
+  videos:
+  - http://www.emberscreencasts.com/posts/148-ember-cli-deploy-intro-and-installation
+  series: EmberScreencasts
+- title: '147- Material Design with ember-paper: Colors'
+  author_ids:
+  - 58
+  date: 2016-05-27
+  url: http://www.emberscreencasts.com/posts/147-material-design-with-ember-paper-colors
+  videos:
+  - http://www.emberscreencasts.com/posts/147-material-design-with-ember-paper-colors
+  series: EmberScreencasts
+  price: $9/month
+- title: '146- Material Design with ember-paper: Awesome Forms'
+  author_ids:
+  - 58
+  date: 2016-05-25
+  url: http://www.emberscreencasts.com/posts/146-material-design-with-ember-paper-awesome-forms
+  videos:
+  - http://www.emberscreencasts.com/posts/146-material-design-with-ember-paper-awesome-forms
+  series: EmberScreencasts
+- title: '145- Serializers: Sending Data to the Server with Serialize'
+  author_ids:
+  - 58
+  date: 2016-05-20
+  url: http://www.emberscreencasts.com/posts/145-serializers-sending-data-to-the-server-with-serialize
+  videos:
+  - http://www.emberscreencasts.com/posts/145-serializers-sending-data-to-the-server-with-serialize
+  series: EmberScreencasts
+  price: $9/month
+- title: '144- Material Design with Ember Paper: Creating a Navbar'
+  author_ids:
+  - 58
+  date: 2016-05-18
+  url: http://www.emberscreencasts.com/posts/144-material-design-with-ember-paper-creating-a-navbar
+  videos:
+  - http://www.emberscreencasts.com/posts/144-material-design-with-ember-paper-creating-a-navbar
+  series: EmberScreencasts
+- title: '143- Serializers: keyForAttribute and keyForRelationship'
+  author_ids:
+  - 58
+  date: 2016-05-13
+  url: http://www.emberscreencasts.com/posts/143-serializers-keyforattribute-and-keyforrelationship
+  videos:
+  - http://www.emberscreencasts.com/posts/143-serializers-keyforattribute-and-keyforrelationship
+  series: EmberScreencasts
+  price: $9/month
+- title: '142- Material Design with Ember Paper: Intro + CSS tricks'
+  author_ids:
+  - 58
+  date: 2016-05-11
+  url: http://www.emberscreencasts.com/posts/142-material-design-with-ember-paper-intro-css-tricks
+  videos:
+  - http://www.emberscreencasts.com/posts/142-material-design-with-ember-paper-intro-css-tricks
+  series: EmberScreencasts
+- title: '141- Serializers: Extracting Relationships'
+  author_ids:
+  - 58
+  date: 2016-05-06
+  url: http://www.emberscreencasts.com/posts/141-serializers-extracting-relationships
+  videos:
+  - http://www.emberscreencasts.com/posts/141-serializers-extracting-relationships
+  series: EmberScreencasts
+  price: $9/month
+- title: '140- Customizing the PacMan Addon'
+  author_ids:
+  - 58
+  date: 2016-05-04
+  url: http://www.emberscreencasts.com/posts/132-customizing-the-pacman-addon
+  videos:
+  - http://www.emberscreencasts.com/posts/132-customizing-the-pacman-addon
+  series: EmberScreencasts
+- title: '139- Serializers: Extracting Attributes and IDs'
+  author_ids:
+  - 58
+  date: 2016-04-29
+  url: http://www.emberscreencasts.com/posts/139-serializers-extracting-attributes-and-ids
+  videos:
+  - http://www.emberscreencasts.com/posts/139-serializers-extracting-attributes-and-ids
+  series: EmberScreencasts
+  price: $9/month
+- title: '138- Serializers: How are normalize and normalizeResponse different?'
+  author_ids:
+  - 58
+  date: 2016-04-27
+  url: http://www.emberscreencasts.com/posts/138-serializers-how-are-normalize-and-normalizeresponse-different
+  videos:
+  - http://www.emberscreencasts.com/posts/138-serializers-how-are-normalize-and-normalizeresponse-different
+  series: EmberScreencasts
+- title: '137- Serializers: normalize${specific}Response'
+  author_ids:
+  - 58
+  date: 2016-04-22
+  url: http://www.emberscreencasts.com/posts/137-serializers-normalizespecificresponse
+  videos:
+  - http://www.emberscreencasts.com/posts/137-serializers-normalizespecificresponse
+  series: EmberScreencasts
+  price: $9/month
+- title: '136- Serializers: normalizeResponse'
+  author_ids:
+  - 58
+  date: 2016-04-20
+  url: http://www.emberscreencasts.com/posts/136-serializers-normalizeresponse
+  videos:
+  - http://www.emberscreencasts.com/posts/136-serializers-normalizeresponse
+  series: EmberScreencasts
+- title: '135- JSON API'
+  author_ids:
+  - 58
+  date: 2016-04-15
+  url: http://www.emberscreencasts.com/posts/135-json-api
+  videos:
+  - http://www.emberscreencasts.com/posts/135-json-api
+  series: EmberScreencasts
+  price: $9/month
+- title: '134- Introduction to Serializers'
+  author_ids:
+  - 58
+  date: 2016-04-13
+  url: http://www.emberscreencasts.com/posts/134-introduction-to-serializers
+  videos:
+  - http://www.emberscreencasts.com/posts/134-introduction-to-serializers
+  series: EmberScreencasts
+- title: '133- Addon Acceptance Tests'
+  author_ids:
+  - 58
+  date: 2016-04-07
+  url: http://www.emberscreencasts.com/posts/133-addon-acceptance-tests
+  videos:
+  - http://www.emberscreencasts.com/posts/133-addon-acceptance-tests
+  series: EmberScreencasts
+  price: $9/month
+- title: '132- Dummy Apps'
+  author_ids:
+  - 58
+  date: 2016-04-06
+  url: http://www.emberscreencasts.com/posts/132-dummy-apps
+  videos:
+  - http://www.emberscreencasts.com/posts/132-dummy-apps
+  series: EmberScreencasts
+- title: '131- Addon Blueprints'
+  author_ids:
+  - 58
+  date: 2016-04-01
+  url: http://www.emberscreencasts.com/posts/131-addon-blueprints
+  videos:
+  - http://www.emberscreencasts.com/posts/131-addon-blueprints
+  series: EmberScreencasts
+  price: $9/month
+- title: '130- Making Addons Extensible'
+  author_ids:
+  - 58
+  date: 2016-03-30
+  url: http://www.emberscreencasts.com/posts/130-making-addons-extensible
+  videos:
+  - http://www.emberscreencasts.com/posts/130-making-addons-extensible
+  series: EmberScreencasts
+- title: '129- Publishing an Addon'
+  author_ids:
+  - 58
+  date: 2016-03-25
+  url: http://www.emberscreencasts.com/posts/129-publishing-an-addon
+  videos:
+  - http://www.emberscreencasts.com/posts/129-publishing-an-addon
+  series: EmberScreencasts
+  price: $9/month
+- title: '128- Creating An Addon'
+  author_ids:
+  - 58
+  date: 2016-03-23
+  url: http://www.emberscreencasts.com/posts/128-creating-an-addon
+  videos:
+  - http://www.emberscreencasts.com/posts/128-creating-an-addon
+  series: EmberScreencasts
+- title: '127- DS.attr Transforms'
+  author_ids:
+  - 58
+  date: 2016-03-18
+  url: http://www.emberscreencasts.com/posts/127-dsattr-transforms
+  videos:
+  - http://www.emberscreencasts.com/posts/127-dsattr-transforms
+  series: EmberScreencasts
+  price: $9/month
+- title: '126 - Liquid Fire: The Explode Transition'
+  author_ids:
+  - 58
+  date: 2016-03-16
+  url: http://www.emberscreencasts.com/posts/126-liquid-fire-the-explode-transition
+  videos:
+  - http://www.emberscreencasts.com/posts/126-liquid-fire-the-explode-transition
+  series: EmberScreencasts
+- title: '125 - Liquid Fire: Matchers and the Transition Map'
+  author_ids:
+  - 58
+  date: 2016-03-11
+  url: http://www.emberscreencasts.com/posts/125-liquid-fire-matchers-and-the-transition-map
+  videos:
+  - http://www.emberscreencasts.com/posts/125-liquid-fire-matchers-and-the-transition-map
+  series: EmberScreencasts
+  price: $9/month
+- title: '124 - Liquid Fire: Liquid Bind'
+  author_ids:
+  - 58
+  date: 2016-03-09
+  url: http://www.emberscreencasts.com/posts/124-liquid-bind
+  videos:
+  - http://www.emberscreencasts.com/posts/124-liquid-bind
+  series: EmberScreencasts
+- title: '123 - Liquid Fire: liquid-if and liquid-spacer'
+  author_ids:
+  - 58
+  date: 2016-03-04
+  url: http://www.emberscreencasts.com/posts/123-liquid-fire-liquid-if-and-liquid-spacer
+  videos:
+  - http://www.emberscreencasts.com/posts/123-liquid-fire-liquid-if-and-liquid-spacer
+  series: EmberScreencasts
+  price: $9/month
+- title: '122 - Liquid Fire: Animating Transitions'
+  author_ids:
+  - 58
+  date: 2016-03-02
+  url: http://www.emberscreencasts.com/posts/122-liquid-fire-animating-transitions
+  videos:
+  - http://www.emberscreencasts.com/posts/122-liquid-fire-animating-transitions
+  series: EmberScreencasts
+- title: '121 - CRUD 2016 pt 3- Create (and refactor)'
+  author_ids:
+  - 58
+  date: 2016-02-26
+  url: http://www.emberscreencasts.com/posts/121-crud-2016-pt-3-create-and-refactor
+  videos:
+  - http://www.emberscreencasts.com/posts/121-crud-2016-pt-3-create-and-refactor
+  series: EmberScreencasts
+  price: $9/month
+- title: '120 - CRUD 2016 pt 2- Read, Update, and Destroy'
+  author_ids:
+  - 58
+  date: 2016-02-24
+  url: http://www.emberscreencasts.com/posts/120
+  videos:
+  - http://www.emberscreencasts.com/posts/120
+  series: EmberScreencasts
+- title: '119 - CRUD 2016 pt 1 - Setup and Index'
+  author_ids:
+  - 58
+  date: 2016-02-19
+  url: http://www.emberscreencasts.com/posts/119-crud-2016-pt-1-setup-and-index
+  videos:
+  - http://www.emberscreencasts.com/posts/119-crud-2016-pt-1-setup-and-index
+  series: EmberScreencasts
+  price: $9/month
+- title: '118 - ember-one-way-controls addon'
+  author_ids:
+  - 58
+  date: 2016-02-17
+  url: http://www.emberscreencasts.com/posts/118-ember-one-way-controls-addon
+  videos:
+  - http://www.emberscreencasts.com/posts/118-ember-one-way-controls-addon
+  series: EmberScreencasts
+- title: '117 - One-way-bound <input>s'
+  author_ids:
+  - 58
+  date: 2016-02-12
+  url: http://www.emberscreencasts.com/posts/117-one-way-bound-inputs
+  videos:
+  - http://www.emberscreencasts.com/posts/117-one-way-bound-inputs
+  series: EmberScreencasts
+  price: $9/month
+- title: '116 - ember-computed-decorators'
+  author_ids:
+  - 58
+  date: 2016-02-10
+  url: http://www.emberscreencasts.com/posts/116-ember-computed-decorators
+  videos:
+  - http://www.emberscreencasts.com/posts/116-ember-computed-decorators
+  series: EmberScreencasts
+- title: '115 - ES2016 Decorators'
+  author_ids:
+  - 58
+  date: 2016-02-05
+  url: http://www.emberscreencasts.com/posts/115-es2016-decorators
+  videos:
+  - http://www.emberscreencasts.com/posts/115-es2016-decorators
+  series: EmberScreencasts
+  price: $9/month
+- title: '114 - ES2015 Destructuring'
+  author_ids:
+  - 58
+  date: 2016-02-03
+  url: http://www.emberscreencasts.com/posts/114-es2015-destructuring
+  videos:
+  - http://www.emberscreencasts.com/posts/114-es2015-destructuring
+  series: EmberScreencasts
+- title: '113 - RESTAdapter vs JSONAPIAdapter vs ActiveModelAdapter'
+  author_ids:
+  - 58
+  date: 2016-01-29
+  url: http://www.emberscreencasts.com/posts/113-restadapter-vs-jsonapiadapter-vs-activemodeladapter
+  videos:
+  - http://www.emberscreencasts.com/posts/113-restadapter-vs-jsonapiadapter-vs-activemodeladapter
+  series: EmberScreencasts
+  price: $9/month
+- title: '112 - Ember Data 2.0: Miscellaneous Adapter Customizations'
+  author_ids:
+  - 58
+  date: 2016-01-27
+  url: http://www.emberscreencasts.com/posts/112-ember-data-20-miscellaneous-adapter-customizations
+  videos:
+  - http://www.emberscreencasts.com/posts/112-ember-data-20-miscellaneous-adapter-customizations
+  series: EmberScreencasts
+- title: '111 - Ember Data 2.0: Advanced Adapter Customizations'
+  author_ids:
+  - 58
+  date: 2016-01-22
+  url: http://www.emberscreencasts.com/posts/111-ember-data-20-advanced-adapter-customizations
+  videos:
+  - http://www.emberscreencasts.com/posts/111-ember-data-20-advanced-adapter-customizations
+  series: EmberScreencasts
+  price: $9/month
+- title: '110 - Ember Data 2.0: Essential Adapter Customizations'
+  author_ids:
+  - 58
+  date: 2016-01-20
+  url: http://www.emberscreencasts.com/posts/110-ember-data-20-essential-adapter-customizations
+  videos:
+  - http://www.emberscreencasts.com/posts/110-ember-data-20-essential-adapter-customizations
+  series: EmberScreencasts
+- title: '109 - Ember Data 2.0: Overview of Customizing Adapters and Serializers'
+  author_ids:
+  - 58
+  date: 2016-01-15
+  url: http://www.emberscreencasts.com/posts/109-ember-data-20-overview-of-customizing-adapters-and-serializers
+  videos:
+  - http://www.emberscreencasts.com/posts/109-ember-data-20-overview-of-customizing-adapters-and-serializers
+  series: EmberScreencasts
+  price: $9/month
+- title: '108 - Ember Data 2.0: Overview of using Adapters and Serializers'
+  author_ids:
+  - 58
+  date: 2016-01-13
+  url: http://www.emberscreencasts.com/posts/108-ember-data-20-overview-of-using-adapters-and-serializers
+  videos:
+  - http://www.emberscreencasts.com/posts/108-ember-data-20-overview-of-using-adapters-and-serializers
+  series: EmberScreencasts
+- title: '107 - Metaprogramming: Editing and Saving Generic Attributes'
+  author_ids:
+  - 58
+  date: 2016-01-08
+  url: http://www.emberscreencasts.com/posts/107-metaprogramming-editing-and-saving-generic-attributes
+  videos:
+  - http://www.emberscreencasts.com/posts/107-metaprogramming-editing-and-saving-generic-attributes
+  series: EmberScreencasts
+  price: $9/month
+- title: '106 - Ember Data 2.0: Metaprogramming with Relationships'
+  author_ids:
+  - 58
+  date: 2016-01-06
+  url: http://www.emberscreencasts.com/posts/106-ember-data-20-metaprogramming-with-relationships
+  videos:
+  - http://www.emberscreencasts.com/posts/106-ember-data-20-metaprogramming-with-relationships
+  series: EmberScreencasts
+- title: '105 - The Making of the Model State Explorer'
+  author_ids:
+  - 58
+  date: 2016-01-01
+  url: http://www.emberscreencasts.com/posts/105-the-making-of-the-model-state-explorer
+  videos:
+  - http://www.emberscreencasts.com/posts/105-the-making-of-the-model-state-explorer
+  series: EmberScreencasts
+  price: $9/month
+- title: '104 - Ember Data 2.0: Relationships'
+  author_ids:
+  - 58
+  date: 2015-12-30
+  url: http://www.emberscreencasts.com/posts/104-ember-data-20-relationships
+  videos:
+  - http://www.emberscreencasts.com/posts/104-ember-data-20-relationships
+  series: EmberScreencasts
+- title: '103 - Ember Data 2.0: states.js Deep Dive'
+  author_ids:
+  - 58
+  date: 2015-12-26
+  url: http://www.emberscreencasts.com/posts/103-ember-data-20-statesjs-deep-dive
+  videos:
+  - http://www.emberscreencasts.com/posts/103-ember-data-20-statesjs-deep-dive
+  series: EmberScreencasts
+  price: $9/month
+- title: '102 - Ember Data 2.0: Model States and Flags'
+  author_ids:
+  - 58
+  date: 2015-12-23
+  url: http://www.emberscreencasts.com/posts/102-ember-data-20-model-states-and-flags
+  videos:
+  - http://www.emberscreencasts.com/posts/102-ember-data-20-model-states-and-flags
+  series: EmberScreencasts
+- title: '101 - Ember Data 2.0: Metaprogramming with DS.Model Attributes Property'
+  author_ids:
+  - 58
+  date: 2015-12-18
+  url: http://www.emberscreencasts.com/posts/101-ember-data-20-metaprogramming-with-dsmodel-attributes-property
+  videos:
+  - http://www.emberscreencasts.com/posts/101-ember-data-20-metaprogramming-with-dsmodel-attributes-property
+  series: EmberScreencasts
+  price: $9/month
+- title: '100 - Ember Data 2.0: Updating Data, Tracking Changes, and Rolling Them Back'
+  author_ids:
+  - 58
+  date: 2015-12-16
+  url: http://www.emberscreencasts.com/posts/100-ember-data-20-updating-data-tracking-changes-and-rolling-them-back
+  videos:
+  - http://www.emberscreencasts.com/posts/100-ember-data-20-updating-data-tracking-changes-and-rolling-them-back
+  series: EmberScreencasts
+- title: '99 - Ember Data 2.0: Create, Save, and Destroy Records'
+  author_ids:
+  - 58
+  date: 2015-12-11
+  url: http://www.emberscreencasts.com/posts/99-ember-data-20-create-save-and-destroy-records
+  videos:
+  - http://www.emberscreencasts.com/posts/99-ember-data-20-create-save-and-destroy-records
+  series: EmberScreencasts
+  price: $9/month
+- title: '98 - Ember Data 2.0: Store Manipulation with Peek, Unload, and More'
+  author_ids:
+  - 58
+  date: 2015-12-09
+  url: http://www.emberscreencasts.com/posts/98-ember-data-20-store-manipulation-with-peek-unload-and-more
+  videos:
+  - http://www.emberscreencasts.com/posts/98-ember-data-20-store-manipulation-with-peek-unload-and-more
+  series: EmberScreencasts
+- title: '97 - Ember Data 2.0: Getting Data from the Server with findRecord and findAll'
+  author_ids:
+  - 58
+  date: 2015-12-04
+  url: http://www.emberscreencasts.com/posts/97-ember-data-20-getting-data-from-the-server-with-findrecord-and-findall
+  videos:
+  - http://www.emberscreencasts.com/posts/97-ember-data-20-getting-data-from-the-server-with-findrecord-and-findall
+  series: EmberScreencasts
+  price: $9/month
+- title: '96 - Ember Data 2.0: Getting Started, and Basics of DS.Model'
+  author_ids:
+  - 58
+  date: 2015-12-02
+  url: http://www.emberscreencasts.com/posts/96-ember-data-20-getting-started-and-basics-of-dsmodel
+  videos:
+  - http://www.emberscreencasts.com/posts/96-ember-data-20-getting-started-and-basics-of-dsmodel
+  series: EmberScreencasts
+- title: '95 - Multiple Concurrent Promises'
+  author_ids:
+  - 58
+  date: 2015-11-27
+  url: http://www.emberscreencasts.com/posts/95-multiple-concurrent-promises
+  videos:
+  - http://www.emberscreencasts.com/posts/95-multiple-concurrent-promises
+  series: EmberScreencasts
+  price: $9/month
+- title: '94 - Finding Current Route and Creating Breadcrumbs with ui-navigator-service'
+  author_ids:
+  - 58
+  date: 2015-11-25
+  url: http://www.emberscreencasts.com/posts/94-finding-current-route-and-creating-breadcrumbs-with-ui-navigator-service
+  videos:
+  - http://www.emberscreencasts.com/posts/94-finding-current-route-and-creating-breadcrumbs-with-ui-navigator-service
+  series: EmberScreencasts
+- title: '93 - Creating New Promises'
+  author_ids:
+  - 58
+  date: 2015-11-20
+  url: http://www.emberscreencasts.com/posts/93-creating-new-promises
+  videos:
+  - http://www.emberscreencasts.com/posts/93-creating-new-promises
+  series: EmberScreencasts
+  price: $9/month
+- title: '92 - Promises Basics'
+  author_ids:
+  - 58
+  date: 2015-11-18
+  url: http://www.emberscreencasts.com/posts/92-promises-basics
+  videos:
+  - http://www.emberscreencasts.com/posts/92-promises-basics
+  series: EmberScreencasts
+- title: '91 - Ember 2.0 Class Helpers'
+  author_ids:
+  - 58
+  date: 2015-11-13
+  url: http://www.emberscreencasts.com/posts/91-ember-20-class-helpers
+  videos:
+  - http://www.emberscreencasts.com/posts/91-ember-20-class-helpers
+  series: EmberScreencasts
+  price: $9/month
+- title: '90 - Ember 2.0 Function Helpers'
+  author_ids:
+  - 58
+  date: 2015-11-11
+  url: http://www.emberscreencasts.com/posts/90-ember-20-function-helpers
+  videos:
+  - http://www.emberscreencasts.com/posts/90-ember-20-function-helpers
+  series: EmberScreencasts
+- title: '89 - Registration Form'
+  author_ids:
+  - 58
+  date: 2015-11-06
+  url: http://www.emberscreencasts.com/posts/89-registration-form
+  videos:
+  - http://www.emberscreencasts.com/posts/89-registration-form
+  series: EmberScreencasts
+  price: $9/month
+- title: '88 - Token Authentication with Server Sessions'
+  author_ids:
+  - 58
+  date: 2015-11-04
+  url: http://www.emberscreencasts.com/posts/88-token-authentication-with-server-sessions
+  videos:
+  - http://www.emberscreencasts.com/posts/88-token-authentication-with-server-sessions
+  series: EmberScreencasts
+- title: '87 - Login Form - Validations and Flash Messages'
+  author_ids:
+  - 58
+  date: 2015-10-30
+  url: http://www.emberscreencasts.com/posts/87-login-form-validations-and-flash-messages
+  videos:
+  - http://www.emberscreencasts.com/posts/87-login-form-validations-and-flash-messages
+  series: EmberScreencasts
+  price: $9/month
+- title: '86 - Login Form'
+  author_ids:
+  - 58
+  date: 2015-10-28
+  url: http://www.emberscreencasts.com/posts/86-login-form
+  videos:
+  - http://www.emberscreencasts.com/posts/86-login-form
+  series: EmberScreencasts
+- title: '85 - Authenticated Routes'
+  author_ids:
+  - 58
+  date: 2015-10-23
+  url: http://www.emberscreencasts.com/posts/85-authenticated-routes
+  videos:
+  - http://www.emberscreencasts.com/posts/85-authenticated-routes
+  series: EmberScreencasts
+  price: $9/month
+- title: '84 - Remember your Session with Cookies'
+  author_ids:
+  - 58
+  date: 2015-10-21
+  url: http://www.emberscreencasts.com/posts/84-remember-your-session-with-cookies
+  videos:
+  - http://www.emberscreencasts.com/posts/84-remember-your-session-with-cookies
+  series: EmberScreencasts
+- title: '83 - Session Service'
+  author_ids:
+  - 58
+  date: 2015-10-16
+  url: http://www.emberscreencasts.com/posts/83-session-service
+  videos:
+  - http://www.emberscreencasts.com/posts/83-session-service
+  series: EmberScreencasts
+  price: $9/month
+- title: '82 - Introduction to Services'
+  author_ids:
+  - 58
+  date: 2015-10-14
+  url: http://www.emberscreencasts.com/posts/82-introduction-to-services
+  videos:
+  - http://www.emberscreencasts.com/posts/82-introduction-to-services
+  series: EmberScreencasts
+- title: '81 - Load Data with Instance Initializers'
+  author_ids:
+  - 58
+  date: 2015-10-09
+  url: http://www.emberscreencasts.com/posts/81-load-data-with-instance-initiliazers
+  videos:
+  - http://www.emberscreencasts.com/posts/81-load-data-with-instance-initiliazers
+  series: EmberScreencasts
+  price: $9/month
+- title: '80- Inject Code with Application Initializers'
+  author_ids:
+  - 58
+  date: 2015-10-07
+  url: http://www.emberscreencasts.com/posts/80-inject-code-with-application-initializers
+  videos:
+  - http://www.emberscreencasts.com/posts/80-inject-code-with-application-initializers
+  series: EmberScreencasts
+- title: '79 - Closure Actions in Ember 2.0 Components - Block Components'
+  author_ids:
+  - 58
+  date: 2015-10-02
+  url: http://www.emberscreencasts.com/posts/79-closure-actions-in-ember-20-components-block-components
+  videos:
+  - http://www.emberscreencasts.com/posts/79-closure-actions-in-ember-20-components-block-components
+  series: EmberScreencasts
+  price: $9/month
+- title: '78 - Closure Actions In Ember 2.0 Components - Return Value'
+  author_ids:
+  - 58
+  date: 2015-09-30
+  url: http://www.emberscreencasts.com/posts/78-closure-action-in-ember-20-components-return-values
+  videos:
+  - http://www.emberscreencasts.com/posts/78-closure-action-in-ember-20-components-return-values
+  series: EmberScreencasts
+- title: '77 - Closure Actions in Ember 2.0 Components- Metaprogramming with Parameter Currying'
+  author_ids:
+  - 58
+  date: 2015-09-25
+  url: http://www.emberscreencasts.com/posts/77-closure-actions-in-ember-20-components-metaprogramming-with-parameter-currying
+  videos:
+  - http://www.emberscreencasts.com/posts/77-closure-actions-in-ember-20-components-metaprogramming-with-parameter-currying
+  series: EmberScreencasts
+  price: $9/month
+- title: '76 - Closure Actions in Ember 2.0 Components- Passing Functions'
+  author_ids:
+  - 58
+  date: 2015-09-23
+  url: http://www.emberscreencasts.com/posts/76-closure-actions-in-ember-20-components-passing-functions
+  videos:
+  - http://www.emberscreencasts.com/posts/76-closure-actions-in-ember-20-components-passing-functions
+  series: EmberScreencasts
+- title: '75 - Actions and Components in Ember 1.x'
+  author_ids:
+  - 58
+  date: 2015-09-18
+  url: http://www.emberscreencasts.com/posts/75-actions-and-components-in-ember-1x
+  videos:
+  - http://www.emberscreencasts.com/posts/75-actions-and-components-in-ember-1x
+  series: EmberScreencasts
+  price: $9/month
+- title: '74 - ember-modal-dialog'
+  author_ids:
+  - 58
+  date: 2015-09-16
+  url: http://www.emberscreencasts.com/posts/74-ember-modal-dialog
+  videos:
+  - http://www.emberscreencasts.com/posts/74-ember-modal-dialog
+  series: EmberScreencasts
+- title: '73 - Action Bubbling'
+  author_ids:
+  - 58
+  date: 2015-09-11
+  url: http://www.emberscreencasts.com/posts/73-action-bubbling
+  videos:
+  - http://www.emberscreencasts.com/posts/73-action-bubbling
+  series: EmberScreencasts
+  price: $9/month
+- title: '72 - Introduction to Ember Actions'
+  author_ids:
+  - 58
+  date: 2015-09-09
+  url: http://www.emberscreencasts.com/posts/72-introduction-to-ember-actions
+  videos:
+  - http://www.emberscreencasts.com/posts/72-introduction-to-ember-actions
+  series: EmberScreencasts
+- title: '71 - Upgrade Ember with ember-cli-deprecation-workflow'
+  author_ids:
+  - 58
+  date: 2015-09-04
+  url: http://www.emberscreencasts.com/posts/71-upgrade-ember-with-ember-cli-deprecation-workflow
+  videos:
+  - http://www.emberscreencasts.com/posts/71-upgrade-ember-with-ember-cli-deprecation-workflow
+  series: EmberScreencasts
+  price: $9/month
+- title: '70 - ember-hold-button'
+  author_ids:
+  - 58
+  date: 2015-09-02
+  url: http://www.emberscreencasts.com/posts/70-ember-hold-button
+  videos:
+  - http://www.emberscreencasts.com/posts/70-ember-hold-button
+  series: EmberScreencasts
+- title: '69 - Custom Validators with Multiple Keys'
+  author_ids:
+  - 58
+  date: 2015-08-28
+  url: http://www.emberscreencasts.com/posts/69-custom-validators-with-multiple-keys
+  videos:
+  - http://www.emberscreencasts.com/posts/69-custom-validators-with-multiple-keys
+  series: EmberScreencasts
+  price: $9/month
+- title: '68 - Custom Validations with ember-validations'
+  author_ids:
+  - 58
+  date: 2015-08-26
+  url: http://www.emberscreencasts.com/posts/68-custom-validations-with-ember-validations
+  videos:
+  - http://www.emberscreencasts.com/posts/68-custom-validations-with-ember-validations
+  series: EmberScreencasts
+- title: '67 - Conditional Validations'
+  author_ids:
+  - 58
+  date: 2015-08-21
+  url: http://www.emberscreencasts.com/posts/67-conditional-validations
+  videos:
+  - http://www.emberscreencasts.com/posts/67-conditional-validations
+  series: EmberScreencasts
+  price: $9/month
+- title: '66 - Advanced Validations with ember-validations'
+  author_ids:
+  - 58
+  date: 2015-08-19
+  url: http://www.emberscreencasts.com/posts/66-advanced-validations-with-ember-validations
+  videos:
+  - http://www.emberscreencasts.com/posts/66-advanced-validations-with-ember-validations
+  series: EmberScreencasts
+- title: '65 - Displaying Validation Errors'
+  author_ids:
+  - 58
+  date: 2015-08-14
+  url: http://www.emberscreencasts.com/posts/65-displaying-validation-errors
+  videos:
+  - http://www.emberscreencasts.com/posts/65-displaying-validation-errors
+  series: EmberScreencasts
+  price: $9/month
+- title: '64 - Form Validation with ember-validations'
+  author_ids:
+  - 58
+  date: 2015-08-12
+  url: http://www.emberscreencasts.com/posts/64-form-validation-with-ember-validations
+  videos:
+  - http://www.emberscreencasts.com/posts/64-form-validation-with-ember-validations
+  series: EmberScreencasts
+- title: '63 - Content Security Policy'
+  author_ids:
+  - 58
+  date: 2015-08-07
+  url: http://www.emberscreencasts.com/posts/63-content-security-policy
+  videos:
+  - http://www.emberscreencasts.com/posts/63-content-security-policy
+  series: EmberScreencasts
+  price: $9/month
+- title: '62 - ES2015 Modules - Import, Export'
+  author_ids:
+  - 58
+  date: 2015-08-05
+  url: http://www.emberscreencasts.com/posts/62-es2015-modules-import-export
+  videos:
+  - http://www.emberscreencasts.com/posts/62-es2015-modules-import-export
+  series: EmberScreencasts
+- title: '24 (revised) - Handlebars Subexpressions'
+  author_ids:
+  - 58
+  date: 2015-08-03
+  url: http://www.emberscreencasts.com/posts/24-revised-handlebars-subexpressions
+  videos:
+  - http://www.emberscreencasts.com/posts/24-revised-handlebars-subexpressions
+  series: EmberScreencasts
+  price: $9/month
+- title: '61 - Computed Properties: Array Setters'
+  author_ids:
+  - 58
+  date: 2015-07-31
+  url: http://www.emberscreencasts.com/posts/61-computed-properties-array-setters
+  videos:
+  - http://www.emberscreencasts.com/posts/61-computed-properties-array-setters
+  series: EmberScreencasts
+  price: $9/month
+- title: '60 - Computed Properties: Setters'
+  author_ids:
+  - 58
+  date: 2015-07-29
+  url: http://www.emberscreencasts.com/posts/60-computed-properties-setters
+  videos:
+  - http://www.emberscreencasts.com/posts/60-computed-properties-setters
+  series: EmberScreencasts
+- title: '9 (revised) - Computed Property Macros'
+  author_ids:
+  - 58
+  date: 2015-07-27
+  url: http://www.emberscreencasts.com/posts/9-revised-computed-property-macros
+  videos:
+  - http://www.emberscreencasts.com/posts/9-revised-computed-property-macros
+  series: EmberScreencasts
+- title: '59 - Computed Properties: Working with Arrays'
+  author_ids:
+  - 58
+  date: 2015-07-26
+  url: http://www.emberscreencasts.com/posts/59-computed-properties-working-with-arrays
+  videos:
+  - http://www.emberscreencasts.com/posts/59-computed-properties-working-with-arrays
+  series: EmberScreencasts
+  price: $9/month
+- title: '58 - Intro to Computed Properties'
+  author_ids:
+  - 58
+  date: 2015-07-25
+  url: http://www.emberscreencasts.com/posts/58-intro-to-computed-properties
+  videos:
+  - http://www.emberscreencasts.com/posts/58-intro-to-computed-properties
+  series: EmberScreencasts
+- title: '57 - ember-cli-flash'
+  author_ids:
+  - 58
+  date: 2015-07-19
+  url: http://www.emberscreencasts.com/posts/57-ember-cli-flash
+  videos:
+  - http://www.emberscreencasts.com/posts/57-ember-cli-flash
+  series: EmberScreencasts
+  price: $9/month
+- title: '56 - ember-pikaday'
+  author_ids:
+  - 58
+  date: 2015-07-18
+  url: http://www.emberscreencasts.com/posts/56-ember-pikaday
+  videos:
+  - http://www.emberscreencasts.com/posts/56-ember-pikaday
+  series: EmberScreencasts
+- title: '55 - Awesome Select Boxes'
+  author_ids:
+  - 58
+  date: 2015-07-12
+  url: http://www.emberscreencasts.com/posts/55-awesome-select-boxes
+  videos:
+  - http://www.emberscreencasts.com/posts/55-awesome-select-boxes
+  series: EmberScreencasts
+  price: $9/month
+- title: '54 - Select Boxes in Ember 2.0'
+  author_ids:
+  - 58
+  date: 2015-07-11
+  url: http://www.emberscreencasts.com/posts/54-select-boxes-in-ember-20
+  videos:
+  - http://www.emberscreencasts.com/posts/54-select-boxes-in-ember-20
+  series: EmberScreencasts
+- title: '53 - dragEnter and dragLeave'
+  author_ids:
+  - 58
+  date: 2015-07-05
+  url: http://www.emberscreencasts.com/posts/53-dragenter-and-dragleave
+  videos:
+  - http://www.emberscreencasts.com/posts/53-dragenter-and-dragleave
+  series: EmberScreencasts
+  price: $9/month
+- title: '52 - dotEnv'
+  author_ids:
+  - 58
+  date: 2015-07-04
+  url: http://www.emberscreencasts.com/posts/52-dotenv
+  videos:
+  - http://www.emberscreencasts.com/posts/52-dotenv
+  series: EmberScreencasts
+- title: '51 - Drag and Drop (with file uploads)'
+  author_ids:
+  - 58
+  date: 2015-06-28
+  url: http://www.emberscreencasts.com/posts/51-drag-and-drop-with-file-uploads
+  videos:
+  - http://www.emberscreencasts.com/posts/51-drag-and-drop-with-file-uploads
+  series: EmberScreencasts
+  price: $9/month
+- title: '50 - Browser Events'
+  author_ids:
+  - 58
+  date: 2015-06-27
+  url: http://www.emberscreencasts.com/posts/50-browser-events
+  videos:
+  - http://www.emberscreencasts.com/posts/50-browser-events
+  series: EmberScreencasts
+- title: '49 - Image Upload Preview'
+  author_ids:
+  - 58
+  date: 2015-06-21
+  url: http://www.emberscreencasts.com/posts/49-image-upload-preview
+  videos:
+  - http://www.emberscreencasts.com/posts/49-image-upload-preview
+  series: EmberScreencasts
+  price: $9/month
+- title: '48 - Upload a File as Part of a Form'
+  author_ids:
+  - 58
+  date: 2015-06-20
+  url: http://www.emberscreencasts.com/posts/48-upload-a-file-as-part-of-a-form
+  videos:
+  - http://www.emberscreencasts.com/posts/48-upload-a-file-as-part-of-a-form
+  series: EmberScreencasts
+- title: '47 - Time series Line Graphs with ember-cli-chart'
+  author_ids:
+  - 58
+  date: 2015-06-15
+  url: http://www.emberscreencasts.com/posts/47-time-series-line-graphs-with-ember-cli-chart
+  videos:
+  - http://www.emberscreencasts.com/posts/47-time-series-line-graphs-with-ember-cli-chart
+  series: EmberScreencasts
+  price: $9/month
+- title: '46 - Bar Charts with ember-cli-chart'
+  author_ids:
+  - 58
+  date: 2015-06-14
+  url: http://www.emberscreencasts.com/posts/46-bar-charts-with-ember-cli-chart
+  videos:
+  - http://www.emberscreencasts.com/posts/46-bar-charts-with-ember-cli-chart
+  series: EmberScreencasts
+- title: '45 - Custom Test Helpers in Ember CLI'
+  author_ids:
+  - 58
+  date: 2015-06-07
+  url: http://www.emberscreencasts.com/posts/custom-test-helpers-in-ember-cli
+  videos:
+  - http://www.emberscreencasts.com/posts/custom-test-helpers-in-ember-cli
+  series: EmberScreencasts
+  price: $9/month
+- title: '44 - ES2015 Template Strings'
+  author_ids:
+  - 58
+  date: 2015-06-06
+  url: http://www.emberscreencasts.com/posts/es2015-template-strings
+  videos:
+  - http://www.emberscreencasts.com/posts/es2015-template-strings
+  series: EmberScreencasts
+- title: '43 - On Init'
+  author_ids:
+  - 58
+  date: 2015-05-31
+  url: http://www.emberscreencasts.com/posts/43-on-init
+  videos:
+  - http://www.emberscreencasts.com/posts/43-on-init
+  series: EmberScreencasts
+  price: $9/month
+- title: '42 - Object Instantiation'
+  author_ids:
+  - 58
+  date: 2015-05-30
+  url: http://www.emberscreencasts.com/posts/object-instantiation
+  videos:
+  - http://www.emberscreencasts.com/posts/object-instantiation
+  series: EmberScreencasts
+- title: '41 - Mixins'
+  author_ids:
+  - 58
+  date: 2015-05-24
+  url: http://www.emberscreencasts.com/posts/41-mixins
+  videos:
+  - http://www.emberscreencasts.com/posts/41-mixins
+  series: EmberScreencasts
+  price: $9/month
+- title: '40 - Class Inheritance'
+  author_ids:
+  - 58
+  date: 2015-05-23
+  url: http://www.emberscreencasts.com/posts/40-class-inheritance
+  videos:
+  - http://www.emberscreencasts.com/posts/40-class-inheritance
+  series: EmberScreencasts
+- title: '39 - Ember.get'
+  author_ids:
+  - 58
+  date: 2015-05-17
+  url: http://www.emberscreencasts.com/posts/39-emberget
+  videos:
+  - http://www.emberscreencasts.com/posts/39-emberget
+  series: EmberScreencasts
+  price: $9/month
+- title: '38 - ES2015: Functions minus 'function''
+  author_ids:
+  - 58
+  date: 2015-05-16
+  url: http://www.emberscreencasts.com/posts/38-es2015-functions-minus-function
+  videos:
+  - http://www.emberscreencasts.com/posts/38-es2015-functions-minus-function
+  series: EmberScreencasts
+- title: '37- Blueprint Basics Pt 2- Custom Variables, Editing Files, and Exploring the Unknown'
+  author_ids:
+  - 58
+  date: 2015-05-10
+  url: http://www.emberscreencasts.com/posts/37-blueprint-basics-pt-2-custom-variables-editing-files-and-exploring-the-unknown
+  videos:
+  - http://www.emberscreencasts.com/posts/37-blueprint-basics-pt-2-custom-variables-editing-files-and-exploring-the-unknown
+  series: EmberScreencasts
+  price: $9/month
+- title: '36- Blueprint Basics Pt 1- Generating Files'
+  author_ids:
+  - 58
+  date: 2015-05-09
+  url: http://www.emberscreencasts.com/posts/36-blueprint-basics-pt-1-generating-files
+  videos:
+  - http://www.emberscreencasts.com/posts/36-blueprint-basics-pt-1-generating-files
+  series: EmberScreencasts
+- title: '35- CRUD pt 2- Create'
+  author_ids:
+  - 58
+  date: 2015-05-03
+  url: http://www.emberscreencasts.com/posts/35-crud-pt-2-create
+  videos:
+  - http://www.emberscreencasts.com/posts/35-crud-pt-2-create
+  series: EmberScreencasts
+  price: $9/month
+- title: '34- CRUD pt 1: Read, Update, Delete'
+  author_ids:
+  - 58
+  date: 2015-05-02
+  url: http://www.emberscreencasts.com/posts/34-crud-pt-1-read-update-delete
+  videos:
+  - http://www.emberscreencasts.com/posts/34-crud-pt-1-read-update-delete
+  series: EmberScreencasts
+- title: 'Embering on the Shoulders of Giants'
+  author_ids:
+  - 58
+  date: 2015-04-28
+  url: http://www.emberscreencasts.com/posts/embering-on-the-shoulders-of-giants
+  videos:
+  - http://www.emberscreencasts.com/posts/embering-on-the-shoulders-of-giants
+  series: EmberScreencasts
+- title: '33- Pods'
+  author_ids:
+  - 58
+  date: 2015-04-26
+  url: http://www.emberscreencasts.com/posts/33-pods
+  videos:
+  - http://www.emberscreencasts.com/posts/33-pods
+  series: EmberScreencasts
+  price: $9/month
+- title: '32- Nested Routes and Outlets'
+  author_ids:
+  - 58
+  date: 2015-04-25
+  url: http://www.emberscreencasts.com/posts/32-nested-routes-and-outlets
+  videos:
+  - http://www.emberscreencasts.com/posts/32-nested-routes-and-outlets
+  series: EmberScreencasts
+- title: '31- Ember Inspector 5- Data'
+  author_ids:
+  - 58
+  date: 2015-04-18
+  url: http://www.emberscreencasts.com/posts/31-ember-inspector-5-data
+  videos:
+  - http://www.emberscreencasts.com/posts/31-ember-inspector-5-data
+  series: EmberScreencasts
+  price: $9/month
+- title: '30- Rearranging Table Columns'
+  author_ids:
+  - 58
+  date: 2015-04-17
+  url: http://www.emberscreencasts.com/posts/30-rearranging-table-columns
+  videos:
+  - http://www.emberscreencasts.com/posts/30-rearranging-table-columns
+  series: EmberScreencasts
+- title: '29 - Dynamic Toggling of Tables'
+  author_ids:
+  - 58
+  date: 2015-04-12
+  url: http://www.emberscreencasts.com/posts/29-toggle-table-columns
+  videos:
+  - http://www.emberscreencasts.com/posts/29-toggle-table-columns
+  series: EmberScreencasts
+  price: $9/month
+- title: '28 - Metaprogramming Magic with arrays and the ember get helper addon'
+  author_ids:
+  - 58
+  date: 2015-04-11
+  url: http://www.emberscreencasts.com/posts/28-metaprogramming-magic-with-arrays-and-the-ember-get-helper-addon
+  videos:
+  - http://www.emberscreencasts.com/posts/28-metaprogramming-magic-with-arrays-and-the-ember-get-helper-addon
+  series: EmberScreencasts
+- title: '27 - Client-side Pagination Part 2- Previous/Next Page Buttons, Change Page Size'
+  author_ids:
+  - 58
+  date: 2015-04-05
+  url: http://www.emberscreencasts.com/posts/27-client-side-pagination-part-2-previousnext-page-buttons-change-page-size
+  videos:
+  - http://www.emberscreencasts.com/posts/27-client-side-pagination-part-2-previousnext-page-buttons-change-page-size
+  series: EmberScreencasts
+  price: $9/month
+- title: '26 - Client-side Pagination Part 1- Basics'
+  author_ids:
+  - 58
+  date: 2015-04-04
+  url: http://www.emberscreencasts.com/posts/26-client-side-pagination-part-1-basics
+  videos:
+  - http://www.emberscreencasts.com/posts/26-client-side-pagination-part-1-basics
+  series: EmberScreencasts
+- title: '25 - Advanced Handlebars: option hashes and more'
+  author_ids:
+  - 58
+  date: 2015-03-29
+  url: http://www.emberscreencasts.com/posts/25-advanced-handlebars-option-hashes-and-more
+  videos:
+  - http://www.emberscreencasts.com/posts/25-advanced-handlebars-option-hashes-and-more
+  series: EmberScreencasts
+  price: $9/month
+- title: '24 - Handlebars Subexpressions'
+  author_ids:
+  - 58
+  date: 2015-03-28
+  url: http://www.emberscreencasts.com/posts/24-handlebars-subexpressions
+  videos:
+  - http://www.emberscreencasts.com/posts/24-handlebars-subexpressions
+  series: EmberScreencasts
+- title: '23 - query params'
+  author_ids:
+  - 58
+  date: 2015-03-21
+  url: http://www.emberscreencasts.com/posts/23-query-params
+  videos:
+  - http://www.emberscreencasts.com/posts/23-query-params
+  series: EmberScreencasts
+  price: $9/month
+- title: '22 - highlight selected sort options'
+  author_ids:
+  - 58
+  date: 2015-03-20
+  url: http://www.emberscreencasts.com/posts/22-highlight-selected-sort-options
+  videos:
+  - http://www.emberscreencasts.com/posts/22-highlight-selected-sort-options
+  series: EmberScreencasts
+- title: '21 - Sort Arrows (and refactoring into a component)'
+  author_ids:
+  - 58
+  date: 2015-03-15
+  url: http://www.emberscreencasts.com/posts/21-sort-arrows-and-refactoring-into-a-component
+  videos:
+  - http://www.emberscreencasts.com/posts/21-sort-arrows-and-refactoring-into-a-component
+  series: EmberScreencasts
+  price: $9/month
+- title: '20 - Sorting Tables with SortableMixin'
+  author_ids:
+  - 58
+  date: 2015-03-14
+  url: http://www.emberscreencasts.com/posts/20-sorting-tables-with-sortablemixin
+  videos:
+  - http://www.emberscreencasts.com/posts/20-sorting-tables-with-sortablemixin
+  series: EmberScreencasts
+- title: '19: Ember Inspector 4 - Routes'
+  author_ids:
+  - 58
+  date: 2015-03-01
+  url: http://www.emberscreencasts.com/posts/19-ember-inspector-4-routes
+  videos:
+  - http://www.emberscreencasts.com/posts/19-ember-inspector-4-routes
+  series: EmberScreencasts
+- title: '18: Ember Inspector 3 - The View Tree'
+  author_ids:
+  - 58
+  date: 2015-02-21
+  url: http://www.emberscreencasts.com/posts/18-ember-inspector-3-the-view-tree
+  videos:
+  - http://www.emberscreencasts.com/posts/18-ember-inspector-3-the-view-tree
+  series: EmberScreencasts
+  price: $9/month
+- title: '17 - Ember Inspector 2 - Exploring Objects'
+  author_ids:
+  - 58
+  date: 2015-02-15
+  url: http://www.emberscreencasts.com/posts/17-ember-inspector-2-exploring-objects
+  videos:
+  - http://www.emberscreencasts.com/posts/17-ember-inspector-2-exploring-objects
+  series: EmberScreencasts
+- title: '16: Ember Inspector 1 - Installing the Ember Inspector'
+  author_ids:
+  - 58
+  date: 2015-02-14
+  url: http://www.emberscreencasts.com/posts/16-ember-inspector-1-installing-the-ember-inspector
+  videos:
+  - http://www.emberscreencasts.com/posts/16-ember-inspector-1-installing-the-ember-inspector
+  series: EmberScreencasts
+  price: $9/month
+- title: '15: Debugging Someone Else's Rubygem'
+  author_ids:
+  - 58
+  date: 2015-02-07
+  url: http://www.emberscreencasts.com/posts/15-debugging-someone-elses-rubygem
+  videos:
+  - http://www.emberscreencasts.com/posts/15-debugging-someone-elses-rubygem
+  series: EmberScreencasts
+  price: $9/month
+- title: '14: ember-cli-rails'
+  author_ids:
+  - 58
+  date: 2015-01-31
+  url: http://www.emberscreencasts.com/posts/sparkcast-14-ember-cli-rails
+  videos:
+  - http://www.emberscreencasts.com/posts/sparkcast-14-ember-cli-rails
+  series: EmberScreencasts
+  price: $9/month
+- title: '13: ember-easyForm'
+  author_ids:
+  - 58
+  date: 2014-06-10
+  url: http://www.emberscreencasts.com/posts/13-ember-easyform
+  videos:
+  - http://www.emberscreencasts.com/posts/13-ember-easyform
+  series: EmberScreencasts
+  price: $9/month
+- title: '12: Moving to Ember CLI from Ember Appkit'
+  author_ids:
+  - 58
+  date: 2014-05-29
+  url: http://www.emberscreencasts.com/posts/12-moving-to-ember-cli-from-ember-appkit-pro
+  videos:
+  - http://www.emberscreencasts.com/posts/12-moving-to-ember-cli-from-ember-appkit-pro
+  series: EmberScreencasts
+  price: $9/month
+- title: '11: Refactoring to a Component'
+  author_ids:
+  - 58
+  date: 2014-05-20
+  url: http://www.emberscreencasts.com/posts/11-refactoring-to-a-component
+  videos:
+  - http://www.emberscreencasts.com/posts/11-refactoring-to-a-component
+  series: EmberScreencasts
+  price: $9/month
+- title: '10: Create and Destroy'
+  author_ids:
+  - 58
+  date: 2014-05-18
+  url: http://www.emberscreencasts.com/posts/10-create-and-destroy
+  videos:
+  - http://www.emberscreencasts.com/posts/10-create-and-destroy
+  series: EmberScreencasts
+  price: $9/month
+- title: '9: Ember.computed'
+  author_ids:
+  - 58
+  date: 2014-05-06
+  url: http://www.emberscreencasts.com/posts/9-embercomputed
+  videos:
+  - http://www.emberscreencasts.com/posts/9-embercomputed
+  series: EmberScreencasts
+- title: '8: Persistence with Ember Data and Ember App Kit'
+  author_ids:
+  - 58
+  date: 2014-04-29
+  url: http://www.emberscreencasts.com/posts/8-persistence-with-ember-data-and-ember-app-kit
+  videos:
+  - http://www.emberscreencasts.com/posts/8-persistence-with-ember-data-and-ember-app-kit
+  series: EmberScreencasts
+  price: $9/month
+- title: '7: Transferring to Ember App Kit'
+  author_ids:
+  - 58
+  date: 2014-04-24
+  url: http://www.emberscreencasts.com/posts/7-transferring-to-ember-app-kit
+  videos:
+  - http://www.emberscreencasts.com/posts/7-transferring-to-ember-app-kit
+  series: EmberScreencasts
+  price: $9/month
+- title: '6: Intro to Ember App Kit'
+  author_ids:
+  - 58
+  date: 2014-04-17
+  url: http://www.emberscreencasts.com/posts/6-intro-to-ember-app-kit
+  videos:
+  - http://www.emberscreencasts.com/posts/6-intro-to-ember-app-kit
+  series: EmberScreencasts
+  price: $9/month
+- title: '5: Embedding Youtube Videos'
+  author_ids:
+  - 58
+  date: 2014-03-31
+  url: http://www.emberscreencasts.com/posts/5-embedding-youtube-videos
+  videos:
+  - http://www.emberscreencasts.com/posts/5-embedding-youtube-videos
+  series: EmberScreencasts
+  price: $9/month
+- title: '4: Setting up Testing'
+  author_ids:
+  - 58
+  date: 2014-03-20
+  url: http://www.emberscreencasts.com/posts/4-setting-up-testing
+  videos:
+  - http://www.emberscreencasts.com/posts/4-setting-up-testing
+  series: EmberScreencasts
+  price: $9/month
+- title: '3: Metaprogramming with defineProperty'
+  author_ids:
+  - 58
+  date: 2014-03-16
+  url: http://www.emberscreencasts.com/posts/3-metaprogramming-with-defineproperty
+  videos:
+  - http://www.emberscreencasts.com/posts/3-metaprogramming-with-defineproperty
+  series: EmberScreencasts
+- title: '2: Switching to Ember Data'
+  author_ids:
+  - 58
+  date: 2014-03-10
+  url: http://www.emberscreencasts.com/posts/2-switching-to-ember-data
+  videos:
+  - http://www.emberscreencasts.com/posts/2-switching-to-ember-data
+  series: EmberScreencasts
+  price: $9/month
+- title: '1: Custom Adapters for Ember Data'
+  author_ids:
+  - 58
+  date: 2014-03-04
+  url: http://www.emberscreencasts.com/posts/1-custom-adapters-for-ember-data
+  videos:
+  - http://www.emberscreencasts.com/posts/1-custom-adapters-for-ember-data
+  series: EmberScreencasts
