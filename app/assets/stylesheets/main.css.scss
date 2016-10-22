@@ -178,3 +178,8 @@ code {
 #notes #code pre {
   margin-bottom: 10px;
 }
+
+#code .highlight span.err {
+  color: black;
+  background-color: transparent;
+}
