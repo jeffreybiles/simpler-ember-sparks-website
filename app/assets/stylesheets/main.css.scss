@@ -142,7 +142,7 @@ a.light-button {
   text-align: center;
 
 }
-  
+
 
 footer {
   position: absolute;
@@ -168,4 +168,13 @@ footer {
   #pac-man-title {
     margin-top: 0;
   }
+}
+
+code {
+  color: black;
+  background-color: #DDD;
+}
+
+#notes #code pre {
+  margin-bottom: 10px;
 }
