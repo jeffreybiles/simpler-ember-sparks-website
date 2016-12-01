@@ -38,28 +38,9 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <% if @viewable_by_user %>
             <div id="video-box">
               <%= render 'video', embed_id: @post.embed_id, current_user: current_user %>
             </div>
-          <% else %>
-
-
-            <div class="sales-box">
-              <h2>Invest in yourself</h2>
-              <p class="lead">Pro subscribers get access to all videos and content</p>
-              <%# rails helper number_to_currency for internationalization %>
-              <div>
-                <a href="/sales" class="btn btn-lg btn-success">
-                  Become a Pro for <%= number_to_currency(10, precision:0) %>/month
-                </a>
-              </div>
-              <% unless current_user %>
-                <a href="/users/sign_in" class="btn btn-lg btn-link top-buffer">Already a Subscriber? Log in</a>
-              <% end %>
-            </div>
-
-          <% end %>
           <ul class="list-inline top-buffer">
             <li>Tags:</li>
             <% @post.tags.each do |tag| %>
@@ -93,24 +74,16 @@
             <% end %>
             <% if @code_present %>
               <section id="code">
-                    <h2>Code</h2>
-                    <% if @viewable_by_google %>
-                      <%= @markdown.render(@post.code).html_safe %>
-                    <% else %>
-                      <p>Code is for subscribers only.</p>
-                    <% end %>
+                <h2>Code</h2>
+                <%= @markdown.render(@post.code).html_safe %>
               </section>
             <% end %>
           </div>
           <div role="tabpanel" class="tab-pane" id="transcript">
             <% if @transcript_present %>
               <section id="transcript">
-                    <h2>Transcript</h2>
-                    <% if @viewable_by_google %>
-                      <%= raw @markdown.render @post.transcript %>
-                    <% else %>
-                      <p>Transcript is for subscribers only.</p>
-                    <% end %>
+                <h2>Transcript</h2>
+                <%= raw @markdown.render @post.transcript %>
               </section>
             <% end %>
           </div>
