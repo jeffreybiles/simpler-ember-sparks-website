@@ -44,7 +44,7 @@ namespace :one_timers do
       end
     end
   end
-  
+
   task :resize_wistia => :environment do
     new_width = 800
     new_height = 500
@@ -55,6 +55,15 @@ namespace :one_timers do
         embed = embed.gsub(/width:.?\d+px/, "width:#{new_width}px")
         embed = embed.gsub(/height:.?\d+px/, "height:#{new_height}px")
         post.update(wistia_embed: embed)
+      end
+    end
+  end
+
+  task :unsubscribe_all => :environment do
+    User.where(subscribed: true).each do |user|
+      customer = Stripe::Customer.retrieve(user.stripe_customer_id)
+      customer.subscriptions.each do |subscription| #just in case we accidentally got 2 subscriptions
+        customer.subscriptions.retrieve(subscription.id).delete
       end
     end
   end
