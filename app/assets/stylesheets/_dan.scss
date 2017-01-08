@@ -10,15 +10,15 @@
 	border-bottom: 1px solid #333;
 }
 
-.free .media-heading:after {
-	content: 'FREE';
-	font-size: 12px;
-	background: #4A90E2;
-	color: white;
-	border-radius: 5px;
-	padding: 4px;
-	margin-left: 5px;
-}
+// .free .media-heading:after {
+// 	content: 'FREE';
+// 	font-size: 12px;
+// 	background: #4A90E2;
+// 	color: white;
+// 	border-radius: 5px;
+// 	padding: 4px;
+// 	margin-left: 5px;
+// }
 
 .icon {
 	background: #4A90E2;
@@ -29,11 +29,11 @@
 	line-height: 1.5em;
 	padding: 5px 8px;
 	vertical-align: middle;
-	&.free {
-		content: 'FREE';
-		font-size: 10px;
-		padding:2px 4px;
-	}
+	// &.free {
+	// 	content: 'FREE';
+	// 	font-size: 10px;
+	// 	padding:2px 4px;
+	// }
 }
 
 .card-well {

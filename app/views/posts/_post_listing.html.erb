@@ -8,11 +8,6 @@
         <h4 class="media-heading" style="display: inline-block;">
           <%= post.display_title %>
         </h4>
-        <% unless current_user && current_user.can_watch_pro %>
-          <% if post.free %>
-            <span class="icon free" style="display: inline-block;">FREE</span>
-          <% end %>
-        <% end %>
       </span>
       <span style="width: 60px; color: black;">
         <span class="play-time">
