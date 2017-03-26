@@ -1,19 +1,23 @@
-<div class="wistia_embed wistia_async_<%= embed_id %> videoFoam=true">&nbsp;</div>
-<script>
-  window._wq = window._wq || []
-  window._wq.push({ id: '<%= embed_id %>', onReady: function(video) {
-    var default_playback_speed = '<%= current_user && current_user.default_playback_speed %>'
-    if(!!default_playback_speed){
-      video.playbackRate(default_playback_speed)
-    }
-    video.bind("playbackratechange", function(chosenSpeed){
-      $.ajax({
-        method: "POST",
-        url: "/update_playback_speed",
-        data: {
-          playback_speed: chosenSpeed
-        }
+<% if youtube_url %>
+  <iframe src="<%= youtube_url %>?autoplay=1&rel=0" width="950" height="534" frameborder="0" allowfullscreen></iframe>
+<% else %>
+  <div class="wistia_embed wistia_async_<%= embed_id %> videoFoam=true">&nbsp;</div>
+  <script>
+    window._wq = window._wq || []
+    window._wq.push({ id: '<%= embed_id %>', onReady: function(video) {
+      var default_playback_speed = '<%= current_user && current_user.default_playback_speed %>'
+      if(!!default_playback_speed){
+        video.playbackRate(default_playback_speed)
+      }
+      video.bind("playbackratechange", function(chosenSpeed){
+        $.ajax({
+          method: "POST",
+          url: "/update_playback_speed",
+          data: {
+            playback_speed: chosenSpeed
+          }
+        })
       })
-    })
-  }});
-</script>
+    }});
+  </script>
+<% end %>

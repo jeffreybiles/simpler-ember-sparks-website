@@ -17,6 +17,7 @@ ActiveAdmin.register Post do
   index do
     column :id
     column :free
+    column :youtube_url
     column :guid
     column :code do |t|
       t.code.present? && t.code != 'null'
@@ -49,6 +50,7 @@ ActiveAdmin.register Post do
         link_to t.title, post_path(t)
       end
       row :guid
+      row :youtube_url
       row :description
       row :publish_date
       row :free
@@ -70,6 +72,7 @@ ActiveAdmin.register Post do
       f.input :seconds
       f.input :difficulty, :as => :select, :collection => ['basic', 'intermediate', 'advanced']
       f.input :publish_date
+      f.input :youtube_url
       f.input :embed_id
       f.input :thumbnail_image
       f.input :description
