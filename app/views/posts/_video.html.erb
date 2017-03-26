@@ -1,5 +1,7 @@
 <% if youtube_url %>
-  <iframe src="<%= youtube_url %>?autoplay=1&rel=0" width="950" height="534" frameborder="0" allowfullscreen></iframe>
+  <div class="video-container">
+    <iframe src="<%= youtube_url %>?autoplay=1&rel=0" width="950" height="534" frameborder="0" allowfullscreen></iframe>
+  </div>
 <% else %>
   <div class="wistia_embed wistia_async_<%= embed_id %> videoFoam=true">&nbsp;</div>
   <script>
