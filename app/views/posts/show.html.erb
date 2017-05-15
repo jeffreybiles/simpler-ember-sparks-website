@@ -90,18 +90,19 @@
         </div>
       </div>
 
-      <% if @series %>
-        <div class="col-md-4">
+      <div class="col-md-4">
+        <% if @series %>
           <%= link_to @series.name, tag_path(@series), class: "btn btn-success well-title" %>
-          <div class="series-list side-well">
-            <ol>
-              <% @series.posts.published.recent_first.reverse_each do |post| %>
-                <li><%= link_to post.display_title, post_path(post) %></li>
-              <% end %>
-            </ol>
-          </div>
-        </div>
-      <% end %>
+            <div class="series-list side-well">
+              <ol>
+                <% @series.posts.published.recent_first.reverse_each do |post| %>
+                  <li><%= link_to post.display_title, post_path(post) %></li>
+                <% end %>
+              </ol>
+            </div>
+          <% end %>
+        <%= render 'shared/mailing_list' %>
+      </div>
     </div>
 
     <section id="comments" align="center" class="top-buffer">
