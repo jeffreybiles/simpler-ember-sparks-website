@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'feed' => 'posts#feed'
   resources :tags, only: [:show, :index]
   resources :search, only: :index
+  get 'charge/:amount/:description', to: 'charges#new'
+  resources :charges
+
 
   get 'about', to: 'pages#about'
   get 'library', to: 'pages#library'

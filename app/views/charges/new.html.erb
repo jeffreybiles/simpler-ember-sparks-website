@@ -1,0 +1,22 @@
+<div class="container">
+  <%= form_tag charges_path(amount: @amount, description: @description) do |f| %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+
+    <p>Paying $<%= @amount.to_i / 100 %> for "<%= @description %>".</p>
+    <p>A receipt will be sent via Stripe.</p>
+    <p>If you need the description changed, go ahead and change it in the URL.</p>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="<%= @description %>"
+            data-amount="<%= @amount %>"
+            data-label="Pay $<%= @amount.to_i / 100 %>"
+            data-locale="auto"></script>
+  <% end %>
+</div>

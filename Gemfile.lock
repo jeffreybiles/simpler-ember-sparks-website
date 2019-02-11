@@ -367,6 +367,7 @@ DEPENDENCIES
   seed_dump
   selenium-webdriver
   spring
+  stripe
   stripe-rails
   stripe-ruby-mock (~> 2.2.1)
   uglifier (>= 1.3.0)
