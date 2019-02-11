@@ -8,7 +8,6 @@ class ChargesController < ApplicationController
     # Amount in cents
     @amount = params[:amount]
     @description = params[:description]
-    binding.pry
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
