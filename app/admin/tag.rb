@@ -21,7 +21,7 @@ ActiveAdmin.register Tag do
     column :permalink
     column :most_recent_publish_date
     column :thumbnail_image
-    default_actions
+    actions
   end
 
   controller do

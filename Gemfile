@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.4.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.14.1'
+gem 'rails', '4.2.11.1'
 
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', '~> 1.0.0'
 gem 'devise'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.17.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.1'
@@ -23,13 +23,13 @@ gem 'stripe'
 gem 'zapier_ruby'
 gem 'algoliasearch-rails'
 
-gem 'redcarpet'
-gem 'rouge'
+gem 'redcarpet', '~> 3.1.1'
+gem 'rouge', '~> 1.10.1'
 gem "font-awesome-rails"
 
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'carrierwave-aws'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 3.7.0'
+gem 'carrierwave-aws', '~> 0.5.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development
@@ -67,7 +67,7 @@ gem 'spring',        group: :development
 
 gem 'ember-cli-rails', '~> 0.7.0'
 gem 'quiet_assets', group: :development
-gem 'active_model_serializers'
+gem 'active_model_serializers', '~> 0.9.3'
 
 gem "rails_12factor", group: [:staging, :production]
 

@@ -31,7 +31,7 @@ ActiveAdmin.register Post do
     column :difficulty
     column :seconds
     column :publish_date
-    default_actions
+    actions
   end
 
   controller do

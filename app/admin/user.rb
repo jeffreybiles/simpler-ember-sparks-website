@@ -24,7 +24,7 @@ ActiveAdmin.register User do
     column :last_sign_in_at
     column :organization_id
     column :organization_permission_level
-    default_actions
+    actions
   end
 
   controller do
