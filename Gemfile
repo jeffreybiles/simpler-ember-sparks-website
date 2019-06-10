@@ -19,7 +19,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'stripe-rails', '0.3.1'
-gem 'stripe', '1.31.0'
+gem 'stripe', '1.58.0'
+gem 'rest-client', '2.0.1'
 gem 'zapier_ruby'
 gem 'algoliasearch-rails'
 
