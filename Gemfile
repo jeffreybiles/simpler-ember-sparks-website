@@ -18,8 +18,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'stripe-rails'
-gem 'stripe'
+gem 'stripe-rails', '0.3.1'
+gem 'stripe', '1.31.0'
 gem 'zapier_ruby'
 gem 'algoliasearch-rails'
 
