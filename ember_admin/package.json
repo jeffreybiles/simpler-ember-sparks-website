@@ -50,6 +50,6 @@
     "moment": "2.10.3"
   },
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^4.17.19"
   }
 }
