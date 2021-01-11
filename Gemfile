@@ -24,7 +24,7 @@ gem 'rest-client', '2.0.1'
 gem 'zapier_ruby'
 gem 'algoliasearch-rails'
 
-gem 'redcarpet', '~> 3.1.1'
+gem 'redcarpet', '~> 3.5.1'
 gem 'rouge', '~> 1.10.1'
 gem "font-awesome-rails"
 
